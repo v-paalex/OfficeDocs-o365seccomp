@@ -40,8 +40,8 @@ In the case of a free trial, your account will move into a grace status for 30 d
 At all times during the term of any subscription, a subscriber can contact Microsoft Support and request expedited subscription deprovisioning. In this process, all user data, including data in SharePoint Online, Exchange Online that may be under hold or stored in inactive mailboxes, is deleted three days after the administrator enters the lockout code provided by Microsoft. For more information on expedited deprovisioning, see [Cancel Office 365](https://support.office.com/article/Cancel-Office-365-for-business-b1bc0bef-4608-4601-813a-cdd9f746709a).
 
 ## Related Links
+- [Data Destruction](office-365-data-destruction.md)
+- [Immutability in Office 365](office-365-data-immutability.md)
 - [Exchange Online Data Deletion](office-365-exchange-online-data-deletion.md)
 - [SharePoint Online Data Deletion](office-365-sharepoint-online-data-deletion.md)
 - [Skype for Business Data Deletion](office-365-skype-data-deletion.md)
-- [Immutability in Office 365](office-365-data-immutability.md)
-- [Data Destruction](office-365-data-destruction.md)
