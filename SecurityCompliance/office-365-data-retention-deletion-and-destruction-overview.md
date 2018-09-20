@@ -15,21 +15,19 @@ description: "An overview of Microsoft's policies for Office 365 regarding data 
 
 # Data Retention, Deletion, and Destruction in Office 365
 
-## Introduction
-
 Microsoft has a Data Handling Standard policy for Office 365 that specifies how long customer data will be retained after being deleted. There are generally two scenarios in which customer data is deleted:
 
 - **Active Deletion** - The tenant has an active subscription and a user deletes data, or data provided by a user is deleted by the administrator.
 - **Passive Deletion** - The tenant subscription ends.
 
-For each of these deletion scenarios, the following table shows the maximum data retention period, by data classification.
+## Data Retention
 
-## Active Deletion Retention
+For each of these deletion scenarios, the following table shows the maximum data retention period, by data classification:
 
-| Data Category | Data Classification | Description | Example | Retention Period Based on Deletion Scenarios |
+| Data Category | Data Classification | Description | Examples | Retention Period |
 |---------------------------------------|-----------------|-----------------|----------------------------------|-------------------------------|
-| Customer Data | Customer Content| Content directly provided/created by admins and users. This includes all text, sound, video, image files, and software created and stored in Microsoft data centers when using the services in Office 365. |- Examples of the most commonly used Office 365 applications which allow users to author data include Word, Excel, PowerPoint, Outlook and OneNote. <br> - Customer content also includes customer-owned/provided secrets (passwords, certificates, encryption keys, storage keys) | - Active Deletion Scenario: at most 30 days <br> - Passive Deletion Scenario: at most 180 days |
-| | End USer Identifiable Information (EUII) | Data that identifies or could be used to identify the user of a Microsoft service. EUII does not contain Customer content | - User name or display name (DOMAIN\UserName) <br> - User principle name (name@company.com) <br> - User-specific IP address | - Active Deletion Scenario: at most 180 days (only a tenant administrator action) <br> - Passive Deletion Scenario: at most 180 days |
+| Customer Data | Customer Content| Content directly provided/created by admins and users. <br><br> This includes all text, sound, video, image files, and software created and stored in Microsoft data centers when using the services in Office 365. | Examples of the most commonly used Office 365 applications which allow users to author data include Word, Excel, PowerPoint, Outlook and OneNote. <br><br> Customer content also includes customer-owned/provided secrets (passwords, certificates, encryption keys, storage keys) | **Active Deletion Scenario:** at most 30 days <br><br> **Passive Deletion Scenario:** at most 180 days |
+| Customer Data | End User Identifiable Information (EUII) | Data that identifies or could be used to identify the user of a Microsoft service. EUII does not contain Customer content | - User name or display name (DOMAIN\UserName) <br> - User principal name (name@company.com) <br> - User-specific IP address | - Active Deletion Scenario: at most 180 days (only a tenant administrator action) <br><br> - Passive Deletion Scenario: at most 180 days |
 | Personal Data <br> (Data not included in Customer Data) | End User Pseudonymous Identifiers (EUPI) | An identifier created by Microsoft tied to the user of a Microsoft service. When EUPI is combined with other information, such as a mapping table, it identifies the end user. EUPI does not contain information uploaded or created by the customer | - User GUIDs, PUIDs, or SIDs <br> - Session IDs | - **Active Deletion Scenario:** at most 30 days <br> - **Passive Deletion Scenario:** at most 180 days |
 
 ## Subscription Retention
