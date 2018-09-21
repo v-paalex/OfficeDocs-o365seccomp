@@ -177,7 +177,7 @@ Here's more information about exporting search results.
   
 [Export reports](export-search-results.md#export-reports)
   
-[Exporting unindexed items](export-search-results.md#exporting-unindexed-items)
+[Exporting partially indexed items](#exporting-partially-indexed-items)
   
 [Exporting individual messages or PST files](export-search-results.md#Exporting-individual-messages-or-PST-files)
   
@@ -274,6 +274,10 @@ Here's more information about exporting search results.
     C - All partially indexed items from all sites in the search are exported, regardless of whether a site contains items that match the search criteria.
     
     If you choose to export partially indexed items, partially indexed mailbox items are exported in a separate PST file regardless of the option that you choose under **Export Exchange content as**.
+
+- If partially indexed items are returned in the search results (because other properties of an partially indexed items matched the search criteria), then those partially indexed are exported with the regular search results and will be listed in the Results.csv report. 
+    
+    If you choose to export both indexed items and partially indexed items (by selecting **All items, including ones that have unrecognized format, are encrypted, or weren't indexed for other reasons** export option) 
     
  ### Exporting individual messages or PST files
   
