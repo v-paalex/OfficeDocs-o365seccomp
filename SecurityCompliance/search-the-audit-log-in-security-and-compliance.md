@@ -643,3 +643,60 @@ Here are some tips for searching for activity in the Exchange admin audit log:
     
 - You can also view events in the Exchange admin audit log by using the Exchange admin center. For instructions, see [View the administrator audit log](https://technet.microsoft.com/library/dn342832%28v=exchg.150%29.aspx).
   
+## Frequently asked questions
+
+**Where can I find about the features offered by the auditing service in Office 365?**
+
+For more information about the auditing and reporting features available in Office 365, see [Auditing and Reporting in Office 365](office-365-auditing-and-reporting-overview.md). 
+
+**What are different Office 365 Services that are currently audited?**
+
+The most used Office 365 Services like Exchange Online, SharePoint, OneDrive, Azure Active Directory, Microsoft Teams, CRM, Advanced Threat Protection, and Data Loss Prevention are audited. See the [Intro](#search-the-audit-log-in-the-office-365-security-amp-compliance-center) section in this article for a complete list.
+
+**What activities are audited by auditing service in Office 365?**
+
+See the [Audited activities](#audited-activities) section in this article for a list and description of the activities that are audited in Office 365.
+
+**How long does it take for an auditing record to be available after an event has occurred?**
+
+Most auditing data is available within 30 minutes but it may take up to 24 hours after an event occurs for the corresponding audit log entry to be displayed in the search results. See the table in the [Before you begin](#before-you-begin) section of this article that shows the time it takes for events in the different Office 365 services to be available.
+
+**How long are the auditing records retained for?**
+
+Currently audit log records are retained for 90 days. Microsoft is actively working on a plan to increase this limit. 
+
+**Can I access the auditing data programmatically?**
+
+Yes. The Office 365 Management Activity API is used to fetch the audit logs programmatically.  To get started, see [Get started with Office 365 Management APIs](https://docs.microsoft.com/office/office-365-management-api/get-started-with-office-365-management-apis).
+
+**Are there other ways to get auditing logs other than suing the Office 365 Security & Compliance Center or the Office 365 Management Activity API?**
+
+No. These are the only two ways to get data from the Office 365 auditing service. 
+
+**Do I need to individually enable auditing in each service that I want to capture audit logs for?**
+
+In most Office 365 services, auditing is enabled by default after you initially turn on auditing for your Office 365 organization (as described in the [Before you begin](#before-you-begin) section in this article). However, you have to enable mailbox auditing in Exchange Online for each mailbox that you want to audit.   We are working on enabling mailbox auditing by default for all mailboxes in an Office 365 organization. For more information, see "Exchange mailbox auditing will be enabled by default" in the [Microsoft Security, Privacy, and Compliance blog](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Exchange-Mailbox-Auditing-will-be-enabled-by-default/ba-p/215171).
+
+**Does the Office 365 auditing service support de-duplication of records?**
+
+No. The auditing service pipeline is near real time, and therefore can't support de-duplication.
+ 
+**Does Office 365 auditing data flow across geographies?**
+
+No. We currently have auditing pipeline deployments in the NA (North America), EMEA (Europe, Middle east and Africa) and APAC (Asia Pacific) regions. However, we may flow the data across these regions for load-balancing and only during live-site issues. When we do perform these activities, the data in transit is encrypted.   
+ 
+**Is auditing data encrypted?**
+
+Auditing data is stored in Exchange mailboxes (data at rest) in the same region where the auditing pipeline is deployed. This data is not encrypted. However, data in transit is always encrypted. 
+
+
+
+
+
+
+
+
+
+
+
+
