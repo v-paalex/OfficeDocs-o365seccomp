@@ -287,7 +287,7 @@ This example returns email items or documents that contain the keyword "report",
   
  **Search query syntax**
   
- `report???(c:c)??????(date<2016-04-01)??????(subjecttitle:"northwind")??????(-filetype="aspx")???`
+ `report(c:c)(date<2016-04-01)(subjecttitle:"northwind")(-filetype="aspx")`
   
  **Search query logic**
   
