@@ -373,4 +373,5 @@ Only documents that are shared by using the third option (shared with **Specific
     
 - When searching a property, use double quotation marks ("  ") if the search value consists of multiple words. For example `subject:budget Q1` returns messages that contain **budget** in the in the subject line and that contain **Q1** anywhere in the message or in any of the message properties. Using `subject:"budget Q1"` returns all messages that contain **budget Q1** anywhere in the subject line. 
     
-- To exclude content marked with a certain property value from your search results, place a minus sign (-) before the name of the property. For example, `-from:"Sara Davis"` will exclude any messages sent by Sara Davis. 
+- To exclude content marked with a certain property value from your search results, place a minus sign (-) before the name of the property. For example, `-from:"Sara Davis"` will exclude any messages sent by Sara Davis.
+- You can export items based on the item type. For example, to export Skype IM messages recived by a user, use the syntax 'Kind:IM'. This search query returen all IM message. 
