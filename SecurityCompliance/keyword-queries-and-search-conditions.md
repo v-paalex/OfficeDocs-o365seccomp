@@ -365,7 +365,7 @@ You can use the following keyword query to specifically search for content in Sk
 kind:im
 ```
 
-Note the previous search query will also return chats from Microsoft Teams. To prevent this, you can narrow the search results to inlude only Skype for Business conversations by using the following keyword query:
+Note the previous search query will also return chats from Microsoft Teams. To prevent this, you can narrow the search results to include only Skype for Business conversations by using the following keyword query:
 
 ```
 kind:im AND subject:conversation
@@ -373,7 +373,7 @@ kind:im AND subject:conversation
 
 The previous keyword query excludes chats in Microsoft Teams because Skype for Business conversations are saved as email messages with a Subject line that starts with the word "Conversation".
 
-To search for Skype for Business conversations that occured within a specific date range, use the following keyword query:
+To search for Skype for Business conversations that occurred within a specific date range, use the following keyword query:
 
 ```
 kind:im AND subject:conversation AND (received=startdate..enddate)
