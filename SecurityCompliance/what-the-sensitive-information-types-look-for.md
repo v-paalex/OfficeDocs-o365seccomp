@@ -2536,7 +2536,7 @@ A DLP policy is 75% confident that it's detected this type of sensitive informat
 ### Pattern
 
 Must match one of two patterns:
-- 13 digits followed by a space followed by two digits</br>
+- 13 digits followed by a space followed by two digits<br/>
 or
 - 15 consecutive digits
 

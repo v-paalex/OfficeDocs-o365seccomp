@@ -55,9 +55,9 @@ At a high level, here's how ATP Safe Links protection works for URLs in email (h
     
 ## How ATP Safe Links works with Office documents
 
-At a high level, here's how ATP Safe Links protection works for URLs in Office 365 ProPlus applications (current versions of OneNote, Word, Excel, and PowerPoint on Windows or Mac, Office apps on iOS or Android devices, Visio on Windows, and Office Online):
+At a high level, here's how ATP Safe Links protection works for URLs in Office 365 ProPlus applications (current versions of Word, Excel, and PowerPoint on Windows or Mac, Office apps on iOS or Android devices, Visio on Windows, OneNote Online, and Office Online):
   
-1. People have installed Office 365 ProPlus on their computer, smartphone, or tablet.
+1. People have installed Office 365 ProPlus on their computer, smartphone, or tablet. (Or, they are using Office Online in their browser.)
     
 2. A user opens a Word, Excel, PowerPoint, or Visio, and signs in to Office 365 Enterprise using their work or school account. The document contains URLs.
     
