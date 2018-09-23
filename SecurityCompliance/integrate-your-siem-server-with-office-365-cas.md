@@ -66,26 +66,26 @@ Office 365 Cloud App Security currently supports the following SIEM servers:
     
 2. Go to **Alerts** \> **Manage advanced alerts**.
     
-3. Choose **Go to Office 365 Cloud App Security**. </br>
+3. Choose **Go to Office 365 Cloud App Security**. <br/>
     ![In the Security &amp; Compliance Center, choose Manage Advanced Alerts to go to Office 365 Cloud App Security](media/958632d4-03e3-4ade-8e22-d5509db6fca7.png)
   
-4. Click **Settings** \> **Security extensions**.</br>
+4. Click **Settings** \> **Security extensions**.<br/>
 ![Choose Settings > Security extensions](media/Settings-SecurityExtensions.png)
 
-5. Choose **Add SIEM agent**.</br>![Choose Add SIEM agent.](media/SIEMAgents.png)
+5. Choose **Add SIEM agent**.<br/>![Choose Add SIEM agent.](media/SIEMAgents.png)
     
-6. Choose **Start wizard**.</br>![Get help or start the wizard](media/HelpOrWizard.png) 
+6. Choose **Start wizard**.<br/>![Get help or start the wizard](media/HelpOrWizard.png) 
     
-7. In the **General** step, specify a name, and **Select your SIEM format** and set any **Advanced settings** that are relevant to that format. Then choose **Next**.</br>![Specify a name and type](media/ChooseAgentTypeAndName.png)
+7. In the **General** step, specify a name, and **Select your SIEM format** and set any **Advanced settings** that are relevant to that format. Then choose **Next**.<br/>![Specify a name and type](media/ChooseAgentTypeAndName.png)
     
-8. In the **Remote Syslog** step, specify the IP address or hostname of the **Remote syslog host** and the **Syslog port number**. Select TCP or UDP as the Remote Syslog protocol. (You can work with your network administrator or security administrator to get these details if you don't have them.) Then choose **Next**.</br>![Specify Remote Syslog details](media/ArcSightS1Syslog.png)
+8. In the **Remote Syslog** step, specify the IP address or hostname of the **Remote syslog host** and the **Syslog port number**. Select TCP or UDP as the Remote Syslog protocol. (You can work with your network administrator or security administrator to get these details if you don't have them.) Then choose **Next**.<br/>![Specify Remote Syslog details](media/ArcSightS1Syslog.png)
   
 9. In the **Data Types** step, do one of the following, and then click **Next**:
-    - Keep the default setting of **All Alerts**</br>OR
+    - Keep the default setting of **All Alerts**<br/>OR
     - Click **All alerts**, and then choose **Specific filters**. Define filters to select the kinds of alerts you want to send to your SIEM server.
-</br>![Data Types step of the wizard](media/ArcSightS1ExportOptions.png)
+<br/>![Data Types step of the wizard](media/ArcSightS1ExportOptions.png)
   
-10. On the Congratulations screen, copy the token and save it for later.</br>![SIEM agent created screen](media/SIEMAgentFinished.png) 
+10. On the Congratulations screen, copy the token and save it for later.<br/>![SIEM agent created screen](media/SIEMAgentFinished.png) 
 
 > [!IMPORTANT]
 > At this point, you have set up a SIEM agent in Office 365 Cloud App Security, but your SIEM server integration is not yet finished. Proceed to the next step to continue your SIEM server integration.
@@ -100,7 +100,7 @@ After you click Close and leave the wizard, on the Security extensions screen, y
     
 2. Extract the .jar file from the zipped folder and run it on your server.
     
-3. After running the file, run the following: command:</br>
+3. After running the file, run the following: command:<br/>
   ```
   java -jar mcas-siemagent-0.87.20-signed.jar [--logsDirectory DIRNAME] [--proxy ADDRESS[:PORT]] --token TOKEN
   ```
@@ -111,7 +111,7 @@ After you click Close and leave the wizard, on the Security extensions screen, y
 - We recommend that you run the JAR fill on your server during server setup.
     - **Windows**: Run as a scheduled task, making sure to configure the task to **Run whether the user is logged on or not** and clear the **Stop the task if it runs longer than** option.
 
-    - **Linux**: Add the run command with an **&** to the `rc.local` file. </br>Example:</br> 
+    - **Linux**: Add the run command with an **&** to the `rc.local` file. <br/>Example:<br/> 
     ```
     java -jar mcas-siemagent-0.87.20-signed.jar [--logsDirectory DIRNAME] [--proxy ADDRESS[:PORT]] --token TOKEN &
     ```
@@ -124,7 +124,7 @@ After you click Close and leave the wizard, on the Security extensions screen, y
   
 ### Step 3: Validate that the SIEM agent is working
 
-1. Make sure the status of the SIEM agent in the Office 365 Cloud App Security portal is not displayed as **Connection error** or **Disconnected** and that there are no agent notifications.</br>For example, here we can see the SIEM server is connected:</br>![SIEM server connected](media/siem-connected.png)</br>And here, we can see the SIEM server is disconnected:</br>![SIEM server not connected](media/siem-not-connected.png) 
+1. Make sure the status of the SIEM agent in the Office 365 Cloud App Security portal is not displayed as **Connection error** or **Disconnected** and that there are no agent notifications.<br/>For example, here we can see the SIEM server is connected:<br/>![SIEM server connected](media/siem-connected.png)<br/>And here, we can see the SIEM server is disconnected:<br/>![SIEM server not connected](media/siem-not-connected.png) 
   
 2. In your Syslog/SIEM server, make sure you see that alerts have arrived from Office 365 Cloud App Security.
   

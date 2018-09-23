@@ -42,7 +42,7 @@ You can report a junk message from your **Inbox**, **Clutter**, or **Deleted Ite
 To submit a phishing scam message to Microsoft:
   
 1. Click on the phishing scam message, click the down arrow next to **Junk**, and then click **Phishing** on the toolbar. Office 365 does not block the sender because senders of phishing scam messages typically impersonate legitimate senders. If you prefer, add the sender to your blocked senders list by following the instructions in the topic [Block or allow (junk email settings)](https://go.microsoft.com/fwlink/?LinkId=627572). 
-    ![Indicate an email is a phishing scam in Outlook on the web](media/959bb577-341c-41ee-a159-e46600b2cf8a.png)</br>Alternatively, right-click a message to display a menu, and click **Mark as Phishing**.</br>You can report a phishing scam message from your **Inbox**, **Clutter**, or **Deleted Items** folder. 
+    ![Indicate an email is a phishing scam in Outlook on the web](media/959bb577-341c-41ee-a159-e46600b2cf8a.png)<br/>Alternatively, right-click a message to display a menu, and click **Mark as Phishing**.<br/>You can report a phishing scam message from your **Inbox**, **Clutter**, or **Deleted Items** folder. 
   
 2. For some organizations, a dialog box opens asking if you want to send a copy of the phishing scam email to Microsoft for analysis. Click **report** to send the message to the Microsoft Spam Analysis Team. This reporting option is currently available to a limited number of organizations; you might not be asked to report a phishing scam to Microsoft. 
     
@@ -50,7 +50,7 @@ To submit a phishing scam message to Microsoft:
 
 When a message is incorrectly identified as junk by Office 365, submit a message as "not junk" to Microsoft:
   
-1. In your Junk email folder, click on the message and then click **Not Junk** on the toolbar. This moves the message to your **Inbox** and adds the sender to your safe senders list. </br>You can also right-click on a message in your Junk mail folder to display a menu and click **Mark as not junk**. 
+1. In your Junk email folder, click on the message and then click **Not Junk** on the toolbar. This moves the message to your **Inbox** and adds the sender to your safe senders list. <br/>You can also right-click on a message in your Junk mail folder to display a menu and click **Mark as not junk**. 
   
 2. A dialog box opens asking if you want to send a copy of the not junk email message to Microsoft for analysis. Click **report** to send the message to the Microsoft Spam Analysis Team.. 
     
