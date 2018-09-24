@@ -86,6 +86,7 @@
 ### [Set up new Office 365 Message Encryption capabilities](set-up-new-message-encryption-capabilities.md)
 ### [How Exchange Online secures your email secrets](exchange-online-secures-email-secrets.md)
 ### [Office 365 Message Encryption (OME)](ome.md)
+### [Revoke email encrypted by Office 365 Message Encryption](revoke-ome-encrypted-mail.md)
 ### [Service encryption with Customer Key for Office 365 FAQ](service-encryption-with-customer-key-faq.md)
 ### [Set up encryption in Office 365 Enterprise](set-up-encryption.md)
 ### [Add your organization's brand to your encrypted messages](add-your-organization-brand-to-encrypted-messages.md)
