@@ -43,7 +43,11 @@ Need to find if a user viewed a specific document or purged an item from their m
 - User and admin activity in Power BI for Office 365
     
 - User and admin activity in Microsoft Teams
+
+- User and admin activity in Dynamics 365
     
+- User and admin activity in Microsoft Flow
+
 - User and admin activity in Yammer
     
 - User and admin activity in Microsoft Stream
@@ -53,7 +57,7 @@ Need to find if a user viewed a specific document or purged an item from their m
 
 Be sure to read the following items before you start searching the Office 365 audit log.
   
-- You (or another admin) must first turn on audit logging before you can start searching the Office 365 audit log. To turn it on, just click ** Start recording user and admin activity ** on the **Audit log search** page in the Security &amp; Compliance Center. (If you don't see this link, auditing has already been turned on for your organization.) After you turn it on, a message is displayed that says the audit log is being prepared and that you can run a search in a couple of hours after the preparation is complete. You only have to do this once. 
+- You (or another admin) must first turn on audit logging before you can start searching the Office 365 audit log. To turn it on, just click **Start recording user and admin activity** on the **Audit log search** page in the Security &amp; Compliance Center. (If you don't see this link, auditing has already been turned on for your organization.) After you turn it on, a message is displayed that says the audit log is being prepared and that you can run a search in a couple of hours after the preparation is complete. You only have to do this once. 
     
     > [!NOTE]
     > We're in the process of turning on auditing by default. Until then, you can turn it on as previously described. 
@@ -87,12 +91,12 @@ Be sure to read the following items before you start searching the Office 365 au
     
 |**Office 365 service**|**30 minutes**|**24 hours**|
 |:-----|:-----|:-----|
-|Advanced Threat Protection & Threat Intelligence  <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)| |
+|Advanced Threat Protection and Threat Intelligence  <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)| |
 |Azure Active Directory (user login events)  <br/> ||![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/> |
 |Azure Active Directory (admin events)  <br/> ||![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png) |
 |Azure Active Directory (user login events)  <br/> ||![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/> |
 |Data Loss Prevention  <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/>| |
-|Dynamics 365 CRM  <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/>| |
+|Dynamics 365 CRM <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/>| |
 |eDiscovery  <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/>| |
 |Exchange Online  <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/> ||
 |Microsoft Flow  <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/>| |
