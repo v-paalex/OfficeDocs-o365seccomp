@@ -262,7 +262,7 @@ After you select a policy template, you can add or remove any types of sensitive
     
 ![Options for identifying sensitive information types](media/de255881-f596-4c8d-8359-e974e3a0819a.png)
   
-### Auto-apply labels to content with specific keywords
+### Auto-apply labels to content with specific keywords or searchable properties
 
 You can auto-apply labels to content that satisfies certain conditions. The conditions now available support applying a label to content that contains specific words, phrases, or searchable properties. You can refine your query by using search operators like AND, OR, and NOT. For more information on operators and query syntax, see:
 
