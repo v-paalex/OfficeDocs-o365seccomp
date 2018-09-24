@@ -6,6 +6,7 @@ manager: laurawi
 ms.date: 11/17/2014
 ms.audience: ITPro
 ms.topic: article
+search.appverid: MET150
 ms.service: exchange-online
 localization_priority: Normal
 ms.assetid: 1e0c579c-26e0-462a-a1b0-d7506dfe05fa

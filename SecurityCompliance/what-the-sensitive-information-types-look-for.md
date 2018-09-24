@@ -5,6 +5,7 @@ author: stephow-MSFT
 manager: laurawi
 ms.date: 6/29/2018
 ms.audience: Admin
+search.appverid: MET150
 ms.topic: reference
 f1_keywords:
 - 'ms.o365.cc.UnifiedDLPRuleContainsSensitiveInformation'
