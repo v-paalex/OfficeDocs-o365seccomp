@@ -3,7 +3,7 @@ title: "Search the audit log in the Office 365 Security &amp; Compliance Center"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
-ms.date: 6/29/2018
+ms.date: 
 ms.audience: Admin
 ms.topic: article
 f1_keywords:
