@@ -34,25 +34,28 @@ Once an email has been revoked, the recipient will get an error when trying to a
 
 ![Screenshot that shows a revoked encrypted email.](media/revoked-encrypted-email.png)
     
-## Revoke an encrypted email
+## How to revoke an encrypted email
 
-**Step 1.** Before you can revoke an encrypted mail you need to gather the Message ID of the mail. The MessageId is usually of the format:
+### Step 1. Obtain the Message ID of the email
+
+Before you can revoke an encrypted mail you need to gather the Message ID of the mail. The MessageId is usually of the format:
 
 `<xxxxxxxxxxxxxxxxxxxxxxx@xxxxxx.xxxx.prod.outlook.com>`  
 
 There are multiple ways to find the Message ID of the email that you want to revoke. This section describes a couple of options, but you can use any method that provides the ID.
 
-  ### To identify the Message ID of the email you want to revoke by using Message Trace in the Security &amp; Compliance Center
+  #### To identify the Message ID of the email you want to revoke by using Message Trace in the Security &amp; Compliance Center
 
 1. Search for the email by sender or recipient using [New Message Trace in Office 365 Security & Compliance Center](https://blogs.technet.microsoft.com/exchange/2018/05/02/new-message-trace-in-office-365-security-compliance-center/).
 2. Once you've located the email select it to bring up the **Message trace details** pane. Expand **More Information** to locate the Message ID.
 
-  ### To identify the Message ID of the email you want to revoke by using Office Message Encryption reports in the Security &amp; Compliance Center
+  #### To identify the Message ID of the email you want to revoke by using Office Message Encryption reports in the Security &amp; Compliance Center
 1. In the Security &amp; Compliance Center, navigate to the **Message Encryption Report**.
 2. Choose the **View details** table and identify the message that you want to revoke. 
 3. Double-click the message to view details that include the Message ID. 
 
-**Step 2.** Revoke the mail
+### Step 2. Revoke the mail  
+
 Once you know the Message ID of the email you want to revoke, you can revoke the email by using the Set-OMEMessageRevocation cmdlet. 
 
 1. [Connect to Exchange Online Using Remote PowerShell](http://technet.microsoft.com/library/jj984289%28v=exchg.150%29.aspx).
