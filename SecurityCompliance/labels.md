@@ -264,9 +264,18 @@ After you select a policy template, you can add or remove any types of sensitive
   
 ### Auto-apply labels to content with specific keywords
 
-You can auto-apply labels to content that satisfies certain conditions. The conditions available now support applying a label to content that contains specific words or phrases. You can refine your query by using search operators like AND, OR, and NOT. For more information on operators, see [Keyword queries and search conditions for Content Search](keyword-queries-and-search-conditions.md).
+You can auto-apply labels to content that satisfies certain conditions. The conditions now available support applying a label to content that contains specific words, phrases, or searchable properties. You can refine your query by using search operators like AND, OR, and NOT. For more information on operators and query syntax, see:
+
+- [Keyword queries and search conditions for Content Search](keyword-queries-and-search-conditions.md)
+- [Keyword Query Language (KQL) syntax reference](https://docs.microsoft.com/en-us/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference)
   
-Support for adding searchable properties (for example, **subject:** ) is coming soon. 
+Examples queries:
+
+- Exchange
+    - subject:"Quarterly Financials"
+- SharePoint and OneDrive for Business
+    - contenttype:contract
+    - site:`https://contoso.sharepoint.com/sites/teams/procurement` AND contenttype:contract
   
 Note that query-based labels use the search index to identify content.
   
