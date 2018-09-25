@@ -58,7 +58,7 @@ There are multiple ways to find the Message ID of the email that you want to rev
 
 Once you know the Message ID of the email you want to revoke, you can revoke the email by using the Set-OMEMessageRevocation cmdlet. 
 
-1. [Connect to Exchange Online Using Remote PowerShell](http://technet.microsoft.com/library/jj984289%28v=exchg.150%29.aspx).
+1. [Connect to Exchange Online Using Remote PowerShell](https://docs.microsoft.com/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell?view=exchange-ps).
     
 2. Run the Set-OMEMessageRevocation cmdlet as follows:
     
