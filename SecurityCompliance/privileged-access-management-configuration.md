@@ -237,7 +237,6 @@ Deny-ElevatedAccessRequest -RequestId a4bc1bdf-00a1-42b4-be65-b6c63d6be279 -Comm
 ```
 
 ## Delete a privileged access policy in Office 365
-
 You can delete a privileged access policy if it is no longer needed in your organization.
 
 ### Using the Microsoft 365 Admin Center
