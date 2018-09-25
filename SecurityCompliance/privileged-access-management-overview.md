@@ -65,10 +65,14 @@ For approved requests, the task is processed by the Exchange Management runspace
 ## Frequently asked questions
 
 ### What SKUs do I need to use privileged access in Office 365?
-Privileged access management in Office 365 is currently only available for customers with E5 and Advanced Compliance SKUs.
+Privileged access management is currently only available for customers with Office 365 E5 and Advanced Compliance SKUs.
 
 ### When will privileged access be available for Office 365 workloads beyond Exchange?
 We plan to offer this feature in other Office 365 workloads soon. When we’re ready to share a timeline, it will be available through the Office 365 roadmap.
+
+### My organization needs more than 30 privileged access polices, will this limit be increased?
+
+We're planning to increase the current limit of 30 privileged access policies per Office 365 organization soon.
 
 ### Do I need to be a Global Admin to manage privileged access in Office 365?
 You need to have Global Admin privilege to be able to manage privileged access in Office 365. Users who are included in an approvers’ group don't need to be a Global Admin to review and approve requests. 
