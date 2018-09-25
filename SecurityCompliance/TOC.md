@@ -51,6 +51,7 @@
 ### [Overview of labels](labels.md)
 ### [Overview of disposition reviews](disposition-reviews.md)
 ### [Overview of event-driven retention](event-driven-retention.md)
+### [Overview of file plan manager](file-plan-manager.md)
 ## [Manage inactive mailboxes](inactive-mailboxes-in-office-365.md)
 ### [Create and manage inactive mailboxes](create-and-manage-inactive-mailboxes.md)
 ### [Change the hold duration for an inactive mailbox](change-the-hold-duration-for-an-inactive-mailbox.md)
