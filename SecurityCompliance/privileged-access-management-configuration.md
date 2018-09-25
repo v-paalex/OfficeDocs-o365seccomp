@@ -97,6 +97,8 @@ Enable-ElevatedAccessControl -AdminGroup 'pamapprovers@fabrikam.onmicrosoft.com'
 
 ## Step 3 - Create an access policy
 
+You can create and configure up to 30 privileged access policies for your Office 365 organization.
+
 ### Using the Microsoft 365 Admin Center
 
 1. Sign into the [Microsoft 365 Admin Center](https://portal.office.com) using credentials for an admin account in your organization.
@@ -139,6 +141,8 @@ New-ElevatedAccessApprovalPolicy -Task 'Exchange\New-MoveRequest' -ApprovalType 
 
 ### Requesting elevation authorization to execute privileged tasks
 
+Requests for privileged access are valid for up to 24 hours after the request is submitted. If not approved or denied, the requests expire and access is not approved.
+
 #### Using the Microsoft 365 Admin Center
 
 1. Sign into the [Microsoft 365 Admin Center](https://portal.office.com) using your credentials.
@@ -155,7 +159,7 @@ New-ElevatedAccessApprovalPolicy -Task 'Exchange\New-MoveRequest' -ApprovalType 
 
     **Request for**: Select from the available policies
 
-    **Duration (hours)**: Number of hours of requested access
+    **Duration (hours)**: Number of hours of requested access. There isn't a limit on the number of hours that can be requested.
 
     **Comments**: Text field for comments related to your access request
 
@@ -230,6 +234,32 @@ Deny-ElevatedAccessRequest -RequestId <request id> -Comment '<denial comment>'
 Example:
 ```
 Deny-ElevatedAccessRequest -RequestId a4bc1bdf-00a1-42b4-be65-b6c63d6be279 -Comment '<denial comment>'
+```
+
+## Delete a privileged access policy in Office 365
+
+If needed, you can delete a privileged access policy if it is no longer needed.
+
+### Using the Microsoft 365 Admin Center
+
+1. Sign into the [Microsoft 365 Admin Center](https://portal.office.com) using credentials for an admin account in your organization.
+
+2. In the Admin Center, go to **Settings** > **Security & Privacy** > **Privileged access**.
+
+3. Select **Manage access policies and requests**.
+
+4. Select **Configure policies**.
+
+5. Select the policy you want to delete, then select **Remove Policy**.
+
+6. Select **Close**.
+
+### Using Exchange Management PowerShell
+
+Run the following command in Exchange Online Powershell to delete a privileged access policy:
+
+```
+Remove-ElevatedAccessApprovalPolicy -Identity <identity GUID of the policy you want to delete>
 ```
 
 ## Disable privileged access in Office 365
