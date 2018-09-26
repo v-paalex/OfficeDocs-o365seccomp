@@ -11,7 +11,7 @@ f1_keywords:
 ms.service: o365-administration
 localization_priority: Normal
 ms.collection: Strat_O365_IP
-search.appverid: MOE150
+search.appverid: MET150
 ms.assetid: ba688e0a-0fcb-4bd7-8e57-2b669564ea84
 description: "For administrators: Learn about using the Import service in the Office 365 Security &amp; Compliance Center to bulk-import email data (PST files)  to user mailboxes in Exchange Online. This topic provides FAQs and explains how the PST import process works."
 ---
