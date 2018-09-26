@@ -8,6 +8,7 @@ ms.audience: Admin
 ms.topic: overview
 ms.service: o365-administration
 localization_priority: Normal
+search.appverid: MET150
 ms.custom: Adm_O365
 ms.assetid: f30e2353-0bd6-41ed-8347-eea1fb8d2662
 description: "For Office 365, Azure, and Dynamics 365 Online regulatory compliance reports, to see third-party audits, find out how Microsoft keeps customer data safe, and how you can be compliant with ISO, HIPAA, NIST, FINRA, GDPR and FedRAMP when you use these online services."

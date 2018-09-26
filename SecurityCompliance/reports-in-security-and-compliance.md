@@ -10,9 +10,6 @@ f1_keywords:
 - 'ms.o365.cc.AuditingHelp'
 ms.service: o365-administration
 localization_priority: Normal
-search.appverid:
-- SPO160
-- MOE150
 ms.assetid: 7acd33ce-1ec8-49fb-b625-43bac7b58c5a
 description: "Use the Office 365 Security &amp; Compliance Center to get various reports for your SharePoint Online and Exchange Online organization, plus Azure Active Directory reports. 
 "

@@ -8,9 +8,7 @@ ms.audience: Admin
 ms.topic: article
 ms.service: o365-administration
 localization_priority: Normal
-search.appverid: 
-- MOE150
-- MET150
+search.appverid: MOE150
 ms.assetid: 04e9de2d-765b-457b-a98a-d0f60bfb13f2
 description: "You can change the the default size of PST files that are dowloaded to your computer when you export eDiscovery search results."
 ---
