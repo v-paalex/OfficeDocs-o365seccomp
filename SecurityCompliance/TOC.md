@@ -250,7 +250,7 @@
 ### [Deploy SharePoint Online sites for three tiers of protection](deploy-sharepoint-online-sites-for-three-tiers-of-protection.md)
 ### [Protect SharePoint Online files with Office 365 labels and DLP](protect-sharepoint-online-files-with-office-365-labels-and-dlp.md)
 ### [Protect SharePoint Online files with Azure Information Protection](protect-sharepoint-online-files-with-azure-information-protection.md)
-### [Secure SharePoint Online sites in a dev/test environment](secure-sharepoint-online-sites-in-a-dev-test-environment.md
+### [Secure SharePoint Online sites in a dev/test environment](secure-sharepoint-online-sites-in-a-dev-test-environment.md)
 ## [Isolated SharePoint Online team sites](isolated-sharepoint-online-team-sites.md)
 ### [Design an isolated SharePoint Online team site](design-an-isolated-sharepoint-online-team-site.md)
 ### [Deploy an isolated SharePoint Online team site](deploy-an-isolated-sharepoint-online-team-site.md)
