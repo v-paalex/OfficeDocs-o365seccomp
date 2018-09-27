@@ -254,7 +254,7 @@
 ## [Isolated SharePoint Online team sites](isolated-sharepoint-online-team-sites.md)
 ### [Design an isolated SharePoint Online team site](design-an-isolated-sharepoint-online-team-site.md)
 ### [Deploy an isolated SharePoint Online team site](deploy-an-isolated-sharepoint-online-team-site.md)
-### [Manage an isolated SharePoint Online team site](Enterprise/manage-an-isolated-sharepoint-online-team-site.md)
+### [Manage an isolated SharePoint Online team site](manage-an-isolated-sharepoint-online-team-site.md)
 ### [Isolated SharePoint Online team site dev/test environment](isolated-sharepoint-online-team-site-dev-test-environment.md)
 
 # Compliance solutions
