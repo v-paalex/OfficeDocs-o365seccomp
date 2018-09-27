@@ -245,8 +245,8 @@
 # Security solutions
 ## [Microsoft Security Guidance for Political Campaigns, Nonprofits, and Other Agile Organizations](microsoft-security-guidance-for-political-campaigns-nonprofits-and-other-agile-o.md)
 ### [Configure groups and users for a political campaign dev/test environment](configure-groups-and-users-for-a-political-campaign-dev-test-environment.md)
-### [Create team sites in a political campaign dev/test environment](https://docs.microsoft.com/office365/enterprise/create-team-sites-in-a-political-campaign-dev-test-environment)
-## [Secure SharePoint Online sites and files](https://docs.microsoft.com/Office365/Enterprise/secure-sharepoint-online-sites-and-files)
+### [Create team sites in a political campaign dev/test environment](https://create-team-sites-in-a-political-campaign-dev-test-environment.md)
+## [Secure SharePoint Online sites and files](secure-sharepoint-online-sites-and-files.md)
 ### [Deploy SharePoint Online sites for three tiers of protection](https://docs.microsoft.com/Office365/Enterprise/deploy-sharepoint-online-sites-for-three-tiers-of-protection)
 ### [Protect SharePoint Online files with Office 365 labels and DLP](https://docs.microsoft.com/Office365/Enterprise/protect-sharepoint-online-files-with-office-365-labels-and-dlp)
 ### [Protect SharePoint Online files with Azure Information Protection](https://docs.microsoft.com/Office365/Enterprise/protect-sharepoint-online-files-with-azure-information-protection)
