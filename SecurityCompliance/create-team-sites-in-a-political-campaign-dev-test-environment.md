@@ -414,9 +414,9 @@ To protect a document with Azure Information Protection and this new label, you 
   
 [Configure groups and users for a political campaign dev/test environment](configure-groups-and-users-for-a-political-campaign-dev-test-environment.md)
   
-[Cloud adoption Test Lab Guides (TLGs)](cloud-adoption-test-lab-guides-tlgs.md)
+[Cloud adoption Test Lab Guides (TLGs)](https://docs.microsoft.com/office365/enterprise/cloud-adoption-test-lab-guides-tlgs)
   
-[Cloud adoption and hybrid solutions](cloud-adoption-and-hybrid-solutions.md)
+[Cloud adoption and hybrid solutions](https://docs.microsoft.com/office365/enterprise/cloud-adoption-and-hybrid-solutions)
 
 
 

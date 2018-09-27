@@ -35,9 +35,9 @@ The configurations in this article align with Microsoft's recommendations for th
     
 For more information about these tiers and capabilities recommended for each tier, see the following resources. 
   
-- [Identity and Device Protection for Office 365](microsoft-cloud-it-architecture-resources.md#BKMK_O365IDP)
+- [Identity and Device Protection for Office 365](https://docs.microsoft.com/office365/enterprise/microsoft-cloud-it-architecture-resources#BKMK_O365IDP)
     
-- [File Protection Solutions in Office 365](microsoft-cloud-it-architecture-resources.md#BKMK_O365fileprotect)
+- [File Protection Solutions in Office 365](https://docs.microsoft.com/office365/enterprise/microsoft-cloud-it-architecture-resources#BKMK_O365fileprotect)
     
 ## Capability overview
 
@@ -185,9 +185,7 @@ For the steps to configure Azure Information Protection in this solution, see [P
 
 [Microsoft Security Guidance for Political Campaigns, Nonprofits, and Other Agile Organizations](microsoft-security-guidance-for-political-campaigns-nonprofits-and-other-agile-o.md)
   
-[Security solutions](security-solutions.md)
-  
-[Cloud adoption and hybrid solutions](cloud-adoption-and-hybrid-solutions.md)
+[Cloud adoption and hybrid solutions](https://docs.microsoft.com/office365/enterprise/cloud-adoption-and-hybrid-solutions)
   
 [Secure SharePoint Online sites in a dev/test environment](secure-sharepoint-online-sites-in-a-dev-test-environment.md)
 

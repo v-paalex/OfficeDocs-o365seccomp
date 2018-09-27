@@ -60,8 +60,6 @@ When you are ready to deploy an isolated SharePoint Online team site in producti
 [Design an isolated SharePoint Online team site](design-an-isolated-sharepoint-online-team-site.md)
   
 [Manage an isolated SharePoint Online team site](manage-an-isolated-sharepoint-online-team-site.md)
-  
-[Security solutions](security-solutions.md)
 
 [Deploy an isolated SharePoint Online team site](deploy-an-isolated-sharepoint-online-team-site.md)
 

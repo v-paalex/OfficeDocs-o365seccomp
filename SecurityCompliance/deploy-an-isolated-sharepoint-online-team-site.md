@@ -234,7 +234,6 @@ When you need to change site access group membership or create a document folder
   
 [Manage an isolated SharePoint Online team site](manage-an-isolated-sharepoint-online-team-site.md)
   
-[Security solutions](security-solutions.md)
 
 
 
