@@ -3,7 +3,7 @@ title: "Manage quarantined messages and files as an administrator in Office 365"
 ms.author: krowley
 author: kccross
 manager: laurawi
-ms.date: 5/19/2018
+ms.date: 09/05/2018
 ms.audience: Admin
 ms.topic: article
 ms.service: o365-administration
@@ -29,7 +29,7 @@ You must have admin permissions in Office 365 to work with quarantined messages 
   
 ## View your organization's quarantined messages
 
-1. Using a work or school account that has global administrator privileges in your Office 365organization, sign in to Office 365 and [go to the Security and Compliance Center](go-to-the-securitycompliance-center.md).
+1. Using a work or school account that has global administrator privileges in your Office 365 organization, sign into Office 365 and [go to the Security and Compliance Center](go-to-the-securitycompliance-center.md).
     
 2. In the list on the left, expand **Threat Management**, choose **Review**, and then choose **Quarantine**.
     
@@ -54,7 +54,7 @@ In addition, as an admin, you can choose to filter all messages for your organiz
   
 You can also filter your results to find specific messages. For tips, see [To filter results and find quarantined messages and files](manage-quarantined-messages-and-files.md#BKMK_AdvSearch) in this article. 
   
-After you find a specific quarantined message, click the message to view details about it, and take actions, like releasing the message to someone's inbox.
+After you find a specific quarantined message, click the message to view details about it, and take actions, like releasing the message to someone's mailbox.
   
 ## View your organization's quarantined files
 

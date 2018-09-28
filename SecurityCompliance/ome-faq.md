@@ -3,7 +3,7 @@ title: "Office 365 Message Encryption FAQ"
 ms.author: krowley
 author: kccross
 manager: laurawi
-ms.date: 7/23/2018
+ms.date: 09/27/2018
 ms.audience: ITPro
 ms.topic: overview
 ms.service: o365-administration
@@ -116,6 +116,10 @@ Yes. Use mail flow rules in Exchange Online to automatically encrypt a message b
 
 Currently you can only set up mail flow rules in Exchange Online. Encryption is currently not supported in DLP through the Security &amp; Compliance Center.
   
+## Can I open encrypted messages sent to a Shared Mailbox?
+
+Currently encrypted messages are not supported for a Shared Mailbox.
+
 ## Can I customize encrypted messages with my company branding?
 
 Yes! For information on customizing email messages and the OME portal, see Add your organization's brand to your encrypted messages. See [Add your organization's brand to your encrypted messages.](add-your-organization-brand-to-encrypted-messages.md)﻿
