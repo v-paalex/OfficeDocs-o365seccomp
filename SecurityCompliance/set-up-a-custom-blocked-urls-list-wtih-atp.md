@@ -3,7 +3,6 @@ title: "Set up a custom blocked URLs list using Office 365 ATP Safe Links"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 5/30/2018
 ms.audience: Admin
 ms.topic: article
 ms.service: o365-administration
@@ -51,9 +50,9 @@ Read this article to learn how to set up your organization's custom blocked URLs
     
 |**Example Entry**|**What It Does**|
 |:-----|:-----|
-|`contoso.com` or `\*contoso.com\*`  <br/> |Blocks the domain, subdomains, and paths, such as `https://www.contoso.com`, `http://sub.contoso.com`, and `http://contoso.com/abc`  <br/> |
+|`contoso.com` or `*contoso.com*`  <br/> |Blocks the domain, subdomains, and paths, such as `https://www.contoso.com`, `http://sub.contoso.com`, and `http://contoso.com/abc`  <br/> |
 |`http://contoso.com/a`  <br/> |Blocks a site `http://contoso.com/a` but not additional subpaths like `http://contoso.com/a/b`  <br/> |
-|`http://contoso.com/a\*`  <br/> |Blocks a site `http://contoso.com/a` and additional subpaths like `http://contoso.com/a/b`  <br/> |
+|`http://contoso.com/a*`  <br/> |Blocks a site `http://contoso.com/a` and additional subpaths like `http://contoso.com/a/b`  <br/> |
    
 5. When you are finished adding URLs, in the lower right corner of the screen, choose **Save**.
     
