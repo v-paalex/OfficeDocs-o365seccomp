@@ -262,28 +262,15 @@ After you select a policy template, you can add or remove any types of sensitive
     
 ![Options for identifying sensitive information types](media/de255881-f596-4c8d-8359-e974e3a0819a.png)
   
-### Auto-apply labels to content with keywords or searchable properties
+### Auto-apply labels to content with keywords
 
-You can auto-apply labels to content that satisfies certain conditions. The conditions now available support applying a label to content that contains specific words, phrases, or values of searchable properties. You can refine your query by using search operators like AND, OR, and NOT. 
+You can auto-apply labels to content that satisfies certain conditions. The conditions now available support applying a label to content that contains specific words or phrases. You can refine your query by using search operators like AND, OR, and NOT. 
 
 For more information on query syntax, see:
 
 - [Keyword Query Language (KQL) syntax reference](https://docs.microsoft.com/en-us/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference)
 
-Query-based labels use the search index to identify content. For more information on valid searchable properties, see:
-
-- [Keyword queries and search conditions for Content Search](keyword-queries-and-search-conditions.md)
-- [Overview of crawled and managed properties in SharePoint Server](https://docs.microsoft.com/en-us/SharePoint/technical-reference/crawled-and-managed-properties-overview)
-  
-Examples queries:
-
-- Exchange
-    - subject:"Quarterly Financials"
-    - recipients:garthf<!--nolink-->@contoso.com
-
-- SharePoint and OneDrive for Business
-    - contenttype:contract
-    - site:https<!--nolink-->://contoso.sharepoint.com/sites/teams/procurement AND contenttype:contract
+Query-based labels use the search index to identify content.
   
 ![Query editor](media/ac5b8e5e-7453-4ec7-905c-160df57298d3.png)
   
