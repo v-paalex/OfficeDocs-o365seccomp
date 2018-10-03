@@ -696,7 +696,7 @@ As previously explained, the retention period for audit records depends on your 
 - **Office 365 E5** - Audit records are retained for 365 days (one year). Retaining audit records for one year is also available for organizations that have an E3 subscription and an Office 365 Advanced Compliance add-on subscription.
 
      > [!NOTE]
-        > The one-year retention period for audit records is currently available only to organizations that are enrolled in the Office 365 Preview program.
+     > The one-year retention period for audit records is currently available only to organizations that are enrolled in the Office 365 Preview program.
 
 **Can I access the auditing data programmatically?**
 
