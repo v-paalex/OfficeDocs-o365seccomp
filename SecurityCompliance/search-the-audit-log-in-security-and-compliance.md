@@ -67,7 +67,7 @@ Be sure to read the following items before you start searching the Office 365 au
     > [!IMPORTANT]
     > If you assign a user the View-Only Audit Logs or Audit Logs role on the **Permissions** page in the Security &amp; Compliance Center, they won't be able to search the Office 365 audit log. You have to assign the permissions in Exchange Online. This is because the underlying cmdlet used to search the audit log is an Exchange Online cmdlet. 
   
-- When an audited activity, an audit record is generated and stored in the Office 365 audit log for your organization. The length of time that an audit record is retained (and searchable) depends on your Office 365 subscription.
+- When an audited activity is performed by a user or admin, an audit record is generated and stored in the Office 365 audit log for your organization. The length of time that an audit record is retained (and searchable in the audit log) depends on your Office 365 subscription.
 
      - **Office 365 E3** - Audit records are retained for 90 days. That means you can search the audit log for activities that were performed within the last 90 days.
 
