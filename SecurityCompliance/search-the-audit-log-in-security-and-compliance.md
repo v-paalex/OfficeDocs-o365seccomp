@@ -46,9 +46,9 @@ Need to find if a user viewed a specific document or purged an item from their m
 
 - User and admin activity in Dynamics 365
     
-- User and admin activity in Microsoft Flow
-
 - User and admin activity in Yammer
+ 
+- User and admin activity in Microsoft Flow
     
 - User and admin activity in Microsoft Stream
     
@@ -67,6 +67,15 @@ Be sure to read the following items before you start searching the Office 365 au
     > [!IMPORTANT]
     > If you assign a user the View-Only Audit Logs or Audit Logs role on the **Permissions** page in the Security &amp; Compliance Center, they won't be able to search the Office 365 audit log. You have to assign the permissions in Exchange Online. This is because the underlying cmdlet used to search the audit log is an Exchange Online cmdlet. 
   
+- When an audited activity, an audit record is generated and stored in the Office 365 audit log for your organization. The length of time that an audit record is retained (and searchable) depends on your Office 365 subscription.
+
+     - **Office 365 E3** - Audit records are retained for 90 days. That means you can search the audit log for activities that were performed within the last 90 days.
+
+     - **Office 365 E5** - Audit records are retained for 365 days (one year). That means you can search the audit log for activities that were performed within the last year. Retaining audit records for one year is also available for organizations that have an E3 subscription and an Office 365 Advanced Compliance add-on subscription.
+
+        > [!NOTE]
+        > The one-year retention period for audit records is currently available as part of the Office 365 Preview program and is only available to organizations with an E5 subscription that are enrolled in the Preview program. Also, audit records for activities that were performed before October 2018 will still be retained for only 90 days. Starting in October 2018, new audit records will be retained for one year for organizations with an E5 subscription or that have an E3 subscription and an Advanced Compliance add-on subscription.
+
 - If you want to turn off audit log search in Office 365 for your organization, you can run the following command in remote PowerShell connected to your Exchange Online organization:
     
   ```
@@ -84,8 +93,6 @@ Be sure to read the following items before you start searching the Office 365 au
 - As previously stated, the underlying cmdlet used to search the audit log is an Exchange Online cmdlet, which is **Search-UnifiedAuditLog**. That means you can use this cmdlet to search the Office 365 audit log instead of using the **Audit log search** page in the Security &amp; Compliance Center. You have to run this cmdlet in remote PowerShell connected to your Exchange Online organization. For more information, see [Search-UnifiedAuditLog](https://go.microsoft.com/fwlink/p/?linkid=834776).
     
 - If you want to programmatically download data from the Office 365 audit log, we recommend that you use the Office 365 Management Activity API instead of using a PowerShell script. The Office 365 Management Activity API is a REST web service that you can use to develop operations, security, and compliance monitoring solutions for your organization. For more information, see [Office 365 Management Activity API reference](https://go.microsoft.com/fwlink/?linkid=852309).
-    
-- You can search the Office 365 audit log for activities that were performed within the last 90 days.
     
 - It can take up to 30 minutes or up to 24 hours after an event occurs for the corresponding audit log entry to be displayed in the search results. The following table shows the time it takes for the different services in Office 365.
     
@@ -283,7 +290,8 @@ Click one of the following links to go to a specific table.
 |[Sway activities](#sway-activities) <br/> |[User administration activities](#user-administration-activities) <br/> |[Azure AD group administration activities](#azure-ad-group-administration-activities) <br/> |
 |[Application administration activities](#application-administration-activities) <br/> |[Role administration activities](#role-administration-activities) <br/> |[Directory administration activities](#directory-administration-activities) <br/> |
 |[eDiscovery activities](#ediscovery-activities) <br/> |[Power BI activities](#power-bi-activities) <br/> |[Microsoft Teams activities](#microsoft-teams-activities) <br/> |
-|[Yammer activities](#yammer-activities) <br/> |[Microsoft Stream](#microsoft-stream) <br/> |[Exchange admin audit log](#exchange-admin-audit-log) <br/> |
+|[Yammer activities](#yammer-activities) <br/> |[Microsoft Flow](#microsoft-flow) <br/> |[Microsoft Stream](#microsoft-stream) <br/>|
+|[Exchange admin audit log](#exchange-admin-audit-log) <br/> |
    
   
 ### File and page activities
@@ -636,6 +644,11 @@ The following table lists the user and admin activities in Yammer that are logge
 |Updated file name  <br/> |FileUpdateName  <br/> |User changes the name of a file.  <br/> |
 |Viewed file  <br/> |FileVisited  <br/> |User views a file.  <br/> |
    
+### Microsoft Flow
+
+You can search the audit log for activities in Microsoft Flow. These activities include creating, editing and deleting flows, and changing flow permissions. For information about auditing for Flow activities, see the blog  [Microsoft Flow audit events now available in Office 365 Security & Compliance Center](https://flow.microsoft.com/blog/security-and-compliance-center).
+
+
 ### Microsoft Stream
   
 You can search the audit log for activities in Microsoft Stream. These activities include video activities performed by users, group channel activities, and admin activities such as managing users, managing organization settings, and exporting reports. For a description of these activities, see the "Activities logged in Microsoft Stream" section in [Audit Logs in Microsoft Stream](https://docs.microsoft.com/stream/audit-logs).
@@ -674,9 +687,16 @@ See the [Audited activities](#audited-activities) section in this article for a 
 
 Most auditing data is available within 30 minutes but it may take up to 24 hours after an event occurs for the corresponding audit log entry to be displayed in the search results. See the table in the [Before you begin](#before-you-begin) section of this article that shows the time it takes for events in the different Office 365 services to be available.
 
-**How long are the auditing records retained for?**
+**How long are the audit records retained for?**
 
-Currently audit log records are retained for 90 days. Microsoft is actively working on a plan to increase this limit. 
+As previously explained, the retention period for audit records depends on your organization's Office 365 subscription.  
+
+- **Office 365 E3** - Audit records are retained for 90 days.
+
+- **Office 365 E5** - Audit records are retained for 365 days (one year). Retaining audit records for one year is also available for organizations that have an E3 subscription and an Office 365 Advanced Compliance add-on subscription.
+
+     > [!NOTE]
+        > The one-year retention period for audit records is currently available only to organizations that are enrolled in the Office 365 Preview program.
 
 **Can I access the auditing data programmatically?**
 
