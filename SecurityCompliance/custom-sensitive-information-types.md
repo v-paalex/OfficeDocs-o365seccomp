@@ -1,5 +1,5 @@
 ---
-title: "Create custom sensitive information types in the Office 365 Security & Compliance Center"
+title: "Custom sensitive information types in the Office 365 Security & Compliance Center"
 ms.author: stephow
 author: stephow-MSFT
 manager: laurawi
@@ -13,29 +13,37 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: 82c382a5-b6db-44fd-995d-b333b3c7fc30
-description: "Learn how to create custom sentisive information types for DLP in the Office 365 Security & Compliance Center."
+description: "Learn about custom sentisive information types for DLP in the Office 365 Security & Compliance Center."
 ---
 
-# Create a custom sensitive information type
+# Custom sensitive information types in the Office 365 Security & Compliance Center
 
 Data loss prevention (DLP) in Office 365 includes many [sensitive information types](what-the-sensitive-information-types-look-for.md) that are ready for you to use in your DLP policies. These built-in types can help identify and protect credit card numbers, bank account numbers, passport numbers, and more. 
-  
-But if you need to identify and protect a different type of sensitive information (for example, an employee ID that uses a format specific to your organization) you can create a custom sensitive information type. A sensitive information type is defined in an XML file called a _rule package_.
-  
-This topic shows you how to create an XML file that defines your own custom sensitive information type. You need to know how to create a regular expression. As an example, this topic creates a custom sensitive information type that identifies an employee ID. You can use this example XML as a starting point for your own XML file.
-  
-After you've created a well-formed XML file, you can upload it to Office 365 by using Office 365 PowerShell. Then you're ready to use your custom sensitive information type in your DLP policies and test that it's detecting the sensitive information as you intended.
+
+But if you need to identify and protect a different type of sensitive information (for example, an employee ID that uses a format specific to your organization) you can create a custom sensitive information type.
+
+You have two options for creating custom sensitive information types:
+
+- Use the Office 365 Security & Compliance Center. The sensitive information types may contain only one pattern, and they're all added to the same rule package named Microsoft.SCCManaged.CustomRulePack. For more information, see [].
+
+- Create an XML file (called a _rule package_) and use Office 365 Security & Compliance Center PowerShell to import the rule package. The sensisitve information types may contain multiple patterns, and you can add different sensitive information types to different rule packages. For more information, see [].
+
+The key differences between these 
+
+The rest of this topic explains the elements of the XML file that defines your own custom sensitive information type. You need to know how to create a regular expression. As an example, this topic explores a custom sensitive information type that identifies an employee ID. You can use this example XML as a starting point for your own XML file.
+
+Then you're ready to use your custom sensitive information type in your DLP policies and test that it's detecting the sensitive information as you intended.
 
 ## Important disclaimer
 
-Due to the variances in customer environments and content match requirements, Microsoft Support cannot assist in providing custom content-matching definitions; e.g., defining custom classifications or regular expression (also known as RegEx) patterns. For custom content-matching development, testing, and debugging, Office 365 customers will need to rely upon internal IT resources, or use an external consulting resource such as Microsoft Consulting Services (MCS). Support engineers can provide limited support for the feature, but cannot provide assurances that any custom content-matching development will fulfill the customer's requirements or obligations.  As an example of the type of support that can be provided, sample regular expression patterns may be provided for testing purposes. Or, support can assist with troubleshooting an existing RegEx pattern which is not triggering as expected with a single specific content example.
+Due to the variances in customer environments and content match requirements, Microsoft Support cannot assist in providing custom content-matching definitions; e.g., defining custom classifications or regular expression (also known as RegEx) patterns. For custom content-matching development, testing, and debugging, Office 365 customers will need to rely upon internal IT resources, or use an external consulting resource such as Microsoft Consulting Services (MCS). Support engineers can provide limited support for the feature, but cannot provide assurances that any custom content-matching development will fulfill the customer's requirements or obligations. As an example of the type of support that can be provided, sample regular expression patterns may be provided for testing purposes. Or, support can assist with troubleshooting an existing RegEx pattern which is not triggering as expected with a single specific content example.
 
  For additional information on the .NET RegEx engine that's used for processing the text, see the documentation on [Regular Expressions in .NET](https://docs.microsoft.com/dotnet/standard/base-types/regular-expressions).
-    
+
 ## Sample XML of a rule package
 
-Here's the sample XML of the rule package that we'll create in this topic. Elements and attributes are explained in the sections below.
-  
+Here's the sample XML of the rule package that we'll explore in this topic. Elements and attributes are explained in the sections below.
+
 ```
 <?xml version="1.0" encoding="UTF-16"?>
 <RulePackage xmlns="http://schemas.microsoft.com/office/2011/mce">
@@ -46,9 +54,7 @@ Here's the sample XML of the rule package that we'll create in this topic. Eleme
 		<LocalizedDetails langcode="en-us">
 			<PublisherName>Contoso</PublisherName>
 			<Name>Employee ID Custom Rule Pack</Name>
-			<Description>
-			This rule package contains the custom Employee ID entity.
-			</Description>
+			<Description>This rule package contains the custom Employee ID entity.</Description>
 		</LocalizedDetails>
 	</Details>
 </RulePack>
@@ -121,169 +127,175 @@ Here's the sample XML of the rule package that we'll create in this topic. Eleme
 ## What are your key requirements? [Rule, Entity, Pattern elements]
 
 Before you get started, it's helpful to understand the basic structure of the XML schema for a rule, and how you can use this structure to define your custom sensitive information type so that it will identify the right content.
-  
+
 A rule defines one or more entities (sensitive information types), and each entity defines one or more patterns. A pattern is what DLP looks for when it evaluates content such as email and documents.
-  
+
 (A quick note on terminology - if you're familiar with DLP policies, you know that a policy contains one or more rules comprised of conditions and actions. However, in this topic, the XML markup uses rule to mean the patterns that define an entity, also known as a sensitive information type. So in this topic, when you see rule, think entity or sensitive information type, not conditions and actions.)
-  
+
 ### Simplest scenario: entity with one pattern
 
 Here's the simplest scenario. You want your DLP policy to identify content that contains your organization's employee ID, which is formatted as a nine-digit number. So the pattern refers to a regular expression contained in the rule that identifies nine-digit numbers. Any content containing a nine-digit number satisfies the pattern.
-  
+
 ![Diagram of entity with one pattern](media/4cc82dcf-068f-43ff-99b2-bac3892e9819.png)
-  
+
 However, while simple, this pattern may identify many false positives by matching content that contains any nine-digit number that is not necessarily an employee ID.
-  
+
 ### More common scenario: entity with multiple patterns
 
 For this reason, it's more common to define an entity by using more than one pattern, where the patterns identify supporting evidence (such as a keyword or date) in addition to the entity (such as a nine-digit number).
-  
+
 For example, to increase the likelihood of identifying content that contains an employee ID, you can define another pattern that also identifies a hire date, and define yet another pattern that identifies both a hire date and a keyword (such as "employee ID"), in addition to the nine-digit number.
-  
+
 ![Diagram of entity with multiple patterns](media/c8dc2c9d-00c6-4ebc-889a-53b41a90024a.png)
-  
+
 Note a couple of important aspects of this structure:
-  
+
 - Patterns that require more evidence have a higher confidence level. This is useful because when you later use this sensitive information type in a DLP policy, you can use more restrictive actions (such as block content) with only the higher-confidence matches, and you can use less restrictive actions (such as send notification) with the lower-confidence matches.
-    
-- The supporting IdMatch and Match elements reference regexes and keywords that are actually children of the Rule element, not the Pattern. These supporting elements are referenced by the Pattern but included in the Rule. This means that a single definition of a supporting element, like a regular expression or a keyword list, can be referenced by multiple entities and patterns.
-    
+
+- The supporting IdMatch and Match elements reference RegExes and keywords that are actually children of the Rule element, not the Pattern. These supporting elements are referenced by the Pattern but included in the Rule. This means that a single definition of a supporting element, like a regular expression or a keyword list, can be referenced by multiple entities and patterns.
+
 ## What entity do you need to identify? [Entity element, id attribute]
 
 An entity is a sensitive information type, such as a credit card number, that has a well-defined pattern. Each entity has a unique GUID as its ID.
-  
+
 ### Name the entity and generate its GUID
 
 Add the Rules and Entity elements. Then add a comment that contains the name of your custom entity - in this example, Employee ID. Later, you'll add the entity name to the localized strings section, and that name is what appears in the UI when you create a DLP policy.
-  
-Next, generate a GUID for your entity. There are several ways to generate GUIDs, but you can do it easily in PowerShell by typing [guid]::NewGuid(). Later, you'll also add the entity GUID to the localized strings section.
-  
+
+Next, generate a GUID for your entity. There are several ways to generate GUIDs, but you can do it easily in Windows PowerShell by running the following command:
+
+```
+[guid]::NewGuid()
+```
+
+Later, you'll also add the entity GUID to the localized strings section.
+
 ![XML markup showing Rules and Entity elements](media/c46c0209-0947-44e0-ac3a-8fd5209a81aa.png)
-  
+
 ## What pattern do you want to match? [Pattern element, IdMatch element, Regex element]
 
-The pattern contains the list of what the sensitive information type is looking for. This can include regexes, keywords, and built-in functions (which perform tasks like running regexes to find dates or addresses). Sensitive information types can have multiple patterns with unique confidences.
-  
+The pattern contains the list of what the sensitive information type is looking for. This can include RegExes, keywords, and built-in functions (which perform tasks like running RegExes to find dates or addresses). Sensitive information types can have multiple patterns with unique confidences.
+
 What all of the below patterns have in common is that they all reference the same regular expression, which looks for a nine-digit number (\d{9}) surrounded by white space (\s) … (\s). This regular expression is referenced by the IdMatch element and is the common requirement for all patterns that look for the Employee ID entity. IdMatch is the identifier that the pattern is to trying to match, such as Employee ID or credit card number or social security number. A Pattern element must have exactly one IdMatch element.
-  
-![XML markup showing multiple Pattern elements referencing single Regex element](media/8f3f497b-3b8b-4bad-9c6a-d9abf0520854.png)
-  
+
+![XML markup showing multiple Pattern elements referencing single RegEx element](media/8f3f497b-3b8b-4bad-9c6a-d9abf0520854.png)
+
 When satisfied, a pattern returns a count and confidence level, which you can use in the conditions in your DLP policy. When you add a condition for detecting a sensitive information type to a DLP policy, you can edit the count and confidence level as shown here. Confidence level (also called match accuracy) is explained later in this topic.
-  
+
 ![Instance count and match accuracy options](media/11d0b51e-7c3f-4cc6-96d8-b29bcdae1aeb.png)
-  
-When you create your regular expression, keep in mind that there are potential issues to be aware of. For example, if you write and upload a regex that identifies too much content, this can impact performance. To learn more about these potential issues, see the later section [Potential validation issues to be aware of](#potential-validation-issues-to-be-aware-of).
-  
+
+When you create your regular expression, keep in mind that there are potential issues to be aware of. For example, if you write and upload a RegEx that identifies too much content, this can impact performance. To learn more about these potential issues, see the later section [Potential validation issues to be aware of](#potential-validation-issues-to-be-aware-of).
+
 ## Do you want to require additional evidence? [Match element, minCount attribute]
 
-In addition to the IdMatch, a pattern can use the Match element to require additional supporting evidence, such as a keyword, regex, date, or address.
-  
+In addition to the IdMatch, a pattern can use the Match element to require additional supporting evidence, such as a keyword, RegEx, date, or address.
+
 A Pattern can include multiple Match elements; they can be included directly in the Pattern element or combined by using the Any element. Match elements are joined by an implicit AND operator; all Match elements must be satisfied for the pattern to be matched. You can use the Any element to introduce AND or OR operators (more on that in a later section).
-  
+
 You can use the optional minCount attribute to specify how many instances of a match need to be found for each of the Match elements. For example, you can specify that a pattern is satisfied only when at least two keywords from a keyword list are found.
-  
+
 ![XML markup showing Match element with minOccurs attribute](media/607f6b5e-2c7d-43a5-a131-a649f122e15a.png)
-  
+
 ### Keywords [Keyword, Group, and Term elements, matchStyle and caseSensitive attributes]
 
 When you identify sensitive information, like an employee ID, you often want to require keywords as corroborative evidence. For example, in addition to matching a nine-digit number, you may want to look for words like "card", "badge", or "ID". To do this, you use the Keyword element. The Keyword element has an id attribute that can be referenced by multiple Match elements in multiple patterns or entities.
-  
+
 Keywords are included as a list of Term elements in a Group element. The Group element has a matchStyle attribute with two possible values:
-  
+
 - **matchStyle="word"** Word match identifies whole words surrounded by white space or other delimiters. You should always use word unless you need to match parts of words or match words in Asian languages. 
-    
+
 - **matchStyle="string"** String match identifies strings no matter what they're surrounded by. For example, "id" will match "bid" and "idea". Use string only when you need to match Asian words or if your keyword may be included as part of other strings. 
-    
+
 Finally, you can use the caseSensitive attribute of the Term element to specify that the content must match the keyword exactly, including lower- and upper-case letters.
-  
+
 ![XML markup showing Match elements referencing keywords](media/e729ba27-dec6-46f4-9242-584c6c12fd85.png)
-  
+
 ### Regular expressions [Regex element]
 
-In this example, the employee ID entity already uses the IdMatch element to reference a regex for the pattern - a nine-digit number surrounded by whitespace. In addition, a pattern can use a Match element to reference an additional Regex element to identify corroborative evidence, such as a five- or nine-digit number in the format of a US zip code.
-  
+In this example, the employee ID entity already uses the IdMatch element to reference a Regex for the pattern: a nine-digit number surrounded by whitespace. In addition, a pattern can use a Match element to reference an additional Regex element to identify corroborative evidence, such as a five- or nine-digit number in the format of a US zip code.
+
 ### Additional patterns such as dates or addresses [built-in functions]
 
 In addition to the built-in sensitive information types, DLP also includes built-in functions that can identify corroborative evidence such as a US date, EU date, expiration date, or US address. DLP does not support uploading your own custom functions, but when you create a custom sensitive information type, your entity can reference the built-in functions.
-  
-For example, an employee ID badge has a hire date on it, so this custom entity can use the built-in function  `Func_us_date` to identify a date in the format commonly used in the US. 
-  
+
+For example, an employee ID badge has a hire date on it, so this custom entity can use the built-in function `Func_us_date` to identify a date in the format commonly used in the US. 
+
 For more information, see [What the DLP functions look for](what-the-dlp-functions-look-for.md).
-  
+
 ![XML markup showing Match element referencing built-in function](media/dac6eae3-9c52-4537-b984-f9f127cc9c33.png)
-  
+
 ## Different combinations of evidence [Any element, minMatches and maxMatches attributes]
 
 In a Pattern element, all IdMatch and Match elements are joined by an implicit AND operator - all of the matches must be satisfied before the pattern can be satisfied. However, you can create more flexible matching logic by using the Any element to group Match elements. For example, you can use the Any element to match all, none, or an exact subset of its children Match elements.
-  
+
 The Any element has optional minMatches and maxMatches attributes that you can use to define how many of the children Match elements must be satisfied before the pattern is matched. Note that these attributes define the number of Match elements that must be satisfied, not the number of instances of evidence found for the matches. To define a minimum number of instances for a specific match, such as two keywords from a list, use the minCount attribute for a Match element (see above).
-  
+
 ### Match at least one child Match element
 
 If you want to require that only a minimum number of Match elements must be met, you can use the minMatches attribute. In effect, these Match elements are joined by an implicit OR operator. This Any element is satisfied if a US-formatted date or a keyword from either list is found.
-  
+
 ![XML markup showing Any element with minMatches attribute](media/385db1b1-571b-4a05-81b3-db28f5099c17.png)
-  
+
 ### Match an exact subset of any children Match elements
 
 If you want to require that an exact number of Match elements must be met, you can set minMatches and maxMatches to the same value. This Any element is satisfied only if exactly one date or keyword is found - any more than that, and the pattern won't be matched.
-  
+
 ![XML markup showing Any element wtih minMatches and maxMatches attributes](media/97b10002-7781-42e8-ac5a-20ad8c5a887e.png)
-  
+
 ### Match none of children Match elements
 
 If you want to require the absence of specific evidence for a pattern to be satisfied, you can set both minMatches and maxMatches to 0. This can be useful if you have a keyword list or other evidence that are likely to indicate a false positive.
-  
+
 For example, the employee ID entity looks for the keyword "card" because it might refer to an "ID card". However, if card appears only in the phrase "credit card", "card" in this content is unlikely to mean "ID card". So you can add "credit card" as a keyword to a list of terms that you want to exclude from satisfying the pattern.
-  
+
 ![XML markup showing maxMatches attribute value of zero](media/f81d44e5-3db8-48a8-8919-f483a386afdf.png)
-  
+
 ## How close to the entity must the other evidence be? [patternsProximity attribute]
 
 Your sensitive information type is looking for a pattern that represents an employee ID, and as part of that pattern it's also looking for corroborative evidence like a keyword such as "ID". It makes sense that the closer together this evidence is, the more likely the pattern is to be an actual employee ID. You can determine how close other evidence in the pattern must be to the entity by using the required patternsProximity attribute of the Entity element.
-  
+
 ![XML markup showing patternsProximity attribute](media/e97eb7dc-b897-4e11-9325-91c742d9839b.png)
-  
+
 For each pattern in the entity, the patternsProximity attribute value defines the distance (in Unicode characters) from the IdMatch location for all other Matches specified for that Pattern. The proximity window is anchored by the IdMatch location, with the window extending to the left and right of the IdMatch.
-  
+
 ![Diagram of proximity window](media/b593dfd1-5eef-4d79-8726-a28923f7c31e.png)
-  
+
 The example below illustrates how the proximity window affects the pattern matching where IdMatch element for the employee ID custom entity requires at least one corroborating match of keyword or date. Only ID1 matches because for ID2 and ID3, either no or only partial corroborating evidence is found within the proximity window.
-  
+
 ![Diagram of corroborative evidence and proximity window](media/dc68e38e-dfa1-45b8-b204-89c8ba121f96.png)
-  
+
 Note that for email, the message body and each attachment are treated as separate items. This means that the proximity window does not extend beyond the end of each of these items. For each item (attachment or body), both the idMatch and corroborative evidence needs to reside in that item.
-  
+
 ## What are the right confidence levels for different patterns? [confidenceLevel attribute, recommendedConfidence attribute]
 
 The more evidence that a pattern requires, the more confidence you have that an actual entity (such as employee ID) has been identified when the pattern is matched. For example, you have more confidence in a pattern that requires a nine-digit ID number, hire date, and keyword in close proximity, than you do in a pattern that requires only a nine-digit ID number.
-  
-The Pattern element has a required confidenceLevel attribute. You can think of the value of confidenceLevel (an integer between 1 and 100) as a unique ID for each pattern in an entity - the patterns in an entity must have different confidence levels that you assign. The precise value of the integer doesn't matter - simply pick numbers that make sense to your compliance team. After you upload your custom sensitive information type and then create a DLP policy, you can reference these confidence levels in the conditions of the rules that you create.
-  
-![XML markup showing Pattern elements with different values for confidenceLevel attribute](media/301e0ba1-2deb-4add-977b-f6e9e18fba8b.png)
-  
-In addition to confidenceLevel for each Pattern, the Entity has a recommendedConfidence attribute. The recommended confidence attribute can be thought of as the default confidence level for the rule. When you create a rule in a DLP policy, if you don't specify a confidence level for the rule to use, that rule will match based on the recommended confidence level for the entity.
-  
-## Do you want to support other languages in the UI of the Security &amp; Compliance Center? [LocalizedStrings element]
 
-If your compliance team uses the Office 365 Security &amp; Compliance Center to create DLP policies in different locales and in different languages, you can provide localized versions of the name and description of your custom sensitive information type. When your compliance team uses Office 365 in a language that you support, they'll see the localized name in the UI.
-  
+The Pattern element has a required confidenceLevel attribute. You can think of the value of confidenceLevel (an integer between 1 and 100) as a unique ID for each pattern in an entity - the patterns in an entity must have different confidence levels that you assign. The precise value of the integer doesn't matter - simply pick numbers that make sense to your compliance team. After you upload your custom sensitive information type and then create a DLP policy, you can reference these confidence levels in the conditions of the rules that you create.
+
+![XML markup showing Pattern elements with different values for confidenceLevel attribute](media/301e0ba1-2deb-4add-977b-f6e9e18fba8b.png)
+
+In addition to confidenceLevel for each Pattern, the Entity has a recommendedConfidence attribute. The recommended confidence attribute can be thought of as the default confidence level for the rule. When you create a rule in a DLP policy, if you don't specify a confidence level for the rule to use, that rule will match based on the recommended confidence level for the entity.
+
+## Do you want to support other languages in the UI of the Security & Compliance Center? [LocalizedStrings element]
+
+If your compliance team uses the Office 365 Security & Compliance Center to create DLP policies in different locales and in different languages, you can provide localized versions of the name and description of your custom sensitive information type. When your compliance team uses Office 365 in a language that you support, they'll see the localized name in the UI.
+
 ![Instance count and match accuracy options](media/11d0b51e-7c3f-4cc6-96d8-b29bcdae1aeb.png)
-  
+
 The Rules element must contain a LocalizedStrings element, which contains a Resource element that references the GUID of your custom entity. In turn, each Resource element contains one or more Name and Description elements that each use the langcode attribute to provide a localized string for a specific language.
-  
+
 ![XML markup showing contents of LocalizedStrings element](media/a96fc34a-b93d-498f-8b92-285b16a7bbe6.png)
-  
-Note that you use localized strings only for how your custom sensitive information type appears in the UI of the Security &amp; Compliance Center. You can't use localized strings to provide different localized versions of a keyword list or regular expression.
-  
+
+Note that you use localized strings only for how your custom sensitive information type appears in the UI of the Security & Compliance Center. You can't use localized strings to provide different localized versions of a keyword list or regular expression.
+
 ## Other rule package markup [RulePack GUID]
 
 Finally, the beginning of each RulePackage contains some general information that you need to fill in. You can use the following markup as a template and replace the ". . ." placeholders with your own info.
-  
-Most importantly, you'll need to generate a GUID for the RulePack. Above, you generated a GUID for the entity; this is a second GUID for the RulePack. There are several ways to generate GUIDs, but you can do it easily in PowerShell by typing [guid]::NewGuid().
-  
+
+Most importantly, you'll need to generate a GUID for the RulePack. Earlier, you generated a GUID for the entity, but this is a second, unique GUID for the RulePack itself. There are several ways to generate GUIDs, but you can do it easily in PowerShell by typing [guid]::NewGuid().
+
 The Version element is also important. When you upload your rule package for the first time, Office 365 notes the version number. Later, if you update the rule package and upload a new version, make sure to update the version number or Office 365 won't deploy the rule package.
-  
+
 ```
 <?xml version="1.0" encoding="utf-16"?>
 <RulePackage xmlns="http://schemas.microsoft.com/office/2011/mce">
@@ -303,101 +315,219 @@ The Version element is also important. When you upload your rule package for the
 	. . .
  </Rules>
 </RulePackage>
-
 ```
 
 When complete, your RulePack element should look like this.
-  
+
 ![XML markup showing RulePack element](media/fd0f31a7-c3ee-43cd-a71b-6a3813b21155.png)
-  
-## Changes for Exchange Online
 
-Previously, you might have used Exchange Online PowerShell to import your custom sensitive information types for DLP. Now your custom sensitive information types can be used in both the Exchange Admin Center and the Security &amp; Compliance Center. As part of this improvement, you should use Security &amp; Compliance Center PowerShell to import your custom sensitive information types - you can't import them from the Exchange PowerShell anymore. Your custom sensitive information types will continue to work just like before; however, it may take up to one hour for changes made to custom sensitive information types in the Security &amp; Compliance Center to appear in the Exchange Admin Center.
-  
-Note that in the Security &amp; Compliance Center, you use the  `DlpSensitiveInformationTypeRulePackage` cmdlet to upload a rule package. Previously, in the Exchange Admin Center, you used the  `ClassificationRuleCollection` cmdlet. 
-  
-## Upload your rule package
+## What do you need to know before you begin?
 
-To upload your rule package, do the following.
-  
-1. Save it as an .xml file with Unicode encoding.
-    
-2. [Connect to the Office 365 Security &amp; Compliance Center using remote PowerShell](http://go.microsoft.com/fwlink/?LinkID=799771&amp;clcid=0x409)
-    
-3. In the Security &amp; Compliance Center PowerShell, type New-DlpSensitiveInformationTypeRulePackage -FileData (Get-Content -Path "C:\custompath\MyNewRulePack.xml" -Encoding Byte).
-    
-    Make sure that you use the file location where your rule pack is actually stored. C:\custompath\ is a placeholder.
-    
-4. To confirm, type Y, and then press ENTER.
-    
-5. Verify that your new sensitive information type was uploaded by typing Get-DlpSensitiveInformationType to see a list of all sensitive types. You can quickly separate custom sensitive information types from those which come built in by looking at the Publisher column. You can filter the list to a specific sensitive information type by running Get-DlpSensitiveInformationType -Identity "name of sensitive information type".
-    
-## Potential validation issues to be aware of
+- To connect to Security & Compliance Center PowerShell, see [Connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell).
 
-When you upload your rule package XML file, the system validates the XML and checks for known bad patterns and obvious performance issues. Here are some known issues that the validation checks for — a regular expression:
-  
-- Cannot begin or end with alternator "|", which matches everything because it's considered an empty match.
-    
-    For example, "|a" or "b|" will not pass validation.
-    
-- Cannot begin or end with a ".{0,m}" pattern, which has no functional purpose and only impairs performance.
-    
-    For example, ".{0,50}ASDF" or "ASDF.{0,50}" will not pass validation.
-    
-- Cannot have ".{0,m}" or ".{1,m}" in groups, and cannot have ".\*" or ".+" in groups.
-    
-    For example, "(.{0,50000})" will not pass validation.
-    
-- Cannot have any character with "{0,m}" or "{1,m}" repeaters in groups.
-    
-    For example, "(a\*)" will not pass validation.
-    
-- Cannot begin or end with ".{1,m}"; instead, use just "."
-    
-    For example, ".{1,m}asdf" will not pass validation; instead, use just ".asdf".
-    
-- Cannot have an unbounded repeater (such as "\*" or "+") on a group.
-    
-    For example, "(xx)\*" and "(xx)+" will not pass validation.
-    
+- To open the Security & Compliance Center, see [Go to the Office 365 Security & Compliance Center](go-to-the-securitycompliance-center.md).
+
+## Use the Security & Compliance Center to create custom sensitive information types
+
+1. In the Security & Compliance Center, go to **Classifications** \> **Custom sensitive information types** and click **Create**.
+
+2. In the **Choose a name and description** page that opens, enter a unique name and a useful description, and then click **Next**.
+
+3. In the **Define the requirements for \<RuleName\>** page that opens, configure the following settings:
+
+  - **Proximity**: When the first pattern element is matched, any supporting elements will match only when found within the specified proximiity to the first pattern element. The default value is 300 characters.
+
+  - **Confidence level**: Patterns that require more evidence have a higher confidence level. The default value is 60.
+
+  - **Pattern elements**: Click the Add primary element drop down and select one of the following values:
+
+    - **Keywords**
+
+    - **Regular expression**
+
+    - **Dictionary (Large keywords)**
+
+## Use Security & Compliance Center PowerShell to upload rule packages
+
+To upload rule packages, use the following syntax:
+
+```
+New-DlpSensitiveInformationTypeRulePackage -FileData (Get-Content -Path "PathToUnicodeXMLFile" -Encoding Byte)
+```
+
+This example uploads the Unicode .xml file named MyNewRulePack.xml fron C:\My Documents.
+
+```
+New-DlpSensitiveInformationTypeRulePackage -FileData (Get-Content -Path "C:\My Documents\MyNewRulePack.xml" -Encoding Byte)
+```
+
+For detailed syntax and parameter information, see [New-DlpSensitiveInformationTypeRulePackage](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-dlp/new-dlpsensitiveinformationtyperulepackage).
+
+### How do you know this worked?
+
+To verify that you've successfully uploaded a rule package, do any of the following steps:
+
+- In the Security & Compliance Center, go to 
+
+- In Security & Compliance Center PowerShell:
+
+  - Run the following command and verify the new rule package is listed:
+
+    ```
+    Get-DlpSensitiveInformationTypeRulePackage
+    ``` 
+
+  - Run the following command and verify the new sensitive information type is listed:
+
+    ```
+    Get-DlpSensitiveInformationType
+    ``` 
+
+    You can separate custom sensitive information types from the built-in types by looking at the Publisher property.
+
+  - Replace \<Name\> with the Name value of the sensitive information type (for example, Employee ID) and run the following command:
+
+    ```
+    Get-DlpSensitiveInformationType -Identity "<Name>"
+    ```
+
+### Potential validation issues to be aware of
+
+When you upload your rule package XML file, the system validates the XML and checks for known bad patterns and obvious performance issues. These are some known regular expression issues that the validation checks for:
+
+- No beginning or ending alternators `|` (this matches everything because it's considered an empty match).
+
+    For example, `|a` or `b|` won't pass validation.
+
+- No beginning or ending `.{0,m}` patterns (no functional purpose and only impairs performance).
+
+    For example, `.{0,50}ASDF` or `ASDF.{0,50}` won't pass validation.
+
+- No `.{0,m}` or `.{1,m}` in groups, and no `.*` or `.+` in groups.
+
+    For example, `(.{0,50000})` won't pass validation.
+
+- No characters with `{0,m}` or `{1,m}` repeaters in groups.
+
+    For example, `(a*)` won't pass validation.
+
+- No beginning or ending with `.{1,m}`; instead, use just `.`
+
+    For example, `.{1,m}asdf` won't pass validation; instead, use just `.asdf`.
+
+- No unbounded repeaters (such as `*` or `+`) on groups.
+
+    For example, `(xx)*` and `(xx)+` won't pass validation.
+
 If a custom sensitive information type contains an issue that may affect performance, it won't be uploaded and you may see one of these error messages:
-  
+
 - **Generic quantifiers which match more content than expected (e.g., '+', '\*')**
-    
+
 - **Lookaround assertions**
-    
+
 - **Complex grouping in conjunction with general quantifiers**
-    
+
 ## Recrawl your content to identify the sensitive information
 
 DLP uses the search crawler to identify and classify sensitive information in site content. Content in SharePoint Online and OneDrive for Business sites is recrawled automatically whenever it's updated. But to identify your new custom type of sensitive information in all existing content, that content must be recrawled.
-  
-In Office 365, you can't manually request a recrawl of an entire tenant, but you can do this for a site collection, list, or library - see [Manually request crawling and re-indexing of a site, a library or a list](https://support.office.com/article/9afa977d-39de-4321-b4ca-8c7c7e6d264e).
-  
-## Remove a custom sensitive information type
 
-1. [Connect to the Office 365 Security &amp; Compliance Center using remote PowerShell](http://go.microsoft.com/fwlink/?LinkID=799771&amp;clcid=0x409)
-    
-2. In the Security &amp; Compliance Center PowerShell, do one of the following:
-    
-  - To remove an entire rule package and all of the entities that it contains
-    
-    Type Remove-DlpSensitiveInformationTypeRulePackage "NameOfYourRulePack" - for the example XML above, you would type Remove-DlpSensitiveInformationTypeRulePackage "Employee ID Custom Rule Pack".
-    
-    Note that to identify your rule package, you can use the \<Name\> element (for any language) in the \<Rule Pack\> element or the GUID of the id attribute of the RulePack element.
-    
-  - To remove a single entity from a rule package
-    
-    You must upload a new version of your rulepack with that specific entity removed using Set-DlpSensitiveInformationTypeRulePackage. You'll need to make sure that no DLP policies or Exchange transport rules still reference the sensitive information type before removing it.
-    
-3. To confirm, type Y, and then press ENTER.
-    
-4. Verify that your new rule was removed by typing Get-DlpSensitiveInformationType, which should no longer display the name of your sensitive information type.
-    
+In Office 365, you can't manually request a recrawl of an entire tenant, but you can do this for a site collection, list, or library. For more information, see [Manually request crawling and re-indexing of a site, a library or a list](https://support.office.com/article/9afa977d-39de-4321-b4ca-8c7c7e6d264e).
+
+## Use Security & Compliance Center PowerShell to modify custom rule packages
+
+> [!IMPORTANT]
+> Before your remove a sensitive information type, verify that no DLP policies or Exchange mail flow rules (also known as transport rules) still reference the sensitive information.
+
+To modify an existing custom rule package (for example, add entities, remove entities, or modify other properties), you need to recreate or modify the .xml file, and then import the updated .xml file into the existing rule package by using the following syntax:
+
+```
+Set-DlpSensitiveInformationTypeRulePackage -Identity "RulePackageIdentity" -FileData (Get-Content -Path "PathToUnicodeXMLFile" -Encoding Byte)
+```
+
+You can use the Name value (for any language) or the `RulePack id` (GUID) value to identify the rule package.
+
+This example uploads the updated Unicode .xml file named MyUpdatedRulePack.xml fron C:\My Documents into the existing rule package named "Employee ID Custom Rule Pack".
+
+```
+Set-DlpSensitiveInformationTypeRulePackage -Identity "Employee ID Custom Rule Pack" -FileData (Get-Content -Path "C:\My Documents\MyUpdatedRulePack.xml" -Encoding Byte)
+```
+
+For detailed syntax and parameter information, see [Set-DlpSensitiveInformationTypeRulePackage](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-dlp/set-dlpsensitiveinformationtyperulepackage).
+
+
+### How do you know this worked?
+
+To verify that you've successfully modified a rule package, do any of the following steps:
+
+- In the Security & Compliance Center, go to blah > blah to verify the sensitive information types are no longer listed.
+
+- In Security & Compliance Center PowerShell:
+
+  - Replace RulePackageName with the name of the modified rule package (for example, Employee ID Custom Rule Pack) and run the following command:
+
+    ```
+    Get-DlpSensitiveInformationTypeRulePackage -Identity "Employee ID Custom Rule Pack" | Format-List
+    ``` 
+
+  - Replace \<Name\> with the Name value of a sensitive information type (for example, Employee ID) within the modified rule packed and run the following command to verify the outcome (added, removed, or modified):
+
+    ```
+    Get-DlpSensitiveInformationType -Identity "<Name>" | Format-List
+    ```
+
+## Use Security & Compliance Center PowerShell to remove custom rule packages
+
+> [!IMPORTANT]
+> Before your remove a custom rule package, verify that no DLP policies or Exchange mail flow rules till reference the sensitive information types in the custom rule package.
+
+To remove an entire rule package and all of the entities that it contains, use the following syntax:
+
+```
+Remove-DlpSensitiveInformationTypeRulePackage -Identity "RulePackageIdentity"
+```
+
+You can use the Name value (for any language) or the `RulePack id` (GUID) value to identify the rule package.
+
+This example removes the rule package named "Employee ID Custom Rule Pack".
+
+```
+Remove-DlpSensitiveInformationTypeRulePackage -Identity "Employee ID Custom Rule Pack"
+```
+
+For detailed syntax and parameter information, see [Remove-DlpSensitiveInformationTypeRulePackage](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-dlp/remove-dlpsensitiveinformationtyperulepackage).
+
+### How do you know this worked?
+
+To verify that you've successfully removed a custom rule package, do any of the following steps:
+
+- In the Security & Compliance Center, go to blah > blah to verify the sensitive information types are no longer listed.
+
+- In Security & Compliance Center PowerShell:
+
+  - Run the following command and verify the rule package is no longer listed:
+
+    ```
+    Get-DlpSensitiveInformationTypeRulePackage
+    ``` 
+
+  - Run the following command and verify the sensitive information types in the removed rule package are no longer listed:
+
+    ```
+    Get-DlpSensitiveInformationType
+    ``` 
+
+    You can separate custom sensitive information types from the built-in types by looking at the Publisher property.
+
+  - Replace \<Name\> with the Name value of a sensitive information type (for example, Employee ID) within the removed rule packed and run the following command to verify the sensitive information type is no longer listed:
+
+    ```
+    Get-DlpSensitiveInformationType -Identity "<Name>"
+    ```
+
 ## Reference: Rule package XML schema definition
 
 You can copy this markup, save it as an XSD file, and use it to validate your rule package XML file.
-  
+
 ```
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:mce="http://schemas.microsoft.com/office/2011/mce"
@@ -437,7 +567,7 @@ You can copy this markup, save it as an XSD file, and use it to validate your ru
         <xs:key name="UniqueResourceIdRef">
           <xs:selector xpath="mce:LocalizedStrings/mce:Resource"/>
           <xs:field xpath="@idRef"/>
-        </xs:key>        
+        </xs:key>
         <xs:keyref name="ReferencedRuleMustExist" refer="mce:UniqueRuleId">
           <xs:selector xpath="mce:LocalizedStrings/mce:Resource"/>
           <xs:field xpath="@idRef"/>
@@ -745,9 +875,82 @@ You can copy this markup, save it as an XSD file, and use it to validate your ru
 ## More information
 
 - [Overview of data loss prevention policies](data-loss-prevention-policies.md)
-    
-- [What the sensitive information types look for](what-the-sensitive-information-types-look-for.md)
-    
-- [What the DLP functions look for](what-the-dlp-functions-look-for.md)
-    
 
+- [What the sensitive information types look for](what-the-sensitive-information-types-look-for.md)
+
+- [What the DLP functions look for](what-the-dlp-functions-look-for.md)
+
+
+Before you get started, it's helpful to understand the basic structure of a sensitive information type, and how you use this structure to identify the right content.
+
+
+## Patterns
+
+A sensitive information type defines one or more patterns that DLP looks for when it evaluates email and documents.
+
+Here's the simplest scenario. You want your sensitive information type to identify content that contains your organization's employee ID, which is formatted as a nine-digit number. So the pattern is a regular expression that identifies nine-digit numbers. Any content that contains a nine-digit number matches the pattern, which is problematic because there are likely other nine-digit numbers in content that aren't employee numbers.
+
+Therefore, it's typical to use more than one pattern to specify additional supporting evidence (for example, a keyword or date).
+
+For example, in addition to the nine-digit number pattern, you can define another pattern that also identifies a hire date, and yet another pattern that identifies a keyword (such as "employee ID").
+
+Patterns that require more evidence have a higher confidence level. When you use the sensitive information type in a DLP policy, you can use more restrictive actions with higher-confidence matches (for example, block content), and less restrictive actions with the lower-confidence matches, (for example, send notification).
+
+The pattern contains the list of what the sensitive information type is looking for. This can include RegExes, keywords, and built-in functions (which perform tasks like running RegExes to find dates or addresses). Sensitive information types can have multiple patterns with unique confidences.
+
+For example, a pattern that contains the regular expression `(\s)(\d{9})(\s)` looks for a nine-digit number `(\d{9})` surrounded by white space `(\s)`. RegEx patterns that negatively impact performance (identify too much content) aren't . For more information, see the [Potential validation issues to be aware of](#potential-validation-issues-to-be-aware-of) section in this topic.
+
+When satisfied, a pattern returns a count and confidence level (also known as match accuracy), which you can use in the conditions in your DLP policy (minimum and maximum values). When you use the sensitive information type in a DLP policy, you can specify the minimum and maximum values for the instance counts and confidence levels (also known as match accuracy).
+
+## Supporting evidence
+
+A pattern can require additional supporting evidence, such as a keyword, RegEx, date, or address.
+
+A Pattern can include multiple Match elements; they can be included directly in the Pattern element or combined by using the Any element. Match elements are joined by an implicit AND operator; all Match elements must be satisfied for the pattern to be matched. You can use the Any element to introduce AND or OR operators (more on that in a later section).
+
+You can use the optional minCount attribute to specify how many instances of a match need to be found for each of the Match elements. For example, you can specify that a pattern is satisfied only when at least two keywords from a keyword list are found.
+
+![XML markup showing Match element with minOccurs attribute](media/607f6b5e-2c7d-43a5-a131-a649f122e15a.png)
+
+### Keywords [Keyword, Group, and Term elements, matchStyle and caseSensitive attributes]
+
+When you identify sensitive information, like an employee ID, you often want to require keywords as corroborative evidence. For example, in addition to matching a nine-digit number, you may want to look for words like "card", "badge", or "ID". To do this, you use keywords.
+
+Keywords are included in a comma-separated list of terms The Group element has a matchStyle attribute with two possible values:
+
+- **matchStyle="word"** Word match identifies whole words surrounded by white space or other delimiters. You should always use word unless you need to match parts of words or match words in Asian languages. 
+
+- **matchStyle="string"** String match identifies strings no matter what they're surrounded by. For example, "id" will match "bid" and "idea". Use string only when you need to match Asian words or if your keyword may be included as part of other strings. 
+
+Finally, you can use the caseSensitive attribute of the Term element to specify that the content must match the keyword exactly, including lower- and upper-case letters.
+
+![XML markup showing Match elements referencing keywords](media/e729ba27-dec6-46f4-9242-584c6c12fd85.png)
+
+
+## Different combinations of evidence [Any element, minMatches and maxMatches attributes]
+
+In a Pattern element, all IdMatch and Match elements are joined by an implicit AND operator - all of the matches must be satisfied before the pattern can be satisfied. However, you can create more flexible matching logic by using the Any element to group Match elements. For example, you can use the Any element to match all, none, or an exact subset of its children Match elements.
+
+The Any element has optional minMatches and maxMatches attributes that you can use to define how many of the children Match elements must be satisfied before the pattern is matched. Note that these attributes define the number of Match elements that must be satisfied, not the number of instances of evidence found for the matches. To define a minimum number of instances for a specific match, such as two keywords from a list, use the minCount attribute for a Match element (see above).
+
+### Match at least one child Match element
+
+If you want to require that only a minimum number of Match elements must be met, you can use the minMatches attribute. In effect, these Match elements are joined by an implicit OR operator. This Any element is satisfied if a US-formatted date or a keyword from either list is found.
+
+Your sensitive information type is looking for a pattern that represents an employee ID, and as part of that pattern it's also looking for corroborative evidence like a keyword such as "ID". It makes sense that the closer together this evidence is, the more likely the pattern is to be an actual employee ID. You can determine how close other evidence in the pattern must be to the entity by using the required patternsProximity attribute of the Entity element.
+
+For each pattern in the entity, the patternsProximity attribute value defines the distance (in Unicode characters) from the IdMatch location for all other Matches specified for that Pattern. The proximity window is anchored by the IdMatch location, with the window extending to the left and right of the IdMatch.
+
+The example below illustrates how the proximity window affects the pattern matching where IdMatch element for the employee ID custom entity requires at least one corroborating match of keyword or date. Only ID1 matches because for ID2 and ID3, either no or only partial corroborating evidence is found within the proximity window.
+
+Note that for email, the message body and each attachment are treated as separate items. This means that the proximity window does not extend beyond the end of each of these items. For each item (attachment or body), both the idMatch and corroborative evidence needs to reside in that item.
+
+## What are the right confidence levels for different patterns? [confidenceLevel attribute, recommendedConfidence attribute]
+
+The more evidence that a pattern requires, the more confidence you have that an actual entity (such as employee ID) has been identified when the pattern is matched. For example, you have more confidence in a pattern that requires a nine-digit ID number, hire date, and keyword in close proximity, than you do in a pattern that requires only a nine-digit ID number.
+
+The Pattern element has a required confidenceLevel attribute. You can think of the value of confidenceLevel (an integer between 1 and 100) as a unique ID for each pattern in an entity - the patterns in an entity must have different confidence levels that you assign. The precise value of the integer doesn't matter - simply pick numbers that make sense to your compliance team. After you upload your custom sensitive information type and then create a DLP policy, you can reference these confidence levels in the conditions of the rules that you create.
+
+![XML markup showing Pattern elements with different values for confidenceLevel attribute](media/301e0ba1-2deb-4add-977b-f6e9e18fba8b.png)
+
+In addition to confidenceLevel for each Pattern, the Entity has a recommendedConfidence attribute. The recommended confidence attribute can be thought of as the default confidence level for the rule. When you create a rule in a DLP policy, if you don't specify a confidence level for the rule to use, that rule will match based on the recommended confidence level for the entity.
