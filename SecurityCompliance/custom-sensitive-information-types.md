@@ -321,76 +321,6 @@ When complete, your RulePack element should look like this.
 
 ![XML markup showing RulePack element](media/fd0f31a7-c3ee-43cd-a71b-6a3813b21155.png)
 
-## What do you need to know before you begin?
-
-- To connect to Security & Compliance Center PowerShell, see [Connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell).
-
-- To open the Security & Compliance Center, see [Go to the Office 365 Security & Compliance Center](go-to-the-securitycompliance-center.md).
-
-## Use the Security & Compliance Center to create custom sensitive information types
-
-1. In the Security & Compliance Center, go to **Classifications** \> **Custom sensitive information types** and click **Create**.
-
-2. In the **Choose a name and description** page that opens, enter a unique name and a useful description, and then click **Next**.
-
-3. In the **Define the requirements for \<RuleName\>** page that opens, configure the following settings:
-
-  - **Proximity**: When the first pattern element is matched, any supporting elements will match only when found within the specified proximiity to the first pattern element. The default value is 300 characters.
-
-  - **Confidence level**: Patterns that require more evidence have a higher confidence level. The default value is 60.
-
-  - **Pattern elements**: Click the Add primary element drop down and select one of the following values:
-
-    - **Keywords**
-
-    - **Regular expression**
-
-    - **Dictionary (Large keywords)**
-
-## Use Security & Compliance Center PowerShell to upload rule packages
-
-To upload rule packages, use the following syntax:
-
-```
-New-DlpSensitiveInformationTypeRulePackage -FileData (Get-Content -Path "PathToUnicodeXMLFile" -Encoding Byte)
-```
-
-This example uploads the Unicode .xml file named MyNewRulePack.xml fron C:\My Documents.
-
-```
-New-DlpSensitiveInformationTypeRulePackage -FileData (Get-Content -Path "C:\My Documents\MyNewRulePack.xml" -Encoding Byte)
-```
-
-For detailed syntax and parameter information, see [New-DlpSensitiveInformationTypeRulePackage](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-dlp/new-dlpsensitiveinformationtyperulepackage).
-
-### How do you know this worked?
-
-To verify that you've successfully uploaded a rule package, do any of the following steps:
-
-- In the Security & Compliance Center, go to 
-
-- In Security & Compliance Center PowerShell:
-
-  - Run the following command and verify the new rule package is listed:
-
-    ```
-    Get-DlpSensitiveInformationTypeRulePackage
-    ``` 
-
-  - Run the following command and verify the new sensitive information type is listed:
-
-    ```
-    Get-DlpSensitiveInformationType
-    ``` 
-
-    You can separate custom sensitive information types from the built-in types by looking at the Publisher property.
-
-  - Replace \<Name\> with the Name value of the sensitive information type (for example, Employee ID) and run the following command:
-
-    ```
-    Get-DlpSensitiveInformationType -Identity "<Name>"
-    ```
-
 ### Potential validation issues to be aware of
 
 When you upload your rule package XML file, the system validates the XML and checks for known bad patterns and obvious performance issues. These are some known regular expression issues that the validation checks for:
@@ -426,103 +356,6 @@ If a custom sensitive information type contains an issue that may affect perform
 - **Lookaround assertions**
 
 - **Complex grouping in conjunction with general quantifiers**
-
-## Recrawl your content to identify the sensitive information
-
-DLP uses the search crawler to identify and classify sensitive information in site content. Content in SharePoint Online and OneDrive for Business sites is recrawled automatically whenever it's updated. But to identify your new custom type of sensitive information in all existing content, that content must be recrawled.
-
-In Office 365, you can't manually request a recrawl of an entire tenant, but you can do this for a site collection, list, or library. For more information, see [Manually request crawling and re-indexing of a site, a library or a list](https://support.office.com/article/9afa977d-39de-4321-b4ca-8c7c7e6d264e).
-
-## Use Security & Compliance Center PowerShell to modify custom rule packages
-
-> [!IMPORTANT]
-> Before your remove a sensitive information type, verify that no DLP policies or Exchange mail flow rules (also known as transport rules) still reference the sensitive information.
-
-To modify an existing custom rule package (for example, add entities, remove entities, or modify other properties), you need to recreate or modify the .xml file, and then import the updated .xml file into the existing rule package by using the following syntax:
-
-```
-Set-DlpSensitiveInformationTypeRulePackage -Identity "RulePackageIdentity" -FileData (Get-Content -Path "PathToUnicodeXMLFile" -Encoding Byte)
-```
-
-You can use the Name value (for any language) or the `RulePack id` (GUID) value to identify the rule package.
-
-This example uploads the updated Unicode .xml file named MyUpdatedRulePack.xml fron C:\My Documents into the existing rule package named "Employee ID Custom Rule Pack".
-
-```
-Set-DlpSensitiveInformationTypeRulePackage -Identity "Employee ID Custom Rule Pack" -FileData (Get-Content -Path "C:\My Documents\MyUpdatedRulePack.xml" -Encoding Byte)
-```
-
-For detailed syntax and parameter information, see [Set-DlpSensitiveInformationTypeRulePackage](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-dlp/set-dlpsensitiveinformationtyperulepackage).
-
-
-### How do you know this worked?
-
-To verify that you've successfully modified a rule package, do any of the following steps:
-
-- In the Security & Compliance Center, go to blah > blah to verify the sensitive information types are no longer listed.
-
-- In Security & Compliance Center PowerShell:
-
-  - Replace RulePackageName with the name of the modified rule package (for example, Employee ID Custom Rule Pack) and run the following command:
-
-    ```
-    Get-DlpSensitiveInformationTypeRulePackage -Identity "Employee ID Custom Rule Pack" | Format-List
-    ``` 
-
-  - Replace \<Name\> with the Name value of a sensitive information type (for example, Employee ID) within the modified rule packed and run the following command to verify the outcome (added, removed, or modified):
-
-    ```
-    Get-DlpSensitiveInformationType -Identity "<Name>" | Format-List
-    ```
-
-## Use Security & Compliance Center PowerShell to remove custom rule packages
-
-> [!IMPORTANT]
-> Before your remove a custom rule package, verify that no DLP policies or Exchange mail flow rules till reference the sensitive information types in the custom rule package.
-
-To remove an entire rule package and all of the entities that it contains, use the following syntax:
-
-```
-Remove-DlpSensitiveInformationTypeRulePackage -Identity "RulePackageIdentity"
-```
-
-You can use the Name value (for any language) or the `RulePack id` (GUID) value to identify the rule package.
-
-This example removes the rule package named "Employee ID Custom Rule Pack".
-
-```
-Remove-DlpSensitiveInformationTypeRulePackage -Identity "Employee ID Custom Rule Pack"
-```
-
-For detailed syntax and parameter information, see [Remove-DlpSensitiveInformationTypeRulePackage](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-dlp/remove-dlpsensitiveinformationtyperulepackage).
-
-### How do you know this worked?
-
-To verify that you've successfully removed a custom rule package, do any of the following steps:
-
-- In the Security & Compliance Center, go to blah > blah to verify the sensitive information types are no longer listed.
-
-- In Security & Compliance Center PowerShell:
-
-  - Run the following command and verify the rule package is no longer listed:
-
-    ```
-    Get-DlpSensitiveInformationTypeRulePackage
-    ``` 
-
-  - Run the following command and verify the sensitive information types in the removed rule package are no longer listed:
-
-    ```
-    Get-DlpSensitiveInformationType
-    ``` 
-
-    You can separate custom sensitive information types from the built-in types by looking at the Publisher property.
-
-  - Replace \<Name\> with the Name value of a sensitive information type (for example, Employee ID) within the removed rule packed and run the following command to verify the sensitive information type is no longer listed:
-
-    ```
-    Get-DlpSensitiveInformationType -Identity "<Name>"
-    ```
 
 ## Reference: Rule package XML schema definition
 
@@ -880,13 +713,18 @@ You can copy this markup, save it as an XSD file, and use it to validate your ru
 
 - [What the DLP functions look for](what-the-dlp-functions-look-for.md)
 
+## Intro
 
-Before you get started, it's helpful to understand the basic structure of a sensitive information type, and how you use this structure to identify the right content.
+A sensitive information type defines one or more patterns that DLP looks for when it evaluates email and documents. Office 365 Security & Compliance Center comes with many [built-in sensitive information types](what-the-sensitive-information-types-look-for.md), but you can create your own for specific scenarios (for example, identifying your company's employee ID numbers).
+
+You can create basic sensitive information types in the Security & Compliance Center. The sensitive information type contains only one pattern (the primary pattern). For more information, see __.
+
+In Security & Compliance Center PowerShell, you can create much more complex sensitive information types, but you're required to create a DLP sensitive information type rule package (also known as a rule package), which is a Unicode .xml file. Each rule within the rule package defines one more or sensitive information types (also known as entities). For details about the format of the .xml file, see the __ section. After you create the rule package, you use PowerShell to import the rule package and its sensitive information types. For more information, see __.
 
 
 ## Patterns
 
-A sensitive information type defines one or more patterns that DLP looks for when it evaluates email and documents.
+
 
 Here's the simplest scenario. You want your sensitive information type to identify content that contains your organization's employee ID, which is formatted as a nine-digit number. So the pattern is a regular expression that identifies nine-digit numbers. Any content that contains a nine-digit number matches the pattern, which is problematic because there are likely other nine-digit numbers in content that aren't employee numbers.
 
