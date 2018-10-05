@@ -35,6 +35,7 @@ If you're an Exchange Online administrator, you can [enable the Report Message a
     
 4. Sign in to your Office 365 email using your work or school account (for business use) or your Microsoft account (for personal use).
     
+
 After the add-in is installed and enabled, you'll see the following icons: 
 
 - In Outlook the icon looks like this: <br/> ![Report Message Add-in icon for Outlook](media/OutlookReportMessageIcon.png)<br/>
@@ -78,6 +79,7 @@ Depending on what you selected using the wizard, people in your organization wil
 - In Outlook the icon looks like this: <br/> ![Report Message Add-in icon for Outlook](media/OutlookReportMessageIcon.png)<br/>
 - In Outlook Web App the icon looks like this:<br/>![Outlook on the Web Report Message Add-in icon](media/d9326d0b-1769-4bc2-ae58-51f0ebc69a17.png)<br/>
 
+
 Next, learn how to [Use the Report Message add-in](https://support.office.com/article/b5caa9f1-cdf3-4443-af8c-ff724ea719d2), and set up a rule to see reported email messages.
 
 ## Review or edit the default settings for the Report Message add-in
@@ -89,7 +91,7 @@ You can review and edit the default settings for the Report Message add-in using
     
 1. If you've just installed the Report Message add-in for your organization, you'll already be on the Services & add-ins page. Otherwise, go [here](https://portal.office.com/adminportal/home#/Settings/ServicesAndAddIns) and sign in using your work or school account for Office 365.
 
-2. Search for Report Message, and then select it.<br/>![Services and add-ins for Office 365](media/ReportMessage-o365servicesaddins.png)<br/> 
+2. Search for **Report Message**, and then select it.<br/>![Services and add-ins for Office 365](media/ReportMessage-o365servicesaddins.png)<br/> 
     
 3. A pane opens that displays the settings that were selected for the Report Message add-in during deployment.<br/>![Settings for the Report Message add-in](media/ReportMessage-reviewaddinsettings.png)<br/> 
 
