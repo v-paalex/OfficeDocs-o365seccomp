@@ -74,7 +74,7 @@ Be sure to read the following items before you start searching the Office 365 au
      - **Office 365 E5** - Audit records are retained for 365 days (one year). That means you can search the audit log for activities that were performed within the last year. Retaining audit records for one year is also available for users that are assigned an E3/Exchange Online Plan 1 license and have an Office 365 Advanced Compliance add-on license.
 
         > [!NOTE]
-        > The one-year retention period for audit records will be available soon as part of the Office 365 Preview program and will be only be available for organizations enrolled in the Preview program. When the longer retention period for audit records does become available, only new audit records for activities performed after the one-year retention period is released to Preview will be retained for one year.
+        > The one-year retention period for audit records will be available soon as part of the Office 365 Preview program and will be only available for organizations enrolled in the Preview program. When the longer retention period for audit records does become available in Preview (and later for general availability), only new audit records (for activities performed after the longer retention period is released) will be retained for one year.
 
 - If you want to turn off audit log search in Office 365 for your organization, you can run the following command in remote PowerShell connected to your Exchange Online organization:
     
