@@ -55,7 +55,7 @@ As a next step, learn how to [Use the Report Message add-in](https://support.off
     
 4. Choose **organization** \> **add-ins**. 
     
-5. Choose **+** \> **Add from the Office Store**.<br/>![Choose Add from the Office Store](media/EAC-Org-AddFromOfficeStore.png)<br/>This opens the Office Store in your web browser.
+5. Choose **+** > **Add from the Office Store**.<br/>![Choose Add from the Office Store](media/EAC-Org-AddFromOfficeStore.png)<br/>This opens the Office Store in your web browser.
     
 6. Search for Report Message.<br/>![Search for Report Message](media/ReportMessageSearchOfficeStore.png)<br/>
     
@@ -93,7 +93,7 @@ You can review and edit the default settings for the Report Message add-in using
     
 3. A pane opens that displays the settings that were selected for the Report Message add-in during deployment.<br/>![Settings for the Report Message add-in](media/ReportMessage-reviewaddinsettings.png)<br/> 
 
-4. Review and if needed, edit settings for the Report Message add-in.
+4. Review and if needed, edit settings for the Report Message add-in, and then save your changes.
     
   
 ## Set up a rule to get a copy of email messages reported by your users
