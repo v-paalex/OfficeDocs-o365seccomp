@@ -81,13 +81,13 @@ We are continuing to add new features to ATP Safe Links. Here are several exampl
     
 - Beginning in March 2018, ATP Safe Links protection is extended to apply to email sent between people within an organization. (Make sure to [review and edit your ATP Safe Links policies](set-up-atp-safe-links-policies.md).)
 
-- Beginning in June 2018, when people are using Outlook Web Application (OWA), ATP Safe Links renders original URLs, and not show rewritten URLs. This enables users to view original links in email. 
+- Beginning in June 2018, when people are using Outlook Web Application (OWA), ATP Safe Links renders original URLs, and not show rewritten URLs. This enables users to view original links in email. (We call this native link visbility.)
 
 - Beginning in September 2018, [Office 365 ATP warning pages](atp-safe-links-warning-pages.md) feature a new color scheme, more details, and the ability to continue to a site despite given warnings and recommendations. 
   
 - Beginning in the second half of 2018, ATP Safe Links protection is extended to apply to URLs in Office Online (Word Online, Excel Online, PowerPoint Online, and OneNote Online) and Office 365 ProPlus on Mac. (Make sure to [review and edit your ATP Safe Links policies](set-up-atp-safe-links-policies.md).)
    
-- Beginning in late 2018, ATP Safe Links renders original URLs, and not show rewritten URLs, similar to OWA. This enables users to view original links in email, whether they're using OWA or Outlook.
+- Beginning in late 2018, native link visibility is available in Outlook. Users are able to view original URLs (not rewritten URLs) in email, whether they're using OWA or Outlook.
     
 ## How to get ATP Safe Links protection
 
