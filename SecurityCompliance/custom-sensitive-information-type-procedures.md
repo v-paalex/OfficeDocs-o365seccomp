@@ -38,6 +38,8 @@ This topic describes the following procedures for managing custom sensitive info
 
 - Microsoft Customer Service & Support can't assist with providing custom content-matching definitions (creating custom classifications or regular expression patterns). Support engineers can provide limited support for the feature (for example, providing sample regular expression patterns for testing purposes, or assist with troubleshooting an existing regular expression pattern that's not triggering as expected), but can't provide assurances that any custom content-matching development will fulfill the customer's requirements or obligations.
 
+- For more information about the .NET RegEx engine that's used for processing text, see [Regular Expressions in .NET](https://docs.microsoft.com/dotnet/standard/base-types/regular-expressions).
+
 ## Create custom sensitive information types
 
 ### Use the Security & Compliance Center to create custom sensitive information types
