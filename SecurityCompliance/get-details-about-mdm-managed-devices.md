@@ -57,12 +57,12 @@ For more info on these steps, see [Connect to Office 365 PowerShell](https://doc
     
 ### Step 2: Connect to your Office 365 subscription
 
-1. In the Windows Azure Active Directory Module for Windows PowerShell, run the following command.</br>  
+1. In the Windows Azure Active Directory Module for Windows PowerShell, run the following command.<br/>  
   `$UserCredential = Get-Credential`
 
 2. In the **Windows PowerShell Credential Request** dialog box, type the user name and password for your Office 365 global admin account, and then click **OK**.
     
-3. Run the following command.</br>
+3. Run the following command.<br/>
     `
   Connect-MsolService -Credential $UserCredential
   `
@@ -76,7 +76,7 @@ To run the **Get-MsolUserDeviceComplianceStatus.ps1** script, you need to enable
   
 1. From your Windows Desktop, click **Start**, and then type Windows PowerShell. Right click **Windows PowerShell**, and then click **Run as administrator**.
     
-2. Run the following command.</br>
+2. Run the following command.<br/>
   `Set-ExecutionPolicy RemoteSigned`
 
 3. When prompted, type `Y` and then press Enter. 
@@ -85,7 +85,7 @@ To run the **Get-MsolUserDeviceComplianceStatus.ps1** script, you need to enable
 
 1. Open the Microsoft Azure Active Directory Module for Windows PowerShell.
     
-2. Run the following command.</br>
+2. Run the following command.<br/>
   ```
   Get-MsolDevice -All -ReturnRegisteredOwners | Where-Object {$_.RegisteredOwners.Count -gt 0}
   ```
@@ -96,7 +96,7 @@ For more examples, see [Get-MsolDevice](https://go.microsoft.com/fwlink/?linkid=
 
 ### First, save the script to your computer
 
-1. Copy and paste the following text into Notepad.</br> 
+1. Copy and paste the following text into Notepad.<br/> 
   ```
   param (
       [PSObject[]]$users = @(),
@@ -161,21 +161,21 @@ For more examples, see [Get-MsolDevice](https://go.microsoft.com/fwlink/?linkid=
   
   ```
 
-2. Save it as a Windows PowerShell script file by using the file extension **.ps1**. </br>Example:</br> `Get-MsolUserDeviceComplianceStatus.ps1`.
+2. Save it as a Windows PowerShell script file by using the file extension **.ps1**. <br/>Example:<br/> `Get-MsolUserDeviceComplianceStatus.ps1`.
     
 ### Run the script to get device information for a single user account
 
 1. Open the Microsoft Azure Active Directory Module for Windows PowerShell.
     
-2. Navigate to the folder where you saved the script. For example, if you saved it to C:\PS-Scripts, you'd run the following command.</br>
+2. Navigate to the folder where you saved the script. For example, if you saved it to C:\PS-Scripts, you'd run the following command.<br/>
     `cd C:\PS-Scripts`
 
-3. Run the following command to identify the user you want to get device details for. This example gets details for bar@example.com.</br>
+3. Run the following command to identify the user you want to get device details for. This example gets details for bar@example.com.<br/>
   ```
   $u = Get-MsolUser -UserPrincipalName bar@example.com
   ```
 
-4. Run the following command to initiate the script.</br>
+4. Run the following command to initiate the script.<br/>
   ```
   .\Get-MsolUserDeviceComplianceStatus.ps1 -User $u -Export
   ```
@@ -186,15 +186,15 @@ The information is exported to your Windows Desktop as a CSV file. You can use a
 
 1. Open the Microsoft Azure Active Directory Module for Windows PowerShell.
     
-2. Navigate to the folder where you saved the script. For example, if you saved it to C:\PS-Scripts, you'd run the following command.</br>
+2. Navigate to the folder where you saved the script. For example, if you saved it to C:\PS-Scripts, you'd run the following command.<br/>
   `cd C:\PS-Scripts`
 
-3. Run the following command to identify the group you want to get device details for. This example gets details for users in the FinanceStaff group.</br>
+3. Run the following command to identify the group you want to get device details for. This example gets details for users in the FinanceStaff group.<br/>
   ```
   $u = Get-MsolGroupMember -SearchString "FinanceStaff" | % { Get-MsolUser -ObjectId $_.ObjectId }
   ```
 
-4. Run the following command to initiate the script.</br>
+4. Run the following command to initiate the script.<br/>
   ```
   .\Get-MsolUserDeviceComplianceStatus.ps1 -User $u -Export
   ```

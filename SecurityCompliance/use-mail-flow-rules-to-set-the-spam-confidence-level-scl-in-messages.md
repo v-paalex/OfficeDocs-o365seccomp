@@ -37,7 +37,7 @@ You can create a transport rule that sets the spam confidence level (SCL) of an 
     
 4. Choose **More options**, and then under **Apply this rule if**, specify a condition that will trigger the action you'll be setting for this rule (which is to set the SCL value).
     
-    For example, you can set **The sender** \> **is internal/external**, and then in the **select sender location** dialog box, select **Inside the organization**, and choose **ok**.</br>
+    For example, you can set **The sender** \> **is internal/external**, and then in the **select sender location** dialog box, select **Inside the organization**, and choose **ok**.<br/>
     ![Select sender location](media/EOP-ETR-SetSCL-1.jpg)
   
 5. Under **Do the following**, select **Modify the message properties** \> **set the spam confidence level (SCL)**.

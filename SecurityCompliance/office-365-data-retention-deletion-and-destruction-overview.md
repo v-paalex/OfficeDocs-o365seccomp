@@ -3,7 +3,6 @@ title: "Data Retention, Deletion, and Destruction in Office 365"
 ms.author: robmazz
 author: robmazz
 manager: laurawi
-ms.date: 8/21/2018
 audience: ITPro
 ms.topic: article
 ms.service: Office 365 Administration
@@ -16,55 +15,33 @@ description: "An overview of Microsoft's policies for Office 365 regarding data 
 
 # Data Retention, Deletion, and Destruction in Office 365
 
-## Introduction
-Microsoft has a Data Handling Standard policy for Office 365 that specifies how long customer data will be retained after being deleted. Generally, within Office 365, there are two scenarios in which customer data is deleted:
-- **Active Deletion** - A user deletes data, or data private to a user is deleted after that user is deleted by the administrator of an active tenant.
+Microsoft has a Data Handling Standard policy for Office 365 that specifies how long customer data will be retained after being deleted. There are generally two scenarios in which customer data is deleted:
+
+- **Active Deletion** - The tenant has an active subscription and a user deletes data, or data provided by a user is deleted by the administrator.
 - **Passive Deletion** - The tenant subscription ends.
 
-Microsoft's Data Handling Standard policy for Office 365 specifies how long data will be retained in each of these scenarios. The following sections describe the categories of data (based on Microsoft's Office 365 Asset Classification Standard) and the retention periods for active and passive deletion scenarios.
+## Data Retention
 
-## Active Deletion Retention
+For each of these deletion scenarios, the following table shows the maximum data retention period, by data category and classification:
 
-| Data Category | Retain at Least | Retain at Most |
-|---------------------------------------|:-----------------:|:-----------------:|:----------------------------------:|:-------------------------------:|
-| Access Control Data | N/A | N/A |
-| Customer Content | 7 days | 30 days |
-| End User Identifiable Information | 90 days | 180 days |
-| Account Data | 1 year | 3 years |
-| Organization Identifiable Information | 90 days | 180 days |
-| System Metadata | See Security Logs | See Security Logs |
-| Security Logs | Min 1 year | Max 1 year |
-| Exchange Online Archiving Logs | Min 3 years | Max 3 years |
+| Data Category | Data Classification | Description | Examples | Retention Period |
+|-----------------|-----------------|-----------------|----------------------------------|-------------------------------|
+| Customer Data | Customer Content| Content directly provided/created by admins and users <br><br> This includes all text, sound, video, image files, and software created and stored in Microsoft data centers when using the services in Office 365 | Examples of the most commonly used Office 365 applications which allow users to author data include Word, Excel, PowerPoint, Outlook and OneNote <br><br> Customer content also includes customer-owned/provided secrets (passwords, certificates, encryption keys, storage keys) | **Active Deletion Scenario:** at most 30 days <br><br> **Passive Deletion Scenario:** at most 180 days |
+| Customer Data | End User Identifiable Information (EUII) | Data that identifies or could be used to identify the user of a Microsoft service. EUII does not contain Customer content | User name or display name (DOMAIN\UserName) <br><br> User principal name (name@domain) <br><br>  User-specific IP addresses | **Active Deletion Scenario:** at most 180 days (only a tenant administrator action) <br><br> **Passive Deletion Scenario:** at most 180 days |
+| Personal Data <br> (data not included in Customer Data) | End User Pseudonymous Identifiers (EUPI) | An identifier created by Microsoft tied to the user of a Microsoft service. When EUPI is combined with other information, such as a mapping table, it identifies the end user <br><br> EUPI does not contain information uploaded or created by the customer | User GUIDs, PUIDs, or SIDs <br><br> Session IDs | **Active Deletion Scenario:** at most 30 days <br><br> **Passive Deletion Scenario:** at most 180 days |
 
-## Passive Deletion Retention
+## Subscription Retention
 
-| Data Category | Retain at Least | Retain at Most |
-|---------------------------------------|:-----------------:|:-----------------:|:----------------------------------:|:-------------------------------:|
-| Access Control Data | 90 days (for content recovery) | 180 days (for content recovery) |
-| Customer Content | 90 days (limited-function account) | 180 days |
-| End User Identifiable Information | 90 days | 180 days |
-| Account Data | 1 year | 3 years |
-| Organization Identifiable Information | 90 days | 180 days |
-| System Metadata | See Security Logs | See Security Logs |
-| Security Logs | Min 1 year | Max 1 year |
-| Exchange Online Archiving Logs | Min 3 years | Max 3 years |
+At all times during the term of an active subscription, a subscriber can access, extract, or delete customer data stored in Office 365. If a paid subscription ends or is terminated, Microsoft will retain customer data stored in Office 365 in a limited-function account for 90 days to enable the subscriber to extract the data. After the 90-day retention period ends, Microsoft will disable the account and delete the customer data. No more than 180 days after expiration or termination of a subscription to Office 365, Microsoft will disable the account and delete all customer data from the account. Once the maximum retention period for any data has elapsed, the data is rendered commercially unrecoverable.
 
-## Subscription Rentention
-
-Customer content is defined as Exchange Online mailbox content (email body, calendar entries, and the content of email attachments, and if applicable, Skype for Business content), SharePoint Online site content and the files stored within sites, and files uploaded to OneDrive for Business or Skype for Business.
-
-At all times during the term of a subscription, a subscriber can access and extract customer data stored in Office 365. Except for free trials and LinkedIn services, Microsoft retains customer data stored in Office 365 in a limited-function account for 90 days after the expiration or termination of the subscription to enable the subscriber to extract the data. (In the case of a free trial, when the trial expires, it moves into a grace period, giving you 30 days (for most trials, in most countries and regions) to purchase Office 365. If you decide not to buy Office 365, you can let your trial expire or cancel it. Soon after the 30-day grace period, your trial account information and data is permanently erased.)
-
-After the 90-day retention period ends, Microsoft disables the account and deletes the customer data. No more than 180 days after expiration or termination of a subscription to Office 365, Microsoft will disable the account and delete all customer data from the account. Once the maximum retention period for any data has elapsed, the data is rendered commercially unrecoverable.
-
-Microsoft also has a Data Handling Standard policy that addresses the recycling and disposal of disk drives and failed or retiring servers. Before re-using any disk drives within Office 365, Microsoft performs a physical sanitization process that is compliant with NIST SP 800-88. Disk drives that cannot be re-used are disposed of using a physical destruction process that is performed on-site within the datacenter containing the disks being destroyed. These procedures are performed by Microsoft Cloud Infrastructure & Operations (MCIO). For more information, see the MCIO audit reports on the [Service Trust Preview](https://aka.ms/STP).
+In the case of a free trial, your account will move into a grace status for 30 days in most countries and regions. During this grace period, you have the option to purchase Office 365. If you decide not to buy Office 365, you can either cancel your trial or let the grace period expire, and your trial account information and data will be deleted.
 
 ## Expedited Deletion
-At all times during the term of a subscription, a subscriber can contact Microsoft Support and request expedited subscription deprovisioning. In this process, all user data, including data in SharePoint Online, Exchange Online that may be under hold or stored in inactive mailboxes, is deleted three days after the administrator enters the lockout code provided by Microsoft. For more information on expedited deprovisioning, see [Cancel Office 365](https://support.office.com/article/Cancel-Office-365-for-business-b1bc0bef-4608-4601-813a-cdd9f746709a).
+At all times during the term of any subscription, a subscriber can contact Microsoft Support and request expedited subscription deprovisioning. In this process, all user data, including data in SharePoint Online, Exchange Online that may be under hold or stored in inactive mailboxes, is deleted three days after the administrator enters the lockout code provided by Microsoft. For more information on expedited deprovisioning, see [Cancel Office 365](https://support.office.com/article/Cancel-Office-365-for-business-b1bc0bef-4608-4601-813a-cdd9f746709a).
 
 ## Related Links
-- [Exchange Online Data Deletion](/office365/enterprise/office-365-exchange-online-data-deletion)
-- [SharePoint Online Data Deletion](/office365/enterprise/office-365-sharepoint-online-data-deletion)
-- [Skype for Business Data Deletion](/office365/enterprise/office-365-skype-data-deletion)
-- [Immutability in Office 365](/office365/enterprise/office-365-data-immutability)
-- [Data Destruction](/office365/enterprise/office-365-data-destruction)
+- [Data Destruction](office-365-data-destruction.md)
+- [Immutability in Office 365](office-365-data-immutability.md)
+- [Exchange Online Data Deletion](office-365-exchange-online-data-deletion.md)
+- [SharePoint Online Data Deletion](office-365-sharepoint-online-data-deletion.md)
+- [Skype for Business Data Deletion](office-365-skype-data-deletion.md)

@@ -54,7 +54,7 @@ In addition, as an admin, you can choose to filter all messages for your organiz
   
 You can also filter your results to find specific messages. For tips, see [To filter results and find quarantined messages and files](manage-quarantined-messages-and-files.md#BKMK_AdvSearch) in this article. 
   
-After you find a specific quarantined message, click the message to view details about it, and take actions, like releasing the message to someone's inbox.
+After you find a specific quarantined message, click the message to view details about it, and take actions, like releasing the message to someone's mailbox.
   
 ## View your organization's quarantined files
 

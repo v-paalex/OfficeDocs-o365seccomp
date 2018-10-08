@@ -22,7 +22,7 @@ description: "Learn about email and file properties that you can search in Excha
 
 # Keyword queries and search conditions for Content Search
 
-This topic describes the email and document properties that you can search for in email items in Exchange Online and documents stored on SharePoint and OneDrive for Business sites by using the Content Search feature in the Office 365 Security &amp; Compliance Center. You can also use the **\*-ComplianceSearch** cmdlets in Security &amp; Compliance Center PowerShell to search for these properties. The topic also describes: 
+This topic describes the email and document properties that you can search for in email items in Exchange Online and documents stored on SharePoint and OneDrive for Business sites by using the Content Search feature in the Office 365 Security &amp; Compliance Center. You can also use the **\*-ComplianceSearch** cmdlets in Security &amp; Compliance Center PowerShell to search for these properties. The topic also describes:   
   
 - Using Boolean search operators, search conditions, and other search query techniques to refine your search results.
     
@@ -42,7 +42,7 @@ The following table lists email message properties that can be searched by using
   
 |**Property**|**Property description**|**Examples**|**Search results returned by the examples**|
 |:-----|:-----|:-----|:-----|
-|AttachmentNames  <br/> |The names of files attached to an email message.  <br/> |`attachmentnames:annualreport.ppt`  <br/> `attachmentnames:annual\*`  <br/> |Messages that have an attached file named annualreport.ppt. In the second example, using the wildcard returns messages with the word "annual" in the file name of an attachment.  <br/> |
+|AttachmentNames  <br/> |The names of files attached to an email message.  <br/> |`attachmentnames:annualreport.ppt`  <br/> `attachmentnames:annual*`  <br/> |Messages that have an attached file named annualreport.ppt. In the second example, using the wildcard returns messages with the word "annual" in the file name of an attachment.  <br/> |
 |Bcc  <br/> |The BCC field of an email message.<sup>1</sup> <br/> |`bcc:pilarp@contoso.com`  <br/> `bcc:pilarp`  <br/> `bcc:"Pilar Pinilla"`  <br/> |All examples return messages with Pilar Pinilla included in the Bcc field.  <br/> |
 |Category  <br/> | The categories to search. Categories can be defined by users by using Outlook or Outlook Web App. The possible values are:  <br/><br/>  blue  <br/>  green  <br/>  orange  <br/>  purple  <br/>  red  <br/>  yellow  <br/> |`category:"Red Category"`  <br/> |Messages that have been assigned the red category in the source mailboxes.  <br/> |
 |Cc  <br/> |The CC field of an email message.<sup>1</sup> <br/> |`cc:pilarp@contoso.com`  <br/> `cc:"Pilar Pinilla"`  <br/> |In both examples, messages with Pilar Pinilla specified in the CC field.  <br/> |
@@ -51,13 +51,13 @@ The following table lists email message properties that can be searched by using
 |HasAttachment  <br/> |Indicates whether or not a message has an attachment. Use the values **true** or **false**.  <br/> |`from:pilar@contoso.com AND hasattachment:true`  <br/> |Messages sent by the specified user that have attachments.  <br/> |
 |Importance  <br/> |The importance of an email message, which a sender can specify when sending a message. By default, messages are sent with normal importance, unless the sender sets the importance as **high** or **low**.  <br/> |`importance:high`  <br/> `importance:medium`  <br/> `importance:low`  <br/> |Messages that are marked as high importance, medium importance, or low importance.  <br/> |
 |IsRead  <br/> |Indicates whether or not messages have been read. Use the values **true** or **false**.  <br/> |`isread:true`  <br/> `isread:false`  <br/> |The first example returns messages with the IsRead property set to **True**. The second example returns messages with the IsRead property set to **False**.  <br/> |
-|ItemClass  <br/> |Use this property to search specific third-party data types that your organization imported to Office 365. Use the following syntax for this property:  `itemclass:ipm.externaldata.<third-party data type>*` <br/> |`itemclass:ipm.externaldata.Facebook\* AND subject:contoso`  <br/> `itemclass:ipm.externaldata.Twitter\* AND from:"Ann Beebe" AND "Northwind Traders"`  <br/> |The first example returns Facebook items that contain the word "contoso" in the Subject property. The second example returns Twitter items that were posted by Ann Beebe and that contain the keyword phrase "Northwind Traders".  <br/> For a complete list of values to use for third-party data types for the ItemClass property, see [Use Content Search to search third-party data that was imported to Office 365](use-content-search-to-search-third-party-data-that-was-imported.md).  <br/> |
-|Kind  <br/> | The type of email message to search for. Possible values:  <br/>  contacts  <br/>  docs  <br/>  email  <br/>  externaldata  <br/>  faxes  <br/>  im  <br/>  journals  <br/>  meetings  <br/>  microsoftteams (returns items from chats, meetings, and calls in Microsoft Teams)  <br/>  notes  <br/>  posts  <br/>  rssfeeds  <br/>  tasks  <br/>  voicemail  <br/> |`kind:email`  <br/> `kind:email OR kind:im OR kind:voicemail`  <br/> `kind:externaldata`  <br/> |The first example returns email messages that meet the search criteria. The second example returns email messages, instant messaging conversations, and voice messages that meet the search criteria. The third example returns items that were imported to mailboxes in Office 365 from third-party data sources, such as Twitter, Facebook, and Cisco Jabber, that meet the search criteria. For more information, see [Archiving third-party data in Office 365](https://go.microsoft.com/fwlink/p/?linkid=716918).  <br/> |
+|ItemClass  <br/> |Use this property to search specific third-party data types that your organization imported to Office 365. Use the following syntax for this property:  `itemclass:ipm.externaldata.<third-party data type>*` <br/> |`itemclass:ipm.externaldata.Facebook* AND subject:contoso`  <br/> `itemclass:ipm.externaldata.Twitter* AND from:"Ann Beebe" AND "Northwind Traders"`  <br/> |The first example returns Facebook items that contain the word "contoso" in the Subject property. The second example returns Twitter items that were posted by Ann Beebe and that contain the keyword phrase "Northwind Traders".  <br/> For a complete list of values to use for third-party data types for the ItemClass property, see [Use Content Search to search third-party data that was imported to Office 365](use-content-search-to-search-third-party-data-that-was-imported.md).  <br/> |
+|Kind  <br/> | The type of email message to search for. Possible values:  <br/>  contacts  <br/>  docs  <br/>  email  <br/>  externaldata  <br/>  faxes  <br/>  im  <br/>  journals  <br/>  meetings  <br/>  microsoftteams (returns items from chats, meetings, and calls in Microsoft Teams)  <br/>  notes  <br/>  posts  <br/>  rssfeeds  <br/>  tasks  <br/>  voicemail  <br/> |`kind:email`  <br/> `kind:email OR kind:im OR kind:voicemail`  <br/> `kind:externaldata`  <br/> |The first example returns email messages that meet the search criteria. The second example returns email messages, instant messaging conversations (including Skype for Business conversations and chats in Microsoft Teams), and voice messages that meet the search criteria. The third example returns items that were imported to mailboxes in Office 365 from third-party data sources, such as Twitter, Facebook, and Cisco Jabber, that meet the search criteria. For more information, see [Archiving third-party data in Office 365](https://go.microsoft.com/fwlink/p/?linkid=716918).  <br/> |
 |Participants  <br/> |All the people fields in an email message; these fields are From, To, CC, and BCC.<sup>1</sup> <br/> |`participants:garthf@contoso.com`  <br/> `participants:contoso.com`  <br/> |Messages sent by or sent to garthf@contoso.com. The second example returns all messages sent by or sent to a user in the contoso.com domain.  <br/> |
-|Received  <br/> |The date that an email message was received by a recipient.  <br/> |`received:04/15/2016`  <br/> `received\>=01/01/2016 AND received\<=03/31/2016`  <br/> |Messages that were received on April 15, 2016. The second example returns all messages received between January 1, 2016 and March 31, 2016.  <br/> |
+|Received  <br/> |The date that an email message was received by a recipient.  <br/> |`received:04/15/2016`  <br/> `received>=01/01/2016 AND received<=03/31/2016`  <br/> |Messages that were received on April 15, 2016. The second example returns all messages received between January 1, 2016 and March 31, 2016.  <br/> |
 |Recipients  <br/> |All recipient fields in an email message; these fields are To, CC, and BCC.<sup>1</sup> <br/> |`recipients:garthf@contoso.com`  <br/> `recipients:contoso.com`  <br/> |Messages sent to garthf@contoso.com. The second example returns messages sent to any recipient in the contoso.com domain.  <br/> |
-|Sent  <br/> |The date that an email message was sent by the sender.  <br/> |`sent:07/01/2016`  <br/> `sent\>=06/01/2016 AND sent\<=07/01/2016`  <br/> |Messages that were sent on the specified date or sent within the specified date range.  <br/> |
-|Size  <br/> |The size of an item, in bytes.  <br/> |`size\>26214400`  <br/> `size:1..1048567`  <br/> |Messages larger than 25??MB. The second example returns messages from 1 through 1,048,567 bytes (1 MB) in size.  <br/> |
+|Sent  <br/> |The date that an email message was sent by the sender.  <br/> |`sent:07/01/2016`  <br/> `sent>=06/01/2016 AND sent<=07/01/2016`  <br/> |Messages that were sent on the specified date or sent within the specified date range.  <br/> |
+|Size  <br/> |The size of an item, in bytes.  <br/> |`size>26214400`  <br/> `size:1..1048567`  <br/> |Messages larger than 25??MB. The second example returns messages from 1 through 1,048,567 bytes (1 MB) in size.  <br/> |
 |Subject  <br/> |The text in the subject line of an email message.  <br/> **Note:** When you use the Subject property in a query, ???the search returns all messages in which the subject line contains the text you're searching for. In other words, the query doesn't return only those messages that have an exact match. For example, if you search for  `subject:"Quarterly Financials"`, your results will include messages with the subject "Quarterly Financials 2018".  <br/> |`subject:"Quarterly Financials"`  <br/> `subject:northwind`  <br/> |Messages that contain the phrase "Quarterly Financials" anywhere in the text of the subject line. The second example returns all messages that contain the word northwind in the subject line.  <br/> |
 |To  <br/> |The To field of an email message.<sup>1</sup> <br/> |`to:annb@contoso.com`  <br/> `to:annb ` <br/> `to:"Ann Beebe"`  <br/> |All examples return messages where Ann Beebe is specified in the To: line.  <br/> |
    
@@ -79,12 +79,12 @@ For a complete list of SharePoint properties that can be searched, see [Overview
 |DetectedLanguage  <br/> |The language of an item.  <br/> |`detectedlanguage:english`  <br/> |All items in English.  <br/> |
 |FileExtension  <br/> |The extension of a file; for example, docx, one, pptx, or xlsx.  <br/> |`fileextension:xlsx`  <br/> |All Excel files (Excel 2007 and later)  <br/> |
 |FileName  <br/> |The name of a file.  <br/> |`filename:"marketing plan"`  <br/> `filename:estimate`  <br/> |The first example returns files with the exact phrase "marketing plan" in the title. The second example returns files with the word "estimate" in the file name.  <br/> |
-|LastModifiedTime  <br/> |The date that an item was last changed.  <br/> |`lastmodifiedtime\>=05/01/2016`  <br/> `lastmodifiedtime\>=05/10/2016 AND lastmodifiedtime\<=06/1/2016`  <br/> |The first example returns items that were changed on or after May 1, 2016. The second example returns items changed between May 1, 2016 and June 1, 2016.  <br/> |
+|LastModifiedTime  <br/> |The date that an item was last changed.  <br/> |`lastmodifiedtime>=05/01/2016`  <br/> `lastmodifiedtime>=05/10/2016 AND lastmodifiedtime<=06/1/2016`  <br/> |The first example returns items that were changed on or after May 1, 2016. The second example returns items changed between May 1, 2016 and June 1, 2016.  <br/> |
 |ModifiedBy  <br/> |The person who last changed an item. Be sure to use the user's display name for this property.  <br/> |`modifiedby:"Garth Fort"`  <br/> |All items that were last changed by Garth Fort.  <br/> |
-|Path  <br/> |The path (URL) of a specific folder on a SharePoint or OneDrive for Business site. If you use this property, be sure to search the site that the specified folder is located in.  <br/> To return items located in subfolders in the folder that you specify for the path property, you have to add /\* to the URL of the specified folder; for example,  `path: https://contoso.sharepoint.com/Shared Documents/*`.  <br/> <br/> **Note:** Using the  `Path` property to search OneDrive locations won't return media files, such as .png, .tiff, or .wav files, in the search results. Use a different site property in your search query to search for media files in OneDrive folders. <br/> <br/> For more information about searching for the Path property and using a script to obtain the path URLs for folders on a specific site, see [Use Content Search in Office 365 for targeted collections](use-content-search-for-targeted-collections.md).  <br/> |`path:https://contoso-my.sharepoint.com/personal/garthf_contoso_com/Documents/Private`  <br/> `path:"https://contoso-my.sharepoint.com/personal/garthf_contoso_com/Documents/Shared with Everyone/\*" AND filename:confidential`  <br/> |The first example returns all items in the specified OneDrive for Business folder. The second example returns documents in the specified site folder (and all subfolders) that contain the word "confidential" in the file name.  <br/> |
+|Path  <br/> |The path (URL) of a specific folder on a SharePoint or OneDrive for Business site. If you use this property, be sure to search the site that the specified folder is located in.  <br/> To return items located in subfolders in the folder that you specify for the path property, you have to add /\* to the URL of the specified folder; for example,  `path: https://contoso.sharepoint.com/Shared Documents/*`.  <br/> <br/> **Note:** Using the  `Path` property to search OneDrive locations won't return media files, such as .png, .tiff, or .wav files, in the search results. Use a different site property in your search query to search for media files in OneDrive folders. <br/> <br/> For more information about searching for the Path property and using a script to obtain the path URLs for folders on a specific site, see [Use Content Search in Office 365 for targeted collections](use-content-search-for-targeted-collections.md).  <br/> |`path:https://contoso-my.sharepoint.com/personal/garthf_contoso_com/Documents/Private`  <br/> `path:"https://contoso-my.sharepoint.com/personal/garthf_contoso_com/Documents/Shared with Everyone/*" AND filename:confidential`  <br/> |The first example returns all items in the specified OneDrive for Business folder. The second example returns documents in the specified site folder (and all subfolders) that contain the word "confidential" in the file name.  <br/> |
 |SharedWithUsersOWSUser  <br/> |Documents that have been shared with the specified user and displayed on the **Shared with me** page in the user's OneDrive for Business site. These are documents that have been explicitly shared with the specified user by other people in your organization. When you export documents that match a search query that uses the SharedWithUsersOWSUser property, the documents are exported from the original content location of the person who shared the document with the specified user. For more details, see [Searching for site content shared within your organization](keyword-queries-and-search-conditions.md#internal).  <br/> |`sharedwithusersowsuser:garthf`  <br/> `sharedwithusersowsuser:"garthf@contoso.com"`  <br/> |Both examples return all internal documents that have been explicitly shared with Garth Fort and that appear on the **Shared with me** page in Garth Fort's OneDrive for Business account.  <br/> |
 |Site  <br/> |The URL of a site or group of sites in your organization.  <br/> |`site:https://contoso-my.sharepoint.com`  <br/> `site:https://contoso.sharepoint.com/sites/teams`  <br/> |The first example returns items from the OneDrive for Business sites for all users in the organization. The second example returns items from all team sites.  <br/> |
-|Size  <br/> |The size of an item, in bytes.  <br/> |`size\>=1`  <br/> `size:1..10000`  <br/> |The first example returns items larger than 1 byte. The second example returns items from 1 through 10,000 bytes in size.  <br/> |
+|Size  <br/> |The size of an item, in bytes.  <br/> |`size>=1`  <br/> `size:1..10000`  <br/> |The first example returns items larger than 1 byte. The second example returns items from 1 through 10,000 bytes in size.  <br/> |
 |Title  <br/> |The title of the document. The Title property is metadata that's specified in Microsoft Office documents. It's different from the file name of the document.  <br/> |`title:"communication plan"`  <br/> |Any document that contains the phrase "communication plan" in the Title metadata property of an Office document.  <br/> |
    
 ## Searchable contact properties
@@ -213,8 +213,8 @@ When you add a condition, you can select an operator that is relevant to type of
   
 |**Operator**|**Query equivalent**|**Description**|
 |:-----|:-----|:-----|
-|After  <br/> |`property\>date`  <br/> |Used with date conditions. Returns items that were sent, received, or modified after the specified date.  <br/> |
-|Before  <br/> |`property\<date`  <br/> |Used with date conditions. Returns items that were sent, received, or modified before the specified date.  <br/> |
+|After  <br/> |`property>date`  <br/> |Used with date conditions. Returns items that were sent, received, or modified after the specified date.  <br/> |
+|Before  <br/> |`property<date`  <br/> |Used with date conditions. Returns items that were sent, received, or modified before the specified date.  <br/> |
 |Between  <br/> |`date..date`  <br/> |Use with date and size conditions. When used with a date condition, returns items there were sent, received, or modified within the specified date range. When used with a size condition, returns items whose size is within the specified range.  <br/> |
 |Contains any of  <br/> |`(property:value) OR (property:value)`  <br/> |Used with conditions for properties that specify a string value. Returns items that contain any part of one or more specified string values.  <br/> |
 |Doesn't contain any of  <br/> |`-property:value`  <br/> `NOT property:value`  <br/> |Used with conditions for properties that specify a string value. Returns items that don't contain any part of the specified string value.  <br/> |
@@ -287,7 +287,7 @@ This example returns email items or documents that contain the keyword "report",
   
  **Search query syntax**
   
- `report???(c:c)??????(date<2016-04-01)??????(subjecttitle:"northwind")??????(-filetype="aspx")???`
+ `report(c:c)(date<2016-04-01)(subjecttitle:"northwind")(-filetype="aspx")`
   
  **Search query logic**
   
@@ -337,7 +337,7 @@ What is considered content that is shared with people outside your organization?
     
 ### Issues using the ViewableByExternalUsers property
 
-While the  `ViewableByExternalUsers` property represents the status of whether a document or site is shared with external users, there are some caveats to what this property does and doesn???t reflect. In the following scenarios, the value of the  `ViewableByExternalUsers` property won't be updated, and the results of a Content Search query that uses this property may be inaccurate. 
+While the  `ViewableByExternalUsers` property represents the status of whether a document or site is shared with external users, there are some caveats to what this property does and doesn't reflect. In the following scenarios, the value of the  `ViewableByExternalUsers` property won't be updated, and the results of a Content Search query that uses this property may be inaccurate. 
   
 - Changes to sharing policy, such as turning off external sharing for a site or for the organization. The property will still show previously shared documents as being externally accessible even though external access might have been revoked.
     
@@ -353,9 +353,31 @@ As previously explained, you can use the  `SharedWithUsersOWSUser` property so s
   
 Note that documents must be explicitly shared with a specific user to be returned in search results when using the  `SharedWithUsersOWSUser` property. For example, when a person shares a document in their OneDrive account, they have the option to share it with anyone (inside or outside the organization), share it only with people inside the organization, or share it with a specific person. Here's a screenshot of the **Share** window in OneDrive, that shows the three sharing options. 
   
-![Only files shared with specific people will be returned by a searcj query that uses the SharedWithUsersOWSUser property](media/469a4b61-68bd-4ab0-b612-ab6302973886.png)
+![Only files shared with specific people will be returned by a search query that uses the SharedWithUsersOWSUser property](media/469a4b61-68bd-4ab0-b612-ab6302973886.png)
   
 Only documents that are shared by using the third option (shared with **Specific people**) will be returned by a search query that uses the  `SharedWithUsersOWSUser` property. 
+
+## Searching for Skype for Business conversations
+
+You can use the following keyword query to specifically search for content in Skype for Business conversations:
+
+```
+kind:im
+```
+
+Note the previous search query will also return chats from Microsoft Teams. To prevent this, you can narrow the search results to include only Skype for Business conversations by using the following keyword query:
+
+```
+kind:im AND subject:conversation
+```
+
+The previous keyword query excludes chats in Microsoft Teams because Skype for Business conversations are saved as email messages with a Subject line that starts with the word "Conversation".
+
+To search for Skype for Business conversations that occurred within a specific date range, use the following keyword query:
+
+```
+kind:im AND subject:conversation AND (received=startdate..enddate)
+```
 
 ## Search tips and tricks
 
@@ -373,4 +395,5 @@ Only documents that are shared by using the third option (shared with **Specific
     
 - When searching a property, use double quotation marks ("  ") if the search value consists of multiple words. For example `subject:budget Q1` returns messages that contain **budget** in the in the subject line and that contain **Q1** anywhere in the message or in any of the message properties. Using `subject:"budget Q1"` returns all messages that contain **budget Q1** anywhere in the subject line. 
     
-- To exclude content marked with a certain property value from your search results, place a minus sign (-) before the name of the property. For example, `-from:"Sara Davis"` will exclude any messages sent by Sara Davis. 
+- To exclude content marked with a certain property value from your search results, place a minus sign (-) before the name of the property. For example, `-from:"Sara Davis"` will exclude any messages sent by Sara Davis.
+- You can export items based on the item type. For example, to export Skype IM messages recived by a user, use the syntax 'Kind:IM'. This search query returen all IM message. 

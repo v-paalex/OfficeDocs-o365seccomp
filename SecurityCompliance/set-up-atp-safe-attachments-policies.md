@@ -28,7 +28,7 @@ People regularly send, receive, and share attachments, such as documents, presen
     
 3. [Learn about ATP Safe Attachments policy options](#learn-about-atp-safe-attachments-policy-options)
     
-## Review the prerequisites
+## Step 1: Review the prerequisites
 
 - Make sure that your organization has [Office 365 Advanced Threat Protection](office-365-atp.md).
     
@@ -38,9 +38,10 @@ People regularly send, receive, and share attachments, such as documents, presen
     
 - Allow up to 30 minutes for your new or updated policy to spread to all Office 365 datacenters.
     
-## Set up an ATP Safe Attachments policy
+## Step 2: Set up (or edit) an ATP Safe Attachments policy
 
-You can set up an ATP Safe Attachments policy using either the Office 365 Security &amp; Compliance Center or the Exchange admin center (EAC). **We recommend using the Office 365 Security &amp; Compliance Center**. 
+> [!TIP]
+> You can set up an ATP Safe Attachments policy using either the Office 365 Security &amp; Compliance Center or the Exchange admin center (EAC). **We recommend using the Office 365 Security &amp; Compliance Center**. 
   
 1. As a global administrator or security administrator, go to [https://protection.office.com](https://protection.office.com) and sign in with your work or school account. 
     
@@ -54,27 +55,27 @@ You can set up an ATP Safe Attachments policy using either the Office 365 Securi
     
     **Example:** To set up a policy called "no delays" that delivers everyone's messages immediately and then reattaches attachments after they're scanned, you might specify the following settings: 
     
-  - In the **Name** box, type no delays.
+      - In the **Name** box, type no delays.
     
-  - In the **Description** box, type a description like, Delivers messages immediately and reattaches attachments after scanning.
+      - In the **Description** box, type a description like, Delivers messages immediately and reattaches attachments after scanning.
     
-  - In the response section, choose the **Dynamic Delivery** option. ([Learn more about dynamic delivery and previewing with ATP Safe Attachments](dynamic-delivery-and-previewing.md).)
+      - In the response section, choose the **Dynamic Delivery** option. ([Learn more about dynamic delivery and previewing with ATP Safe Attachments](dynamic-delivery-and-previewing.md).)
     
-  - In the **Redirect attachment** section, select the option to enable redirect and type the email address of your Office 365 global administrator, security administrator, or security analyst who will investigate malicious attachments. 
+      - In the **Redirect attachment** section, select the option to enable redirect and type the email address of your Office 365 global administrator, security administrator, or security analyst who will investigate malicious attachments. 
     
-  - In the **Applied To** section, choose **The recipient domain is**, and then select your domain. Choose **Add**, and then choose **OK**.
+      - In the **Applied To** section, choose **The recipient domain is**, and then select your domain. Choose **Add**, and then choose **OK**.
     
 6. Choose **Save**.
     
 Consider setting up multiple ATP Safe Attachments policies for your organization. These policies will be applied in the order they're listed on the **ATP Safe Attachments** page. After a policy has been defined or edited, allow at least 30 minutes for the polices to take effect throughout Microsoft datacenters. 
   
-## Learn about ATP Safe Attachments policy options
+## Step 3: Learn about ATP Safe Attachments policy options
 
 As you set up your ATP Safe Attachments policies, you choose from among many options, including Monitor, Block, Replace, Dynamic Delivery, and so on. In case you're wondering about what these options do, the following table summarizes each and its effect.
   
 |**Option**|**Effect**|**Use when you want to:**|
 |:-----|:-----|:-----|
-|**Off** <br/> |Does not scan attachments for malware  <br/> Does not delay message delivery  <br/> |Turn scanning off for internal senders, scanners, faxes, or smart hosts that will only send known, good attachments  <br/> Prevent unnecessary delays in routing internal mail  <br/> > [!IMPORTANT]> This option is not recommended for most users. It enables you to turn ATP Safe Attachments scanning off for a small group of internal senders.           |
+|**Off** <br/> |Does not scan attachments for malware  <br/> Does not delay message delivery  <br/> |Turn scanning off for internal senders, scanners, faxes, or smart hosts that will only send known, good attachments  <br/> Prevent unnecessary delays in routing internal mail  <br/> **This option is not recommended for most users. It enables you to turn ATP Safe Attachments scanning off for a small group of internal senders.**           |
 |**Monitor** <br/> |Delivers messages with attachments and then tracks what happens with detected malware  <br/> |See where detected malware goes in your organization  <br/> |
 |**Block** <br/> |Prevents messages with detected malware attachments from proceeding  <br/> Sends messages with detected malware to [quarantine in Office 365](manage-quarantined-messages-and-files.md) where a security administrator or analyst can review and release (or delete) those messages  <br/> Blocks future messages and attachments automatically  <br/> |Safeguard your organization from repeated attacks using the same malware attachments  <br/> |
 |**Replace** <br/> |Removes detected malware attachments  <br/> Notifies recipients that attachments have been removed  <br/> Sends messages with detected malware to [quarantine in Office 365](manage-quarantined-messages-and-files.md) where a security administrator or analyst can review and release (or delete) those messages  <br/> |Raise visibility to recipients that attachments were removed because of detected malware  <br/> |

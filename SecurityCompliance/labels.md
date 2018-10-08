@@ -262,13 +262,15 @@ After you select a policy template, you can add or remove any types of sensitive
     
 ![Options for identifying sensitive information types](media/de255881-f596-4c8d-8359-e974e3a0819a.png)
   
-### Auto-apply labels to content with specific keywords
+### Auto-apply labels to content with keywords
 
-You can auto-apply labels to content that satisfies certain conditions. The conditions available now support applying a label to content that contains specific words or phrases. You can refine your query by using search operators like AND, OR, and NOT. For more information on operators, see [Keyword queries and search conditions for Content Search](keyword-queries-and-search-conditions.md).
-  
-Support for adding searchable properties (for example, **subject:** ) is coming soon. 
-  
-Note that query-based labels use the search index to identify content.
+You can auto-apply labels to content that satisfies certain conditions. The conditions now available support applying a label to content that contains specific words or phrases. You can refine your query by using search operators like AND, OR, and NOT. 
+
+For more information on query syntax, see:
+
+- [Keyword Query Language (KQL) syntax reference](https://docs.microsoft.com/en-us/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference)
+
+Query-based labels use the search index to identify content.
   
 ![Query editor](media/ac5b8e5e-7453-4ec7-905c-160df57298d3.png)
   

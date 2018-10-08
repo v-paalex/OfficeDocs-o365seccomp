@@ -9,7 +9,9 @@ ms.topic: overview
 ms.service: o365-administration
 localization_priority: Priority
 ms.collection: Strat_O365_IP
-search.appverid: MOE150
+search.appverid: 
+- MOE150
+- MET150
 ms.assetid: 34823bbc-a3e3-4949-ba42-97c73997eeed
 description: "Learn how to keep real email out of junk and from being marked as spam in Office 365."
 ---
