@@ -129,7 +129,7 @@ After you click Close and leave the wizard, on the Security extensions screen, y
   
 2. In your Syslog/SIEM server, make sure you see that alerts have arrived from Office 365 Cloud App Security.
   
-## What do logfiles look like?
+## What the logfiles look like
 
 Here's an alerts logfile example that might be sent to a SIEM server:
 
@@ -147,7 +147,7 @@ Here's an alerts logfile example that might be sent to a SIEM server:
 2017-07-16T09:41:04.369Z CEF:0|MCAS|SIEM_Agent|0.102.17|ALERT_CABINET_EVENT_MATCH_AUDIT|test-activity-policy2|3|externalId=596b34b10c204203a33a5240 start=1500198064369 end=1500198064369 msg=Activity policy ''test-activity-policy2'' was triggered by ''user2@test15-adallom.com'' suser=user2@test15-adallom.com destinationServiceName=Google cn1Label=riskScore cn1= cs1Label=portalURL cs1=https://cloud-app-security.com/#/alerts/596b34b10c204203a33a5240 cs2Label=uniqueServiceAppIds cs2=APPID_33626 cs3Label=relatedAudits cs3=1500197996117_fd71f265-1e46-4f04-b372-2e32ec874cd3 cs4Label=policyIDs cs4=
 ```
 
-And here's another sample, in CEF format:
+And here's another sample, this time in CEF format:
 
 
 |CEF field name  | Description  |
@@ -161,7 +161,11 @@ And here's another sample, in CEF format:
 |csLabel     | Varies (labels have different meanings). Typically, labels are self-explanatory, like targetObjects.        |
 |cs     | Information corresponding to a label (such as the target user of an alert as per the label example)        |
 
-## Regenerate a token
+## Additional tasks (as needed)
+
+After you have configured your SIEM server and have integrated it with Office 365 Cloud App Security, you might need to regenerate a token, edit a SIEM agent, or delete a SIEM agent. The following sections describe how to perform these tasks.
+
+### Regenerate a token
 
 If you lose your token, you can regenerate one. 
 
@@ -171,7 +175,7 @@ If you lose your token, you can regenerate one.
 
 3. Click the ellipses, and then choose **Regenerate token**.<br/>![Regenerate a token by clicking the ellipsis for your SIEM agent](media/04de368a-b88e-4a9c-a830-58025cb98db6.png)
   
-## Edit a SIEM agent
+### Edit a SIEM agent
 
 1. In the Office 365 Cloud App Security portal, choose **Settings** > **Security extensions**.
 
@@ -179,7 +183,7 @@ If you lose your token, you can regenerate one.
 
 3. Click the ellipses, and then choose **Edit**. (If you edit the SIEM agent, you do not need to re-run the .jar file; it updates automatically.) <br/>![To edit your SIEM agent, choose the ellipses, and then choose Edit.](media/96d0b362-3e0c-4dff-b2b4-d7af5b1bfb91.png)
   
-## Delete a SIEM agent?
+### Delete a SIEM agent
 
 1. In the Office 365 Cloud App Security portal, choose **Settings** > **Security extensions**.
 
