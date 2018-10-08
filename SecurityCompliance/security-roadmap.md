@@ -3,7 +3,7 @@ title: "Office 365 security roadmap - Top priorities for the first 30 days, 90 d
 ms.author: bcarter
 author: BrendaCarter
 manager: laurawi
-ms.date: 3/21/2018
+ms.date: 10/08/2018
 ms.audience: Admin
 ms.topic: conceptual
 ms.service: o365-administration
