@@ -123,7 +123,7 @@
 ## [Overview of Office 365 Cloud App Security](office-365-cas-overview.md)
 ### [What's new in Office 365 Cloud App Security](new-in-office-365-cas.md)
 ### [Get ready for Office 365 Cloud App Security](get-ready-for-office-365-cas.md)
-### [Turn on Office 365 Cloud App Security](turn-on-office-365-cas.md)
+### [Set up Office 365 Cloud App Security](turn-on-office-365-cas.md)
 #### [Activity policies and alerts in Office 365 Cloud App Security](activity-policies-and-alerts.md)
 #### [Anomaly detection policies in Office 365 Cloud App Security](anomaly-detection-policies-in-ocas.md)
 #### [Integrate your SIEM server with Office 365 Cloud App Security](integrate-your-siem-server-with-office-365-cas.md)
