@@ -20,15 +20,35 @@ description: "Learn about custom sentisive information types for DLP in the Offi
 
 Data loss prevention (DLP) in Office 365 includes many [sensitive information types](what-the-sensitive-information-types-look-for.md) that are ready for you to use in your DLP policies. These built-in types can help identify and protect credit card numbers, bank account numbers, passport numbers, and more. 
 
-But if you need to identify and protect a different type of sensitive information (for example, an employee ID that uses a format specific to your organization) you can create a custom sensitive information type.
+But if you need to identify and protect a different type of sensitive information (for example, employee IDs or project numbers that uses a format specific to your organization) you can create a custom sensitive information type.
 
-You have two options for creating custom sensitive information types:
+The fundamental parts of a custom sensitive information type are:
 
-- Use the Office 365 Security & Compliance Center. The sensitive information types may contain only one pattern, and they're all added to the same rule package named Microsoft.SCCManaged.CustomRulePack. For more information, see [].
+- **The primary pattern that you're trying to match in content**: employee ID numbers, project numbers, etc. This is typically identified by a regular expression (RegEx), but it can also be a list of keywords.
 
-- Create an XML file (called a _rule package_) and use Office 365 Security & Compliance Center PowerShell to import the rule package. The sensisitve information types may contain multiple patterns, and you can add different sensitive information types to different rule packages. For more information, see [].
+- **Supporting evidence**: Suppose you're looking for a nine-digit employee ID number. Not all nine-digit numbers are employee ID numbers, so you can look for additional text: "card", "badge", "ID", or other text based on additional regular expressions. This supporting evidence (also known as corroborative evidence) with the nine-digit number increases the likelyhood that number found in content is really an employee ID number.
 
-The key differences between these 
+- **Character proximity**: It makes sense that the closer together the primary pattern and the supporting evidence is, the more likely the pattern is going to be what you're looking for. You can specify the character distance between the primary pattern and the supporting evidence as show in the following diagram:
+
+    ![Diagram of corroborative evidence and proximity window](media/dc68e38e-dfa1-45b8-b204-89c8ba121f96.png)
+
+- **Confidence level**: The more supporting evidence you have, the higher the likelyhood that the content contains the sensitive information you're looking for. You can assign higher levels of confidence for matches based on more evidence. When you use the sensitive information type in DLP policies, you can then take more restrictive action on higher confidence match.
+
+To create custom sensitive information types, you have the following options:
+
+- **Use the graphical user interface**: This method is easier and faster, but you have less configuration options than PowerShell.
+
+- **Use PowerShell**: This method requires that you first create an XML file (called a _rule package_) that contains one or more sensitive information types, and then you use use PowerShell to import the rule package (importing the rule package is not too difficult). This method is much more complex than the graphical user interface, but you have more configuration options.
+
+The key differences are described in the following table:
+
+|Sensitive information types in the UI|Sensitive information types in PowerShell|
+|:-----|:-----|
+|Name and Description are in one language|Supports mulitple languages for Name and Description|
+|Supports only one pattern (the primary pattern).|Supports multiple patterns in addition to the primary pattern.|
+|Confidence level is configurable for the sensitive information type.|Confidence leve is configurable for the sensitive information type and each individual pattern within.|
+|Supporting evidence can be: <br/>• Regular expressions <br/>• Keywords <br/>• Keyword dictionaries|Supporting evidence can be: <br/>• Regular expressions <br/>• Keywords <br/>• Keyword dictionaries <br/>• [Built-in DLP functions](what-the-dlp-functions-look-for.md)|
+|Supporting evidence is implicitly joined by the OR operator.|Supporting evidence can be implicitly joined by combination of AND and OR operators.|
 
 The rest of this topic explains the elements of the XML file that defines your own custom sensitive information type. You need to know how to create a regular expression. As an example, this topic explores a custom sensitive information type that identifies an employee ID. You can use this example XML as a starting point for your own XML file.
 
@@ -45,7 +65,7 @@ Here's the sample XML of the rule package that we'll explore in this topic. Elem
 ```
 <?xml version="1.0" encoding="UTF-16"?>
 <RulePackage xmlns="http://schemas.microsoft.com/office/2011/mce">
-<RulePack id="DAD86A92-AB18-43BB-AB35-96F7C594ADAA">
+<RulePack id="DAD86A2-AB18-43BB-AB35-96F7C594ADAA">
 	<Version build="0" major="1" minor="0" revision="0"/>
 	<Publisher id="619DD8C3-7B80-4998-A312-4DF0402BAC04"/>
 	<Details defaultLangCode="en-us">
@@ -154,31 +174,33 @@ Note a couple of important aspects of this structure:
 
 ## Name the entity and generate its GUID [Rules, Entity, and Entity id elements]
 
-In the XML file, an **entity** is a sensitive information type (for example, an employee ID number) that has a well-defined pattern. Each entity has a unique GUID as its ID.
+In the XML file, an **entity** is a sensitive information type that has a well-defined pattern: (for example, an employee ID number, credit card number, or social security number) Each entity has a unique GUID as its ID.
 
 1. Add the `<Rules>` `</Rules>` tags.
 
 2. Inside the Rules tags, add the `<!-- -->` comment tag that contains the the name of your custom entity (`<!-- Employee ID -->` in this example).
 
-3. After the comment tag, add the `<Entity>` `</Entity>` tags. The opening Entity tag requires an addtional ` id=` value that contains a unique GUID for the entity. You can generate a GUID in Windows PowerShell by running the following command:
+3. After the comment tag, add the `<Entity>` `</Entity>` tags. The opening Entity tag requires an addtional `id=` value that contains a unique GUID for the entity. You can generate a GUID in Windows PowerShell by running the following command:
 
     ```
     [guid]::NewGuid()
     ```
 
-    The example value is `<Entity id="E1CC861E-3FE9-4A58-82DF-4BD259EAB378">`
+    The example value in the following diagram is `<Entity id="E1CC861E-3FE9-4A58-82DF-4BD259EAB378">`
 
 ![XML markup showing Rules and Entity elements](media/c46c0209-0947-44e0-ac3a-8fd5209a81aa.png)
 
 ## Identify the text pattern to match [Regex, Pattern, and IdMatch elements]
 
-In this example, the `Regex` element is the fundamental item that's used in the entity (sensitive information type), because that's what defines an employee ID:
+Every
+
+In this example, the `Regex` element is the fundamental item that's used in the entity, because that's what defines an employee ID:
 
 - The regular expression `(\s)(\d{9})(\s)` looks for nine-digit numbers `(\d{9})` surrounded by white space `(\s)`.
 
-- The Regex element is named `Regex_employee_id`, and that name is referenced by the patterns in the entity. Note that the `Regex` element is actually _outside_ the employee identity itself (below the `</Entity>` tag), which means they can be referenced by other entities.
+- The Regex element is named `Regex_employee_id`, and that name is referenced by all patterns in the entity. Note that the `Regex` element is actually _outside_ the Employee ID entity itself (below the `</Entity>` tag), which means `Regex_employee_id` can be referenced by other entities within the rule package.
 
-The `Pattern` elements contains the list of what the entity is looking for. Each `Pattern` element has one and only one `IdMatch` element that identifies what needs to be matched (`Regex_employee_id` in this example). Regardless of how many patterns exists in the entity, they all have the primary requirement of trying to match the criteria defined in the `IdMatch` value (for example, employee ID, credit card number, or social security number).
+The `Pattern` elements contains the list of what the entity is looking for. Each `Pattern` element has one and only one `IdMatch` element that identifies what needs to be matched (`Regex_employee_id` in this example). Regardless of how many patterns exists in the entity, they all have the primary requirement of trying to match the criteria defined in the `IdMatch` value (for example, an employee ID, credit card number, or social security number).
 
 The only reason to have multiple `Pattern` elements is so each pattern uses different levels of evidence to augment the `IdMatch` search criteria (additional keywords, RegExes, or built-in functions). And, the best use of patterns with different levels of evidence is to assign a different confidence level to each pattern. This allows your DLP policies to take more or less aggressive action on content that's identified with more or less confidence (levels of evidence).
 
@@ -247,9 +269,7 @@ An `Any` element defines a group of `Match` elements. You use the `minMatches` a
 
   ![XML markup showing Any element with minMatches attribute](media/385db1b1-571b-4a05-81b3-db28f5099c17.png)
 
-- **Use the maxMatches attribute by itself**: For example, your `Any` element has three `Match` elements, and you use the value `maxMatches=2`. The `Any` element is satisfied if one or two of the `Match` elements are satisfied, but not all three.
-
-- **Set minMatches and maxMatches to the same value**: For example, your `Any` element has three `Match` elements, and you use the values `minMatches=1` and `maxMatches=2`. This `Any` element is satisfied if _only_ one of the `Match` elements is satisfied; any more than that, and the `Any` element isn't satisfied. In the following diagram, the `Any` element is statisfied only if exactly one date or keyword is found.
+- **Set minMatches and maxMatches to the same value**: For example, your `Any` element has three `Match` elements, and you use the values `minMatches=1` and `maxMatches=1`. This `Any` element is satisfied if _only_ one of the `Match` elements is satisfied; any more than that, and the `Any` element isn't satisfied. In the following diagram, the `Any` element is statisfied only if exactly one date or keyword is found.
 
   ![XML markup showing Any element wtih minMatches and maxMatches attributes](media/97b10002-7781-42e8-ac5a-20ad8c5a887e.png)
 
@@ -262,49 +282,42 @@ An `Any` element defines a group of `Match` elements. You use the `minMatches` a
 
 ## Proximity of evidence [patternsProximity attribute]
 
-Your sensitive information type is looking for a pattern that represents an employee ID, and as part of that pattern it's also looking for corroborative evidence like a keyword such as "ID". It makes sense that the closer together this evidence is, the more likely the pattern is to be an actual employee ID. You can determine how close other evidence in the pattern must be to the entity by using the required patternsProximity attribute of the Entity element.
 
 ![XML markup showing patternsProximity attribute](media/e97eb7dc-b897-4e11-9325-91c742d9839b.png)
 
-For each pattern in the entity, the patternsProximity attribute value defines the distance (in Unicode characters) from the IdMatch location for all other Matches specified for that Pattern. The proximity window is anchored by the IdMatch location, with the window extending to the left and right of the IdMatch.
+The `patternsProximity` attribute each `Entity` element defines the required distance (in Unicode characters) of the supporting evidence in the pattern (keywords, dates, etc.) from the primary item that the pattern is looking for (the employee ID number, social security number, etc.) as defined by the `IdMatch` element. This distance to the left or right of the primary item is called the _proximity window_.
 
 ![Diagram of proximity window](media/b593dfd1-5eef-4d79-8726-a28923f7c31e.png)
 
-The example below illustrates how the proximity window affects the pattern matching where IdMatch element for the employee ID custom entity requires at least one corroborating match of keyword or date. Only ID1 matches because for ID2 and ID3, either no or only partial corroborating evidence is found within the proximity window.
+The following diagram illustrates how the proximity window affects pattern matching where the primary social security number (SSN) requires at least one corroborating match of keyword or date.
 
 ![Diagram of corroborative evidence and proximity window](media/dc68e38e-dfa1-45b8-b204-89c8ba121f96.png)
 
-Note that for email, the message body and each attachment are treated as separate items. This means that the proximity window does not extend beyond the end of each of these items. For each item (attachment or body), both the idMatch and corroborative evidence needs to reside in that item.
+**Note**: For email messages, the message body and each attachment are treated as separate items. One proximity window is the message body; another is each individual message attachment.
 
 ## What are the right confidence levels for different patterns? [confidenceLevel attribute, recommendedConfidence attribute]
 
 The more evidence that a pattern requires, the more confidence you have that an actual entity (such as employee ID) has been identified when the pattern is matched. For example, you have more confidence in a pattern that requires a nine-digit ID number, hire date, and keyword in close proximity, than you do in a pattern that requires only a nine-digit ID number.
 
-The Pattern element has a required confidenceLevel attribute. You can think of the value of confidenceLevel (an integer between 1 and 100) as a unique ID for each pattern in an entity - the patterns in an entity must have different confidence levels that you assign. The precise value of the integer doesn't matter - simply pick numbers that make sense to your compliance team. After you upload your custom sensitive information type and then create a DLP policy, you can reference these confidence levels in the conditions of the rules that you create.
+Every `Pattern` element in an entity has a required `confidenceLevel` attribute that has an integer value from 1 to 100. You can think of the `confidenceLevel` value as  a unique ID for each pattern in an entity, because each pattern requires a different confidence level. A lower confidence patterm should have a lower value than a higher confidence patter, but the actual number value doesn't matter; simply pick numbers that make sense to your compliance team. You can reference these confidence levels in the conditions of the rules in the DLP policies that you create.
 
 ![XML markup showing Pattern elements with different values for confidenceLevel attribute](media/301e0ba1-2deb-4add-977b-f6e9e18fba8b.png)
 
-In addition to confidenceLevel for each Pattern, the Entity has a recommendedConfidence attribute. The recommended confidence attribute can be thought of as the default confidence level for the rule. When you create a rule in a DLP policy, if you don't specify a confidence level for the rule to use, that rule will match based on the recommended confidence level for the entity.
+The `Entity` element itself also has a `recommendedConfidence` attribute. You can think of this value as the default confidence level for the whole entity. When you create a rule in a DLP policy, if you don't specify a confidence level for the rule to use, the rule will use the recommended confidence level for the sensitive information type.
 
-## Do you want to support other languages in the UI of the Security & Compliance Center? [LocalizedStrings element]
+## Other languages [LocalizedStrings element]
 
-If your compliance team uses the Office 365 Security & Compliance Center to create DLP policies in different locales and in different languages, you can provide localized versions of the name and description of your custom sensitive information type. When your compliance team uses Office 365 in a language that you support, they'll see the localized name in the UI.
+If your compliance team uses the Security & Compliance Center to create DLP policies in different languages, you can provide localized versions of the name and description of the entity (custom sensitive information type) that the compliance team sees.
 
-![Instance count and match accuracy options](media/11d0b51e-7c3f-4cc6-96d8-b29bcdae1aeb.png)
-
-The Rules element must contain a LocalizedStrings element, which contains a Resource element that references the GUID of your custom entity. In turn, each Resource element contains one or more Name and Description elements that each use the langcode attribute to provide a localized string for a specific language.
+The `LocalizedStrings` element that exists in the XML file outside of the `Entity` element defines the name and description of the entity (sensitive information type) in one or more languages. The `LocalizedStrings` element contains a `Resource` element that references the ID (GUID) of the entity. Each `Resource` element contains one or more `Name` and `Description` elements that use a `langcode` attributes to provide a localized name and description of the sensitive information type for each specified language. You can also use the `default` attribute to specify the default language.
 
 ![XML markup showing contents of LocalizedStrings element](media/a96fc34a-b93d-498f-8b92-285b16a7bbe6.png)
 
-Note that you use localized strings only for how your custom sensitive information type appears in the UI of the Security & Compliance Center. You can't use localized strings to provide different localized versions of a keyword list or regular expression.
+**Notes**: Localized strings control how your custom sensitive information type appears to admins and compliance officers in the Security & Compliance Center. You can't use localized strings to provide different localized versions of keyword lists or regular expressions.
 
-## Other rule package markup [RulePack GUID]
+## Rule package identifiers [RulePackage element]
 
-Finally, the beginning of each RulePackage contains some general information that you need to fill in. You can use the following markup as a template and replace the ". . ." placeholders with your own info.
-
-Most importantly, you'll need to generate a GUID for the RulePack. Earlier, you generated a GUID for the entity, but this is a second, unique GUID for the RulePack itself. There are several ways to generate GUIDs, but you can do it easily in PowerShell by typing [guid]::NewGuid().
-
-The Version element is also important. When you upload your rule package for the first time, Office 365 notes the version number. Later, if you update the rule package and upload a new version, make sure to update the version number or Office 365 won't deploy the rule package.
+The custom rule package itself requires some identitfying information. You can use the following markup as a template and replace the ". . ." placeholders with your own values. The diagram at the end of this section
 
 ```
 <?xml version="1.0" encoding="utf-16"?>
@@ -320,14 +333,21 @@ The Version element is also important. When you upload your rule package for the
       </LocalizedDetails>
     </Details>
   </RulePack>
-  
- <Rules>
-	. . .
- </Rules>
 </RulePackage>
 ```
 
-When complete, your RulePack element should look like this.
+**Notes**
+
+- You need to generate a unique GUID for the custom rule package (the `RulePack` ID), which must be different than the GUID that you generated for the entity. You can generate a GUID in Windows PowerShell by running the following command:
+
+    ```
+    [guid]::NewGuid()
+    ```
+
+- Mantaining the `Version` element is important. When you upload your custom rule package for the first time, Office 365 notes the version number. Later, if you try to upload a modified version of the same rule package, the verson number must be different; otherwise, the upload will fail.
+
+
+The following diagram shows what your `RulePackage` element should look like:
 
 ![XML markup showing RulePack element](media/fd0f31a7-c3ee-43cd-a71b-6a3813b21155.png)
 
