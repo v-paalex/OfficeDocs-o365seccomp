@@ -3,7 +3,7 @@ title: "FAQ about importing PST files to Office 365"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
-ms.date: 1/3/2018
+ms.date: 
 ms.audience: Admin
 ms.topic: reference
 ms.service: o365-administration
