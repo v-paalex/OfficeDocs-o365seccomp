@@ -3,7 +3,7 @@ title: "FAQ about importing PST files to Office 365"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
-ms.date: 1/3/2018
+ms.date: 
 ms.audience: Admin
 ms.topic: reference
 ms.service: o365-administration
@@ -43,7 +43,7 @@ Additionally, to create import jobs in the Office 365 Security &amp; Compliance 
   
  **Where is network upload available?**
   
-Network upload is currently available in the United States, Canada, Brazil, the United Kingdom, Europe, India, East Asia, Southeast Asia, Japan, Republic of Korea, and Australia. Network upload will be available in more regions soon.
+Network upload is currently available in the United States, Canada, Brazil, the United Kingdom, France, Europe, India, East Asia, Southeast Asia, Japan, Republic of Korea, and Australia. Network upload will be available in more regions soon.
   
  **What is the pricing for importing PST files by using network upload?**
   
