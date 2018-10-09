@@ -89,7 +89,7 @@ The ATP Safe Links features are active when:
     
 - **Your organization's email is hosted in Office 365**, not in an on-premises server. 
     
-## How to make sure ATP Safe Links protection is in place
+### How to make sure ATP Safe Links protection is in place
 
 One good way to see how ATP Safe Links protection is working for your organization is by [viewing reports for Advanced Threat Protection](view-reports-for-atp.md). Additionally, as a global administrator or security administrator, be sure to review your [ATP Safe Links policies](set-up-atp-safe-links-policies.md). ATP Safe Links policies determine whether protection applies to hyperlinks in email messages only, or to URLs in Office documents as well.
 
