@@ -93,6 +93,18 @@ The ATP Safe Links features are active when:
 
 One good way to see how ATP Safe Links protection is working for your organization is by [viewing reports for Advanced Threat Protection](view-reports-for-atp.md). Additionally, as a global administrator or security administrator, be sure to review your [ATP Safe Links policies](set-up-atp-safe-links-policies.md). ATP Safe Links policies determine whether protection applies to hyperlinks in email messages only, or to URLs in Office documents as well.
 
+### Example scenarios where ATP Safe Links protection might or might not be in place
+  
+The following table describes some example scenarios where ATP Safe Links protection might or might not be in place. (In all of these cases, we assume the organization has Office 365 Enterprise E5.)
+  
+|**Example scenario**|**Does ATP Safe Links protection apply in this case?**|
+|:-----|:-----|
+|Jean is a member of a group that has ATP Safe Links policies covering URLs in email and Office documents. Jean opens a PowerPoint presentation that someone sent, and then clicks a URL in the presentation.  <br/> |Yes. The ATP Safe Links policies that are defined apply to Jean's group, Jean's email, and Word, Excel, PowerPoint, or Visio documents that Jean opens, so long as Jean is signed in and using Office 365 ProPlus on Windows, iOS, or Android devices.  <br/> |
+|In Chris's organization, no global or security administrators have defined any ATP safe links policies yet. Chris receives an email that contains a URL to a malicious website. Chris is unaware the URL is malicious and clicks the link.  <br/> |No. The default policy that covers URLs for everyone in the organization must be defined in order for protection to be in place.  <br/> |
+|In Pat's organization, no global or security administrators have defined or edited any ATP Safe Links policies yet. Pat opens a Word document and clicks a URL in the file.  <br/> |No. A policy that includes Office documents must be defined in order for protection to be in place. See [Set up ATP Safe Links policies in Office 365](set-up-atp-safe-links-policies.md).  <br/> |
+|Lee's organization has a ATP Safe Links policy that has `http://tailspintoys.com` listed as a blocked website. Lee receives an email message that contains a URL to `http://tailspintoys.com/aboutus/trythispage`. Lee clicks the URL.  <br/> |It depends on whether the entire site and all its subpages are included in the list of blocked URLs. See [Set up a custom blocked URLs list using ATP Safe Links](set-up-a-custom-blocked-urls-list-wtih-atp.md).  <br/> |
+|Jamie, Jean's colleague, sends an email to Jean, not knowing that the email contains a malicious URL.  <br/> |It depends on whether ATP Safe Links policies are defined for email sent within the organization. See [Set up ATP Safe Links policies in Office 365](set-up-atp-safe-links-policies.md).  <br/> |
+
 ## New features are continually being added to ATP Safe Links
 
 We are continuing to add new features to ATP Safe Links. Sometimes a new feature calls for ATP Safe Links policies to be reviewed and updated. Here are several examples:
@@ -107,17 +119,6 @@ We are continuing to add new features to ATP Safe Links. Sometimes a new feature
  
 - Beginning in October 2018 and rolling out over the next several months, when people are using Outlook Web Application (OWA) or Outlook (as part of Office 365 Enterprise or Microsoft 365 Business), ATP Safe Links renders original URLs, not rewritten URLs. (We call this native link visibility.)
 
-### Example scenarios where ATP Safe Links protection might or might not be in place
-  
-The following table describes some example scenarios where ATP Safe Links protection might or might not be in place. (In all of these cases, we assume the organization has Office 365 Enterprise E5.)
-  
-|**Example scenario**|**Does ATP Safe Links protection apply in this case?**|
-|:-----|:-----|
-|Jean is a member of a group that has ATP Safe Links policies covering URLs in email and Office documents. Jean opens a PowerPoint presentation that someone sent, and then clicks a URL in the presentation.  <br/> |Yes. The ATP Safe Links policies that are defined apply to Jean's group, Jean's email, and Word, Excel, PowerPoint, or Visio documents that Jean opens, so long as Jean is signed in and using Office 365 ProPlus on Windows, iOS, or Android devices.  <br/> |
-|In Chris's organization, no global or security administrators have defined any ATP safe links policies yet. Chris receives an email that contains a URL to a malicious website. Chris is unaware the URL is malicious and clicks the link.  <br/> |No. The default policy that covers URLs for everyone in the organization must be defined in order for protection to be in place.  <br/> |
-|In Pat's organization, no global or security administrators have defined or edited any ATP Safe Links policies yet. Pat opens a Word document and clicks a URL in the file.  <br/> |No. A policy that includes Office documents must be defined in order for protection to be in place. See [Set up ATP Safe Links policies in Office 365](set-up-atp-safe-links-policies.md).  <br/> |
-|Lee's organization has a ATP Safe Links policy that has `http://tailspintoys.com` listed as a blocked website. Lee receives an email message that contains a URL to `http://tailspintoys.com/aboutus/trythispage`. Lee clicks the URL.  <br/> |It depends on whether the entire site and all its subpages are included in the list of blocked URLs. See [Set up a custom blocked URLs list using ATP Safe Links](set-up-a-custom-blocked-urls-list-wtih-atp.md).  <br/> |
-|Jamie, Jean's colleague, sends an email to Jean, not knowing that the email contains a malicious URL.  <br/> |It depends on whether ATP Safe Links policies are defined for email sent within the organization. See [Set up ATP Safe Links policies in Office 365](set-up-atp-safe-links-policies.md).  <br/> |
    
 ## Related topics
 
