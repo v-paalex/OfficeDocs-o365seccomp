@@ -3,7 +3,6 @@ title: "Set up Office 365 ATP Safe Attachments policies"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 5/8/2018
 ms.audience: Admin
 ms.topic: article
 ms.service: o365-administration
@@ -39,9 +38,6 @@ People regularly send, receive, and share attachments, such as documents, presen
 - Allow up to 30 minutes for your new or updated policy to spread to all Office 365 datacenters.
     
 ## Step 2: Set up (or edit) an ATP Safe Attachments policy
-
-> [!TIP]
-> You can set up an ATP Safe Attachments policy using either the Office 365 Security &amp; Compliance Center or the Exchange admin center (EAC). **We recommend using the Office 365 Security &amp; Compliance Center**. 
   
 1. As a global administrator or security administrator, go to [https://protection.office.com](https://protection.office.com) and sign in with your work or school account. 
     

@@ -3,7 +3,6 @@ title: "Turn on Office 365 ATP for SharePoint, OneDrive, and Microsoft Teams"
 ms.author: derng
 author: derng
 manager: laurawi
-ms.date: 5/31/2018
 ms.audience: ITPro
 ms.topic: article
 ms.service: o365-administration
@@ -19,8 +18,7 @@ description: "Learn how to turn on ATP for SharePoint, OneDrive, and Teams, incl
 
 [Office 365 ATP for SharePoint, OneDrive, and Microsoft Teams](atp-for-spo-odb-and-teams.md) protects your organization from inadvertently sharing malicious files. When a malicious file is detected, that file is blocked so that no one can open, copy, move, or share it until further actions are taken by the organization's security team. Read this article to turn on ATP for SharePoint, OneDrive, and Teams, set up alerts to be notified about detected files, and take your next steps. 
   
-> [!TIP]
-> In order to perform the tasks described in this article, you must have the necessary permissions assigned in Office 365 and in the Security &amp; Compliance Center.
+In order to perform the tasks described in this article, you must have the necessary permissions assigned in Office 365 and in the Security &amp; Compliance Center.
   
 ## Turn on ATP for SharePoint, OneDrive, and Microsoft Teams
 
@@ -40,14 +38,13 @@ description: "Learn how to turn on ATP for SharePoint, OneDrive, and Teams, incl
     
 5. Review (and, as appropriate, edit) your organization's [Safe Attachments policies](set-up-atp-safe-attachments-policies.md) and [Safe Links policies](set-up-atp-safe-links-policies.md).
     
-6. (Recommended) As a global administrator or a SharePoint Online administrator, run the **[Set-SPOTenant](https://docs.microsoft.com/powershell/module/sharepoint-online/Set-SPOTenant?view=sharepoint-ps)** cmdlet with the **DisallowInfectedFileDownload** parameter set to  *true*  . <br/><br/>Setting the parameter to *true* blocks all actions (except Delete) for detected files. People cannot open, move, copy, or share detected files. <br/><br/>Setting the parameter to *false* blocks all actions except Delete and Download. People can choose to accept the risk and download a detected file. <br/><br/>We recommend setting the parameter to *true*. 
+6. (Recommended) As a global administrator or a SharePoint Online administrator, run the **[Set-SPOTenant](https://docs.microsoft.com/powershell/module/sharepoint-online/Set-SPOTenant?view=sharepoint-ps)** cmdlet with the **DisallowInfectedFileDownload** parameter set to  *true*  . <br/>Setting the parameter to *true* blocks all actions (except Delete) for detected files. People cannot open, move, copy, or share detected files. <br/>Setting the parameter to *false* blocks all actions except Delete and Download. People can choose to accept the risk and download a detected file. <br/>We recommend setting the parameter to *true*. 
    
 7. Allow up to 30 minutes for your changes to spread to all Office 365 datacenters.
     
 8. (Recommended) Proceed to set up alerts for detected files.
     
-> [!TIP]
-> To learn more about using PowerShell with Office 365, see [Manage Office 365 with PowerShell](https://docs.microsoft.com/office365/enterprise/powershell/manage-office-365-with-office-365-powershell). > To learn more about the user experience when a file has been detected as malicious, see [What to do when a malicious file is found in SharePoint Online, OneDrive, or Microsoft Teams](https://support.office.com/article/01e902ad-a903-4e0f-b093-1e1ac0c37ad2). 
+To learn more about using PowerShell with Office 365, see [Manage Office 365 with PowerShell](https://docs.microsoft.com/office365/enterprise/powershell/manage-office-365-with-office-365-powershell). > To learn more about the user experience when a file has been detected as malicious, see [What to do when a malicious file is found in SharePoint Online, OneDrive, or Microsoft Teams](https://support.office.com/article/01e902ad-a903-4e0f-b093-1e1ac0c37ad2). 
   
 ## Set up alerts for detected files
 
@@ -71,8 +68,7 @@ To receive notification when a file in SharePoint Online, OneDrive for Business,
     
 7. Click **Save**.
     
-> [!TIP]
-> To learn more about alerts, see [Create activity alerts in the Office 365 Security &amp; Compliance Center](create-activity-alerts.md). 
+To learn more about alerts, see [Create activity alerts in the Office 365 Security &amp; Compliance Center](create-activity-alerts.md). 
   
 ## Next steps
 
