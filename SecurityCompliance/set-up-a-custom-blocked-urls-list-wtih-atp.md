@@ -56,7 +56,7 @@ Read this article to learn how to set up your organization's custom blocked URLs
    
 5. When you are finished adding URLs, in the lower right corner of the screen, choose **Save**.
     
-## What if I want to define exceptions for certain users in my organization?
+## How to define exceptions for certain users in an organization
 
 If you want certain groups to be able to view URLs that might be blocked for others, you can specify an ATP Safe Links policy that applies to specific recipients. See [Set up a custom "do not rewrite" URLs list using ATP Safe Links](set-up-a-custom-do-not-rewrite-urls-list-with-atp.md).
   

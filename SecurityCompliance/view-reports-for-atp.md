@@ -16,11 +16,11 @@ description: "Learn how to find and use reports for Office 365 Advanced Threat P
 
 # View reports for Office 365 Advanced Threat Protection
 
-If your organization has [Office 365 Advanced Threat Protection](office-365-atp.md) (ATP) and you have the necessary permissions, you can use several ATP reports in the Security &amp; Compliance Center. (Go to **Reports** \> **Dashboard**.)
+If your organization has [Office 365 Advanced Threat Protection](office-365-atp.md) (ATP) and you have the [necessary permissions](#what-permissions-are-needed-to-view-these-reports), you can use several ATP reports in the Security &amp; Compliance Center. (Go to **Reports** \> **Dashboard**.)
   
 ![The Security &amp; Compliance Center dashboard can help you see where Advanced Threat Protection is working](media/6b213d34-adbb-44af-8549-be9a7e2db087.png)
   
-ATP reports include the Threat protection status report, the ATP File Types report, and the ATP Message Disposition report. This article describes the ATP reports and includes links to additional reports to view.
+ATP reports include the [Threat protection status report](#threat-protection-status-report), the [ATP File Types report](#atp-file-types-report), and the [ATP Message Disposition report](#atp-message-disposition-report). This article describes the ATP reports and includes links to [additional reports to view](#additional-reports-to-view).
   
 ## Threat protection status report
 
@@ -72,9 +72,9 @@ In addition to the ATP reports described in this article, [email security report
   
 And, if your organization has [Office 365 Threat Intelligence](office-365-ti.md), you can also [Use Explorer in the Security &amp; Compliance Center](use-explorer-in-security-and-compliance.md).
   
-## What permissions are needed to view these reports?
+## What permissions are needed to view the ATP reports?
 
-In order to view and use the email security reports described in this article, you must have an appropriate role assigned in the Security &amp; Compliance Center and in the Exchange Admin Center.
+In order to view and use the reports described in this article, you must have an appropriate role assigned in the Security &amp; Compliance Center and in the Exchange Admin Center.
   
 |**Role group**|**Where assigned**|**Learn more**|
 |:-----|:-----|:-----|
