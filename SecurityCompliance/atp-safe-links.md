@@ -117,7 +117,7 @@ We are continuing to add new features to ATP Safe Links. Sometimes a new feature
 
 - Beginning in September 2018, [Office 365 ATP warning pages](atp-safe-links-warning-pages.md) feature a new color scheme, more details, and the ability to continue to a site despite given warnings and recommendations. 
  
-- Beginning in October 2018 and rolling out over the next several months, when people are using Outlook Web Application (OWA) or Outlook (as part of Office 365 Enterprise or Microsoft 365 Business), ATP Safe Links renders original URLs, not rewritten URLs. (We call this native link visibility.)
+- Beginning in October 2018 and rolling out over the next several months, when people are using Outlook Web Application (OWA) or Outlook, ATP Safe Links renders original URLs, not rewritten URLs. (We call this native link visibility.)
 
    
 ## Related topics
