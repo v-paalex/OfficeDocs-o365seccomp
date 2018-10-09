@@ -19,7 +19,7 @@ description: "Set up Safe Links policies to protect your organization from malic
 
 [ATP Safe Links](atp-safe-links.md) , a feature of [Office 365 Advanced Threat Protection](office-365-atp.md) (ATP), can help protect your organization from malicious links used in phishing and other attacks. If you have the necessary [permissions assigned in the Office 365 Security &amp; Compliance Center](permissions-in-the-security-and-compliance-center.md), you can set up ATP Safe Links policies to help ensure that when people click web addresses (URLs), your organization is protected. Your ATP Safe Links policies can be configured to scan URLs in email and URLs in Office documents.
   
-[New features are continually being added to ATP Safe Links](atp-safe-links.md#new-features-added-to-atp-safe-links). As new features are added, you may need to make adjustments to your existing ATP Safe Links policies.
+[New features are continually being added to ATP Safe Links](atp-safe-links.md#new-features-are-continually-being-added-to-atp-safe-links). As new features are added, you may need to make adjustments to your existing ATP Safe Links policies.
 
 ## What to do 
   
