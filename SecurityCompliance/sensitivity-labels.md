@@ -180,7 +180,7 @@ Azure Information Protection users are currently able to classify and label cont
 
 To prevent confusion, we recommend that you avoid creating labels in the Security & Compliance Center. The [AIP migration topic](https://docs.microsoft.com/en-us/azure/information-protection/configure-policy-migrate-labels) has important information and some specific caveats. If you are not yet ready to migrate your production tenants to sensitivity labels, there is no cause for concern: for the moment, your users can continue using the Azure Information Protection client, and admins can continue using the Azure portal for management.
 
-## Endpoint protection in Microsoft Intune
+## Protect content on Windows devices by using endpoint protection in Microsoft Intune
 
 When you create a sensitivity label, you have the option to turn on endpoint protection in Intune. This option can help ensure that content with this label can only be shared or copied to sanctioned locations, even when it’s stored on an endpoint. In essence, turning on this option for a sensitivity label tells Windows that this is extra critical data that warrants additional usage constraints.
 
@@ -204,14 +204,14 @@ Before your sensitivity labels can use WIP, you first need to do the prerequisit
 - [Set up Windows Defender Advanced Threat Protection (WDATP)](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-atp/get-started), which scans content for a label and applies the corresponding WIP protection.
 - [Create a Windows Information Protection (WIP) policy with MDM using the Azure portal for Microsoft Intune](https://docs.microsoft.com/en-us/windows/security/information-protection/windows-information-protection/create-wip-policy-using-intune-azure). A WIP policy needs to be applied to endpoint devices.
 
-## Protect content in third-party apps and services
+## Protect content in third-party apps and services by using Microsoft Cloud App Security
 
 Protect content in third-party apps and services by using Cloud App Security (CAS). With CAS, you can detect, classify, label, and protect content in third-party services and apps, such as SalesForce, Box, or Dropbox. For example, Dropbox might not understand a sensitivity label, but CAS can reach out and protect labeled content in that location. 
 
 For more information, see (need CAS link)
 https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Microsoft-Information-Protection-showcases-integrated-partner/ba-p/262657 
 
-## Extend sensitivity labels to third-party apps and services
+## Extend sensitivity labels to third-party apps and services by using the Microsoft Information Protection SDK
 
 Because a sensitivity label is persisted as clear text in the metadata of a document, third-party apps and services can choose to support identifying and protecting content that contains such a label. Support in other apps and services is always expanding.
 
