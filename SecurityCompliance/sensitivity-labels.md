@@ -82,7 +82,7 @@ A document or email can have only a single sensitivity label applied to it. If y
 
 ![Option to create a sublabel](media/Sensitivity_label_sublabel_options.png)
 
-### Sublabels
+### Sublabels (grouping labels)
 
 With sublabels, you can group one or more labels below a header. For example, under Highly Confidential, your organization might use several different labels for specific types of that classification. In this example, the label Highly Confidential is simply a text label with no protection settings, so it can’t be applied to content. Instead, users must choose Highly Confidential to view the sublabels, and then they can choose a sublabel to apply to content.
 
@@ -96,25 +96,25 @@ If you delete a sensitivity label in the Security & Compliance Center, note that
 
 If you edit a sensitivity label in the Security & Compliance Center, the version of the label that was applied to content is what’s enforced.
 
-What label policies can do
+## What label policies can do
 
 After you create your sensitivity labels, you need to publish them, to make them available to people in your organization, who can then apply the labels to content. Unlike retention labels, which are published to locations, such as all Exchange mailboxes, sensitivity labels are published to users or groups. Sensitivity labels then appear in Office apps for those users and groups.
 
 With a label policy, you can:
 
-- Choose which users and groups see the labels. Labels can be published to any email-enabled security group, distribution group, Office 365 group, or dynamic distribution group.
+- **Choose which users and groups see the labels.** Labels can be published to any email-enabled security group, distribution group, Office 365 group, or dynamic distribution group.
 
-- Apply a default label to all of the documents and email of the users and groups included in the label policy. This default label can set a base level of protection settings that you want applied to all your content.
+- **Apply a default label** to all of the documents and email of the users and groups included in the label policy. This default label can set a base level of protection settings that you want applied to all your content.
 
-- Require a justification for changing label. If content is marked Confidential and a user wants to remove that label or replace it with a lower classification, such as a label named Public, you can require that the user provide a justification when performing this action. These justifications will be available for the admin to review. We’re currently working on a report where admins can view the user justifications.
+- **Require a justification for changing a label.** If content is marked Confidential and a user wants to remove that label or replace it with a lower classification, such as a label named Public, you can require that the user provide a justification when performing this action. These justifications will be available for the admin to review. We’re currently working on a report where admins can view the user justifications.
 
     ![Prompt where users enter a justification](media/Sensitivity_label_justification_required.png)
 
-- Provide help link to a custom help page. If your users aren’t sure what your sensitivity labels mean or how they should be used, you can provide a Learn More URL that appears at the bottom of the Sensitivity label menu in the Office apps.
+- **Provide help link to a custom help page.** If your users aren’t sure what your sensitivity labels mean or how they should be used, you can provide a Learn More URL that appears at the bottom of the Sensitivity label menu in the Office apps.
 
     ![Learn more link on Sensitivity button on Ribbon](media/Sensitivity_label_learn_more.png)
 
-- After you create a label policy and assign sensitivity labels to users and groups, those people will see those labels available in the Office apps in an hour or less.
+After you create a label policy and assign sensitivity labels to users and groups, those people will see those labels available in the Office apps in an hour or less.
 
 ## How to get started
 
@@ -134,7 +134,7 @@ Here’s the basic flow of what the admin, user, and Office app do to make sensi
 
 Sensitivity labels appear in the UI of Office apps. Here is the current availability.
 
-|**Platform**|**Word**|**PowerPoint**|**Excel**|**Outlook**|
+||**Word**|**PowerPoint**|**Excel**|**Outlook**|
 |:-----|:-----|:-----|:-----|:-----|
 |**Mac**  <br/> |Yes  <br/> |Yes  <br/> |Yes  <br/> |Yes  <br/> |
 |**iOS**  <br/> |Yes  <br/> |Yes  <br/> |Coming soon  <br/> |Coming soon  <br/> |
