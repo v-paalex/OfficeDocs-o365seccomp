@@ -202,7 +202,7 @@ Before your sensitivity labels can use WIP, you first need to do the prerequisit
 
 - Make sure you're running Windows 10, version 1809 or later.
 - [Set up Windows Defender Advanced Threat Protection (WDATP)](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-atp/get-started), which scans content for a label and applies the corresponding WIP protection.
-- [Create a Windows Information Protection (WIP) policy with MDM using the Azure portal for Microsoft Intune](https://docs.microsoft.com/en-us/windows/security/information-protection/windows-information-protection/create-wip-policy-using-intune-azure)WIP policy needs to be applied to endpoint devices
+- [Create a Windows Information Protection (WIP) policy with MDM using the Azure portal for Microsoft Intune](https://docs.microsoft.com/en-us/windows/security/information-protection/windows-information-protection/create-wip-policy-using-intune-azure). A WIP policy needs to be applied to endpoint devices.
 
 ## Protect content in third-party apps and services
 
