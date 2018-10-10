@@ -54,7 +54,7 @@ With retention labels, you can:
     
 - **Implement records management across Office 365**, including both email and documents. You can use a retention label to classify content as a record. When this happens, the label can't be changed or removed, and the content can't be edited or deleted. 
     
-You create and manage retention labels on the **Retention** tab on **Labels** page in the Office 365 Security &amp; Compliance Center. 
+You create and manage retention labels on the **Retention** tab on the **Labels** page in the Office 365 Security &amp; Compliance Center. 
   
 ![Retention tab on Labels page](media/Retention_tab_on_Labels_page.png)
  
