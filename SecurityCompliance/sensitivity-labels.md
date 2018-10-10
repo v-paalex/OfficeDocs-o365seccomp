@@ -86,7 +86,7 @@ A document or email can have only a single sensitivity label applied to it. If y
 
 ### Sublabels (grouping labels)
 
-With sublabels, you can group one or more labels below a header that a user sees in an Office app. For example, under Highly Confidential, your organization might use several different labels for specific types of that classification. In this example, the label Confidential is simply a text label with no protection settings, so it can’t be applied to content. Instead, users must choose Confidential to view the sublabels, and then they can choose a sublabel to apply to content.
+With sublabels, you can group one or more labels below a header that a user sees in an Office app. For example, under Confidential, your organization might use several different labels for specific types of that classification. In this example, the label Confidential is simply a text label with no protection settings, so it can’t be applied to content. Instead, users must choose Confidential to view the sublabels, and then they can choose a sublabel to apply to content.
 
 Sublabels are simply a way to present labels to users in logical groups. Sublabels don’t inherit any settings from the label they’re under.
 
@@ -149,7 +149,9 @@ In Office apps on devices running Windows, sensitivity labels appear on the **Pr
 
 The AIP add-in is what causes the UI for sensitivity labels to appear in Office apps on Windows. In the first version of the AIP add-in, sensitivity labels appear on the **Protect** button. In the second version of the AIP add-in, which is coming soon, sensitivity labels will appear on the **Sensitivity** button, as shown here.
 
-**Important prerequisite** First deploy the Office apps, and then deploy the AIP add-in. For more information, see [Admin Guide: Install the Azure Information Protection client for users](https://docs.microsoft.com/en-us/azure/information-protection/rms-client/client-admin-guide-install). We’re currently working on native support for sensitivity labels in Office apps on Windows, so that the AIP add-in will no longer be required.
+#### Important prerequisites 
+
+First deploy the Office apps, and then deploy the AIP add-in. For more information, see the [Admin Guide: Install the Azure Information Protection client for users](https://docs.microsoft.com/en-us/azure/information-protection/rms-client/client-admin-guide-install). We’re currently working on native support for sensitivity labels in Office apps on Windows, so that the AIP add-in will no longer be required.
 
 ![Sensitivity button on Ribbon in Excel on Windows](media/Sensitivity_label_Sensitivity_button.png)
 
