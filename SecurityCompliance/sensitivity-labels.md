@@ -208,8 +208,14 @@ Before your sensitivity labels can use WIP, you first need to do the prerequisit
 
 Protect content in third-party apps and services by using Cloud App Security (CAS). With CAS, you can detect, classify, label, and protect content in third-party services and apps, such as SalesForce, Box, or Dropbox. For example, Dropbox might not understand a sensitivity label, but CAS can reach out and protect labeled content in that location. 
 
-For more information, see (need CAS link)
-https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Microsoft-Information-Protection-showcases-integrated-partner/ba-p/262657 
+For more information, see [Automatically apply Azure Information Protection classification labels](https://docs.microsoft.com/en-us/cloud-app-security/use-case-information-protection).
+
+### Important prerequisites
+
+Before your sensitivity labels can use CAS, you first need to do the prerequisites described here: [Automatically apply Azure Information Protection classification labels](https://docs.microsoft.com/en-us/cloud-app-security/use-case-information-protection). This topic describes the following prerequisites:
+
+- [Enable Cloud App Security and Azure Information Protection](https://docs.microsoft.com/en-us/cloud-app-security/azip-integration) for your tenant.
+- [Connect the app](https://docs.microsoft.com/en-us/cloud-app-security/enable-instant-visibility-protection-and-governance-actions-for-your-apps) to Cloud App Security.
 
 ## Extend sensitivity labels to third-party apps and services by using the Microsoft Information Protection SDK
 
