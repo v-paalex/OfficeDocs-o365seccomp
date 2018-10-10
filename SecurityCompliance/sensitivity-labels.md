@@ -56,7 +56,7 @@ When you assign a sensitivity label to a document or email, it’s simply like a
 
 In the Office apps, a sensitivity label simply appears as a tag on an email or document.
 
-Each item of content can have a single sensitivity label applied to it. But note that an item can have both a single sensitivity label and a single retention label applied to it.
+Each item of content can have a single sensitivity label applied to it. But note that an item can have both a single sensitivity label and a single [retention label](labels.md) applied to it.
 
 ![Sensitivity label applied to an email](media/Sensitivity_label_on_email.png)
 
