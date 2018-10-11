@@ -49,7 +49,7 @@ Configure policies to manage spoofing, protect against phishing attacks, and cat
     
 - [Learn about spoof intelligence](learn-about-spoof-intelligence.md)
     
-- [Set up ATP anti-phishing policies](set-up-atp-anti-phishing-policies.md)
+- [Set up anti-phishing policies](set-up-anti-phishing-policies.md)
     
 - [Set up ATP Safe Links policies](set-up-atp-safe-links-policies.md)
     
