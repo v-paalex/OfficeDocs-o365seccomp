@@ -50,7 +50,7 @@ Second, spoofed messages create uncertainty for users who know about phishing me
   
 The above message did come from Microsoft, but at the same time, users are used to getting phishing messages that may trick a user into clicking a link and giving up their credentials, downloading malware, or replying to a message with sensitive content. Because it is difficult to tell the difference between a real password reset and a fake one, many users ignore these messages, report them as spam, or unnecessarily report the messages back to Microsoft as missed phishing scams.
     
-To stop spoofing, the email filtering industry has developed email authentication protocols such as [SPF](https://technet.microsoft.com/en-us/library/dn789058%28v=exchg.150%29.aspx), [DKIM](https://technet.microsoft.com/en-us/library/mt695945%28v=exchg.150%29.aspx), and [DMARC](https://technet.microsoft.com/en-us/library/mt734386%28v=exchg.150%29.aspx). DMARC prevents spoofing examining a message's sender - the one that the user sees in their email client (in the examples above, this is service.outlook.com, outlook.com, and accountprotection.microsoft.com) - with the domain that passed SPF or DKIM. That is, the domain that the user sees has been authenticated and is therefore not spoofed. For a more complete discussion, see the section " *Understanding why email authentication is not always enough to stop spoofing"*  later on in this document. 
+To stop spoofing, the email filtering industry has developed email authentication protocols such as [SPF](https://technet.microsoft.com/en-us/library/dn789058%28v=exchg.150%29.aspx), [DKIM](https://technet.microsoft.com/en-us/library/mt695945%28v=exchg.150%29.aspx), and [DMARC](https://technet.microsoft.com/en-us/library/mt734386%28v=exchg.150%29.aspx). DMARC prevents spoofing examining a message's sender - the one that the user sees in their email client (in the examples above, this is service.outlook.com, outlook.com, and accountprotection.microsoft.com) - with the domain that passed SPF or DKIM. That is, the domain that the user sees has been authenticated and is therefore not spoofed. For a more complete discussion, see the section "*Understanding why email authentication is not always enough to stop spoofing"*  later on in this document. 
   
 However, the problem is that email authentication records are optional, not required. Therefore, while domains with strong authentication policies like microsoft.com and skype.com are protected from spoofing, domains that publish weaker authentication policies, or no policy at all, are targets for being spoofed.As of March 2018, only 9% of domains of companies in the Fortune 500 publish strong email authentication policies. The remaining 91% may be spoofed by a phisher, and unless the email filter detects it using another policy, may be delivered to an end user and deceive them:
   
@@ -60,7 +60,7 @@ The proportion of small-to-medium sized companies that are not in the Fortune 50
   
 This is a big problem because while enterprises may not be aware of how email authentication works, phishers do understand and take advantage of the lack of it.
   
-For information on setting up SPF, DKIM, and DMARC, see the section " *Customers of Office 365"*  later on in this document. 
+For information on setting up SPF, DKIM, and DMARC, see the section "*Customers of Office 365"*  later on in this document. 
   
 ## Stopping spoofing with implicit email authentication
 
