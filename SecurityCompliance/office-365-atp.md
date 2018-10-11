@@ -46,7 +46,7 @@ Once you have ATP, the next step is for your security team to define policies.
   
 ## Define policies for ATP
 
-- **[Set up ATP anti-phishing policies in Office 365](set-up-atp-anti-phishing-policies.md)** including impersonation-based attacks to protect against attackers who send email messages that appear to be from trusted people or domains 
+- **[Set up ATP anti-phishing policies in Office 365](set-up-anti-phishing-policies.md)** including impersonation-based attacks to protect against attackers who send email messages that appear to be from trusted people or domains 
 
 - **[Set up ATP Safe Links policies in Office 365](set-up-atp-safe-links-policies.md)** including your organization's [custom blocked URLs list](set-up-a-custom-blocked-urls-list-wtih-atp.md) and [custom "Do not rewrite" URLs list](set-up-a-custom-do-not-rewrite-urls-list-with-atp.md)
     
@@ -64,7 +64,7 @@ After your ATP policies are in place, reports are available to show how the serv
     
 3. If needed, make adjustments to your security policies. See the following resources:
 
-  - [ATP anti-phishing policies in Office 365](set-up-atp-anti-phishing-policies.md)
+  - [ATP anti-phishing policies in Office 365](set-up-anti-phishing-policies.md)
     
   - [ATP Safe Links policies in Office 365](set-up-atp-safe-links-policies.md)
     

@@ -3,7 +3,7 @@ title: "Office 365 Message Encryption FAQ"
 ms.author: krowley
 author: kccross
 manager: laurawi
-ms.date: 09/27/2018
+ms.date: 10/9/2018
 ms.audience: ITPro
 ms.topic: overview
 ms.service: o365-administration
@@ -84,7 +84,7 @@ No. If you are using Exchange Online with Active Directory Rights Management ser
   
 ## My organization has an Exchange Hybrid deployment. Can I use this feature?
 
-On-premises users can send encrypted mail using Exchange Online mail flow rules. In order to do this, you need to route email through Exchange Online.
+On-premises users can send encrypted mail using Exchange Online mail flow rules. In order to do this, you need to route email through Exchange Online. For more information, see [Part 2: Configure mail to flow from your email server to Office 365](https://docs.microsoft.com/exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/set-up-connectors-to-route-mail#part-2-configure-mail-to-flow-from-your-email-server-to-office-365).
   
 ## What email client do I need to use in order to create an OME encrypted message? What applications are supported for sending protected messages?
 
@@ -114,7 +114,7 @@ Yes. Use mail flow rules in Exchange Online to automatically encrypt a message b
   
 ## Can I automatically encrypt messages by setting up policies in Data Loss Prevention (DLP) through the Security &amp; Compliance Center?
 
-Currently you can only set up mail flow rules in Exchange Online. Encryption is currently not supported in DLP through the Security &amp; Compliance Center.
+Yes! You can set up mail flow rules in Exchange Online or by using DLP in the Security &amp; Compliance Center.
   
 ## Can I open encrypted messages sent to a Shared Mailbox?
 
