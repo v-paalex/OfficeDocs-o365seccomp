@@ -72,7 +72,7 @@
 ## [Anti-spam and anti-malware protection](anti-spam-and-anti-malware-protection.md)
 ### [Anti-phishing protection in Office 365](anti-phishing-protection.md)
 #### [ATP anti-phishing capabilities in Office 365](atp-anti-phishing.md)
-#### [Set up Office 365 ATP anti-phishing policies](set-up-atp-anti-phishing-policies.md)
+#### [Set up anti-phishing and ATP anti-phishing policies](set-up-anti-phishing-policies.md)
 #### [How Office 365 validates the From: address to prevent phishing](how-office-365-validates-the-from-address.md)
 ### [Anti-spoofing protection in Office 365](anti-spoofing-protection.md)
 #### [Learn more about spoof intelligence](learn-about-spoof-intelligence.md)
