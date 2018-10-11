@@ -65,9 +65,9 @@ Implement the rich feature set in Exchange Online Protection and gain greater as
     
 - If you're using a custom domain for your organization in Office 365, set up SPF, DKIM, and then DMARC to validate mail sent by your organization and to help prevent spoofing:
     
-  - [Set up SPF in Office 365 to help prevent spoofing](https://technet.microsoft.com/en-us/library/dn789058%28v=exchg.150%29.aspx).
+  - [Set up SPF in Office 365 to help prevent spoofing](https://docs.microsoft.com/office365/SecurityCompliance/set-up-spf-in-office-365-to-help-prevent-spoofing).
     
-  - [Use DKIM to validate outbound email sent from your custom domain in Office 365](https://technet.microsoft.com/en-us/library/dn789058%28v=exchg.150%29.aspx).
+  - [Use DKIM to validate outbound email sent from your custom domain in Office 365](https://docs.microsoft.com/office365/SecurityCompliance/set-up-spf-in-office-365-to-help-prevent-spoofing).
     
   - [Use DMARC to validate email in Office 365](https://technet.microsoft.com/library/mt734386%28v=exchg.150%29.aspx).
     
