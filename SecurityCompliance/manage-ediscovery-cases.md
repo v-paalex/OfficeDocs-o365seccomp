@@ -83,7 +83,7 @@ The first step is to assign the appropriate eDiscovery-related permissions to pe
     
 4. After you've added all the users, click **Done**, click **Save** to save the changes to the role group, and then click **Close**.
     
-[Return to top](manage-ediscovery-cases.md#top)
+
   
 ## Step 2: Create a new case
 <a name="step2_1"> </a>
@@ -104,8 +104,6 @@ The next step is to create a new eDiscovery case. You must be a member of the eD
     
     > [!TIP]
     > After you create a new case, you can rename it anytime. Just click the name of the case on the **eDiscovery** page. On the **Manage this case** flyout page, change the name displayed in the box under **Name**, and then save the change. 
-  
-[Return to top](manage-ediscovery-cases.md#top)
   
 ## Step 3: Add members to a case
 <a name="step2a_1"> </a>
@@ -132,8 +130,6 @@ After you create a new case, the next step is to add members to the case. As pre
     In **Manage this case**, click **Save** to save the new list of case members. 
     
 6. Click **Save** to save the new list of case members. 
-    
-[Return to top](manage-ediscovery-cases.md#top)
   
 ## Step 4: Place content locations on hold
 <a name="step3_1"> </a>
@@ -194,8 +190,6 @@ To create a hold for an eDiscovery case:
 2. Under **Conditions**, click **Add condition** to add one or more conditions to narrow the search query for the hold. Each condition adds a clause to the KQL search query that is created and run when you create the hold. For example you can specify a date range so that email or site documents that were created within the date ranged are placed on hold. A condition is logically connected to the keyword query (specified in the keyword box) by the **AND** operator. That means that items have to satisfy both the keyword query and the condition to be placed on hold. 
     
 9. After configuring a query-based hold, click **Finish** to create the hold. 
-    
-[Return to top](manage-ediscovery-cases.md#top)
   
 ### Hold statistics
 
@@ -212,8 +206,6 @@ Keep the following things in mind about hold statistics:
 - You can get the latest hold statistics by clicking **Update statistics** to re-run a search estimate that calculates the current number of items on hold. If necessary, click **Refresh**![Refresh icon](media/O365-MDM-Policy-RefreshIcon.gif) in the toolbar to update the hold statistics in the details pane. 
     
 - It's normal for the number of items on hold to increase over time because users whose mailbox or site is on hold are typically sending or receiving new email message and creating new SharePoint and OneDrive for Business documents.
-    
-[Return to top](manage-ediscovery-cases.md#top)
   
 ## Step 5: Create and run a Content Search associated with a case
 <a name="step4_1"> </a>
@@ -260,13 +252,11 @@ After an eDiscovery case is created and any custodians related to the case are p
     
 7. After you selected the content locations to search, click **Next**.
     
-8. On the **New search** page, you can add keywords and conditions to create the search query. 
-    
-    ![Search criteria and conditions](media/9064147e-feac-4090-bbf6-2298ad7622c6.png)
+8. On the **New search** page, you can add keywords and conditions to create the search query. <br/>![Search criteria and conditions](media/9064147e-feac-4090-bbf6-2298ad7622c6.png)
   
-1. In the box under **What do you want us to look for?**, type a search query in the box. You can specify keywords, message properties such as sent and received dates, or document properties such as file names or the date that a document was last changed. You can use a more complex queries that use a Boolean operator, such as **AND**, **OR**, **NOT**, **NEAR**, or **ONEAR**. You can also search for sensitive information (such as social security numbers) in documents, or search for documents that have been shared externally. If you leave the keyword box empty, all content located in the specified content locations will be included in the search results. 
+9. In the box under **What do you want us to look for?**, type a search query in the box. You can specify keywords, message properties such as sent and received dates, or document properties such as file names or the date that a document was last changed. You can use a more complex queries that use a Boolean operator, such as **AND**, **OR**, **NOT**, **NEAR**, or **ONEAR**. You can also search for sensitive information (such as social security numbers) in documents, or search for documents that have been shared externally. If you leave the keyword box empty, all content located in the specified content locations will be included in the search results. 
     
-2. You can click the **Show keyword list** checkbox and the type a keyword in each row. If you do this, the keywords on each row are connected by the **OR** operator in the search query that's created. 
+10. You can click the **Show keyword list** checkbox and the type a keyword in each row. If you do this, the keywords on each row are connected by the **OR** operator in the search query that's created. 
     
     ![Search keywords](media/c3ef511a-e0a3-4b5d-9779-36803270a193.png)
   
@@ -274,19 +264,17 @@ After an eDiscovery case is created and any custodians related to the case are p
     
     For more information about using the keywords list, see [More information](run-a-content-search-in-the-security-and-compliance-center.md#moreinfo).
     
-3. Click **Check query for typos** to check your query for unsupported characters and for Boolean operators that might not be capitalized. Unsupported characters are often hidden and typically cause a search error or return unintended results. For more information about the unsupported characters that are checked, see [Check your Content Search query for errors](check-your-content-search-query-for-errors.md).
+11. Click **Check query for typos** to check your query for unsupported characters and for Boolean operators that might not be capitalized. Unsupported characters are often hidden and typically cause a search error or return unintended results. For more information about the unsupported characters that are checked, see [Check your Content Search query for errors](check-your-content-search-query-for-errors.md).
     
-4. Under **Conditions**, add conditions to a search query to narrow a search and return a more refined set of results. Each condition adds a clause to the KQL search query that is created and run when you start the search. A condition is logically connected to the keyword query (specified in the keyword box) by the **AND** operator. That means that items have to satisfy both the keyword query and the condition to be included in the results. This is how conditions help to narrow your results. 
+12. Under **Conditions**, add conditions to a search query to narrow a search and return a more refined set of results. Each condition adds a clause to the KQL search query that is created and run when you start the search. A condition is logically connected to the keyword query (specified in the keyword box) by the **AND** operator. That means that items have to satisfy both the keyword query and the condition to be included in the results. This is how conditions help to narrow your results. 
     
     For more information about creating a search query and using conditions, see [Keyword queries for Content Search](keyword-queries-and-search-conditions.md).
     
-9. Click **Search** to save the search settings and start the search. 
+13. Click **Search** to save the search settings and start the search. 
     
     The search is started. After a while, an estimate of the search results is displayed in the details pane. The estimate includes the total size and number of items that matched the search criteria. The search estimate also includes the number of the unindexed items in the content locations that were searched. The number of unindexed items that don't meet the search criteria will be included in the search statistics displayed in the details pane. If an unindexed item matches the search query (because other message or document properties meet the search criteria), it won't be included in the estimated number of unindexed items. If an unindexed item is excluded by the search criteria, it also won't be included in the estimate of unindexed items.
     
     After the search is completed, you can preview the search results. If necessary, click **Refresh**![Refresh icon](media/O365-MDM-Policy-RefreshIcon.gif) to update the information in the details pane. 
-    
-[Return to top](manage-ediscovery-cases.md#top)
   
 ## Step 6: Export the results of a Content Search associated with a case
 <a name="step5_1"> </a>
@@ -376,8 +364,6 @@ As an alternative to exporting the results of a single Content Search associated
 - If you restart an export from the **Exports** page in an eDiscovery case, the search results that are transferred to the Azure storage area will overwrite the previous results; the previous results there were transferred won't be available to be downloaded. 
     
 - Preparing the results of multiple searches for analysis in Advanced eDiscovery isn't available. You can only prepare the results of a single search for analysis in Advanced eDiscovery.
-    
-[Return to top](manage-ediscovery-cases.md#top)
   
 ## Step 7: Prepare search results for Advanced eDiscovery
 <a name="step7_1"> </a>
@@ -410,8 +396,6 @@ When you prepare search results for Advanced eDiscovery, optical character recog
     The search results are prepared for analysis with Advanced eDiscovery.
     
 7. In the details pane, click **Check preparation status** to display information about the preparation process. When the preparation process is finished, you can go to the case in Advanced eDiscovery to process the data for analysis. 
-    
-[Return to top](manage-ediscovery-cases.md#top)
   
 ## Step 8: Go to the case in Advanced eDiscovery
 <a name="gotoAeD_1"> </a>
@@ -440,8 +424,6 @@ To go to a case in Advanced eDiscovery:
     
 > [!TIP]
 > Click **Switch to eDiscovery** to go back to the same case in the Security &amp; Compliance Center. 
-  
-[Return to top](manage-ediscovery-cases.md#top)
   
 ## (Optional) Step 9: Close a case
 <a name="closecase_1"> </a>
@@ -479,8 +461,6 @@ To close a case:
 7. On the **eDiscovery** page, click ![Refresh icon](media/O365-MDM-Policy-RefreshIcon.gif) **Refresh** to update the status of the closed case. It might take up to 60 minutes for the closing process to complete. 
     
     When the process is complete, the status of the case is changed to **Close** on the **eDiscovery** page. Click the name of the case again to display the **Manage this case** flyout page, which contains information about when the case was closed and who closed it. 
-    
-[Return to top](manage-ediscovery-cases.md#top)
   
 ## (Optional) Step 10: Re-open a closed case
 <a name="reopencase_1"> </a>
@@ -506,8 +486,6 @@ When you re-open a case, any holds that were in place when the case was closed w
 6. On the **eDiscovery** page, click ![Refresh icon](media/O365-MDM-Policy-RefreshIcon.gif) **Refresh** to update the status of the re-opened case. It might take up to 60 minutes for the re-opening process to complete. 
     
     When the process is complete, the status of the case is changed to **Active** on the **eDiscovery** page. 
-    
-[Return to top](manage-ediscovery-cases.md#top)
   
 ## More information
 <a name="moreinfo_1"> </a>
