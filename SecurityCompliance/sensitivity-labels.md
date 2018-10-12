@@ -35,6 +35,8 @@ You can use sensitivity labels to:
 - **Protect content in third-party apps and services**, by using Cloud App Security (CAS). With CAS, you can detect, classify, label, and protect content in third-party services and apps, such as SalesForce, Box, or Dropbox, even if the third-party app or service does not read or support sensitivity labels.    
 
 - **Extend sensitivity labels to third-party apps and services.** With the Microsoft Information Protection SDK, third-party apps on Windows, Mac, and Linux can read sensitivity labels and apply protection settings. Support for apps on iOS and Android is coming soon.
+
+- **Classify content without using any protection settings.** You can also simply assign a classification to content (like a sticker) that persists and roams with the content as it's used and shared. You can use this classification to generate usage reports and see activity data for your sensitive content. Based on this information, you can always choose at a later time to configure protection settings that can be applied based upon the document’s classification.
     
 In all of these cases, sensitivity labels in Office 365 can help you take the right actions on the right content. With labels, you can classify data across your organization and enforce protection settings based on that classification.
   
@@ -140,11 +142,9 @@ Sensitivity labels appear in the UI of Office apps. To view the current availabi
 
 In Office apps on devices running Windows, sensitivity labels appear on the **Sensitivity** button, on the **Home** tab on the Ribbon. The label applied also appears in the Status bar at the bottom of the window.
 
-The Azure Information Protection unified labeling client is what causes the UI for sensitivity labels to appear in Office apps on Windows.
+Coming soon is native support for sensitiivty labels in Office apps on Windows.
 
-#### Important prerequisites 
-
-First deploy the Office apps, and then deploy the Azure Information Protection unified labeling client, which is coming soon. (Check back for a link to information about how to deploy the client.) We’re currently working on native support for sensitivity labels in Office apps on Windows, so that the Azure Information Protection unified labeling client will no longer be required.
+If you're an existing Azure Information Protection customer, you can deploy the Azure Information Protection unified labeling client, which supports sensitivity labels and is coming soon. (Check back for a link to information about how to deploy the client.) We’re currently working on native support for sensitivity labels in Office apps on Windows, so that the Azure Information Protection unified labeling client will no longer be required.
 
 ![Sensitivity button on Ribbon in Excel on Windows](media/Sensitivity_label_Sensitivity_button.png)
 
@@ -178,7 +178,7 @@ Azure Information Protection users are currently able to classify and label cont
 - Keep your existing Azure Information Protection labels on documents and email.
 - Keep your existing Azure Information Protection label configuration.
 
-To prevent confusion, we recommend that you avoid creating labels in the Security & Compliance Center. The [Azure Information Protection migration topic](https://docs.microsoft.com/en-us/azure/information-protection/configure-policy-migrate-labels) has important information and some specific caveats. If you are not yet ready to migrate your production tenants to sensitivity labels, there is no cause for concern: for the moment, your users can continue using the Azure Information Protection client, and admins can continue using the Azure portal for management.
+If you are using AIP labels, for now we recommend that you avoid creating new labels in Security & Compliance Center until after you’ve completed your migration. The [Azure Information Protection migration topic](https://docs.microsoft.com/en-us/azure/information-protection/configure-policy-migrate-labels) has important information and some specific caveats. If you are not yet ready to migrate your production tenants to sensitivity labels, there is no cause for concern: for the moment, your users can continue using the Azure Information Protection client, and admins can continue using the Azure portal for management.
 
 ## Protect content on Windows devices by using endpoint protection in Microsoft Intune
 
