@@ -3,7 +3,7 @@ title: "Increase the Recoverable Items quota for mailboxes on hold"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
-ms.date: 8/22/2017
+ms.date: 10/12/2018
 ms.audience: Admin
 ms.topic: article
 ms.service: o365-administration
