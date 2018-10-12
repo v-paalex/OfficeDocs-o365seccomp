@@ -70,7 +70,7 @@ After a sensitivity label is applied to an email or document, the protection set
 
     ![Watermark and header applied to document](media/Sensitivity_label_watermark_header.png)
 
-- **Prevent data exfiltration (data leaving your organization)** by turning on endpoint protection in Intune. If sensitive content gets downloaded, you can help prevent the loss of data from Windows devices. For example, you can’t copy labeled content into Dropbox, Gmail, or USB drive. Before your sensitivity labels can use Windows Information Protection (WIP), you first need to create an app protection policy in the Azure portal. For more information, see [How Windows Information Protection protects files with a sensitivity label](https://docs.microsoft.com/en-us/windows/security/information-protection/windows-information-protection/how-wip-works-with-labels?branch=vsts17546553).
+- **Prevent data loss** by turning on endpoint protection in Intune. If sensitive content gets downloaded, you can help prevent the loss of data from Windows devices. For example, you can’t copy labeled content into Dropbox, Gmail, or USB drive. Before your sensitivity labels can use Windows Information Protection (WIP), you first need to create an app protection policy in the Azure portal. For more information, see [How Windows Information Protection protects files with a sensitivity label](https://docs.microsoft.com/en-us/windows/security/information-protection/windows-information-protection/how-wip-works-with-labels?branch=vsts17546553).
 
 All of these options are available when you create a label in the Security & Compliance Center.
 
@@ -236,11 +236,3 @@ Members of your compliance team who will create sensitivity labels need permissi
 For more information, see Give users access to the Office 365 Security & Compliance Center.
 
 These permissions are required only to create and apply labels and a label policy. Policy enforcement does not require access to the content.
-
-## Find the PowerShell cmdlets for sensitivity labels
-
-To use the sensitivity label cmdlets, you need to:
-  
-1. [Connect to the Office 365 Security &amp; Compliance Center using remote PowerShell](https://docs.microsoft.com/en-us/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps)
-    
-2. Use these [Office 365 Security &amp; Compliance Center cmdlets](http://go.microsoft.com/fwlink/?LinkID=799772&amp;clcid=0x409)
