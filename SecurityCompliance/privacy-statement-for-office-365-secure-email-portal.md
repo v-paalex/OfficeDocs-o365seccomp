@@ -3,7 +3,7 @@ title: "Privacy statement for Office 365 Secure Email Portal"
 ms.author: krowley
 author: kccross
 manager: laurawi
-ms.date: 5/9/2017
+ms.date: 10/12/2018
 ms.audience: End User
 ms.topic: reference
 ms.service: o365-administration
