@@ -3,7 +3,7 @@ title: "Change the size of PST files when exporting eDiscovery search results"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
-ms.date: 11/30/2016
+ms.date: 10/12/2018
 ms.audience: Admin
 ms.topic: article
 ms.service: o365-administration
