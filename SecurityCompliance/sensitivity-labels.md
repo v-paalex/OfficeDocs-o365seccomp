@@ -38,9 +38,9 @@ You can use sensitivity labels to:
     
 In all of these cases, sensitivity labels in Office 365 can help you take the right actions on the right content. With labels, you can classify data across your organization and enforce protection settings based on that classification.
   
-You create sensitivity labels in the Office 365 Security &amp; Compliance Center. The Security & Compliance Center is now the single place to configure sensitivity labels and policies across Azure Information Protection (AIP) and Office 365. These sensitivity labels can be used by Azure Information Protection, Office apps, and Office 365 services.
+You create sensitivity labels in the Office 365 Security &amp; Compliance Center. The Security & Compliance Center is now the single place to configure sensitivity labels and policies across Azure Information Protection and Office 365. These sensitivity labels can be used by Azure Information Protection, Office apps, and Office 365 services.
 
-For Azure Information Protection customers, you can use your AIP labels in the Security & Compliance center, and your labels will be synced with the Azure portal in case you choose to perform additional or advanced configuration. **AIP labels and Office 365 sensitivity labels are fully compatible with each other.** This means, for example, if you have content labeled by Azure Information Protection, you won’t need to reclassify or relabel your content.
+For Azure Information Protection customers, you can use your Azure Information Protection labels in the Security & Compliance center, and your labels will be synced with the Azure portal in case you choose to perform additional or advanced configuration. **Azure Information Protection labels and Office 365 sensitivity labels are fully compatible with each other.** This means, for example, if you have content labeled by Azure Information Protection, you won’t need to reclassify or relabel your content.
 
 ![Sensitivity tab on Labels page of Security and Compliance Center](media/Sensitivity_label_tab_on_Labels_page.png)
 
@@ -134,24 +134,17 @@ Here’s the basic flow of what the admin, user, and Office app do to make sensi
 
 ## Where sensitivity labels can appear
 
-Sensitivity labels appear in the UI of Office apps. Here is the current availability.
-
-||**Word**|**PowerPoint**|**Excel**|**Outlook**|
-|:-----|:-----|:-----|:-----|:-----|
-|**Mac**  <br/> |Yes  <br/> |Yes  <br/> |Yes  <br/> |Yes  <br/> |
-|**iOS**  <br/> |Yes  <br/> |Yes  <br/> |Coming soon  <br/> |Coming soon  <br/> |
-|**Android**  <br/> |Yes  <br/> |Yes  <br/> |Coming soon  <br/> |Coming soon  <br/> |
-|**Win 32 (AIP add-in)**  <br/> |Yes  <br/> |Yes  <br/> |Yes  <br/> |Yes  <br/> |
+Sensitivity labels appear in the UI of Office apps. To view the current availability for specific apps and platforms, see [Where is the feature available today?](https://support.office.com/en-us/article/apply-sensitivity-labels-to-your-documents-and-email-within-office-2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9?ad=US&ui=en-US&rs=en-US#bkmk_whereavailable)
 
 ### Office apps on Windows
 
-In Office apps on devices running Windows, sensitivity labels appear on the **Protect** button, on the **Home** tab on the Ribbon. The label applied also appears in the Status bar at the bottom of the window.
+In Office apps on devices running Windows, sensitivity labels appear on the **Sensitivity** button, on the **Home** tab on the Ribbon. The label applied also appears in the Status bar at the bottom of the window.
 
-The AIP add-in is what causes the UI for sensitivity labels to appear in Office apps on Windows. In the first version of the AIP add-in, sensitivity labels appear on the **Protect** button. In the second version of the AIP add-in, which is coming soon, sensitivity labels will appear on the **Sensitivity** button, as shown here.
+The Azure Information Protection unified labeling client is what causes the UI for sensitivity labels to appear in Office apps on Windows.
 
 #### Important prerequisites 
 
-First deploy the Office apps, and then deploy the AIP add-in. For more information, see the [Admin Guide: Install the Azure Information Protection client for users](https://docs.microsoft.com/en-us/azure/information-protection/rms-client/client-admin-guide-install). We’re currently working on native support for sensitivity labels in Office apps on Windows, so that the AIP add-in will no longer be required.
+First deploy the Office apps, and then deploy the Azure Information Protection unified labeling client, which is coming soon. (Check back for a link to information about how to deploy the client.) We’re currently working on native support for sensitivity labels in Office apps on Windows, so that the Azure Information Protection unified labeling client will no longer be required.
 
 ![Sensitivity button on Ribbon in Excel on Windows](media/Sensitivity_label_Sensitivity_button.png)
 
@@ -173,18 +166,23 @@ In Office apps on Android devices, sensitivity labels appear on the **Sensitivit
 
 ![Sensitivity button on Ribbon in Office on Android](media/Sensitivity_label_on_Android.png)
 
-## How sensitivity labels work with existing AIP labels
+### More information on sensitivity labels in Office apps
 
-Azure Information Protection users are currently able to classify and label content on Windows by using the AIP add-in for Office. Existing AIP labels work seamlessly with new sensitivity labels. This means you can:
+- [Apply sensitivity labels to your documents and email within Office](https://support.office.com/en-us/article/apply-sensitivity-labels-to-your-documents-and-email-within-office-2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9)
+- [Known issues when you apply sensitivity labels to your Office files](https://support.office.com/en-us/article/known-issues-when-you-apply-sensitivity-labels-to-your-office-files-b169d687-2bbd-4e21-a440-7da1b2743edc)
 
-- Keep your existing AIP labels on documents and email.
-- Keep your existing AIP label configuration.
+## How sensitivity labels work with existing Azure Information Protection labels
 
-To prevent confusion, we recommend that you avoid creating labels in the Security & Compliance Center. The [AIP migration topic](https://docs.microsoft.com/en-us/azure/information-protection/configure-policy-migrate-labels) has important information and some specific caveats. If you are not yet ready to migrate your production tenants to sensitivity labels, there is no cause for concern: for the moment, your users can continue using the Azure Information Protection client, and admins can continue using the Azure portal for management.
+Azure Information Protection users are currently able to classify and label content on Windows by using the Azure Information Protection unified labeling client. Existing Azure Information Protection labels work seamlessly with new sensitivity labels. This means you can:
+
+- Keep your existing Azure Information Protection labels on documents and email.
+- Keep your existing Azure Information Protection label configuration.
+
+To prevent confusion, we recommend that you avoid creating labels in the Security & Compliance Center. The [Azure Information Protection migration topic](https://docs.microsoft.com/en-us/azure/information-protection/configure-policy-migrate-labels) has important information and some specific caveats. If you are not yet ready to migrate your production tenants to sensitivity labels, there is no cause for concern: for the moment, your users can continue using the Azure Information Protection client, and admins can continue using the Azure portal for management.
 
 ## Protect content on Windows devices by using endpoint protection in Microsoft Intune
 
-When you create a sensitivity label, you have the option to turn on endpoint protection in Intune. This option can help ensure that content with this label can only be shared or copied to sanctioned locations, even when it’s stored on an endpoint. In essence, turning on this option for a sensitivity label tells Windows that this is extra critical data that warrants additional usage constraints.
+When you create a sensitivity label, you have the option to tell Windows that files with this label are sensitive and need to be protected against data leakage when stored on Windows devices. This option can help ensure that content with this label can only be shared or copied to sanctioned locations, even when it’s stored on an endpoint. In essence, turning on this option for a sensitivity label tells Windows that this is extra critical data that warrants additional usage constraints.
 
 When you turn on this option, Windows can read, understand, and act on sensitivity labels in documents and automatically apply Windows Information Protection (WIP) on content, no matter how it reaches a managed Windows device. This helps protect labeled files from accidental leakage, with or without applying encryption.
 
@@ -203,8 +201,10 @@ And if a user attempts to save labeled content to a USB drive, they see this mes
 Before your sensitivity labels can use WIP, you first need to do the prerequisites described here: [How Windows Information Protection protects files with a sensitivity label](https://docs.microsoft.com/en-us/windows/security/information-protection/windows-information-protection/how-wip-works-with-labels?branch=vsts17546553). This topic describes the following prerequisites:
 
 - Make sure you're running Windows 10, version 1809 or later.
-- [Set up Windows Defender Advanced Threat Protection (WDATP)](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-atp/get-started), which scans content for a label and applies the corresponding WIP protection.
-- [Create a Windows Information Protection (WIP) policy with MDM using the Azure portal for Microsoft Intune](https://docs.microsoft.com/en-us/windows/security/information-protection/windows-information-protection/create-wip-policy-using-intune-azure). A WIP policy needs to be applied to endpoint devices.
+- [Set up Windows Defender Advanced Threat Protection (WDATP)](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-atp/get-started), which scans content for a label and applies the corresponding WIP protection. ATP performs some actions independently from WIP, such as reporting anomalies.
+- Create a Windows Information Protection (WIP) policy that applies to endpoint devices:
+    - [Create a Windows Information Protection (WIP) policy with MDM using the Azure portal for Microsoft Intune](https://docs.microsoft.com/en-us/windows/security/information-protection/windows-information-protection/create-wip-policy-using-intune-azure)
+    - [Create and deploy a Windows Information Protection (WIP) policy using System Center Configuration Manager](https://docs.microsoft.com/en-us/windows/security/information-protection/windows-information-protection/create-wip-policy-using-sccm)
 
 ## Protect content in third-party apps and services by using Microsoft Cloud App Security
 
@@ -244,4 +244,3 @@ To use the sensitivity label cmdlets, you need to:
 1. [Connect to the Office 365 Security &amp; Compliance Center using remote PowerShell](https://docs.microsoft.com/en-us/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps)
     
 2. Use these [Office 365 Security &amp; Compliance Center cmdlets](http://go.microsoft.com/fwlink/?LinkID=799772&amp;clcid=0x409)
-
