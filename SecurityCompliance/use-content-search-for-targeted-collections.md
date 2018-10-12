@@ -3,7 +3,7 @@ title: "Use Content Search in Office 365 for targeted collections"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
-ms.date: 12/19/2017
+ms.date: 10/12/2018
 ms.audience: Admin
 ms.topic: article
 ms.service: o365-administration
