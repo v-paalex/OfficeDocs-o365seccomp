@@ -136,7 +136,7 @@ Here’s the basic flow of what the admin, user, and Office app do to make sensi
 
 ## Where sensitivity labels can appear
 
-Sensitivity labels appear in the UI of Office apps. To view the current availability for specific apps and platforms, see [Where is the feature available today?](https://support.office.com/en-us/article/apply-sensitivity-labels-to-your-documents-and-email-within-office-2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9?ad=US&ui=en-US&rs=en-US#bkmk_whereavailable)
+Sensitivity labels appear in the UI of Office apps. To view the current availability for specific apps and platforms, see [Where is the feature available today?](https://support.office.com/en-us/article/apply-sensitivity-labels-to-your-documents-and-email-within-office-2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9?ad=US&ui=en-US&rs=en-US#bkmk_whereavailable).
 
 ### Office apps on Windows
 
