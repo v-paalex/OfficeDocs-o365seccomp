@@ -12,7 +12,9 @@
 # Protect access to data and services
 ## [Protect access to data and services in Office 365](protect-access-to-data-and-services.md)
 ## [Choose between MDM and Intune](choose-between-mdm-and-intune.md)
-# [Prevent data loss (DLP)](data-loss-prevention-policies.md)
+# Protect information
+## [Sensitivity labels](sensitivity-labels.md)
+## [Prevent data loss (DLP)](data-loss-prevention-policies.md)
 ## [Watch an extended overview of DLP](https://channel9.msdn.com/events/ignite/microsoft-ignite-orlando-2017/brk3111)
 ## Set up DLP
 ### [Get started with DLP policy recommendations](get-started-with-dlp-policy-recommendations.md)
@@ -47,11 +49,11 @@
 ### [Enable unlimited archiving](enable-unlimited-archiving.md)
 ### [Set up an archive and deletion policy for mailboxes](set-up-an-archive-and-deletion-policy-for-mailboxes.md)
 ## Retain data
-### [Overview of retention policies](retention-policies.md)
-### [Overview of labels](labels.md)
-### [Overview of disposition reviews](disposition-reviews.md)
-### [Overview of event-driven retention](event-driven-retention.md)
-### [Overview of file plan manager](file-plan-manager.md)
+### [Retention policies](retention-policies.md)
+### [Retention labels](labels.md)
+### [Disposition reviews](disposition-reviews.md)
+### [Event-driven retention](event-driven-retention.md)
+### [File plan manager](file-plan-manager.md)
 ## [Manage inactive mailboxes](inactive-mailboxes-in-office-365.md)
 ### [Create and manage inactive mailboxes](create-and-manage-inactive-mailboxes.md)
 ### [Change the hold duration for an inactive mailbox](change-the-hold-duration-for-an-inactive-mailbox.md)
