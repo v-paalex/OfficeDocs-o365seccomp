@@ -20,7 +20,7 @@ description: "Use this topic to learn more about configuring privileged access m
 > [!IMPORTANT]
 > This topic covers deployment and configuration guidance for features only currently available in Office 365 E5 and Advanced Compliance SKUs.
 
-This topic will guide you through enabling and configuring privileged access management in your Office 365 organization. You can use either the the Microsoft 365 Admin Center or Exchange Management PowerShell to manage and use privileged access. 
+This topic will guide you through enabling and configuring privileged access management in your Office 365 organization. You can use either the Microsoft 365 Admin Center or Exchange Management PowerShell to manage and use privileged access. 
 
 ## Enable and configure privileged access management
 

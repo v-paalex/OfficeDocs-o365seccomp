@@ -3,7 +3,7 @@ title: "Manage eDiscovery cases in the Office 365 Security &amp; Compliance Cent
 ms.author: markjjo
 author: markjjo
 manager: laurawi
-ms.date: 7/2/2018
+ms.date: 10/12/2018
 ms.audience: Admin
 ms.topic: article
 ms.service: o365-administration
@@ -174,11 +174,7 @@ To create a hold for an eDiscovery case:
   
 2. **Sites** Click **Add**![Add Icon](media/ITPro-EAC-AddIcon.gif) to specify SharePoint and OneDrive for Business sites to place on hold. Type the URL for each site that you want to place on hold. You can also add the URL for the SharePoint site for an Office 365 Group or a Microsoft Team. 
     
-<<<<<<< HEAD
-    See the [Manage eDiscovery cases in the Office 365 Security &amp; Compliance Center](https://support.office.com/article/edea80d6-20a7-40fb-b8c4-5e8c8395f6da#moreinfo_1) section for tips on putting Office 365 Groups and Microsoft Teams on hold. 
-=======
     See the [More information](https://support.office.com/article/edea80d6-20a7-40fb-b8c4-5e8c8395f6da.aspx#moreinfo_1) section for tips on putting Office 365 Groups and Microsoft Teams on hold. 
->>>>>>> deniseb-conversion
     
     > [!NOTE]
     > In the rare case that a person's user principal name (UPN) is changed, the URL for their OneDrive account will also be changed to incorporate the new UPN. If this happens, you'll have to modify the hold by adding the user's new OneDrive URL and removing the old one. 
@@ -535,13 +531,9 @@ When you re-open a case, any holds that were in place when the case was closed w
     
     Finally, as previous explained, eDiscovery Administrators in the Security &amp; Compliance Center are automatically added as administrators in Advanced eDiscovery. That means a person who is an eDiscovery Administrator can perform administrative tasks in Advanced eDiscovery, such as setting up users, creating cases, and adding data to cases.
     
-<<<<<<< HEAD
-- **What are the licensing requirements to place content locations on hold?**In general, organizations require an Office 365 E3 subscription or higher to place content locations on hold. To place mailboxes on hold, an Exchange Online Plan 2 license is required. For more information, see this [eDiscovery FAQ](https://support.office.com/article/9d1a29ae-b7b4-4a27-9c8c-84289023dcae#Q5).
-=======
 - **What are the licensing requirements to place content locations on hold?**In general, organizations require an Office 365 E3 subscription or higher to place content locations on hold. To place mailboxes on hold, an Exchange Online Plan 2 license is required. For more information, see this [FAQ](https://support.office.com/article/9d1a29ae-b7b4-4a27-9c8c-84289023dcae.aspx#Q5).
->>>>>>> deniseb-conversion
-    
-- **What else should you know about searching all case content in Step 5?**As previously explained, you can search the the content locations that have been placed on hold in the case. When you do this, only the content that matches the hold criteria is search. If there is no hold criteria, all content is searched. If contents are on a query-based hold, only the content that matches both hold criteria (from the hold placed in Step 4) and the search criteria (from the search in Step 5) is returned with the search results.
+
+- **What else should you know about searching all case content in Step 5?**As previously explained, you can search the content locations that have been placed on hold in the case. When you do this, only the content that matches the hold criteria is search. If there is no hold criteria, all content is searched. If contents are on a query-based hold, only the content that matches both hold criteria (from the hold placed in Step 4) and the search criteria (from the search in Step 5) is returned with the search results.
     
     Here are some other things to keep in mind when searching all case content:
     
