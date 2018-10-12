@@ -3,7 +3,7 @@ title: "Manage eDiscovery cases in the Office 365 Security &amp; Compliance Cent
 ms.author: markjjo
 author: markjjo
 manager: laurawi
-ms.date: 7/2/2018
+ms.date: 10/12/2018
 ms.audience: Admin
 ms.topic: article
 ms.service: o365-administration
