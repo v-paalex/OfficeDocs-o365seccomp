@@ -62,7 +62,7 @@ To display a list of mailbox folders or site path names:
   #    * If an email address is supplied: list the folders for the target mailbox.			#
   #    * If a SharePoint or OneDrive for Business site is supplied: list the folder paths for the site.	#
   #    * In both cases, the script supplies the correct search properties (folderid: or path:)		#
-  #      appeneded to the folder ID or path ID to use in a Content Search.				#
+  #      appended to the folder ID or path ID to use in a Content Search.				#
   # Notes:												#
   #    * For SharePoint and OneDrive for Business, the paths are searched recursively; this means the 	#
   #      the current folder and all sub-folders are searched.						#
@@ -73,7 +73,7 @@ To display a list of mailbox folders or site path names:
   #########################################################################################################
   # Collect the target email address or SharePoint Url
   $addressOrSite = Read-Host "Enter an email address or a URL for a SharePoint or OneDrive for Business site"
-  # Authenticate with Exchange Online and the Security &amp; Complaince Center (Exchange Online Protection - EOP)
+  # Authenticate with Exchange Online and the Security &amp; Compliance Center (Exchange Online Protection - EOP)
   if (!$credentials)
   {
       $credentials = Get-Credential
@@ -115,13 +115,13 @@ To display a list of mailbox folders or site path names:
       $searchActionName = "SPFoldersSearch_Preview"
       # List the folders for the SharePoint or OneDrive for Business Site
       $siteUrl = $addressOrSite
-      # Authenticate with the Security &amp; Complaince Center
+      # Authenticate with the Security &amp; Compliance Center
       if (!$SccSession)
       {
           $SccSession = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://ps.compliance.protection.outlook.com/powershell-liveid -Credential $credentials -Authentication Basic -AllowRedirection
           Import-PSSession $SccSession -AllowClobber -DisableNameChecking
       }
-      # Clean-up, if the the script was aborted, the search we created might not have been deleted.  Try to do so now.
+      # Clean-up, if the script was aborted, the search we created might not have been deleted.  Try to do so now.
       Remove-ComplianceSearch $searchName -Confirm:$false -ErrorAction 'SilentlyContinue'
       # Create a Content Search against the SharePoint Site or OneDrive for Business site and only search for folders; wait for the search to complete
       $complianceSearch = New-ComplianceSearch -Name $searchName -ContentMatchQuery "contenttype:folder" -SharePointLocation $siteUrl
