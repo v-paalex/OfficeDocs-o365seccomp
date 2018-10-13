@@ -26,7 +26,7 @@ In the Security &amp; Compliance Center, several [reports and insights](reports-
   
 1. In the Security &amp; Compliance Center, go to **Reports** \> **Dashboard**.
     
-2. Choose a report. For this example, we'll choose the Threat protection status report.
+2. Choose a report. For this example, we'll choose the Threat Protection Status report.
     
 3. In the upper left corner of the report, choose **+ Create schedule**.
     
