@@ -45,7 +45,7 @@ description: "Set up Safe Links policies to protect your organization from malic
     
 ## Step 2: Define (or review) the ATP Safe Links policy that applies to everyone
 
-When you have Advanced Threat Protection in Office 365 Enterprise, you will have a default ATP Safe Links policy that applies to everyone in your organization. 
+When you have Advanced Threat Protection in Office 365 Enterprise, you will have a default ATP Safe Links policy that applies to everyone in your organization. Make sure to review, and if needed, edit your default policy.
   
 1. Go to [https://protection.office.com](https://protection.office.com) and sign in with your work or school account. 
     
@@ -63,7 +63,7 @@ When you have Advanced Threat Protection in Office 365 Enterprise, you will have
     
 ## Step 3: Add (or edit) ATP Safe Links policies that apply to specific email recipients
 
-After you have reviewed the ATP Safe Links policy for all users, consider defining additional policies for specific groups of email recipients. This enables you to specify exceptions to your default policy. 
+After you have reviewed (or edited) the default ATP Safe Links policy that applies to everyone, your next step is to define additional policies that would apply to specific recipients. For example, you can specify exceptions to your default policy by defining an additional policy. 
   
 1. Go to [https://protection.office.com](https://protection.office.com) and sign in with your work or school account. 
     
