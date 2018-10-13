@@ -29,9 +29,9 @@ Let's walk through the flow from a detailed report to an insight and actions. (T
     
     ![In the Security &amp; Compliance Center, go to Reports \> Dashboard](media/68f3bb7c-b4f7-4cca-904b-478643a93c94.png)
   
-2. We choose a report to get a more detailed view. (Choose a report, such as the **Threat protection status** report.) 
+2. We choose a report to get a more detailed view. (Choose a report, such as the **Threat Protection Status** report.) 
     
-    ![Threat protection status report showing insights](media/f47d7dbd-816a-47ba-b8db-53919fbed192.png)
+    ![Threat Protection Status report showing insights](media/f47d7dbd-816a-47ba-b8db-53919fbed192.png)
   
 3. We notice an insights indicator in the chart as well as below the report. Positioning the mouse pointer on the insights marker gives some additional details. (Hover over the insights marker to see additional details.)
     
