@@ -22,7 +22,7 @@ A variety of email security reports are available in the Security &amp; Complian
   
 Your email security reports include the following:
   
-- [Threat protection status report](view-email-security-reports.md#tps) (new!) 
+- [Threat Protection Status report](view-email-security-reports.md#tps) (new!) 
     
 - [Malware Detections report](view-email-security-reports.md#maldet)
     
@@ -38,15 +38,18 @@ Your email security reports include the following:
     
 - [User-reported messages report](view-email-security-reports.md#userreported) (new!) 
     
-## Threat protection status report (new!)
+## Threat Protection Status report (new!)
 
-The new **Threat protection status** report is a smart report that shows malicious email that was detected and blocked by Exchange Online Protection. This report shows information about email identified as malware or a phishing attempt. 
+The new **Threat Protection Status** report is a smart report that shows malicious email that was detected and blocked by Exchange Online Protection. This report shows information about email identified as malware or a phishing attempt. 
+
+> [!NOTE]
+> A Threat Protection Status report is available to customers who have either Office 365 ATP or Exchange Online Protection (EOP); however, the information that is displayed in the Threat Protection Status report for ATP customers will likely contain different data than what EOP customers might see. For example, EOP customers can view information about malware detected in email, but not information about [malicious files detected in SharePoint Online, OneDrive, or Microsoft Teams](atp-for-spo-odb-and-teams.md), an ATP-specific capability. ([Learn more about ATP reports](view-reports-for-atp.md).)
   
-To view this report, in the Security &amp; Compliance Center, go to **Reports** \> **Dashboard** \> **Threat protection status**.
+To view this report, in the Security &amp; Compliance Center, go to **Reports** \> **Dashboard** \> **Threat Protection Status**.
   
 ![Threat Protection Status report](media/0ff86e12-c2b2-4d89-92a5-cefb054dc070.png)
   
-When you first open the Threat protection status report, the report shows data for the past seven days by default; however, you can click **Filters** and change the date range for up to 90 days of detail. This report is useful for viewing the effectiveness and impact of your organization's Exchange Online Protection features, and for longer-term trending. 
+When you first open the Threat Protection Status report, the report shows data for the past seven days by default; however, you can click **Filters** and change the date range for up to 90 days of detail. This report is useful for viewing the effectiveness and impact of your organization's Exchange Online Protection features, and for longer-term trending. 
   
 ![Threat Protection Status report filters](media/ab6b6b8d-e97a-4c3a-8fb1-c4940dcb7a07.png)
   
@@ -62,7 +65,7 @@ To view this report, in the Security &amp; Compliance Center, go to **Reports** 
   
 ![Malware Detections Report example](media/a1ba61a3-565a-46d6-b0d5-6a6cff6b31d7.png)
   
-Similar to other reports, like the Threat protection status report, the report displays data for the past seven days by default. However, you can choose **Filters** to change the date range. 
+Similar to other reports, like the Threat Protection Status report, the report displays data for the past seven days by default. However, you can choose **Filters** to change the date range. 
   
 ## Top Malware report
 
