@@ -88,8 +88,8 @@ In order to view and use the reports described in this article, you must have an
   
 |**Role group**|**Where assigned**|**Learn more**|
 |:-----|:-----|:-----|
-| One of the following:  <br/>  Organization Management  <br/>  Security Administrator  <br/>  Security Reader  <br/> |Security &amp; Compliance Center  <br/> |[Permissions in the Office 365 Security &amp; Compliance Center](permissions-in-the-security-and-compliance-center.md) <br/> |
-| One of the following:  <br/>  Organization Management  <br/>  View-only Organization Management  <br/>  View-Only Recipients role  <br/>  Compliance Management  <br/> |Exchange Admin Center  <br/> |[Feature permissions in Exchange Online](https://technet.microsoft.com/library/jj200673%28v=exchg.150%29.aspx) <br/> |
+| One of the following:  <br/><br/>--Organization Management  <br/>--Security Administrator  <br/>--Security Reader  <br/> |Security &amp; Compliance Center  <br/> |[Permissions in the Office 365 Security &amp; Compliance Center](permissions-in-the-security-and-compliance-center.md) <br/> |
+| One of the following:  <br/><br/>--Organization Management  <br/>--View-only Organization Management  <br/>--View-Only Recipients role  <br/>--Compliance Management  <br/> |Exchange Admin Center  <br/> |[Feature permissions in Exchange Online](https://technet.microsoft.com/library/jj200673%28v=exchg.150%29.aspx) <br/> |
    
 ## What if the reports aren't showing data?
 
