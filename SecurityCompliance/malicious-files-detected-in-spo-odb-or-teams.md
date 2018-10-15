@@ -22,9 +22,9 @@ In order to perform the tasks described in this article, you must have the neces
   
 ## View reports with information about detected files
 
-To view status and detailed information about files that were detected by Office 365 ATP, you can use the Threat protection status report.
+To view status and detailed information about files that were detected by Office 365 ATP, you can use the Threat Protection Status report.
   
-1. In the Office 365 Security &amp; Compliance Center, choose **Reports** \> **Dashboard** \> **Threat protection status**.
+1. In the Office 365 Security &amp; Compliance Center, choose **Reports** \> **Dashboard** \> **Threat Protection Status**.
     
 2. In the upper right corner of the report, choose **View details table**.
     
