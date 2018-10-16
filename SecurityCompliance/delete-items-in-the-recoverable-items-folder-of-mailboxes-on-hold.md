@@ -241,22 +241,22 @@ After you've identified the name of the eDiscovery case and the hold, go to the 
   
 ## Step 4: Remove the delay hold from the mailbox
 
-After any type of hold is removed from a mailbox, the value of the *DelayHoldApplied* mailbox property is set to **True**. This is called a *delay hold* and means that the actual removal of the hold is delayed for 30 days to prevent data from being permanently deleted (purged) from the mailbox.   When a delay hold is placed on the mailbox, the mailbox is still considered to be on hold for an unlimited duration, as if the mailbox was on Litigation Hold. (The purpose of a delay hold is to give admins an opportunity to search for or recover mailbox items that will be purged after a hold is removed.) Noe that after 30 days, the delay hold expires, and Office 365 will automatically attempt to remove the delay hold (by setting the *DelayHoldApplied* property to **False**) so that the hold will be actually removed. 
+After any type of hold is removed from a mailbox, the value of the *DelayHoldApplied* mailbox property is set to **True**. This occurs the next time the Managed Folder Assistant processes the mailbox and detects that a hold has been removed. This is called a *delay hold* and means the actual removal of the hold is delayed for 30 days to prevent data from being permanently deleted from the mailbox. (The purpose of a delay hold is to give admins an opportunity to search for or recover mailbox items that will be purged after a hold is removed.)  When a delay hold is placed on the mailbox, the mailbox is still considered to be on hold for an unlimited duration, as if the mailbox was on Litigation Hold. After 30 days, the delay hold expires, and Office 365 will automatically attempt to remove the delay hold (by setting the *DelayHoldApplied* property to **False**) so that the hold is actually removed. 
 
-Before you can delete items in Step 5, you have to remove the delay hold from the mailbox. Run the following command in Exchange Online PowerShell to remove the delay hold: 
- 
-```
-Set-Mailbox <username> -RemoveDelayHoldApplied
-```
-Note that you must be assigned the Legal Hold role in Exchange Online to use the *RemoveDelayHoldApplied* parameter.
-
-To verify that delay hold has been removed, run the following command.
+Before you can delete items in Step 5, you have to remove the delay hold from the mailbox. First, determine if the delay hold is applied to the mailbox by running the following command in Exchange Online PowerShell:
 
 ```
 Get-Mailbox <username> | FL DelayHoldApplied
 ```
 
-The value of **False** for the *DelayHoldApplied* property indicates the delay has been removed.
+If the value of the *DelayHoldApplied* property is set to **False**, a delay hold has not been placed on the mailbox. You can go to Step 5 and delete items in the Recoverable Items folder.
+
+If the value of the *DelayHoldApplied* property is set to **True**, run the following command to remove the delay hold:
+
+```
+Set-Mailbox <username> -RemoveDelayHoldApplied
+```
+Note that you must be assigned the Legal Hold role in Exchange Online to use the *RemoveDelayHoldApplied* parameter.
 
 ## Step 5: Delete items in the Recoverable Items folder
 
