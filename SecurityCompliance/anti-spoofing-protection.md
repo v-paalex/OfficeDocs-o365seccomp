@@ -3,7 +3,7 @@ title: "Anti-spoofing protection in Office 365"
 ms.author: krowley
 author: kccross
 manager: laurawi
-ms.date: 7/2/2018
+ms.date: 10/11/2018
 ms.audience: ITPro
 ms.topic: article
 ms.service: o365-administration
@@ -11,7 +11,6 @@ localization_priority: Normal
 search.appverid:
 - MET150
 ms.assetid: d24bb387-c65d-486e-93e7-06a4f1a436c0
-
 description: "This article describes how Office 365 mitigates against phishing attacks that uses forged sender domains, that is, domains that are spoofed. It accomplishes this by analyzing the messages and blocking the ones that can be authenticated neithe by using standard email authentication methods, nor other sender reputation techniques. This change is being implemented to reduce the number of phishing attacks organizations in Office 365 are exposed to."
 ---
 
@@ -21,7 +20,7 @@ This article describes how Office 365 mitigates against phishing attacks that us
   
 This article also describes why this change is being made, how customers can prepare for this change, how to view messages that will be affected, how to report on messages, how to mitigate false positives, as well as how senders to Microsoft should prepare for this change.
   
-Microsoft's anti-spoofing technology is initially deployed to its Office 365 Advanced Threat Protection (ATP) and E5 customers. However, because of the way all of its filters learn from each other, non-ATP customers and even Outlook.com users may also be affected.
+Microsoft's anti-spoofing technology was initially deployed to its organizations that had an Office 365 Enterprise E5 subscription or had purchased the Office 365 Advanced Threat Protection (ATP) add-on for their subscription. As of October, 2018 we've extended the protection to organizations that have Exchange Online Protection (EOP) as well. Additionally, because of the way all of our filters learn from each other, Outlook.com users may also be affected.
   
 ## How spoofing is used in phishing attacks
 
@@ -51,7 +50,7 @@ Second, spoofed messages create uncertainty for users who know about phishing me
   
 The above message did come from Microsoft, but at the same time, users are used to getting phishing messages that may trick a user into clicking a link and giving up their credentials, downloading malware, or replying to a message with sensitive content. Because it is difficult to tell the difference between a real password reset and a fake one, many users ignore these messages, report them as spam, or unnecessarily report the messages back to Microsoft as missed phishing scams.
     
-To stop spoofing, the email filtering industry has developed email authentication protocols such as [SPF](https://technet.microsoft.com/en-us/library/dn789058%28v=exchg.150%29.aspx), [DKIM](https://technet.microsoft.com/en-us/library/mt695945%28v=exchg.150%29.aspx), and [DMARC](https://technet.microsoft.com/en-us/library/mt734386%28v=exchg.150%29.aspx). DMARC prevents spoofing examining a message's sender - the one that the user sees in their email client (in the examples above, this is service.outlook.com, outlook.com, and accountprotection.microsoft.com) - with the domain that passed SPF or DKIM. That is, the domain that the user sees has been authenticated and is therefore not spoofed. For a more complete discussion, see the section " *Understanding why email authentication is not always enough to stop spoofing"*  later on in this document. 
+To stop spoofing, the email filtering industry has developed email authentication protocols such as [SPF](https://docs.microsoft.com/office365/SecurityCompliance/set-up-spf-in-office-365-to-help-prevent-spoofing), [DKIM](https://docs.microsoft.com/office365/SecurityCompliance/use-dkim-to-validate-outbound-email), and [DMARC](https://docs.microsoft.com/office365/SecurityCompliance/use-dmarc-to-validate-email). DMARC prevents spoofing examining a message's sender - the one that the user sees in their email client (in the examples above, this is service.outlook.com, outlook.com, and accountprotection.microsoft.com) - with the domain that passed SPF or DKIM. That is, the domain that the user sees has been authenticated and is therefore not spoofed. For a more complete discussion, see the section "*Understanding why email authentication is not always enough to stop spoofing"*  later on in this document. 
   
 However, the problem is that email authentication records are optional, not required. Therefore, while domains with strong authentication policies like microsoft.com and skype.com are protected from spoofing, domains that publish weaker authentication policies, or no policy at all, are targets for being spoofed.As of March 2018, only 9% of domains of companies in the Fortune 500 publish strong email authentication policies. The remaining 91% may be spoofed by a phisher, and unless the email filter detects it using another policy, may be delivered to an end user and deceive them:
   
@@ -61,7 +60,7 @@ The proportion of small-to-medium sized companies that are not in the Fortune 50
   
 This is a big problem because while enterprises may not be aware of how email authentication works, phishers do understand and take advantage of the lack of it.
   
-For information on setting up SPF, DKIM, and DMARC, see the section " *Customers of Office 365"*  later on in this document. 
+For information on setting up SPF, DKIM, and DMARC, see the section "*Customers of Office 365"*  later on in this document. 
   
 ## Stopping spoofing with implicit email authentication
 
@@ -170,7 +169,7 @@ Authentication-Results: spf=none (sender IP is 1.2.3.4)
 From: sender @ example.com
 To: receiver @ contoso.com
 ```
-After anti-spoofing, if you are an Advanced Threat Protection or E5 customer, the compauth value is stamped (non-ATP and non-E5 customers are not affected):
+After anti-spoofing, if you have Office 365 Enterprise E5, EOP, or ATP, the compauth value is stamped:
   
 ```
 Authentication-Results: spf=none (sender IP is 1.2.3.4)
@@ -404,20 +403,20 @@ This feature is currently under development. As more details are defined, this p
   
 ### Understanding how spam, phishing, and advanced phishing detections are combined
 
-Exchange Online customers - both ATP and non-ATP - are able to specify the actions to take when the service identifies messages as malware, spam, high confidence spam, phishing, and bulk. However, with the introduction of new Anti-phishing policies for ATP customers, and the fact that a message may hit multiple detection types (e.g., malware, phishing, and user impersonation), there may be some confusion as to which policy applies. 
+Organizations that use Exchange Online, with or without ATP, can specify which actions to take when the service identifies messages as malware, spam, high confidence spam, phishing, and bulk. With the ATP Anti-phishing policies for ATP customers, and the Anti-phishing policies for EOP customers, and the fact that a message may hit multiple detection types (for example, malware, phishing, and user-impersonation), there may be some confusion as to which policy applies. 
   
 In general, the policy applied to a message is identified in the X-Forefront-Antispam-Report header in the CAT (Category) property. 
   
 |**Priority**|**Policy**|**Category**|**Where managed?**|**Applies to**|
 |:-----|:-----|:-----|:-----|:-----|
-|1  <br/> |Malware  <br/> |MALW  <br/> |[Malware policy](https://technet.microsoft.com/en-us/library/jj200745%28v=exchg.150%29.aspx) <br/> |All customers﻿  <br/> |
-|2  <br/> |Phishing  <br/> |PHSH  <br/> |[Hosted content filter policy](https://technet.microsoft.com/library/jj200684%28v=exchg.150%29.aspx) <br/> |All customers  <br/> |
-|3  <br/> |High confidence spam  <br/> |HSPM  <br/> |[Hosted content filter policy](https://technet.microsoft.com/library/jj200684%28v=exchg.150%29.aspx) <br/> |All customers  <br/> |
-|4  <br/> |Spoofing  <br/> |SPOOF  <br/> |[Anti-phishing policy](https://go.microsoft.com/fwlink/?linkid=864553),          [Spoof intelligence﻿](https://support.office.com/article/Learn-more-about-spoof-intelligence-978c3173-3578-4286-aaf4-8a10951978bf) <br/> |ATP only  <br/> |
-|5  <br/> |Spam  <br/> |SPM  <br/> |[Hosted content filter policy](https://technet.microsoft.com/library/jj200684%28v=exchg.150%29.aspx) <br/> |All customers  <br/> |
-|6  <br/> |Bulk  <br/> |BULK  <br/> |[Hosted content filter policy](https://technet.microsoft.com/library/jj200684%28v=exchg.150%29.aspx) <br/> |All customers  <br/> |
-|7  <br/> |Domain Impersonation  <br/> |DIMP  <br/> |[Anti-phishing policy](https://go.microsoft.com/fwlink/?linkid=864553) <br/> |ATP only  <br/> |
-|8  <br/> |User Impersonation  <br/> |UIMP﻿  <br/> |[Anti-phishing policy](https://go.microsoft.com/fwlink/?linkid=864553) <br/> |ATP only  <br/> |
+|1  <br/> |Malware  <br/> |MALW  <br/> |[Malware policy](https://technet.microsoft.com/en-us/library/jj200745%28v=exchg.150%29.aspx) <br/> |All organizations  <br/> |
+|2  <br/> |Phishing  <br/> |PHSH  <br/> |[Hosted content filter policy](https://technet.microsoft.com/library/jj200684%28v=exchg.150%29.aspx) <br/> |All organizations  <br/> |
+|3  <br/> |High confidence spam  <br/> |HSPM  <br/> |[Hosted content filter policy](https://technet.microsoft.com/library/jj200684%28v=exchg.150%29.aspx) <br/> |All organizations  <br/> |
+|4  <br/> |Spoofing  <br/> |SPOOF  <br/> |[Anti-phishing policy](https://go.microsoft.com/fwlink/?linkid=864553),          [Spoof intelligence](https://support.office.com/article/Learn-more-about-spoof-intelligence-978c3173-3578-4286-aaf4-8a10951978bf) <br/> |All organizations  <br/> |
+|5  <br/> |Spam  <br/> |SPM  <br/> |[Hosted content filter policy](https://technet.microsoft.com/library/jj200684%28v=exchg.150%29.aspx) <br/> |All organizations  <br/> |
+|6  <br/> |Bulk  <br/> |BULK  <br/> |[Hosted content filter policy](https://technet.microsoft.com/library/jj200684%28v=exchg.150%29.aspx) <br/> |All organizations  <br/> |
+|7  <br/> |Domain Impersonation  <br/> |DIMP  <br/> |[Anti-phishing policy](https://go.microsoft.com/fwlink/?linkid=864553) <br/> |Organizations with ATP only  <br/> |
+|8  <br/> |User Impersonation  <br/> |UIMP  <br/> |[Anti-phishing policy](https://go.microsoft.com/fwlink/?linkid=864553) <br/> |Organizations with ATP only <br/> |
    
 If you have multiple different Anti-phishing policies, the one at the highest priority will apply. For example, suppose you have two policies:
   
@@ -615,11 +614,11 @@ If you are an administrator who currently sends messages to Microsoft, either Of
 
 If you are an Office 365 customer and you use Office 365 to send outbound email:
   
-- For your domains, [Set up SPF in Office 365 to help prevent spoofing](https://technet.microsoft.com/en-us/library/dn789058%28v=exchg.150%29.aspx)
+- For your domains, [Set up SPF in Office 365 to help prevent spoofing](https://docs.microsoft.com/office365/SecurityCompliance/set-up-spf-in-office-365-to-help-prevent-spoofing)
     
-- For your primary domains, [Use DKIM to validate outbound email sent from your custom domain in Office 365](https://technet.microsoft.com/en-us/library/mt695945%28v=exchg.150%29.aspx)
+- For your primary domains, [Use DKIM to validate outbound email sent from your custom domain in Office 365](https://docs.microsoft.com/office365/SecurityCompliance/use-dkim-to-validate-outbound-email)
     
-- [Consider setting up DMARC records](https://technet.microsoft.com/en-us/library/mt734386%28v=exchg.150%29.aspx) for your domain to determine who are your legitimate senders 
+- [Consider setting up DMARC records](https://docs.microsoft.com/office365/SecurityCompliance/use-dmarc-to-validate-email) for your domain to determine who are your legitimate senders 
     
 Microsoft does not provide detailed implementation guidelines for each of SPF, DKIM, and DMARC. However, there is a lot of information published online. There are also 3rd party companies dedicated to helping your organization set up email authentication records.
   
@@ -679,7 +678,7 @@ Microsoft itself first adopted this feature several weeks before deploying it to
   
 ### Will Microsoft bring this feature to Outlook.com and non-Advanced Threat Protection customers of Office 365?
 
-Anti-spoofing protection will be initially rolled out to ATP/E5 customers, and may in the future be released to its other users. However, if it does, there may be some capabilities that are not applied such as reporting and custom overrides.
+Microsoft's anti-spoofing technology was initially deployed to its organizations that had an Office 365 Enterprise E5 subscription or had purchased the Office 365 Advanced Threat Protection (ATP) add-on for their subscription. As of October, 2018 we've extended the protection to organizations that have Exchange Online Protection (EOP) as well. In the future, we may release it for Outlook.com. However, if we do, there may be some capabilities that are not applied such as reporting and custom overrides.
   
 ### How can I report spam or non-spam messages back to Microsoft?
 

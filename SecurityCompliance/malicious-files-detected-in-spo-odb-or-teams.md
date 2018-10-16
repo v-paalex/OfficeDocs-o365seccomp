@@ -3,7 +3,6 @@ title: "View information about malicious files detected in SharePoint, OneDrive,
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 5/31/2018
 ms.audience: ITPro
 ms.topic: article
 ms.service: o365-administration
@@ -18,15 +17,14 @@ description: "Learn where to go to view information about malicious files detect
 # View information about malicious files detected in SharePoint, OneDrive, or Microsoft Teams
 
 [Office 365 ATP for SharePoint, OneDrive, and Microsoft Teams](atp-for-spo-odb-and-teams.md) protects your organization from malicious files in document libraries and team sites. When a malicious file is detected, that file is blocked so that no one can open, copy, move, or share it until further actions are taken by the organization's security team. Read this article to learn how to view information about detected files and what actions to take. 
-  
-> [!TIP]
-> In order to perform the tasks described in this article, you must have the necessary [permissions assigned in the Office 365 Security &amp; Compliance Center](permissions-in-the-security-and-compliance-center.md). 
+
+In order to perform the tasks described in this article, you must have the necessary [permissions assigned in the Office 365 Security &amp; Compliance Center](permissions-in-the-security-and-compliance-center.md). 
   
 ## View reports with information about detected files
 
-To view status and detailed information about files that were detected by Office 365 ATP, you can use the Threat protection status report.
+To view status and detailed information about files that were detected by Office 365 ATP, you can use the Threat Protection Status report.
   
-1. In the Office 365 Security &amp; Compliance Center, choose **Reports** \> **Dashboard** \> **Threat protection status**.
+1. In the Office 365 Security &amp; Compliance Center, choose **Reports** \> **Dashboard** \> **Threat Protection Status**.
     
 2. In the upper right corner of the report, choose **View details table**.
     
@@ -35,9 +33,6 @@ To view status and detailed information about files that were detected by Office
 4. Select an item in the list to view detailed information, including actions taken, the file name, the file path, and more.
     
 5. Choose the **Advanced Analysis** tab to view information, such as observed behavior and analysis details. 
-    
-> [!TIP]
-> To learn more about available reports, see [View reports for Office 365 Advanced Threat Protection](view-reports-for-atp.md). 
   
 ## View and take action on files in quarantine
 
@@ -58,9 +53,6 @@ To view status and detailed information about files that were detected by Office
   - Choose **Delete** to remove the file from the list of quarantined items. If you choose this option, you must also delete the file from its respective library in SharePoint Online, OneDrive for Business, or Microsoft Teams. This option does not unblock a file from being opened or shared. 
     
 5. Choose **Close** to close the details for a selected item. 
-    
-> [!TIP]
-> To learn more about managing quarantined files, see [Manage quarantined messages and files as an administrator in Office 365](manage-quarantined-messages-and-files.md). 
   
 ## Related topics
 
@@ -69,5 +61,7 @@ To view status and detailed information about files that were detected by Office
 [View the reports for Office 365 Advanced Threat Protection](view-reports-for-atp.md)
   
 [Permissions in the Office 365 Security &amp; Compliance Center](permissions-in-the-security-and-compliance-center.md)
+
+[Manage quarantined messages and files as an administrator in Office 365](manage-quarantined-messages-and-files.md)
   
 

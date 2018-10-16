@@ -18,7 +18,7 @@ description: "ATP anti-phishing is offered as part of Office 365 Advanced Threat
 
 ATP anti-phishing is offered as part of [Office 365 Advanced Threat Protection](https://technet.microsoft.com/en-us/library/exchange-online-advanced-threat-protection-service-description.aspx). ATP anti-phishing applies a set of machine learning models together with impersonation detection algorithms to incoming messages to provide protection for commodity and spear phishing attacks. All messages are subject to an extensive set of machine learning models trained to detect phishing messages, together with a set of advanced algorithms used to protect against various user and domain impersonation attacks. ATP anti-phishing protects your organization according to polices that are set by your Office 365 global or security administrators.
   
-To learn more, see [Set up ATP anti-phishing policies in Office 365](set-up-atp-anti-phishing-policies.md).
+To learn more, see [Set up anti-phishing policies in Office 365](set-up-anti-phishing-policies.md).
   
 > [!NOTE]
 > ATP anti-phishing is only available in Advanced Threat Protection, available with Office 365 Enterprise E5. If your organization is using another Office 365 Enterprise subscription, Advanced Threat Protection can be purchased as an add-on. (As a global admin, in the Office 365 admin center, choose **Billing** \> **Add subscriptions**.) For more information about plan options, see [Compare All Office 365 for Business Plans](https://go.microsoft.com/fwlink/?linkid=844053). 
@@ -30,14 +30,14 @@ ATP anti-phishing checks incoming messages for indicators that the message may b
   
 ATP anti-phishing allows Office 365 global administrators or security admins to define policies that provide protection against phishing attacks that include impersonation of either users or domains. (or both). Office 365 global administrators or security admins define within the policy which user and domains should be protected from impersonation attacks using either a fixed list of users or domains or by using mailbox intelligence. Mailbox intelligence is an advanced understanding of a user's email habits and personal contacts. ATP learns how each individual user communicates with other users inside and outside the organization and builds up a map of these relationships. This map allows ATP to understand more details about how to ensure the right messages are identified as impersonation.
   
-ATP anti-phishing polices can be applied to a specific set of people or groups in your organization, or to an entire domain or all of your custom domains. To learn more, see [Set up ATP anti-phishing policies in Office 365](set-up-atp-anti-phishing-policies.md).
+ATP anti-phishing polices can be applied to a specific set of people or groups in your organization, or to an entire domain or all of your custom domains. To learn more, see [Set up anti-phishing policies in Office 365](set-up-anti-phishing-policies.md).
   
 ## How to get ATP anti-phishing
 <a name="Howtogetantiphish"> </a>
 
 ATP anti-phishing is part of Advanced Threat Protection, which is included in Office 365 Enterprise E5. Advanced Threat Protection can also be purchased as an add-on to Office 365 Enterprise E1 or Office 365 Enterprise E3. For more information about plan options, see [Compare All Office 365 for Business Plans](https://go.microsoft.com/fwlink/?linkid=844053).
   
-ATP anti-phishing applies when an anti-phishing policy, such as an impersonation-based policy are set up. (See [Set up ATP anti-phishing policies in Office 365](set-up-atp-anti-phishing-policies.md).)
+ATP anti-phishing applies when an anti-phishing policy, such as an impersonation-based policy are set up. (See [Set up anti-phishing policies in Office 365](set-up-anti-phishing-policies.md).)
   
 ## How to know if ATP anti-phishing is in place
 <a name="IsantiphishOn"> </a>
@@ -57,7 +57,7 @@ ATP anti-phishing policies must be defined in order for protection to be active.
   
 [Anti-phishing protection in Office 365](anti-phishing-protection.md)
   
-[Set up ATP anti-phishing policies in Office 365](set-up-atp-anti-phishing-policies.md)
+[Set up anti-phishing policies in Office 365](set-up-anti-phishing-policies.md)
   
 [ATP safe links in Office 365](atp-safe-links.md)
   

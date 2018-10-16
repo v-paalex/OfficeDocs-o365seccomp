@@ -19,7 +19,7 @@ description: "Set up Safe Links policies to protect your organization from malic
 
 [ATP Safe Links](atp-safe-links.md) , a feature of [Office 365 Advanced Threat Protection](office-365-atp.md) (ATP), can help protect your organization from malicious links used in phishing and other attacks. If you have the necessary [permissions assigned in the Office 365 Security &amp; Compliance Center](permissions-in-the-security-and-compliance-center.md), you can set up ATP Safe Links policies to help ensure that when people click web addresses (URLs), your organization is protected. Your ATP Safe Links policies can be configured to scan URLs in email and URLs in Office documents.
   
-[New features are continually being added to ATP Safe Links](atp-safe-links.md#new-features-added-to-atp-safe-links). As new features are added, you may need to make adjustments to your existing ATP Safe Links policies.
+[New features are continually being added to ATP Safe Links](atp-safe-links.md#new-features-are-continually-being-added-to-atp-safe-links). As new features are added, you may need to make adjustments to your existing ATP Safe Links policies.
 
 ## What to do 
   
@@ -45,10 +45,7 @@ description: "Set up Safe Links policies to protect your organization from malic
     
 ## Step 2: Define (or review) the ATP Safe Links policy that applies to everyone
 
-When you have Advanced Threat Protection in Office 365 Enterprise, you will have a default ATP Safe Links policy that applies to everyone in your organization. 
-
-> [!TIP]
-> You can edit your policy in either the Security &amp; Compliance Center or the Exchange admin center. **We recommend using the Security &amp; Compliance Center to review or edit any of your ATP policies**.
+When you have Advanced Threat Protection in Office 365 Enterprise, you will have a default ATP Safe Links policy that applies to everyone in your organization. Make sure to review, and if needed, edit your default policy.
   
 1. Go to [https://protection.office.com](https://protection.office.com) and sign in with your work or school account. 
     
@@ -66,10 +63,7 @@ When you have Advanced Threat Protection in Office 365 Enterprise, you will have
     
 ## Step 3: Add (or edit) ATP Safe Links policies that apply to specific email recipients
 
-After you have reviewed the ATP Safe Links policy for all users, consider defining additional policies for specific groups of email recipients. This enables you to specify exceptions to your default policy. 
-
-> [!TIP]
-> You can add policies using either the Security &amp; Compliance Center (recommended) or the Exchange admin center. **We recommend using the Security &amp; Compliance Center to review or edit any of your ATP policies**.
+After you have reviewed (or edited) the default ATP Safe Links policy that applies to everyone, your next step is to define additional policies that would apply to specific recipients. For example, you can specify exceptions to your default policy by defining an additional policy. 
   
 1. Go to [https://protection.office.com](https://protection.office.com) and sign in with your work or school account. 
     
@@ -77,13 +71,9 @@ After you have reviewed the ATP Safe Links policy for all users, consider defini
     
 3. Choose **Safe Links**.
     
-4. In the **Policies that apply to specific recipients** section, choose **New** (the New button resembles a plus sign ( **+**)).
-    
-    ![Choose New to add a Safe Links policy for specific email recipients](media/01073f42-3cec-4ddb-8c10-4d33ec434676.png)
+4. In the **Policies that apply to specific recipients** section, choose **New** (the New button resembles a plus sign ( **+**)).<br/>![Choose New to add a Safe Links policy for specific email recipients](media/01073f42-3cec-4ddb-8c10-4d33ec434676.png)
   
-5. Specify the name, description, and settings for your policy.
-    
-    **Example:** To set up a policy called "no direct click through" that does not allow people in a certain group in your organization to click through to a specific website without ATP Safe Links protection, you might specify the following recommended settings: 
+5. Specify the name, description, and settings for your policy.<br/>**Example:** To set up a policy called "no direct click through" that does not allow people in a certain group in your organization to click through to a specific website without ATP Safe Links protection, you might specify the following recommended settings: 
     
   - In the **Name** box, type no direct click through.
     
@@ -107,8 +97,7 @@ After you have reviewed the ATP Safe Links policy for all users, consider defini
 
 As you set up or edit your ATP Safe Links policies, will see several options available. In case you are wondering what these options are, the following table describes each one and its effect. 
 
-> [!NOTE]
-> There are two main kinds of policies to define or edit: a default policy that applies to everyone, and additional policies that are defined for specific recipients. Those are differentiated in the "For this policy" column in the following table.
+There are two main kinds of policies to define or edit: a default policy that applies to everyone, and additional policies that are defined for specific recipients. Those are differentiated in the **For this policy** column in the following table.
   
 |**For this policy**|**This option**|**Does this**|
 |:-----|:-----|:-----|

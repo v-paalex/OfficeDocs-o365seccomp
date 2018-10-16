@@ -3,7 +3,7 @@ title: "Privacy statement for Office 365 Secure Email Portal"
 ms.author: krowley
 author: kccross
 manager: laurawi
-ms.date: 5/9/2017
+ms.date: 10/12/2018
 ms.audience: End User
 ms.topic: reference
 ms.service: o365-administration
@@ -18,17 +18,17 @@ description: "Last Updated: May 2017"
 
 Last Updated: May 2017
   
-This privacy statement governs the Office 365 the new OME capabilities Portal (the "the new OME capabilities Portal"). Previous versions were known as Office 365 Message Encryption (OME) and the "OME Portal". This privacy statement does not apply to other online or offline Microsoft sites, products, or services. Other privacy statements may also apply to the data you process through the the new OME capabilities Portal, such as the privacy statement for Microsoft account (if it is used for authentication) or the privacy statement associated with your device.
+This privacy statement governs the Office 365 the new OME capabilities Portal (the "the new OME capabilities Portal"). Previous versions were known as Office 365 Message Encryption (OME) and the "OME Portal". This privacy statement does not apply to other online or offline Microsoft sites, products, or services. Other privacy statements may also apply to the data you process through the new OME capabilities Portal, such as the privacy statement for Microsoft account (if it is used for authentication) or the privacy statement associated with your device.
   
 ## Collection, Processing and Use of Your Information
 
-The the new OME capabilities Portal enables you to view email encrypted with Office 365 from a variety of end points, such as desktop computers or mobile devices. The encrypted email arrives in your mailbox as an HTML attachment to a regular mail. If the mail is sent to your Microsoft account, work or school account, or Gmail account, you will be asked to sign in to the web-based the new OME capabilities Portal with such account. If the encrypted mail is sent to an account other than the Microsoft Account, the work or school account, or a Gmail account, you will be prompted to create a Microsoft account and associate it with the account to which the encrypted message was sent; alternatively, you can choose to request a one-time passcode for authentication which will be sent to the same email address to which the encrypted message was sent. After successful authentication, the message will be decrypted and displayed via the the new OME capabilities Portal.
+The new OME capabilities Portal enables you to view email encrypted with Office 365 from a variety of end points, such as desktop computers or mobile devices. The encrypted email arrives in your mailbox as an HTML attachment to a regular mail. If the mail is sent to your Microsoft account, work or school account, or Gmail account, you will be asked to sign in to the web-based the new OME capabilities Portal with such account. If the encrypted mail is sent to an account other than the Microsoft Account, the work or school account, or a Gmail account, you will be prompted to create a Microsoft account and associate it with the account to which the encrypted message was sent; alternatively, you can choose to request a one-time passcode for authentication which will be sent to the same email address to which the encrypted message was sent. After successful authentication, the message will be decrypted and displayed via the new OME capabilities Portal.
   
-Your credential information to the Microsoft account, the work or school account, or the Gmail account, as well as the one-time passcode, will be used solely for the purpose of authentication; it will not be stored in the the new OME capabilities Portal, or used by the new OME capabilities for any other purpose.
+Your credential information to the Microsoft account, the work or school account, or the Gmail account, as well as the one-time passcode, will be used solely for the purpose of authentication; it will not be stored in the new OME capabilities Portal, or used by the new OME capabilities for any other purpose.
   
-During the decryption process, the encrypted mail you receive will not be stored by the the new OME capabilities Portal; it will not be transmitted outside the the new OME capabilities Portal at any time.
+During the decryption process, the encrypted mail you receive will not be stored by the new OME capabilities Portal; it will not be transmitted outside the new OME capabilities Portal at any time.
   
-The the new OME capabilities Portal may, in some instances, collect data points about the use and performance of the new OME capabilities (for example, how often encrypted messages are viewed, the browser or app used, and any errors encountered), which may be analyzed in aggregate for purposes of improving the quality, security, and integrity of this and other Microsoft apps, products, or services. This information is not used to identify, contact, or target advertising to you.
+The new OME capabilities Portal may, in some instances, collect data points about the use and performance of the new OME capabilities (for example, how often encrypted messages are viewed, the browser or app used, and any errors encountered), which may be analyzed in aggregate for purposes of improving the quality, security, and integrity of this and other Microsoft apps, products, or services. This information is not used to identify, contact, or target advertising to you.
   
 ## For More Information
 
