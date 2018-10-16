@@ -24,8 +24,8 @@ To provide feedback on Customer Key, including the documentation, send your idea
   
 ## What is service encryption with Customer Key?
 
-Customer Key is a feature that allows you to provision and manage the keys used to encrypt data at rest in Office 365. The feature leverages service encryption, which is encryption that is performed by Office 365 Exchange and SharePoint. Service encryption provides advantages beyond what BitLocker can provide - namely, greater defense-in-depth against attackers. Service encryption is a strong countermeasure if an attacker attempts to bypass the Office 365 access control system that is used to process all requests for access to customer data. This is because service encryption means that a server administrator does not have control or even access to encryption keys and cannot disable encryption, unlike with BitLocker. Therefore, an attacker with administrative access to a server hosting customer data that was encrypted using service encryption will not be able to read the customer data and even if the encrypted data is copied off the server it will remain useless. 
-  
+Customer Key enhances the ability of your organization to meet the demands of compliance requirements that specify key arrangements with the cloud service provider. With Customer Key, you provide and control the encryption keys for your Office 365 data at-rest at the application level. As a result, you may exercise control and revoke your organization's keys, should you decide to exit the service. By revoking the keys, the data is unreadable to the service. Key revocation is the first step on the path towards data deletion.
+
 ## What Office 365 data at rest is covered by Customer Key?
 <a name="WhatDataIsCoveredbyCustomerKey"> </a>
 
