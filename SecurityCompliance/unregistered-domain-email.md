@@ -3,7 +3,7 @@ title: "Unregistered Domain Email"
 ms.author: krowley
 author: kccross
 manager: laurawi
-ms.date: 09/17/2018
+ms.date: 10/17/2018
 ms.audience: Admin
 ms.topic: overview
 ms.service: o365-administration
