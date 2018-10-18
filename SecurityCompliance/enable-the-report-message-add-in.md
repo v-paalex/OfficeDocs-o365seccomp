@@ -3,7 +3,7 @@ title: "Enable the Report Message add-in"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 10/04/2018
+ms.date: 10/18/2018
 ms.audience: Admin
 ms.topic: article
 ms.service: o365-administration
@@ -17,9 +17,18 @@ description: "Learn how to enable the Report Message add-in for Outlook and Outl
 
 # Enable the Report Message add-in
 
-The Report Message add-in for Outlook enables people to easily report misclassified email, whether safe or malicious, to Microsoft and its affiliates for analysis. Microsoft uses these submissions to improve the effectiveness of email protection technologies. In addition, if your organization is using Microsoft Cloud services that include [Office 365 Advanced Threat Protection](office-365-atp.md) or [Threat Intelligence](office-365-ti.md), the Report Message add-in provides your organization's security team with useful information they can use to review and update security policies. 
+## Overview
 
-For example, suppose that people are reporting a lot of messages as phishing. This information surfaces in the [Security Dashboard](security-dashboard.md) and other reports. Your organization's security team can use this information as an indication that anti-phishing policies might need to be updated. Or, if people are reporting a lot of messages that were flagged as junk mail as Not Junk by using the Report Message add-in, your organization's security team might need to adjust [anti-spam policies](configure-the-anti-spam-policies.md).  
+The Report Message add-in for Outlook and Outlook on the Web enables people to easily report misclassified email, whether safe or malicious, to Microsoft and its affiliates for analysis. Microsoft uses these submissions to improve the effectiveness of email protection technologies. In addition, if your organization is using [Office 365 Advanced Threat Protection](office-365-atp.md) or [Office 365 Threat Intelligence](office-365-ti.md), the Report Message add-in provides your organization's security team with useful information they can use to review and update security policies. 
+
+For example, suppose that people are reporting a lot of messages as phishing. This information surfaces in the [Security Dashboard](security-dashboard.md) and other reports. Your organization's security team can use this information as an indication that anti-phishing policies might need to be updated. Or, if people are reporting a lot of messages that were flagged as junk mail as Not Junk by using the Report Message add-in, your organization's security team might need to adjust [anti-spam policies](configure-the-anti-spam-policies.md). 
+
+The Report Message add-in works with your Office 365 subscription and the following products:
+ - Outlook on the Web
+ - Outlook 2013 SP1
+ - Outlook 2016
+ - Outlook 2016 for Mac
+ - Outlook included with Office 365 ProPlus
   
 If you're an individual user, you can [enable the Report Message add-in for yourself](#get-the-report-message-add-in-for-yourself). 
   
@@ -72,32 +81,15 @@ As a next step, learn how to [Use the Report Message add-in](https://support.off
     
 11. Specify who gets the Report Message add-in. <br/>![Specify who gets the Report Message add-in](media/ReportMessageChooseWhoGetsItAdminSettings.png)<br/>
 
-12. Choose **Save**.
+12. Choose **Save**. <br/>
+> [!TIP]
+> We recommend [setting up a rule to get a copy of email messages reported by your users](#set-up-a-rule-to-get-a-copy-of-email-messages-reported-by-your-users)
 
-Depending on what you selected using the wizard, people in your organization will have the Report Message add-in available. People in your organization will see the following icons: 
+Depending on what you selected using the wizard, people in your organization will have the [Report Message add-in](https://support.office.com/article/b5caa9f1-cdf3-4443-af8c-ff724ea719d2) available. People in your organization will see the following icons: 
 
 - In Outlook the icon looks like this: <br/> ![Report Message Add-in icon for Outlook](media/OutlookReportMessageIcon.png)<br/>
 - In Outlook Web App the icon looks like this:<br/>![Outlook on the Web Report Message Add-in icon](media/d9326d0b-1769-4bc2-ae58-51f0ebc69a17.png)<br/>
 
-
-Next, learn how to [Use the Report Message add-in](https://support.office.com/article/b5caa9f1-cdf3-4443-af8c-ff724ea719d2), and set up a rule to see reported email messages.
-
-## Review or edit the default settings for the Report Message add-in
-
-You can review and edit the default settings for the Report Message add-in using the Admin Center. 
-
-> [!IMPORTANT]
-> You must be an Office 365 global administrator or an Exchange Online Administrator to complete this task.
-    
-1. If you've just installed the Report Message add-in for your organization, you'll already be on the Services & add-ins page. Otherwise, go [here](https://portal.office.com/adminportal/home#/Settings/ServicesAndAddIns) and sign in using your work or school account for Office 365.
-
-2. Search for **Report Message**, and then select it.<br/>![Services and add-ins for Office 365](media/ReportMessage-o365servicesaddins.png)<br/> 
-    
-3. A pane opens that displays the settings that were selected for the Report Message add-in during deployment.<br/>![Settings for the Report Message add-in](media/ReportMessage-reviewaddinsettings.png)<br/> 
-
-4. Review and if needed, edit settings for the Report Message add-in, and then save your changes.
-    
-  
 ## Set up a rule to get a copy of email messages reported by your users
 
 > [!IMPORTANT]
@@ -132,6 +124,25 @@ You can set up a rule to get a copy of email messages reported by users in your 
 10. Choose **Save**. 
     
 With this rule in place, whenever someone in your organization reports an email message using the Report Message add-in, your global administrator, security administrator, and/or security reader will receive a copy of that message. This information can enable you to set up or adjust policies, such as [Office 365 ATP Safe Links](atp-safe-links.md) policies. 
+
+## Review or edit the default settings for the Report Message add-in
+
+You can review and edit the default settings for the Report Message add-in using the Admin Center. 
+
+> [!IMPORTANT]
+> You must be an Office 365 global administrator or an Exchange Online Administrator to complete this task.
+    
+1. If you've just installed the Report Message add-in for your organization, you'll already be on the Services & add-ins page. Otherwise, go [here](https://portal.office.com/adminportal/home#/Settings/ServicesAndAddIns) and sign in using your work or school account for Office 365.
+
+2. Search for **Report Message**, and then select it.<br/>![Services and add-ins for Office 365](media/ReportMessage-o365servicesaddins.png)<br/> 
+    
+3. A pane opens that displays the settings that were selected for the Report Message add-in during deployment.<br/>![Settings for the Report Message add-in](media/ReportMessage-reviewaddinsettings.png)<br/> 
+
+4. Review and if needed, edit settings for the Report Message add-in, and then save your changes.
+    
+## Learn how to use the Report Message add-in
+
+See [Use the Report Message add-in](https://support.office.com/article/b5caa9f1-cdf3-4443-af8c-ff724ea719d2).
   
 ## Related topics
 
