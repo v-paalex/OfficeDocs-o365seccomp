@@ -24,8 +24,6 @@ In Office 365, you can turn on mailbox audit logging to log mailbox access by ma
   
 - You have to use Exchange Online PowerShell to enable mailbox audit logging. You can't use the Office 365 Security &amp; Compliance Center or the Exchange admin center.
     
-- After you enable mailbox audit logging for a mailbox, access to the mailbox and certain admin and delegate actions are logged by default. To log actions taken by the mailbox owner, you must specify which owner actions to audit. See the "More info" section to see a list of actions that are logged after mailbox audit logging is enabled, and which actions are available for each type of user logon.
-    
 - You can't enable mailbox audit logging for the mailbox that's associated with an Office 365 Group or a team in Microsoft Teams.
     
 - An administrator who has been assigned the Full Access permission to a user's mailbox is considered a delegate user.
@@ -78,7 +76,7 @@ Get-Mailbox -ResultSize Unlimited -Filter {RecipientTypeDetails -eq "UserMailbox
   
 ## Step 3: Specify owner actions to audit
 
-When you enable auditing for a mailbox, only one action ( **UpdateFolderPermissions** ) performed by the mailbox owner is audited by default. You have to specify other owner actions to audit. See the table in the "Mailbox actions" section for a list and description of owner actions that can be audited. 
+When you enable auditing for a mailbox, actions performed by the mailbox owner are audited by default. You have to specify other owner actions to audit. See the table in the [Mailbox auditing actions](#mailbox-auditing-actions) section for a list and description of owner actions that are logged by default and the other actions that can be audited. 
   
 This example adds the **MailboxLogin** and **HardDelete** owner actions to mailbox auditing for Pilar Pinilla's mailbox. This example assumes that mailbox auditing has already been enabled for this mailbox. 
 
@@ -118,7 +116,7 @@ A value of **True** for the **AuditEnabled** property verifies that mailbox audi
     
 ## Mailbox auditing actions
   
-The following table lists the actions that can be logged by mailbox audit logging. The table includes which action can be logged for the different user logon types. In the table, a **No** indicates that an action can't be logged for that logon type. An asterisk ( **\*** ) indicates that the action is logged by default when mailbox audit logging is enabled for the mailbox. As previously stated, the only owner action audited by default when you turn on mailbox auditing is UpdateFolderPermissions. To log other actions taken by the mailbox owner, you must specify additional owner actions to audit. To do this, see [Step 3](#step-3-specify-owner-actions-to-audit) in this topic. 
+The following table lists the actions that can be logged by mailbox audit logging. The table includes which action can be logged for the different user logon types. In the table, a **No** indicates that an action can't be logged for that logon type. An asterisk ( **\*** ) indicates that the action is logged by default when mailbox audit logging is enabled for the mailbox. 
   
 |**Action**|**Description**|**Admin**|**Delegate\*\*\***|**Owner**|
 |:-----|:-----|:-----|:-----|:-----|
@@ -141,7 +139,7 @@ The following table lists the actions that can be logged by mailbox audit loggin
 > [!NOTE]
 > <sup>\*</sup> Audited by default if auditing is enabled for a mailbox.<br/><br/>  <sup>\*\*</sup> Entries for folder bind actions performed by delegates are consolidated. One log entry is generated for individual folder access within a time span of 24 hours.<br/><br/><sup>\*\*\*</sup> An administrator who has been assigned the Full Access permission to a user's mailbox is considered a delegate user. 
   
-If you no longer require certain types of mailbox actions to be audited, you should modify the mailbox's audit logging configuration to disable those actions. Existing log entries aren't purged until the 90-day age limit for audit log entries is reached.
+If you no longer require certain types of mailbox actions to be audited, you should modify the mailbox's audit logging configuration to disable those actions. Existing log entries aren't purged until the retention age limit for audit log entries is reached. For more information about the retention age for audit log entries, see the "Before you begin" section in [Search the audit log in the Office 365 Security & Compliance Center](search-the-audit-log-in-security-and-compliance.md#before-you-begin).
   
 ## [More info](#tab/)
   
