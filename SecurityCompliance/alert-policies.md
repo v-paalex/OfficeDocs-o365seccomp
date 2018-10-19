@@ -69,7 +69,7 @@ An alert policy consists of the following settings and conditions.
     
   - Data governance
     
-  - Data loss protection
+  - Data loss prevention
 
   - Mail flow
     
@@ -97,7 +97,7 @@ The following table lists and describes the available default alert policies and
 |**Default alert policy**|**Description**|**Office 365 Enterprise subscription**|
 |:-----|:-----|:-----|
 |**Creation of forwarding/redirect rule** <br/> |Generates an alert when someone in your organization creates an inbox rule for their mailbox that forwards or redirects messages to another email account. This policy only tracks inbox rules that are created using Outlook Web App or Exchange Online PowerShell. This policy has a **Low** severity setting. For more information using inbox rules to forward and redirect email in Outlook Web App, see [Use rules in Outlook Web App to automatically forward messages to another account](https://support.office.com/article/1433e3a0-7fb0-4999-b536-50e05cb67fed).  <br/> |E1, E3, or E5  <br/> |
-|**eDiscovery search started or exported** <br/> |Generates an alert when someone uses the Content search tool in the Security & Compliance Center. An alert is triggered when the following content search activities are performed: <br/><br/>• A content search is started<br/>• The results of a content search are exported<br/>• A content search report is exported<br/>• Content search results or report are downloaded to a computer<br/>• A content search preview item is downloaded to a computer<br/><br/>Alerts are also trigged when the previous content search activities are performed in association with an eDiscovery case. This policy has a **Medium** severity setting. For more information about content search activites, see [Search for eDiscovery activities in the Office 365 audit log](search-for-ediscovery-activities-in-the-audit-log.md#ediscovery-activities). <br/> |E3 or E5  <br/> |
+|**eDiscovery search started or exported** <br/> |Generates an alert when someone uses the Content search tool in the Security & Compliance Center. An alert is triggered when the following content search activities are performed: <br/><br/>• A content search is started<br/>• The results of a content search are exported<br/>• A content search report is exported<br/>• Content search results or report are downloaded to a computer<br/>• A content search preview item is downloaded to a computer<br/><br/>Alerts are also trigged when the previous content search activities are performed in association with an eDiscovery case. This policy has a **Medium** severity setting. For more information about content search activities, see [Search for eDiscovery activities in the Office 365 audit log](search-for-ediscovery-activities-in-the-audit-log.md#ediscovery-activities). <br/> |E1, E3, or E5  <br/> |
 |**Elevation of Exchange admin privilege** <br/> |Generates an alert when someone is assigned administrative permissions in your Exchange Online organization; for example, if a user is added to the Organization Management role group in Exchange Online. This policy has a **Low** severity setting.  <br/> |E1, E3, or E5  <br/> |
 |**Messages have been delayed** <br/> |Generates an alert when Office 365 can't deliver email messages to your on-premises organization or a partner servers by using a connector. When this happen, the message is queued in Office 365. This alert is triggered when there are 2,000 messages or more that have been queued for more than an hour. This policy has a **High** severity setting.  <br/> |E1, E3, or E5  <br/> |
 |**Malware campaign detected after delivery** <br/> |Generates an alert when an unusually large number of messages containing malware are delivered to mailboxes in your organization. If this event occurs, Office 365 removes the infected messages from Exchange Online mailboxes. This policy has a **High** severity setting.  <br/> |E5 or Office 365 Threat Intelligence add-on subscription  <br/> |
@@ -122,7 +122,7 @@ You can use the following filters to view a subset of all the alerts on the **Vi
   
 - **Status** - Use this filter to show alerts that are assigned a particular status; the default status is **Active**. You or other administrators can change the status value.
     
-- **Policies** - Use this filter to show alerts that match the setting of one or more alert policies. Or, you can just display all alerts for all alert policies.
+- **Policy** - Use this filter to show alerts that match the setting of one or more alert policies. Or, you can just display all alerts for all alert policies.
     
 - **Time range** - Use this filter to show alerts that were generated within a specific date and time range.
     
