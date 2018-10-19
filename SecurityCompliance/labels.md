@@ -1,5 +1,5 @@
 ---
-title: "Overview of labels"
+title: "Overview of retention labels"
 ms.author: stephow
 author: stephow-MSFT
 manager: laurawi
