@@ -1,5 +1,5 @@
 ---
-title: "Overview of labels"
+title: "Overview of retention labels"
 ms.author: stephow
 author: stephow-MSFT
 manager: laurawi
@@ -270,7 +270,7 @@ You can auto-apply retention labels to content that satisfies certain conditions
 
 For more information on query syntax, see:
 
-- [Keyword Query Language (KQL) syntax reference](https://docs.microsoft.com/en-us/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference)
+- [Keyword Query Language (KQL) syntax reference](https://docs.microsoft.com/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference)
 
 Query-based retention labels use the search index to identify content.
   
@@ -436,7 +436,7 @@ These permissions are required only to create and apply retention labels and a l
 
 To use the label cmdlets, you need to:
   
-1. [Connect to the Office 365 Security &amp; Compliance Center using remote PowerShell](http://go.microsoft.com/fwlink/?LinkID=799771&amp;clcid=0x409)
+1. [Connect to the Office 365 Security &amp; Compliance Center using remote PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps)
     
 2. Use these [Office 365 Security &amp; Compliance Center cmdlets](http://go.microsoft.com/fwlink/?LinkID=799772&amp;clcid=0x409)
     
