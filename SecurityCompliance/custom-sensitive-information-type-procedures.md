@@ -100,6 +100,8 @@ Here's a scenario: You want a custom sensitive information type that detects 9-d
 
 4. On the **Review and finalize** page that opens, review the settings and click **Finish**.
 
+5. The next page encourages you to test the new custom sensitive information type. For more information, see [Use the Security & Compliance Center to test custom sensitive information types](#use-the-security--compliance-center-to-test-custom-sensitive-information-types). Otherwise, click **Cancel**.
+
 ### Use Security & Compliance Center PowerShell to create custom sensitive information types
 
 Creating custom sensitive information types in PowerShell is really about creating a sensitive information type rule package (also known as a rule package). The rule package is a Unicode XML file that contains one or more sensitive information types. For more information about the rule package that you need to create, see ___.
@@ -267,7 +269,7 @@ To verify that you've successfully modified a sensitive information type, do any
 
 - Before your remove a custom sensitive information type, verify that no DLP policies or Exchange mail flow rules (also known as transport rules) still reference the sensitive information type.
 
-### Use the Security & Compliance Center to remove custom senstive information types
+### Use the Security & Compliance Center to remove custom sensitive information types
 
 1. In the Security & Compliance Center, go to **Classifications** \> **Sensitive info types** and select one or more custom sensitive information types that you want to remove.
 
@@ -275,7 +277,7 @@ To verify that you've successfully modified a sensitive information type, do any
 
 3. In the warning message that appears, click **Yes**.
 
-### Use Security & Compliance Center PowerShell to remove custom senstive information types
+### Use Security & Compliance Center PowerShell to remove custom sensitive information types
 
 In Security & Compliance Center PowerShell, there are two methods to remove custom sensitive information types:
 
@@ -333,6 +335,6 @@ To verify that you've successfully removed a custom sensitive information type, 
 
 2. Select one or more custom sensitive information types to test. In the fly-out that opens, click **Test type** (or **Test sensitive info types** if you selected more than one).
 
-3. On the page that opens, upload a document to test by dragging and droping a file or by clicking **Browse** and selecting a file.
+3. On the page that opens, upload a document to test by dragging and dropping a file or by clicking **Browse** and selecting a file.
 
 4. Click the **Test** button to test the document for pattern matches in the file.

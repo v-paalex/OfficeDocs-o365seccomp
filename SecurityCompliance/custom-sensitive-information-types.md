@@ -26,7 +26,7 @@ The fundamental parts of a custom sensitive information type are:
 
 - **Primary pattern**: employee ID numbers, project numbers, etc. This is typically identified by a regular expression (RegEx), but it can also be a list of keywords.
 
-- **Additional evidence**: Suppose you're looking for a nine-digit employee ID number. Not all nine-digit numbers are employee ID numbers, so you can look for additional text: kewords like "employee", "badge", "ID", or other text patterns based on additional regular expressions. This supporting evidence (also known as _supporting_ or _corroborative_ evidence) increases the likelyhood that nine-digit number found in content is really an employee ID number.
+- **Additional evidence**: Suppose you're looking for a nine-digit employee ID number. Not all nine-digit numbers are employee ID numbers, so you can look for additional text: keywords like "employee", "badge", "ID", or other text patterns based on additional regular expressions. This supporting evidence (also known as _supporting_ or _corroborative_ evidence) increases the likelihood that nine-digit number found in content is really an employee ID number.
 
 - **Character proximity**: It makes sense that the closer the primary pattern and the supporting evidence are to each other, the more likely the detected content is going to be what you're looking for. You can specify the character distance between the primary pattern and the supporting evidence (also known as the _proximity window_) as shown in the following diagram:
 
@@ -42,7 +42,7 @@ To create custom sensitive information types in the Office 365 Security & Compli
 
 - **Use the graphical user interface**: This method is easier and faster, but you have less configuration options than PowerShell.
 
-- **Use PowerShell**: This method requires that you first create an XML file (called a _rule package_) that contains one or more sensitive information types, and then you use use PowerShell to import the rule package (importing the rule package is trivial compared to creating the rule package). This method is much more complex than the graphical user interface, but you have more configuration options.
+- **Use PowerShell**: This method requires that you first create an XML file (called a _rule package_) that contains one or more sensitive information types, and then you use PowerShell to import the rule package (importing the rule package is trivial compared to creating the rule package). This method is much more complex than the graphical user interface, but you have more configuration options.
 
 The key differences are described in the following table:
 
@@ -152,7 +152,7 @@ Here's the sample XML of the custm rule package that we'll explore in this topic
 
 ### Basic custom rule package identifiers [RulePackage element]
 
-The custom rule package requires some basic identitfying information that's basically independent of the custom sensitive information types. You can use the following markup as a template and replace the ". . ." placeholders with your own values. The diagram at the end of this section shows a sample of what your values will look like.
+The custom rule package requires some basic identifying information that's basically independent of the custom sensitive information types. You can use the following markup as a template and replace the ". . ." placeholders with your own values. The diagram at the end of this section shows a sample of what your values will look like.
 
 ```
 <?xml version="1.0" encoding="utf-16"?>
@@ -173,13 +173,13 @@ The custom rule package requires some basic identitfying information that's basi
 
 **Notes**
 
-- You need to generate a globally unique identifier (GUID) for the custom rule package tself (the `RulePack id=` value), which must be different than the GUID that you'll generate later for the sensitive information type in the `Entity` element. You can generate a GUID in Windows PowerShell by running the following command:
+- You need to generate a globally unique identifier (GUID) for the custom rule package itself (the `RulePack id=` value), which must be different than the GUID that you'll generate later for the sensitive information type in the `Entity` element. You can generate a GUID in Windows PowerShell by running the following command:
 
     ```
     [guid]::NewGuid()
     ```
 
-- Mantaining the `Version` element is important. When you upload your custom rule package for the first time, Office 365 notes the version number. Later, if you try to upload a modified version of the same rule package, the verson number must be different; otherwise, the upload will fail.
+- Mantaining the `Version` element is important. When you upload your custom rule package for the first time, Office 365 notes the version number. Later, if you try to upload a modified version of the same rule package, the version number must be different; otherwise, the upload will fail.
 
 The following diagram shows what your `RulePackage` element should look like:
 
