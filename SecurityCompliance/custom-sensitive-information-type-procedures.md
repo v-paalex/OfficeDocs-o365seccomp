@@ -18,13 +18,13 @@ description: "Learn how to add, modify and remove custom sensitive information t
 
 # Procedures for custom sensitive information types in the Office 365 Security & Compliance Center
 
-A sensitive information type in Office 365 defines one or more patterns that data loss prevention (DLP) looks for when it evaluates email and documents. The Office 365 Security & Compliance Center comes with many [built-in sensitive information types](what-the-sensitive-information-types-look-for.md), but you can create your own for specific scenarios (for example, to dected content that contains your company's employee ID numbers). For more information, see __.
+A sensitive information type in Office 365 defines one or more patterns that data loss prevention (DLP) looks for when it evaluates email and documents. The Office 365 Security & Compliance Center comes with many [built-in sensitive information types](what-the-sensitive-information-types-look-for.md), but you can create your own for specific scenarios (for example, to detected content that contains your company's employee ID numbers). For more information, see __.
 
 This topic describes the following procedures for managing custom sensitive information types in the Security & Compliance Center:
 
 - Create custom sensitive information types.
 
-- Modify custom senstive information types.
+- Modify custom sensitive information types.
 
 - Remove custom sensitive information types.
 
@@ -74,9 +74,9 @@ Here's a scenario: You want a custom sensitive information type that detects 9-d
 
   - **Description** Detect nine-digit Contoso employee ID numbers.
 
-  When you're finished, click **Next**
+  When you're finished, click **Next**.
 
-3. In the **Requirements for matchng** page that opens, click **Add an element** configure the following settings:
+3. In the **Requirements for matching** page that opens, click **Add an element** configure the following settings:
 
   - **Detect content containing**:
  
@@ -114,7 +114,7 @@ To upload rule packages, use the following syntax:
 New-DlpSensitiveInformationTypeRulePackage -FileData (Get-Content -Path "PathToUnicodeXMLFile" -Encoding Byte)
 ```
 
-This example uploads the Unicode XML file named MyNewRulePack.xml fron C:\My Documents.
+This example uploads the Unicode XML file named MyNewRulePack.xml from C:\My Documents.
 
 ```
 New-DlpSensitiveInformationTypeRulePackage -FileData (Get-Content -Path "C:\My Documents\MyNewRulePack.xml" -Encoding Byte)
@@ -162,7 +162,7 @@ To verify that you've successfully created a new sensitive information type, do 
 
 ## Modify custom sensitive information types
 
-**Note**: You can only modify customer sensitive information types; you can't modify built-in sensitive information types. But, you can use PowerShell to export built-in custom sensitive information types, customize them, and import them as custom senstive information types. For more information, see [Customize a built-in sensitive information type](customize-a-built-in-sensitive-information-type.md).
+**Note**: You can only modify customer sensitive information types; you can't modify built-in sensitive information types. But you can use PowerShell to export built-in custom sensitive information types, customize them, and import them as custom sensitive information types. For more information, see [Customize a built-in sensitive information type](customize-a-built-in-sensitive-information-type.md).
 
 ### Use the Security & Compliance Center to modify custom sensitive information types
 
@@ -228,7 +228,7 @@ Set-DlpSensitiveInformationTypeRulePackage -Identity "RulePackageIdentity" -File
 
 You can use the Name value (for any language) or the `RulePack id` (GUID) value to identify the rule package.
 
-This example uploads the updated Unicode XML file named MyUpdatedRulePack.xml fron C:\My Documents into the existing rule package named "Employee ID Custom Rule Pack".
+This example uploads the updated Unicode XML file named MyUpdatedRulePack.xml from C:\My Documents into the existing rule package named "Employee ID Custom Rule Pack".
 
 ```
 Set-DlpSensitiveInformationTypeRulePackage -Identity "Employee ID Custom Rule Pack" -FileData (Get-Content -Path "C:\My Documents\MyUpdatedRulePack.xml" -Encoding Byte)
