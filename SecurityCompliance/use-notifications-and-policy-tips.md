@@ -236,9 +236,7 @@ Note that while policy tips can draw only from a single location, email notifica
 ### Default text for policy tips in email
 
 By default, policy tips display text similar to the following for email.
-  
-|
-|
+
 |**If the DLP policy rule does this…**|**Then the default policy tip says this…**|
 |:-----|:-----|
 |Sends a notification but doesn't allow override  <br/> |Your email conflicts with a policy in your organization.  <br/> |
@@ -274,9 +272,7 @@ In each of these Office 2016 desktop programs, people can choose to turn off pol
 ### Default text for policy tips in Excel 2016, PowerPoint 2016, and Word 2016
 
 By default, policy tips display text similar to the following on the Message Bar and Backstage view of an open document. The notification text is configured separately for each rule, so the text that's displayed differs depending on which rule is matched.
-  
-|
-|
+
 |**If the DLP policy rule does this…**|**Then the default policy tip says this…**|
 |:-----|:-----|
 |Sends a notification but doesn't allow override  <br/> |This file conflicts with a policy in your organization. Go to the **File** menu for more information.  <br/> |

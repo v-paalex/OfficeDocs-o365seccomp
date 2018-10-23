@@ -140,7 +140,7 @@ Sensitivity labels appear in the UI of Office apps. To view the current availabi
 
 In Office apps on devices running Windows, sensitivity labels appear on the **Sensitivity** button, on the **Home** tab on the Ribbon. The label applied also appears in the Status bar at the bottom of the window.
 
-Coming soon is native support for sensitivty labels in Office apps on Windows.
+Coming soon is native support for sensitivity labels in Office apps on Windows.
 
 If you're an existing Azure Information Protection customer, you can deploy the Azure Information Protection unified labeling client, which supports sensitivity labels. For more information about downloading the client, see [Azure Information Protection unified labeling client: Version release information](https://docs.microsoft.com/en-us/azure/information-protection/rms-client/unifiedlabelingclient-version-release-history). We’re currently working on native support for sensitivity labels in Office apps on Windows, so that the Azure Information Protection unified labeling client will no longer be required.
 
