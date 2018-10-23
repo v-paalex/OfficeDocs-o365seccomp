@@ -3,7 +3,7 @@ title: "Learn more about spoof intelligence"
 ms.author: krowley
 author: kccross
 manager: laurawi
-ms.date: 10/11/2018
+ms.date: 10/22/2018
 ms.audience: Admin
 ms.topic: article
 ms.service: o365-administration
@@ -97,7 +97,7 @@ If you have an Office 365 Enterprise E5 subscription or have separately purchase
 ## Configuring the anti-spoofing policy
 <a name="Managespooflist"> </a>
 
-In addition to allowing or blocking a particular sender from sending spoofed email into your organization, you can also configure how strict you want the filter to be, the action to take when a spoofing message is found, and whether or not to enable Safety Tips for anti-spoofing.
+In addition to allowing or blocking a particular sender from sending spoofed email into your organization, you can also configure how strict you want the filter to be, and the action to take when a spoofing message is found.
   
 Anti-spoofing protection is applied to email from senders from domains that are external to your Office 365 organization. You can apply the policy to recipients whose mailboxes are licensed for Office 365 Enterprise E5, Advanced Threat Protection and as of October, 2018 EOP customers as well. You manage the anti-spoofing policy along with the other anti-phishing settings. For more information about anti-phishing settings, see [Set up the Office 365 anti-phishing policies](https://support.office.com/article/set-up-office-365-atp-anti-phishing-policies-5a6f2d7f-d998-4f31-b4f5-f7cbf6f38578?ui=en-US&amp;rs=en-US&amp;ad=US#phishpolicyoptions).
   
@@ -121,11 +121,7 @@ Even though the anti-spoofing policy appears under the anti-phishing policy in t
   
     ![Screenshot showing anti-spoofing policy edit options](media/7a868dff-2c4b-46b9-88ca-f2d523ca2307.jpg)
   
-7. Choose whether to enable or disable anti-spoofing safety tips. Office 365 recommends enabling the **Authentication fails** safety tip in order to warn users when they are interacting with a sender whose identity could not be verified. Office 365 also recommends enabling the safety tip for an **Authentication soft-pass** for smaller groups of users, because this safety tip may generate a lot of warnings if the user receives email from many legitimate, but unauthenticated sources.  
-  
-    ![Screenshot showing anti-spoofing safety tip options](media/1ed675c0-48c2-4587-a957-60eb68dc9628.jpg)
-
-8. Make your choice and then choose **Save**. 
+7. Make your choice and then choose **Save**. 
     
 ## Other ways to manage spoofing and phishing with Office 365
 <a name="Managespooflist"> </a>
@@ -135,6 +131,7 @@ Be diligent about spoofing and phishing protection. Here are related ways to che
 - Check the Exchange Online Protection spoof mail report as part of your routine. You can use this report often to view and help manage spoofed senders. For information, see **Spoof mail report** in [Use mail protection reports in Office 365 to view data about malware, spam, and rule detections](https://technet.microsoft.com/library/dn500744%28v=exchg.150%29.aspx).
     
 For more advanced Office 365 admins, you can also complete these checks:
+    
     
 - Review your Sender Policy Framework (SPF) configuration. For a quick introduction to SPF and to get it configured quickly, see [Set up SPF in Office 365 to help prevent spoofing](https://technet.microsoft.com/library/dn789058%28v=exchg.150%29.aspx). For a more in-depth understanding of how Office 365 uses SPF, or for troubleshooting or non-standard deployments such as hybrid deployments, start with [How Office 365 uses Sender Policy Framework (SPF) to prevent spoofing](https://technet.microsoft.com/library/mt712724%28v=exchg.150%29.aspx).
     

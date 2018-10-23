@@ -3,7 +3,7 @@ title: "Set up your EOP service"
 ms.author: krowley
 author: kccross
 manager: laurawi
-ms.date: 12/9/2016
+ms.date: 10/23/2018
 ms.audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
@@ -44,7 +44,7 @@ This topic explains how to set up Microsoft Exchange Online Protection (EOP). If
 2. Follow the steps to add the applicable DNS records to your DNS-hosting provider in order to verify domain ownership.
     
 > [!TIP]
-> [Add your domain to Office 365](https://go.microsoft.com/fwlink/p/?LinkId=282303) and [Create DNS records for Office 365](https://go.microsoft.com/fwlink/p/?LinkId=304219) are helpful resources to reference as you add your domain to the service and configure DNS. 
+> [Add your domain to Office 365](https://support.office.com/en-us/article/add-a-domain-to-office-365-6383f56d-3d09-4dcb-9b41-b5f5a5efd611) and [Create DNS records for Office 365](https://support.office.com/en-us/article/create-dns-records-at-any-dns-hosting-provider-for-office-365-7b7b075d-79f9-4e37-8a9e-fb60c1d95166) are helpful resources to reference as you add your domain to the service and configure DNS. 
   
 ### Step 2: Add recipients and optionally enable DBEB
 
