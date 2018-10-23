@@ -205,6 +205,25 @@ If the policy tips are configured to allow override, you can choose **Show Detai
 ![Policy tip dialog where you can override the policy tip](media/f97e836c-04bd-44b4-aec6-ed9526ea31f8.png)
   
 Note that when you add sensitive information to an email, there may be latency between when the sensitive information is added and when the policy tip appears.
+
+### Outlook 2013 and later supports showing policy tips for only some conditions
+
+Currently, Outlook 2013 and later supports showing policy tips only for these conditions:
+
+- Content contains
+- Content is shared
+
+We're currently working on support for showing policy tips for additional conditions. These include:
+
+- Any email attachment's content could not be scanned
+- Any email attachment's content didn't complete scanning
+- Attachment file extension is
+- Attachment is password protected
+- Document property is
+- Recipient domain is
+- Sender IP address is
+
+Note that all of these conditions work in Outlook, where they will match content and enforce protective actions on content. But showing policy tips to users that is not yet supported.
   
 ### Policy tips in the Exchange Admin Center vs. the Office 365 Security &amp; Compliance Center
 
