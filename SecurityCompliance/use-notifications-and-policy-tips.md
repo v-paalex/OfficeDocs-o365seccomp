@@ -223,7 +223,7 @@ We're currently working on support for showing policy tips for additional condit
 - Recipient domain is
 - Sender IP address is
 
-Note that all of these conditions work in Outlook, where they will match content and enforce protective actions on content. But showing policy tips to users that is not yet supported.
+Note that all of these conditions work in Outlook, where they will match content and enforce protective actions on content. But showing policy tips to users is not yet supported.
   
 ### Policy tips in the Exchange Admin Center vs. the Office 365 Security &amp; Compliance Center
 
