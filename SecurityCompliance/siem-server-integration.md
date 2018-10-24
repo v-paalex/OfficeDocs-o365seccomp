@@ -15,7 +15,7 @@ ms.custom:
 description: "Summary: Read this article to get an overview of SIEM server integration with the Microsoft 365."
 ---
 
-# SIEM server integration with Microsoft cloud services and applications
+# SIEM server integration with Microsoft 365 services and applications
 
 ## Overview
 
