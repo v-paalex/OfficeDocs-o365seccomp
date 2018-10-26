@@ -97,9 +97,7 @@ Notifications have a Subject line that begins with the action taken, such as "No
 ![Notification message](media/35813d40-5fd8-425f-9624-55655e74fa6b.png)
   
 By default, notifications display text similar to the following for an item on a site. The notification text is configured separately for each rule, so the text that's displayed differs depending on which rule is matched.
-  
-|
-|
+
 |**If the DLP policy rule does this…**|**Then the default notification for SharePoint or OneDrive for Business documents says this…**|**Then the default notification for Outlook messages says this…**|
 |:-----|:-----|:-----|
 |Sends a notification but doesn't allow override  <br/> |This item conflicts with a policy in your organization.  <br/> |Your email message conflicts with a policy in your organization.  <br/> |
@@ -111,9 +109,7 @@ By default, notifications display text similar to the following for an item on a
 You can create a custom email notification instead of sending the default email notification to your end users or admins. The custom email notification supports HTML and has a 5,000-character limit. You can use HTML to include images, formatting, and other branding in the notification.
   
 You can also use the following tokens to help customize the email notification. These tokens are variables that are replaced by specific information in the notification that's sent.
-  
-|
-|
+
 |**Token**|**Description**|
 |:-----|:-----|
 |%%AppliedActions%%  <br/> |The actions applied to the content.  <br/> |
@@ -175,9 +171,7 @@ DLP policies are synced to sites and contented is evaluated against them periodi
 ### Default text for policy tips on sites
 
 By default, policy tips display text similar to the following for an item on a site. The notification text is configured separately for each rule, so the text that's displayed differs depending on which rule is matched.
-  
-|
-|
+
 |**If the DLP policy rule does this…**|**Then the default policy tip says this…**|
 |:-----|:-----|
 |Sends a notification but doesn't allow override  <br/> |This item conflicts with a policy in your organization.  <br/> |
