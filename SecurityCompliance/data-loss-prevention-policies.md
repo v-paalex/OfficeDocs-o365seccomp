@@ -325,7 +325,7 @@ By using labels as a condition in your DLP rules, can you selectively enforce pr
 
 ### Support for sensitivity labels is coming
 
-Note that you can currently use only a retention label as a condition, not a [sensitivity label](sensitivity-labels.md). We're currently working on support for using a sensitivity label in this condition. In the meantime, because a sensitvity label is persisted in the metadata of a document or email, you can use the condition [Document property is](protect-documents-that-have-fci-or-other-properties.md) to create rules for content with a sensitivity label.
+Note that you can currently use only a retention label as a condition, not a [sensitivity label](sensitivity-labels.md). We're currently working on support for using a sensitivity label in this condition.
   
 ### How this feature relates to other features
 
