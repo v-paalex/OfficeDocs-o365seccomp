@@ -772,7 +772,7 @@ A DLP policy is 75% confident that it's detected this type of sensitive informat
 |
 |**Keywords_portugal_eu_passport_number**|
 |:-----|
-|passport number  <br/> portugese passport number  <br/> passport no  <br/> número do passaporte  <br/> |
+|passport number  <br/> portuguese passport number  <br/> passport no  <br/> número do passaporte  <br/> |
    
 ## Romania
 
