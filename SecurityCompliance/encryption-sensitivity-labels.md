@@ -45,7 +45,7 @@ When you create a sensitivity label, you can:
 - **Allow access to labeled content to expire**, either on a specific date or after a specific number of days after the label is applied. After this time, users won’t be able to open the labeled item. If you specify a date, it is effective midnight on that date in your current time zone. 
 - **Allow offline access** never, always, or for a specific number of days after the label is applied. If you restrict offline access to never or a number of days, when that threshold is reached, users must be reauthenticated and their access is logged. For more information, see the next section on the Rights Management use license.
 
-ART
+![Encryption settings for sensitivity label](media/Sensitivity_Encryption_settings_for_sensitivity_label.png)
 
 ### Rights Management use license for offline access
 
@@ -66,7 +66,7 @@ Doing so is a straightforward two-step process:
 1. First you add users or groups that will be assigned permissions to the labeled content.
 2. Then you choose which permissions those users have for the labeled content.
 
-ART
+![Options to assign permissions to users](media/Sensitivity_Assign_permissions_settings.png)
 
 ### Add users or groups
 
@@ -89,7 +89,7 @@ When you choose which permissions to allow for those users or groups, you can se
 
 For more information on each specific permission, see [Usage rights and descriptions](https://docs.microsoft.com/en-us/azure/information-protection/configure-usage-rights#usage-rights-and-descriptions).  
 
-ART
+![Options to choose preset or custom permissions](media/Sensitivity_Choose_permissions_settings.png)
 
 ### Rights Management issuer (user applying the sensitivity label) always has Full Control
 
