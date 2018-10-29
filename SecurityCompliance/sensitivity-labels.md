@@ -3,7 +3,7 @@ title: "Overview of sensitivity labels"
 ms.author: stephow
 author: stephow-MSFT
 manager: laurawi
-ms.date: 6/22/2018
+ms.date: 10/22/2018
 ms.audience: Admin
 ms.topic: overview
 ms.service: o365-administration
