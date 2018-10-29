@@ -91,9 +91,9 @@ For more information on each specific permission, see [Usage rights and descript
 
 ![Options to choose preset or custom permissions](media/Sensitivity_Choose_permissions_settings.png)
 
-Note that the same label can grant different permissions to different users. For example, a single label can assign users as Reviewer and a different user as Co-author, as shown below.
+Note that the same label can grant different permissions to different users. For example, a single label can assign some users as Reviewer and a different user as Co-author, as shown below.
 
-To do this, add users or groups, assign them permissions, and save those settings. Then repeat these steps, to assign different permissions to different users, saving the settings each time. You can do this as often as necessary, to define different permissions for different users.
+To do this, add users or groups, assign them permissions, and save those settings. Then repeat these steps, adding users and assigning them permissions, saving the settings each time. You can do this as often as necessary, to define different permissions for different users.
 
 ![Different users with different permissions](media/Sensitivity_Multiple_users_permissions.png)
 
