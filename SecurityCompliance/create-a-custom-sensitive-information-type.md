@@ -13,7 +13,7 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: 
-description: "Learn how to create, modify, remove, and test custom sensitive information types for DLP in the graphical users interface in Office 365 Security & Compliance Center.""
+description: "Learn how to create, modify, remove, and test custom sensitive information types for DLP in the graphical users interface in Office 365 Security & Compliance Center."
 ---
 
 # Create a custom sensitive information type
