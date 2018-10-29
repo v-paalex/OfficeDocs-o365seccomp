@@ -258,6 +258,7 @@
 ### [Deploy an isolated SharePoint Online team site](deploy-an-isolated-sharepoint-online-team-site.md)
 ### [Manage an isolated SharePoint Online team site](manage-an-isolated-sharepoint-online-team-site.md)
 ### [Isolated SharePoint Online team site dev/test environment](isolated-sharepoint-online-team-site-dev-test-environment.md)
+## [SIEM server integration](siem-server-integration.md)
 
 # Compliance solutions
 ## [Use Compliance Manager to help meet data protection and regulatory requirements when using Microsoft cloud services](meet-data-protection-and-regulatory-reqs-using-microsoft-cloud.md)
