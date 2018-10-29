@@ -3,7 +3,7 @@ title: "Assign eDiscovery permissions in the Office 365 Security &amp; Complianc
 ms.author: markjjo
 author: markjjo
 manager: laurawi
-ms.date: 3/22/2018
+ms.date: 
 ms.audience: Admin
 ms.topic: article
 ms.service: o365-administration
