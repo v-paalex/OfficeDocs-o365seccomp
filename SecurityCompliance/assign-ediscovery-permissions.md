@@ -61,11 +61,11 @@ The primary eDiscovery-related role group in Security &amp; Compliance Center is
 > [!NOTE]
 > You can also use the **Add-eDiscoveryCaseAdmin** cmdlet to make a user an eDiscovery Administrator. However, the user must be assigned the Case Management role before you can use this cmdlet to make them an eDiscovery Administrator. For more information, see [Add-eDiscoveryCaseAdmin](https://go.microsoft.com/fwlink/p/?LinkID=798217). 
   
-On the **Permissions** page in the Security &amp; Compliance Center, you can also assign users eDiscovery-related permissions, by adding them to the Compliance Administrator, Organization Management, and Reviewer role groups. For a list of the eDiscovery-related roles assigned to each of these role groups, see the [More information](#more-information) section. 
-  
-## More information
+On the **Permissions** page in the Security &amp; Compliance Center, you can also assign users eDiscovery-related permissions, by adding them to the Compliance Administrator, Organization Management, and Reviewer role groups. For a description of the eDiscovery-related RBAC roles assigned to each of these role groups, see the next section [RBAC roles related to eDiscovery](#rbac-roles-related-to-ediscovery). 
 
-- **What are the eDiscovery-related roles in the Security &amp; Compliance Center?** The following table describes the eDiscovery-related roles in the Security &amp; Compliance Center, and indicates the built-in role groups that each role is assigned to, by default. 
+## RBAC roles related to eDiscovery
+
+The following table describes the eDiscovery-related RBAC roles in the Security & Compliance Center, and indicates the built-in role groups that each role is assigned to by default. 
     
 |**Role**|**Compliance Administrator**|**eDiscovery Manager &amp; Administrator**|**Organization Management**|**Reviewer**|
 |:-----|:-----|:-----|:-----|:-----|
@@ -76,8 +76,10 @@ On the **Permissions** page in the Security &amp; Compliance Center, you can als
 |**Preview** <br/> Lets users view a list of items that were returned from a Content Search. They'll also be able to open and view each item from the list to view its contents.  <br/> | <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/> | <br/> | <br/> |
 |**Review** <br/> Lets users access case data in Office 365 Advanced eDiscovery. This role is primarily used to give users access to Advanced eDiscovery. Users who are assigned this role can see and open the list of the cases on the eDiscovery page in the Security & Compliance Center that they are members of. After the user accesses the case in the Security & Compliance Center, they can click **Switch to Advanced eDiscovery** to acces and analyze case data in Advanced eDiscovery. This role doesn't allow the user to preview the results of a content Search that's associated with the case or perform other content search or case management tasks.<br/> | <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/> | <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/> |
 |**RMS Decrypt** <br/> Lets users decrypt RMS-encrypted email messages when exporting search results or preparing search results for analysis in Advanced eDiscovery. For more information about decrypting search results during export, see [Export search results from the Office 365 Security &amp; Compliance Center](export-search-results.md).  <br/> ||![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/> |||
-|**Search And Purge** <br/> Lets users perform bulk removal of data matching the criteria of a content search. For more information, see [Search for and delete email messages in your Office 365 organization](search-for-and-delete-messages-in-your-organization.md).  <br/> | <br/> | <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/> | <br/> |
-   
+|**Search And Purge** <br/> Lets users perform bulk removal of data matching the criteria of a content search. For more information, see [Search for and delete email messages in your Office 365 organization](search-for-and-delete-messages-in-your-organization.md).  <br/> | <br/> | <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/> | <br/> | 
+  
+## More information
+
 - **Why create an eDiscovery Administrator?** As previously explained, an eDiscovery Administrator is member of the eDiscovery Manager role group who can view and access all eDiscovery cases in your organization. This ability to access all the eDiscovery cases has two important purposes: 
     
   - If a person who is the only member of an eDiscovery case leaves your organization, no one (including members of the Organization Management role group or another member of the eDiscovery Manager role group) can access that eDiscovery case because they aren't a member of a case. In this situation, there would be no way to access the data in the case. But because an eDiscovery Administrator can access all eDiscovery cases in the organization, they can view the case in the Security &amp; Compliance Center and add themselves or another eDiscovery manager as a member of the case.
