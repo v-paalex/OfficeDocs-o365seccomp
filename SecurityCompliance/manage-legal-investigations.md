@@ -3,7 +3,7 @@ title: "Manage legal investigations in Office 365"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
-ms.date: 5/18/2018
+ms.date: 
 ms.audience: Admin
 ms.topic: hub-page
 ms.service: o365-administration
@@ -27,7 +27,7 @@ Organizations have many reasons to respond to a legal case involving certain exe
    
 ## Manage legal investigations with eDiscovery cases
 
-eDiscovery cases let you control who can create, access, and manage eDiscovery cases in your organization. Use cases to add members and control what types of actions they can perform, place a hold on content locations relevant to a legal case, and use the Content Search tool to search the locations on hold for content that might be responsive to your case. Then you can also export and download those results for further investigation by external reviewers. If your Office 365 organization has and E5 subscription, you can also prepare search results for analysis in Advanced eDiscovery.
+eDiscovery cases let you control who can create, access, and manage eDiscovery cases in your organization. Use cases to add members and control what types of actions they can perform, place a hold on content locations relevant to a legal case, and use the Content Search tool to search the locations on hold for content that might be responsive to your case. Then you can also export and download those results for further investigation by external reviewers. If your Office 365 organization has an E5 subscription, you can also prepare search results for analysis in Advanced eDiscovery.
   
 - [Manage your eDiscovery workflow](ediscovery-cases.md) by creating and using eDiscovery cases for every legal investigation your organization has to undertake 
     

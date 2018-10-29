@@ -97,9 +97,7 @@ Notifications have a Subject line that begins with the action taken, such as "No
 ![Notification message](media/35813d40-5fd8-425f-9624-55655e74fa6b.png)
   
 By default, notifications display text similar to the following for an item on a site. The notification text is configured separately for each rule, so the text that's displayed differs depending on which rule is matched.
-  
-|
-|
+
 |**If the DLP policy rule does this…**|**Then the default notification for SharePoint or OneDrive for Business documents says this…**|**Then the default notification for Outlook messages says this…**|
 |:-----|:-----|:-----|
 |Sends a notification but doesn't allow override  <br/> |This item conflicts with a policy in your organization.  <br/> |Your email message conflicts with a policy in your organization.  <br/> |
@@ -111,9 +109,7 @@ By default, notifications display text similar to the following for an item on a
 You can create a custom email notification instead of sending the default email notification to your end users or admins. The custom email notification supports HTML and has a 5,000-character limit. You can use HTML to include images, formatting, and other branding in the notification.
   
 You can also use the following tokens to help customize the email notification. These tokens are variables that are replaced by specific information in the notification that's sent.
-  
-|
-|
+
 |**Token**|**Description**|
 |:-----|:-----|
 |%%AppliedActions%%  <br/> |The actions applied to the content.  <br/> |
@@ -175,9 +171,7 @@ DLP policies are synced to sites and contented is evaluated against them periodi
 ### Default text for policy tips on sites
 
 By default, policy tips display text similar to the following for an item on a site. The notification text is configured separately for each rule, so the text that's displayed differs depending on which rule is matched.
-  
-|
-|
+
 |**If the DLP policy rule does this…**|**Then the default policy tip says this…**|
 |:-----|:-----|
 |Sends a notification but doesn't allow override  <br/> |This item conflicts with a policy in your organization.  <br/> |
@@ -205,6 +199,25 @@ If the policy tips are configured to allow override, you can choose **Show Detai
 ![Policy tip dialog where you can override the policy tip](media/f97e836c-04bd-44b4-aec6-ed9526ea31f8.png)
   
 Note that when you add sensitive information to an email, there may be latency between when the sensitive information is added and when the policy tip appears.
+
+### Outlook 2013 and later supports showing policy tips for only some conditions
+
+Currently, Outlook 2013 and later supports showing policy tips only for these conditions:
+
+- Content contains
+- Content is shared
+
+We're currently working on support for showing policy tips for additional conditions. These include:
+
+- Any email attachment's content could not be scanned
+- Any email attachment's content didn't complete scanning
+- Attachment file extension is
+- Attachment is password protected
+- Document property is
+- Recipient domain is
+- Sender IP address is
+
+Note that all of these conditions work in Outlook, where they will match content and enforce protective actions on content. But showing policy tips to users is not yet supported.
   
 ### Policy tips in the Exchange Admin Center vs. the Office 365 Security &amp; Compliance Center
 
@@ -217,9 +230,7 @@ Note that while policy tips can draw only from a single location, email notifica
 ### Default text for policy tips in email
 
 By default, policy tips display text similar to the following for email.
-  
-|
-|
+
 |**If the DLP policy rule does this…**|**Then the default policy tip says this…**|
 |:-----|:-----|
 |Sends a notification but doesn't allow override  <br/> |Your email conflicts with a policy in your organization.  <br/> |
@@ -255,9 +266,7 @@ In each of these Office 2016 desktop programs, people can choose to turn off pol
 ### Default text for policy tips in Excel 2016, PowerPoint 2016, and Word 2016
 
 By default, policy tips display text similar to the following on the Message Bar and Backstage view of an open document. The notification text is configured separately for each rule, so the text that's displayed differs depending on which rule is matched.
-  
-|
-|
+
 |**If the DLP policy rule does this…**|**Then the default policy tip says this…**|
 |:-----|:-----|
 |Sends a notification but doesn't allow override  <br/> |This file conflicts with a policy in your organization. Go to the **File** menu for more information.  <br/> |
