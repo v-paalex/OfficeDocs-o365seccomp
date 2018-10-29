@@ -3,7 +3,7 @@ title: "Set up an archive and deletion policy for mailboxes in your Office 365 o
 ms.author: markjjo
 author: markjjo
 manager: laurawi
-ms.date: 1/9/2018
+ms.date: 
 ms.audience: Admin
 ms.topic: article
 ms.service: o365-administration
@@ -20,11 +20,9 @@ description: "Create an archiving and deletion policy in Office 365  that automa
 
 # Set up an archive and deletion policy for mailboxes in your Office 365 organization
 
- **This article is for administrators. Want to add archive and retention policies to items in your mailbox? See [Assign retention policy to email messages](https://support.office.com/article/3e5fd2dc-633f-4a38-b313-b31b81f7cf7a) | [Retention and archive policies in Outlook on the web for business](https://support.office.com/article/465372e4-e16b-47db-bee0-aba44799085e)**
+ In Office 365, admins can create an archiving and deletion policy that automatically moves items to a user's archive mailbox and automatically deletes items from the mailbox. The admin does this by creating a retention policy that's assigned to mailboxes, and moves items to a user's archive mailbox after a certain period of time and that also deletes items from the mailbox after they reach a certain age limit. The actual rules that determine what items are moved or deleted and when that happens are called retention tags. Retention tags are linked to a retention policy, that in turn is assigned to a user's mailbox. A retention tag applies retention settings to individual messages and folders in a user's mailbox. It defines how long a message remains in the mailbox and what action is taken when the message reaches the specified retention age. When a message reaches its retention age, it's either moved to the user's archive mailbox or it's deleted. 
   
-In Office 365, you can create an archiving and deletion policy that automatically moves items to a user's archive mailbox and automatically deletes items from the mailbox. You can do this by creating a retention policy that' s assigned to mailboxes, and moves items to a user's archive mailbox after a certain period of time and that also deletes items from the mailbox after they reach a certain age limit. The actual rules that determine what items are moved or deleted and when that happens are called retention tags. Retention tags are linked to a retention policy, that in turn is assigned to a user's mailbox. A retention tag applies retention settings to individual messages and folders in a user's mailbox. It defines how long a message remains in the mailbox and what action is taken when the message reaches the specified retention age. When a message reaches its retention age, it's either moved to the user's archive mailbox or it's deleted. 
-  
-The steps in this topic will set up an archiving and retention policy for a fictitious organization named Alpine House. Setting up this policy includes the following tasks:
+The steps in this article will set up an archiving and retention policy for a fictitious organization named Alpine House. Setting up this policy includes the following tasks:
   
 - Enabling an archive mailbox for every user in the organization. This gives users addition mailbox storage, and is required so that a retention policy can move items to the archive mailbox. It also let's a user store archival information by moving items to their archive mailbox. 
     
@@ -32,7 +30,7 @@ The steps in this topic will set up an archiving and retention policy for a fict
     
   - Automatically moves items that are 3 years old to the user's archive mailbox. Moving items to the archive mailbox frees up space in a user's primary mailbox.
     
-  - Automatically deletes items that are 5 years old from the Deleted Items folder. This also frees up space in the user's primary mailbox. User's will have the opportunity to recover these items if necessary. See the footnote in the [More information](set-up-an-archive-and-deletion-policy-for-mailboxes.md#moreinfo) section for more details. 
+  - Automatically deletes items that are 5 years old from the Deleted Items folder. This also frees up space in the user's primary mailbox. User's will have the opportunity to recover these items if necessary. See the footnote in the [More information](#more-information) section for more details. 
     
   - Automatically (and permanently) deletes items that are 7 years old from both the primary and archive mailbox. Because of compliance regulations, some organization's are required to retain email for a certain period of time. After this time period expires, an organization might want to permanently remove these items user mailboxes. 
     
@@ -289,9 +287,9 @@ That's it! You've set up an archive and deletion policy for the Alpine House org
     
     |**Retention tag**|**What this tag does**|**Built-in or custom?**|**Type**|
     |:-----|:-----|:-----|:-----|
-    |Alpine House 3 Year Move to Archive  <br/> |Moves items that are 1095 days (3 years) old to the archive mailbox.  <br/> |Custom (See [Step 2: Create new retention tags for the archive and deletion policies](set-up-an-archive-and-deletion-policy-for-mailboxes.md#step3) )  <br/> |Default Policy Tag (archive); this tag is automatically applied to the entire mailbox.  <br/> |
-    |Alpine House 7 Year Permanently Delete  <br/> |Permanently deletes items in the primary mailbox or the archive mailbox when they are 7 years old.  <br/> |Custom (See [Step 2: Create new retention tags for the archive and deletion policies](set-up-an-archive-and-deletion-policy-for-mailboxes.md#step3) )  <br/> |Default Policy Tag (deletion); this tag is automatically applied to the entire mailbox.  <br/> |
-    |Alpine House Deleted Items 5 Years Delete and Allow Recovery  <br/> |Deletes items from the Deleted Items folder that are 5 years old. Users can recover these items for up 14 days after they're deleted.<sup>\*</sup> <br/> |Custom (See [Step 2: Create new retention tags for the archive and deletion policies](set-up-an-archive-and-deletion-policy-for-mailboxes.md#step3) )  <br/> |Retention Policy Tag (Deleted Items); this tag is automatically applied to items in the Deleted items folder.  <br/> |
+    |Alpine House 3 Year Move to Archive  <br/> |Moves items that are 1095 days (3 years) old to the archive mailbox.  <br/> |Custom (See [Step 2: Create new retention tags for the archive and deletion policies](#step-2-create-new-retention-tags-for-the-archive-and-deletion-policies))  <br/> |Default Policy Tag (archive); this tag is automatically applied to the entire mailbox.  <br/> |
+    |Alpine House 7 Year Permanently Delete  <br/> |Permanently deletes items in the primary mailbox or the archive mailbox when they are 7 years old.  <br/> |Custom (See [Step 2: Create new retention tags for the archive and deletion policies](#step-2-create-new-retention-tags-for-the-archive-and-deletion-policies))  <br/> |Default Policy Tag (deletion); this tag is automatically applied to the entire mailbox.  <br/> |
+    |Alpine House Deleted Items 5 Years Delete and Allow Recovery  <br/> |Deletes items from the Deleted Items folder that are 5 years old. Users can recover these items for up 14 days after they're deleted.<sup>\*</sup> <br/> |Custom (See [Step 2: Create new retention tags for the archive and deletion policies](#step-2-create-new-retention-tags-for-the-archive-and-deletion-policies))  <br/> |Retention Policy Tag (Deleted Items); this tag is automatically applied to items in the Deleted items folder.  <br/> |
     |Recoverable Items 14 days Move to Archive  <br/> |Moves items that have been in the Recoverable Items folder for 14 days to the Recoverable Items folder in the archive mailbox.  <br/> |Built-in  <br/> |Retention Policy Tag (Recoverable Items); this tag is automatically applied to items in the Recoverable Items folder.  <br/> |
     |Junk Email  <br/> |Permanently deletes items that have been in the Junk Email folder for 30 days. Users can recover these items for up 14 days after they're deleted.<sup>\*</sup> <br/> |Built-in  <br/> |Retention Policy Tag (Junk Email); this tag is automatically applied to items in Junk Email folder.  <br/> |
     |1 Month Delete  <br/> |Permanently deletes items that are 30 days old. Users can recover these items for up 14 days after they're deleted.<sup>\*</sup> <br/> |Built-in  <br/> |Personal; this tag can be applied by users.  <br/> |
