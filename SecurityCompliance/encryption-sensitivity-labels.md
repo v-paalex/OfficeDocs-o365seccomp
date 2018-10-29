@@ -37,13 +37,13 @@ The encryption settings are available in the Office 365 Security & Compliance Ce
 
 Encryption uses Azure Rights Management (Azure RMS). Azure RMS uses encryption, identity, and authorization policies. To learn more, see [What is Azure Rights Management?](https://docs.microsoft.com/en-us/azure/information-protection/what-is-azure-rms)
 
-## Set an expiration date for access and restrict offline access
+## How to turn on encryption for a sensitivity label
 
-When you create a sensitivity label, you can:
+To begin, simply toggle **Encryption** to **On**, and then use the options below to control who can acess email or documents to which this label is applied. You can:
 
-- **Apply these options to both email and documents, or just email.**
-- **Allow access to labeled content to expire**, either on a specific date or after a specific number of days after the label is applied. After this time, users won’t be able to open the labeled item. If you specify a date, it is effective midnight on that date in your current time zone. 
-- **Allow offline access** never, always, or for a specific number of days after the label is applied. If you restrict offline access to never or a number of days, when that threshold is reached, users must be reauthenticated and their access is logged. For more information, see the next section on the Rights Management use license.
+1. **Apply encryption to both email and documents, or just email.** If you choose just email, messages with this label will be encrypted in Outlook, but documents with this label won't be encrypted in other apps, such as Word or PowerPoint. 
+2. **Allow access to labeled content to expire**, either on a specific date or after a specific number of days after the label is applied. After this time, users won’t be able to open the labeled item. If you specify a date, it is effective midnight on that date in your current time zone. 
+3. **Allow offline access** never, always, or for a specific number of days after the label is applied. If you restrict offline access to never or a number of days, when that threshold is reached, users must be reauthenticated and their access is logged. For more information, see the next section on the Rights Management use license.
 
 ![Encryption settings for sensitivity label](media/Sensitivity_Encryption_settings_for_sensitivity_label.png)
 
@@ -90,6 +90,12 @@ When you choose which permissions to allow for those users or groups, you can se
 For more information on each specific permission, see [Usage rights and descriptions](https://docs.microsoft.com/en-us/azure/information-protection/configure-usage-rights#usage-rights-and-descriptions).  
 
 ![Options to choose preset or custom permissions](media/Sensitivity_Choose_permissions_settings.png)
+
+Note that the same label can grant different permissions to different users. For example, a single label can assign users as Reviewer and a different user as Co-author, as shown below.
+
+To do this, add users or groups, assign them permissions, and save those settings. Then repeat these steps, to assign different permissions to different users, saving the settings each time. You can do this as often as necessary, to define different permissions for different users.
+
+![Different users with different permissions](media/Sensitivity_Multiple_users_permissions.png)
 
 ### Rights Management issuer (user applying the sensitivity label) always has Full Control
 
