@@ -12,22 +12,18 @@ ms.collection: Ent_O365
 ms.custom: 
  - Ent_Solutions
  - SIEM
-description: "Summary: Read this article to get an overview of SIEM server integration with the Microsoft 365."
+description: "Summary: Read this article to get an overview of SIEM server integration with Microsoft 365."
 ---
 
 # SIEM server integration with Microsoft 365 services and applications
 
 ## Overview
 
-If your organization is using a Security Information and Event Management (SIEM) server, or if you are planning to get a SIEM server soon, you might be wondering how that'll integrate with your Microsoft 365, including Office 365 Enterprise. Read this article to get an overview of SIEM server integration.
-
-Whether you need a SIEM server depends on many factors, such as your organization's security requirements. Microsoft 365 services offer a variety of security features; however, if your organization has content and applications on premises and in the cloud (as in the case of a hybrid cloud deployment), you might consider adding a SIEM server for extra protection. Or, if your organization has particularly stringent security requirements you must meet, you might consider adding a SIEM server to your environment.
+If your organization is using a Security Information and Event Management (SIEM) server, or if you are planning to get a SIEM server soon, you might be wondering how that'll integrate with your Microsoft 365, including Office 365 Enterprise. Whether you need a SIEM server depends on many factors, such as your organization's security requirements. Microsoft 365 offers a variety of security features; however, if your organization has content and applications on premises and in the cloud (as in the case of a hybrid cloud deployment), you might consider adding a SIEM server for extra protection. Or, if your organization has particularly stringent security requirements you must meet, you might consider adding a SIEM server to your environment.
 
 ## SIEM server integration Microsoft 365
 
-A SIEM server can receive data from a wide variety of Microsoft 365 services and applications. In some cases, such as Office 365 Advanced Threat Protection, SIEM server integration uses the Office 365 Management Activity API. In other cases, such as Cloud App Security, you set up a SIEM server agent and configure the connection. 
-
-The following table lists several Microsoft 365 services and applications with SIEM server inputs and where to go to learn more about how SIEM server integration is configured. 
+A SIEM server can receive data from a wide variety of Microsoft 365 services and applications. The following table lists several Microsoft 365 services and applications along with SIEM server inputs and where to go to learn more about SIEM server integration. 
 
 | Microsoft 365 Service or Application | SIEM server inputs | Resources to learn more |
 | --- | --- | --- |
