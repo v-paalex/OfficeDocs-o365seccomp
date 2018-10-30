@@ -111,7 +111,7 @@
 #### [ATP Safe Links warning pages](atp-safe-links-warning-pages.md)
 ### [ATP Safe Attachments](atp-safe-attachments.md)
 #### [Set up ATP Safe Attachments policies](set-up-atp-safe-attachments-policies.md)
-#### [Dynamic delivery and previewing for Safe Attachments](dynamic-delivery-and-previewing.md)
+#### [Dynamic Delivery and previewing for Safe Attachments](dynamic-delivery-and-previewing.md)
 ### [Office 365 ATP for SharePoint, OneDrive, and Microsoft Teams](atp-for-spo-odb-and-teams.md)
 #### [Turn on ATP for SharePoint, OneDrive, and Microsoft Teams](turn-on-atp-for-spo-odb-and-teams.md)
 #### [View information about malicious files](malicious-files-detected-in-spo-odb-or-teams.md)
