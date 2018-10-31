@@ -5,6 +5,7 @@ author: denisebmsft
 manager: laurawi
 ms.audience: Admin
 ms.topic: reference
+ms.date: 10/31/2018
 ms.service: o365-administration
 localization_priority: Normal
 search.appverid:
@@ -22,7 +23,7 @@ This article is updated frequently, as features are added or improved. Office 36
   
 ## Office 365 Cloud App Security release 130
 
-*Releases September 5, 2018*
+*Released September 5, 2018*
 
 **Releasing with [Microsoft Cloud App Security release 130](https://docs.microsoft.com/cloud-app-security/release-notes#cloud-app-security-release-130)**:
 
