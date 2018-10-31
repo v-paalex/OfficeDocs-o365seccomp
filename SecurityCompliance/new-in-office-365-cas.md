@@ -27,7 +27,7 @@ This article is updated frequently, as features are added or improved. Office 36
 
 **Releasing with [Microsoft Cloud App Security release 130](https://docs.microsoft.com/cloud-app-security/release-notes#cloud-app-security-release-130)**:
 
-- **New menu bar** To provide a more consistent admin experience across Microsoft 365 products, and to enable you to pivot more easily between Microsoft security solutions, the Cloud App Security portal menu bar has moved to the left side of the screen. This consistent navigation experience helps you orient yourself when moving from one Microsoft security portal to another.
+- **New menu bar** To provide a more consistent admin experience across Microsoft 365 products, and to enable you to pivot more easily between Microsoft security solutions, the Cloud App Security portal menu bar has moved to the left side of the screen. This consistent navigation experience helps you orient yourself when moving from one Microsoft security portal to another.<br/>![Menu bar in Office Cloud App Security](media/OCAS-MenuBar.png)<br/>
 
 - **Impact OAuth app score** You can now send the Cloud App Security team feedback to let us know if there’s an OAuth app discovered in your organization that seems malicious. This new feature enables you to be part of our security community and enhance OAuth app risk score and analysis. For more information see [Manage app permissions](manage-app-permissions-in-ocas.md).
 
