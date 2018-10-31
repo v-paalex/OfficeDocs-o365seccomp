@@ -22,17 +22,17 @@ description: "Learn how to modify or create new Office 365 sensitive information
 
 This article provides three examples to demonstrate how to modify or create new Office 365 sensitive information types for GDPR.
 
--   Modify an existing sensitive information type — EU Debit Card Number
+- Modify an existing sensitive information type — EU Debit Card Number
 
--   Create a new sensitive information type — email address
+- Create a new sensitive information type — email address
 
--   Create a new sensitive information type with example XML file — Contoso customer number
+- Create a new sensitive information type with example XML file — Contoso customer number
 
 Also see:
 
--   [Create a custom sensitive information type](https://support.office.com/en-us/article/Create-a-custom-sensitive-information-type-82c382a5-b6db-44fd-995d-b333b3c7fc30)
+- [Create a custom sensitive information type in Office 365 Security & Compliance Center PowerShell](create-a-custom-sensitive-information-type-in-scc-powershell.md)
 
--   [Customize a built-in sensitive information type ](https://support.office.com/en-us/article/Customize-a-built-in-sensitive-information-type-2164ce3d-4d64-4283-b6b1-b81fbe835e8e)
+- [Customize a built-in sensitive information type](customize-a-built-in-sensitive-information-type.md)
 
 ## Modify a sensitive information type to improve accuracy
 

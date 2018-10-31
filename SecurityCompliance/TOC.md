@@ -33,6 +33,7 @@
 ### [Watch an extended overview of customizing DLP](https://go.microsoft.com/fwlink/?linkid=852306)
 ### [Customize a built-in sensitive information type](customize-a-built-in-sensitive-information-type.md)
 ### [Create a custom sensitive information type](create-a-custom-sensitive-information-type.md)
+### [Create a custom sensitive information type in Office 365 Security & Compliance Center PowerShell](create-a-custom-sensitive-information-type-in-scc-powershell.md)
 ### [Create a keyword dictionary](create-a-keyword-dictionary.md)
 ### [Document Fingerprinting](document-fingerprinting.md) 
 # Manage data governance		
