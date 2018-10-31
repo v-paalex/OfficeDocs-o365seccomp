@@ -3,7 +3,7 @@ title: "Set up Azure Rights Management for Office 365 Message Encryption"
 ms.author: krowley
 author: kccross
 manager: laurawi
-ms.date: 10/3/2017
+ms.date: 10/30/2018
 ms.audience: Admin
 ms.topic: article
 ms.service: o365-administration
@@ -12,14 +12,17 @@ search.appverid:
 - MET150
 - MOE150
 ms.assetid: 2cba47b3-f09e-4911-9207-ac056fcb9db7
-description: "Office 365 Message Encryption depends on Microsoft Azure Rights Management (previously known as Windows Azure Active Directory Rights Management). "
+description: "The previous version of Office 365 Message Encryption depends on Microsoft Azure Rights Management (previously known as Windows Azure Active Directory Rights Management)."
 ---
 
-# Set up Azure Rights Management for Office 365 Message Encryption
+# This article applies to the previous version of OME
+If you haven't yet moved your Office 365 organization to the new OME capabilities, but you have already deployed OME, then the information in this article applies to your organization. Microsoft recommends that you make a plan to move to the new OME capabilities as soon as it is reasonable for your organization. For instructions, see [Set up new Office 365 Message Encryption capabilities](set-up-new-message-encryption-capabilities). If you want to find out more about how the new capabilities work first, see [Office 365 Message Encryption](ome.md). The rest of this article refers to OME behavior before the release of the new OME capabilities.
+
+# Set up Azure Rights Management for the previous version of Office 365 Message Encryption
 
 This topic describes the steps you need to follow in order to activate and then set up Azure Rights Management (RMS), part of Azure Information Protection, for use with Office 365 Message Encryption (OME).
   
-## Prerequisites for using Office 365 Message Encryption
+## Prerequisites for using the previous version of Office 365 Message Encryption
 <a name="warmprereqs"> </a>
 
 Office 365 Message Encryption (OME), including IRM, depends on Azure Rights Management (Azure RMS). Azure RMS is the protection technology used by Azure Information Protection. To use OME, your Office 365 organization must include an Exchange Online or Exchange Online Protection subscription that, in turn, includes an Azure Rights Management subscription.
@@ -34,12 +37,12 @@ Office 365 Message Encryption (OME), including IRM, depends on Azure Rights Mana
     
 - If you've already set up OME to work with Azure Rights Management for Exchange Online or Exchange Online Protection, depending on how you set it up, you may be ready to start using OME and its new capabilities right away. This article explains how to determine if you've set OME up correctly, what to do if you need to change your setup, and what happens if you choose not to change your setup. For example, in order to use the new capabilities, you must use Azure RMS with OME. You can't use the new capabilities with an on-premises Active Directory RMS.
     
-## Activate Azure Rights Management for OME in Office 365
+## Activate Azure Rights Management for  the previous version of OME in Office 365
 <a name="activatewarm"> </a>
 
 You need to activate Azure Rights Management so that the users in your organization can apply information protection to messages that they send, and open messages and files that have been protected by the Azure Rights Management service. For instructions, see [Activating Azure Rights Management](https://go.microsoft.com/fwlink/p/?LinkId=525775). Once you've completed the activation, return here and continue with the tasks in this article.
   
-## Set up OME to use Azure RMS by importing trusted publishing domains (TPDs)
+## Set up the previous version of OME to use Azure RMS by importing trusted publishing domains (TPDs)
 <a name="importTPDs"> </a>
 
 A TPD is an XML file that contains information about your organization's rights management settings. For example, the TPD contains information about the server licensor certificate (SLC) used for signing and encrypting certificates and licenses, the URLs used for licensing and publishing, and so on. You import the TPD into your Office 365 organization by using Windows PowerShell.
@@ -103,7 +106,7 @@ A TPD is an XML file that contains information about your organization's rights 
 
 8. To verify that you have successfully imported the TPD and enabled Azure Rights Management, use the Test-IRMConfiguration cmdlet to test Azure Rights Management functionality. For details, see "Example 1" in [Test-IRMConfiguration](https://technet.microsoft.com/library/dd979798%28v=exchg.150%29.aspx).
     
-## I have OME set up with Active Directory Rights Management not Azure Information Protection, what do I do?
+## I have the previous version of OME set up with Active Directory Rights Management not Azure Information Protection, what do I do?
 <a name="importTPDs"> </a>
 
 You can continue to use your existing Office 365 Message Encryption mail flow rules with Active Directory Rights Management, but you can't configure or use the new OME capabilities. Instead, you need to migrate to Azure Information Protection. For information about migration and what this means for your organization, see [Migrating from AD RMS to Azure Information Protection](https://docs.microsoft.com/information-protection/deploy-use/prepare-environment-adrms).
