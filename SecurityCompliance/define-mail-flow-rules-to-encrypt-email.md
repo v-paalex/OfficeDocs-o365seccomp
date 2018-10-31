@@ -3,7 +3,7 @@ title: "Define mail flow rules to encrypt email messages in Office 365"
 ms.author: krowley
 author: kccross
 manager: laurawi
-ms.date: 10/30/2018
+ms.date: 10/31/2018
 ms.audience: ITPro
 ms.topic: article
 ms.service: o365-administration
@@ -24,7 +24,7 @@ If you recently migrated from AD RMS to Azure Information Protection, you'll nee
 For information about the components that make up mail flow rules and how mail flow rules work, see [Mail flow rules (transport rules) in Exchange Online](https://technet.microsoft.com/library/jj919238%28v=exchg.150%29.aspx). For additional information about how mail flow rules work with Azure Information Protection, see [Configuring Exchange Online mail flow rules for Azure Information Protection labels](https://docs.microsoft.com/azure/information-protection/deploy-use/configure-exo-rules).
   
 ## Hybrid Exchange environments: Do this first
-On-premises users can send encrypted mail using OME if you route email through Exchange Online. In order to do this, you need to configure mail flow to flow from your email server to Office 365. Once you've configured mail to flow through Office 365, you can make mail flow rules for OME by using this article.
+On-premises users can send encrypted mail using OME if you route email through Exchange Online. In order to do this, you need to configure mail to flow from your email server to Office 365. Once you've configured mail to flow through Office 365, then you can make mail flow rules for OME by using this article.
 
 For instructions, see [Set up connectors to route mail between Office 365 and your own email servers](https://docs.microsoft.com/exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/set-up-connectors-to-route-mail). In particular, complete the steps in "Part 2: Configure mail to flow from your email server to Office 365".
 
