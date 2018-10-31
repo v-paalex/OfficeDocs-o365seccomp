@@ -36,7 +36,7 @@ If you're an Exchange Online administrator, you can [enable the Report Message a
     
 ## Get the Report Message add-in for yourself
 
-1. In the [Office store](https://appsource.microsoft.com/product/office/WA104381180?src=office), get the Report Message add-in.
+1. In [Microsoft AppSource](https://appsource.microsoft.com/marketplace/apps), search for the [Report Message add-in](https://appsource.microsoft.com/product/office/wa104381180).
     
 2. Choose **GET IT NOW**.<br/>![Report Message - Get It Now](media/ReportMessageGETITNOW.png)<br/> 
     
