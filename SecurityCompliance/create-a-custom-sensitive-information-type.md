@@ -40,13 +40,13 @@ The fundamental parts of a custom sensitive information type are:
 
 To create custom sensitive information types in the Office 365 Security & Compliance Center, you have the following options:
 
-- **Use the graphical user interface**: This method is easier and faster, but you have less configuration options than PowerShell. The rest of this topic describes these procedures.
+- **Use the UI**: This method is easier and faster, but you have less configuration options than PowerShell. The rest of this topic describes these procedures.
 
-- **Use PowerShell**: This method requires that you first create an XML file (called a _rule package_) that contains one or more sensitive information types, and then you use PowerShell to import the rule package (importing the rule package is trivial compared to creating the rule package. This method is much more complex than the graphical user interface, but you have more configuration options. For instructions, see [Create a custom sensitive information type in Office 365 Security & Compliance Center PowerShell](create-a-custom-sensitive-information-type-in-scc-powershell.md).
+- **Use PowerShell**: This method requires that you first create an XML file (called a _rule package_) that contains one or more sensitive information types, and then you use PowerShell to import the rule package (importing the rule package is trivial compared to creating the rule package. This method is much more complex than the UI, but you have more configuration options. For instructions, see [Create a custom sensitive information type in Office 365 Security & Compliance Center PowerShell](create-a-custom-sensitive-information-type-in-scc-powershell.md).
 
 The key differences are described in the following table:
 
-|Sensitive information types in the UI|Sensitive information types in PowerShell|
+|Custom sensitive information types in the UI|Custom sensitive information types in PowerShell|
 |:-----|:-----|
 |Name and Description are in one language|Supports multiple languages for Name and Description|
 |Supports one pattern (the primary pattern).|Supports multiple patterns in addition to the primary pattern.|

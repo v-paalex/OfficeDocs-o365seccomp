@@ -27,7 +27,7 @@ This topic shows you how to create an XML file that defines your own custom sens
 After you've created a well-formed XML file, you can upload it to Office 365 by using Office 365 PowerShell. Then you're ready to use your custom sensitive information type in your DLP policies and test that it's detecting the sensitive information as you intended.
 
 > [!NOTE]
-> You can also create less complex custom sensitive information types in the graphical user interface of the Security & Compliance Center. For more information, see [Create a custom sensitive information type](create-a-custom-sensitive-information-type.md).
+> You can also create less complex custom sensitive information types in the Security & Compliance Center UI. For more information, see [Create a custom sensitive information type](create-a-custom-sensitive-information-type.md).
 
 ## Important disclaimer
 
@@ -477,7 +477,7 @@ To connect to Security & Compliance Center PowerShell, see [Connect to Office 36
     Get-DlpSensitiveInformationTypeRulePackage
     ```
 
-    **Note**: The built-in rule package that contains the built-in sensitive information types is named Microsoft Rule Package. The rule package that contains the custom sensitive information types that you created in the Security & Compliance Center graphical user interface is named Microsoft.SCCManaged.CustomRulePack.
+    **Note**: The built-in rule package that contains the built-in sensitive information types is named Microsoft Rule Package. The rule package that contains the custom sensitive information types that you created in the Security & Compliance Center UI is named Microsoft.SCCManaged.CustomRulePack.
 
 2. Use the following syntax to store the custom rule package to a variable:
 
