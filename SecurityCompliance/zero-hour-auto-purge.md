@@ -69,7 +69,7 @@ Admins can also [disable ZAP](zero-hour-auto-purge.md#BK_Posh) by using PowerShe
     
     If you choose **Save** at this point, the policy applies to your Office 365 tenant. 
     
-    ![Set spam and bulk actions to Mpve message to Junk Email folder](media/4332cfb3-89e1-48ba-8da8-9286f2fa1089.PNG)
+    ![Set spam and bulk actions to Move message to Junk Email folder](media/4332cfb3-89e1-48ba-8da8-9286f2fa1089.PNG)
   
 4. If you created a new policy, and you want to apply the policy to only a set of users, scroll to the **Applied To** section in the policy filter window, and in the menu controls choose the **recipients**, **domain**, or **group memberships** you want to apply the policy to. You can also set additional conditions and exceptions. 
     
