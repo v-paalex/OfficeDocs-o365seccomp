@@ -40,7 +40,7 @@ You complete this task in the Office 365 Security & Compliance Center (SCC). [Go
 3. Click **Yes** to confirm the change. 
     
 > [!NOTE]
-> There's a limit to the number of times that an account can be unblocked by the tenant admin. If the limit for a user has been exceeded, an error message appears. You will then need to contact Support to unblock the user.
+> There's a limit to the number of times that an account can be unblocked by the tenant admin. If the limit for a user has been exceeded, an error message appears. You will then need to contact Support to unblock the user.</br></br> It may take up to 1 hour before the user is unblocked.
   
 ## Third-party block lists
 
