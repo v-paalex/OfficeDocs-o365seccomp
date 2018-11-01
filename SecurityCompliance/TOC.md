@@ -234,7 +234,7 @@
 ## [Search for eDiscovery activities in the audit log](search-for-ediscovery-activities-in-the-audit-log.md)
 # [Monitor security and compliance]()
 ## [Alert policies](alert-policies.md)
-### [Create activity alerts](create-activity-alerts.md)
+## [Activity alerts](create-activity-alerts.md)
 ## [Smart reports and insights in the Security & Compliance Center](reports-and-insights-in-security-and-compliance.md)
 ### [ View email security reports in the Security & Compliance Center](view-email-security-reports.md)
 #### [Walkthrough - From a detailed report to an insight](from-a-detailed-report-to-an-insight.md)
