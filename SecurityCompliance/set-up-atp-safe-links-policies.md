@@ -39,8 +39,6 @@ description: "Set up Safe Links policies to protect your organization from malic
     
 - [Learn about ATP Safe Links policy options](#learn-about-atp-safe-links-policy-options) (in this article). 
 
-- Make sure that Office clients are configured to use [Modern Authentication](https://docs.microsoft.com/office365/enterprise/modern-auth-for-office-2013-and-2016).
-    
 - Allow up to 30 minutes for your new or updated policy to spread to all Office 365 datacenters.
     
 ## Step 2: Define (or review) the ATP Safe Links policy that applies to everyone
