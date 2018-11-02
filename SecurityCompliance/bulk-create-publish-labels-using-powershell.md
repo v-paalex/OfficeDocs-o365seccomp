@@ -1,5 +1,5 @@
 ---
-title: "Bulk create and publish labels by using PowerShell"
+title: "Bulk create and publish retention labels by using PowerShell"
 ms.author: stephow
 author: stephow-msft
 ms.date: 1/17/2018
@@ -14,7 +14,7 @@ ms.assetid: 8986701b-ffa1-46ec-8fd0-8f7e81d5b25f
 description: "In Office 365, you can use labels to implement a retention schedule for your organization. As a record manager or compliance officer, you might have hundreds of labels to create and publish. You can do this through the UI in the Security and Compliance Center, but creating labels one at a time is time-consuming and inefficient. By using the script and .csv files provided below, you can bulk create and publish labels and label policies. First you create a list of the labels and a list of the label policies in Excel, and then you bulk create the labels and label policies in those lists by using PowerShell. This makes it easier to create and publish at one time all of the labels that your retention schedule requires."
 ---
 
-# Bulk create and publish labels by using PowerShell
+# Bulk create and publish retention labels by using PowerShell
 
 In Office 365, you can use labels to implement a retention schedule for your organization. As a record manager or compliance officer, you might have hundreds of labels to create and publish. You can do this through the UI in the Security &amp; Compliance Center, but creating labels one at a time is time-consuming and inefficient.
   

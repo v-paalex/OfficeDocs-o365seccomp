@@ -14,9 +14,9 @@
 ## [Choose between MDM and Intune](choose-between-mdm-and-intune.md)
 # Protect information
 ## [Sensitivity labels](sensitivity-labels.md)
-## [Restrict access to content by using encryption in sensitivity labels](encryption-sensitivity-labels.md)
+### [Restrict access to content by using encryption in sensitivity labels](encryption-sensitivity-labels.md)
 ## [Prevent data loss (DLP)](data-loss-prevention-policies.md)
-## [Watch an extended overview of DLP](https://channel9.msdn.com/events/ignite/microsoft-ignite-orlando-2017/brk3111)
+### [Watch an extended overview of DLP](https://channel9.msdn.com/events/ignite/microsoft-ignite-orlando-2017/brk3111)
 ## Set up DLP
 ### [Get started with DLP policy recommendations](get-started-with-dlp-policy-recommendations.md)
 ### [Get started with the default DLP policy](get-started-with-the-default-dlp-policy.md)
@@ -33,6 +33,7 @@
 ### [Watch an extended overview of customizing DLP](https://go.microsoft.com/fwlink/?linkid=852306)
 ### [Customize a built-in sensitive information type](customize-a-built-in-sensitive-information-type.md)
 ### [Create a custom sensitive information type](create-a-custom-sensitive-information-type.md)
+### [Create a custom sensitive information type in Office 365 Security & Compliance Center PowerShell](create-a-custom-sensitive-information-type-in-scc-powershell.md)
 ### [Create a keyword dictionary](create-a-keyword-dictionary.md)
 ### [Document Fingerprinting](document-fingerprinting.md) 
 # Manage data governance		
@@ -52,6 +53,7 @@
 ## Retain data
 ### [Retention policies](retention-policies.md)
 ### [Retention labels](labels.md)
+### [Bulk create and publish retention labels by using PowerShell](https://docs.microsoft.com/en-us/office365/securitycompliance/bulk-create-publish-labels-using-powershell)
 ### [Disposition reviews](disposition-reviews.md)
 ### [Event-driven retention](event-driven-retention.md)
 ### [File plan manager](file-plan-manager.md)
@@ -110,7 +112,7 @@
 #### [ATP Safe Links warning pages](atp-safe-links-warning-pages.md)
 ### [ATP Safe Attachments](atp-safe-attachments.md)
 #### [Set up ATP Safe Attachments policies](set-up-atp-safe-attachments-policies.md)
-#### [Dynamic delivery and previewing for Safe Attachments](dynamic-delivery-and-previewing.md)
+#### [Dynamic Delivery and previewing for Safe Attachments](dynamic-delivery-and-previewing.md)
 ### [Office 365 ATP for SharePoint, OneDrive, and Microsoft Teams](atp-for-spo-odb-and-teams.md)
 #### [Turn on ATP for SharePoint, OneDrive, and Microsoft Teams](turn-on-atp-for-spo-odb-and-teams.md)
 #### [View information about malicious files](malicious-files-detected-in-spo-odb-or-teams.md)
@@ -233,7 +235,7 @@
 ## [Search for eDiscovery activities in the audit log](search-for-ediscovery-activities-in-the-audit-log.md)
 # [Monitor security and compliance]()
 ## [Alert policies](alert-policies.md)
-### [Create activity alerts](create-activity-alerts.md)
+## [Activity alerts](create-activity-alerts.md)
 ## [Smart reports and insights in the Security & Compliance Center](reports-and-insights-in-security-and-compliance.md)
 ### [ View email security reports in the Security & Compliance Center](view-email-security-reports.md)
 #### [Walkthrough - From a detailed report to an insight](from-a-detailed-report-to-an-insight.md)
