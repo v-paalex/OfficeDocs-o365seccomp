@@ -18,7 +18,7 @@ description: "Learn how to create, modify, remove, and test custom sensitive inf
 
 # Create a custom sensitive information type
 
-Data loss prevention (DLP) in Office 365 includes many [sensitive information types](what-the-sensitive-information-types-look-for.md) that are ready for you to use in your DLP policies. These built-in types can help identify and protect credit card numbers, bank account numbers, passport numbers, and more. 
+Data loss prevention (DLP) in Office 365 includes many built-in [sensitive information types](what-the-sensitive-information-types-look-for.md) that are ready for you to use in your DLP policies. These built-in types can help identify and protect credit card numbers, bank account numbers, passport numbers, and more. 
 
 But if you need to identify and protect a different type of sensitive information (for example, employee IDs or project numbers that uses a format specific to your organization) you can create a custom sensitive information type.
 
@@ -48,21 +48,19 @@ The key differences are described in the following table:
 
 |Custom sensitive information types in the UI|Custom sensitive information types in PowerShell|
 |:-----|:-----|
-|Name and Description are in one language|Supports multiple languages for Name and Description|
-|Supports one pattern (the primary pattern).|Supports multiple patterns in addition to the primary pattern.|
+|Name and Description are in one language.|Supports multiple languages for Name and Description.|
+|Supports one pattern.|Supports multiple patterns.|
 |Supporting evidence can be: <br/>• Regular expressions <br/>• Keywords <br/>• Keyword dictionaries|Supporting evidence can be: <br/>• Regular expressions <br/>• Keywords <br/>• Keyword dictionaries <br/>• [Built-in DLP functions](what-the-dlp-functions-look-for.md)|
-|Confidence level is configurable for the sensitive information type.|Confidence level is configurable for the sensitive information type and each individual pattern within.|
+|Custom sensitive information types are added to the rule package named Microsoft.SCCManaged.CustomRulePack|You can create up to 10 rule packages that contain custom sensitive information types.|
 |Pattern match requires the detection of the primary pattern and all supporting evidence (the implicit AND operator is used).|Pattern match requires the detection of the primary pattern and a configurable amount of supporting evidence (implicit AND and OR operators can be used).|
 
 ## What do you need to know before you begin?
 
 - To open the Security & Compliance Center, see [Go to the Office 365 Security & Compliance Center](go-to-the-securitycompliance-center.md).
 
-- Custom sensitive information types require familiarity with regular expressions (RegEx). For additional information on the .NET RegEx engine that's used for processing the text, see [.NET Regular Expressions](https://docs.microsoft.com/dotnet/standard/base-types/regular-expressions).
+- Custom sensitive information types require familiarity with regular expressions (RegEx). For more information about the Boost.RegEx (formerly known as RegEx++) engine that's used for processing the text, see [Boost.Regex 5.1.3](https://www.boost.org/doc/libs/1_68_0/libs/regex/doc/html/).
 
   Microsoft Customer Service & Support can't assist with providing custom content-matching definitions (creating custom classifications or regular expression patterns). Support engineers can provide limited support for the feature (for example, providing sample regular expression patterns for testing purposes, or assisting with troubleshooting an existing regular expression pattern that's not triggering as expected), but can't provide assurances that any custom content-matching development will fulfill your requirements or obligations.
-
-- For more information about the .NET RegEx engine that's used for processing text, see [Regular Expressions in .NET](https://docs.microsoft.com/dotnet/standard/base-types/regular-expressions).
 
 - DLP uses the search crawler to identify and classify sensitive information in SharePoint Online and OneDrive for Business sites. To identify your new custom sensitive information type in existing content, the content must be recrawled. Content is recrawled based on a schedule, but you can manually recrawl content for a site collection, list, or library. For more information, see [Manually request crawling and re-indexing of a site, a library or a list](https://docs.microsoft.com/sharepoint/crawl-site-content).
 
@@ -102,7 +100,7 @@ Here's a scenario: You want a custom sensitive information type that detects 9-d
  
     a. Click **Any of these** and select **Regular expression**.
 
-    b. In the regular expression box, enter `(\s)(\d{9})(\s)` (nine-digit numbers surrounded by white space)
+    b. In the regular expression box, enter `(\s)(\d{9})(\s)` (nine-digit numbers surrounded by white space).
   
   - **Supporting elements**: Click **Add supporting elements** and select **Contains this keyword list**.
 
