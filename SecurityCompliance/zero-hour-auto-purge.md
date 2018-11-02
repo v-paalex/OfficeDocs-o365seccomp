@@ -50,49 +50,7 @@ Allow lists, [mail flow rules](https://go.microsoft.com/fwlink/p/?LinkId=722755)
     
 ## To see if ZAP moved your message
 
-<<<<<<< HEAD
 If you want to see if ZAP moved your message, you can use either the [Threat Protection Status report](view-email-security-reports.md#threat-protection-status-report-new) (or [Threat Explorer](use-explorer-in-security-and-compliance.md)).
-=======
-ZAP is turned on by default, but you do have to make sure a couple of conditions are met:
-  
-- Spam filter policy is set to [Move message to Junk Email folder](zero-hour-auto-purge.md#BK_SetSpam).
-    
-    You can also create a new spam filter policy that applies only to a set of users if you don't want all mailboxes to be screened by ZAP.
-    
-- The user's [Options \> Junk Email](https://support.office.com/article/068FA430-F8D7-4518-A8DA-8BC74958F05F).
-    
-If you want [to see if ZAP moved your message](zero-hour-auto-purge.md#BK_DidZAPMove), you can use the Exchange Online message trace tool.
-  
-Admins can also [disable ZAP](zero-hour-auto-purge.md#BK_Posh) by using PowerShell. 
-  
- **To set spam filter policy**
-  
-1. Sign in to the [Where to sign in to Office 365 for business](https://support.office.com/article/e9eb7d51-5430-4929-91ab-6157c5a050b4) and choose **protection** \> **spam filter**. 
-    
-    ![In the EAC choose protection and then spam filter](media/0463c879-63fa-4a6c-9b03-e980d5ef3954.PNG)
-  
-2. Either choose the filter policy you want to adjust, or choose **add**![Add icon](media/8ee52980-254b-440b-99a2-18d068de62d3.gif) to create a new one. 
-    
-    In the previous screen shot, the policy is named "Default", but if you create additional spam filter policies you can give them a different name. You can also apply the policy to only a limited set of users.
-    
-3. In the policy window, choose **spam and bulk actions**, and make sure that **Spam** is set to **Move message to Junk Email folder**. 
-    
-    If you choose **Save** at this point, the policy applies to your Office 365 tenant. 
-    
-    ![Set spam and bulk actions to Move message to Junk Email folder](media/4332cfb3-89e1-48ba-8da8-9286f2fa1089.PNG)
-  
-4. If you created a new policy, and you want to apply the policy to only a set of users, scroll to the **Applied To** section in the policy filter window, and in the menu controls choose the **recipients**, **domain**, or **group memberships** you want to apply the policy to. You can also set additional conditions and exceptions. 
-    
-    ![In the Applied To section choose the recipients](media/19ca10db-c0f4-432c-b3de-ad4101a23de6.PNG)
-  
-    Choose **Save** to apply the policy to the selected users. 
-    
- **To see if ZAP moved your message**
-  
-- You can use the [Find and fix email delivery issues as an Office 365 for business admin](https://support.office.com/article/e7758b99-1896-41db-bf39-51e2dba21de6) to determine if the message was moved by ZAP: 
-    
-    Look for the text "Zero-Hour Auto Purge (ZAP)" in your trace details to identify a message that was moved by ZAP.
->>>>>>> master
     
 ## To disable ZAP
   
