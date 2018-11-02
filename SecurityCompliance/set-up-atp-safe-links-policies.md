@@ -38,7 +38,7 @@ description: "Set up Safe Links policies to protect your organization from malic
     
 - Make sure that you have the necessary permissions to define or edit ATP policies. See [Permissions in the Office 365 Security &amp; Compliance Center](permissions-in-the-security-and-compliance-center.md).
 
-- In order for ATP Safe Links to work correctly in Office documents, make sure that Office clients are configured to use [Modern Authentication](https://docs.microsoft.com/office365/enterprise/modern-auth-for-office-2013-and-2016).
+- Make sure that Office clients are configured to use [Modern Authentication](https://docs.microsoft.com/office365/enterprise/modern-auth-for-office-2013-and-2016) (this is for ATP Safe Links protection in Office documents).
     
 - [Learn about ATP Safe Links policy options](#learn-about-atp-safe-links-policy-options) (in this article). 
 
