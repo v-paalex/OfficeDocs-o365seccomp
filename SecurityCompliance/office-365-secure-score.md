@@ -1,9 +1,9 @@
 ---
-title: "Introducing the Office 365 Secure Score"
+title: "Office 365 Secure Score"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 6/23/2018
+ms.date: 11/05/2018
 ms.audience: Admin
 ms.topic: overview
 ms.service: o365-administration
@@ -12,16 +12,24 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: c9e7160f-2c34-4bd0-a548-5ddcc862eaef
-description: "Ever wonder how secure your Office 365 organization really is? Time to stop wondering - the Office 365 Secure Score is here to help. Secure Score analyzes your Office 365 organization's security based on your regular activities and security settings and assigns a score. Think of it as a credit score for security."
+description: "Ever wonder how secure your organization really is in Office 365? Secure Score is here to help. Secure Score analyzes your organization's security  based on your regular activities and security settings in Offic 365, and assigns a score."
 ---
 
-# Introducing the Office 365 Secure Score
+# Office 365 Secure Score
 
-Ever wonder how secure your Office 365 organization really is? Time to stop wondering - the Office 365 Secure Score is here to help. Secure Score analyzes your Office 365 organization's security based on your regular activities and security settings and assigns a score. Think of it as a credit score for security.
+**Summary** Ever wonder how secure your organization really is in Office 365? Secure Score is here to help. Secure Score analyzes your organization's security  based on your regular activities and security settings in Office 365, and assigns a score. Read this article to get an overview of Secure Score and how you can use it.
   
 ## How do I get to Secure Score?
 
-Anyone who has admin permissions (global admin or a custom admin role) for an Office 365 Business Premium or Enterprise subscription can access the Secure Score at [https://securescore.office.com](https://securescore.office.com). Users who aren't assigned an admin role won't be able to access Secure Score. However, admins can use the tool to share their results with other people in their organization.
+If your organization has a subscription that includes [Office 365 Enterprise](https://docs.microsoft.com/office365/enterprise/) or [Microsoft 365 Business](https://docs.microsoft.com/microsoft-365/business/), and you have admin permissions (global admin or a custom admin role), you can view your organization's secure score by visiting [https://securescore.office.com](https://securescore.office.com). You can also view your organization's Secure Score in the Security & Compliance Center ([https://protection.office.com](https://protection.office.com)), where you'll find a widget that provides you with your current scoree.
+
+![Secure Score widget](media/SecureScoreWidget-o365.png)
+
+The widget includes a link to Microsoft Secure Score, which takes you to your Secure Score dashboard.
+
+![Secure Score dashboard](media/SecureScore-WelcomeScreen.png)
+
+Users who aren't assigned an admin role won't be able to access Secure Score. However, admins can use the tool to share their results with other people in their organization.
   
 ## How does it work?
 
