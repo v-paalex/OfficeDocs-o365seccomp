@@ -3,7 +3,7 @@ title: "Define mail flow rules to encrypt email messages in Office 365"
 ms.author: krowley
 author: kccross
 manager: laurawi
-ms.date: 10/31/2018
+ms.date:
 ms.audience: ITPro
 ms.topic: article
 ms.service: o365-administration
@@ -21,7 +21,7 @@ As an Office 365 global administrator, you can create mail flow rules, also know
   
 If you recently migrated from AD RMS to Azure Information Protection, you'll need to review your existing mail flow rules to ensure that they continue to work in your new environment. Additionally, if you want to take advantage of the new Office 365 Message Encryption (OME) capabilities available to you through Azure Information Protection, you need to update your existing mail flow rules. Otherwise, your users will continue to receive encrypted mail that uses the previous HTML attachment format instead of the new, seamless OME experience. If you haven't set up OME yet, see [Set up new Office 365 Message Encryption capabilities built on top of Azure Information Protection](set-up-new-message-encryption-capabilities.md) for information. 
   
-For information about the components that make up mail flow rules and how mail flow rules work, see [Mail flow rules (transport rules) in Exchange Online](https://technet.microsoft.com/library/jj919238%28v=exchg.150%29.aspx). For additional information about how mail flow rules work with Azure Information Protection, see [Configuring Exchange Online mail flow rules for Azure Information Protection labels](https://docs.microsoft.com/azure/information-protection/deploy-use/configure-exo-rules).
+For information about the components that make up mail flow rules and how mail flow rules work, see [Mail flow rules (transport rules) in Exchange Online](https://docs.microsoft.com/exchange/security-and-compliance/mail-flow-rules/mail-flow-rules). For additional information about how mail flow rules work with Azure Information Protection, see [Configuring Exchange Online mail flow rules for Azure Information Protection labels](https://docs.microsoft.com/azure/information-protection/deploy-use/configure-exo-rules).
   
 ## Hybrid Exchange environments: Do this first
 On-premises users can send encrypted mail using OME if you route email through Exchange Online. In order to do this, you need to configure mail to flow from your email server to Office 365. Once you've configured mail to flow through Office 365, then you can make mail flow rules for OME by using this article.
@@ -40,27 +40,27 @@ You can define mail flow rules for triggering message encryption with the new OM
     
 3. In the Office 365 admin center, choose **Admin centers** \> **Exchange**.
     
-4. In the EAC, go to **mail flow** \> **rules** \> ![New icon](media/457cd93f-22c2-4571-9f83-1b129bcfb58e.gif) ( **New**) \> **Create a new rule**. For more information about using the EAC, see [Exchange Admin Center in Exchange Online](https://technet.microsoft.com/library/jj200743%28v=exchg.150%29.aspx).
+4. In the EAC, go to **mail flow** \> **rules** \> ![New icon](media/457cd93f-22c2-4571-9f83-1b129bcfb58e.gif) ( **New**) \> **Create a new rule**. For more information about using the EAC, see [Exchange Admin Center in Exchange Online](https://docs.microsoft.com/exchange/exchange-admin-center).
     
 5. In **Name**, type a name for the rule, such as Encrypt mail for DrToniRamos@hotmail.com.
     
-6. In **Apply this rule if** select a condition, and enter a value if necessary. For example, to encrypt messages going to DrToniRamos@hotmail.com: 
+6. In **Apply this rule if** select a condition, and enter a value if necessary. For example, to encrypt messages going to DrToniRamos@hotmail.com:
+
+  1. In **Apply this rule if**, select **the recipient is**.
+
+  2. Select an existing name from the contact list or type a new email address in the **check names** box. 
     
-    1. In **Apply this rule if**, select **the recipient is**.
+    To select an existing name, select it from the list and then click **OK**.
     
-    2. Select an existing name from the contact list or type a new email address in the **check names** box. 
-    
-        To select an existing name, select it from the list and then click **OK**.
-    
-        To enter a new name, type an email address in the **check names** box and then select **check names** \> **OK**.
+    To enter a new name, type an email address in the **check names** box and then select **check names** \> **OK**.
     
 7. To add more conditions, choose **More options** and then choose **add condition** and select from the list. 
     
-    For example, to apply the rule only if the recipient is outside your organization, select **add condition** and then select **The recipient is external/internal** \> **Outside the organization** \> **OK**.
+  For example, to apply the rule only if the recipient is outside your organization, select **add condition** and then select **The recipient is external/internal** \> **Outside the organization** \> **OK**.
     
 8. To enable encryption using the new OME capabilities, from **Do the following**, select **Modify the message security** and then choose **Apply Office 365 Message Encryption and rights protection**. Select an RMS template from the list, choose **Save**, and then choose **OK**.
     
-    The list of templates includes all default templates and options as well as any custom templates you've created for use by Office 365. If the list is empty, ensure that you have set up Office 365 Message Encryption with the new capabilities as described in [Set up new Office 365 Message Encryption capabilities built on top of Azure Information Protection](set-up-new-message-encryption-capabilities.md). For information about the default templates, see [Configuring and managing templates for Azure Information Protection](https://docs.microsoft.com/information-protection/deploy-use/configure-policy-templates). For information about the **Do Not Forward** option, see [Do Not Forward option for emails](https://docs.microsoft.com/information-protection/deploy-use/configure-usage-rights#do-not-forward-option-for-emails). For information about the **encrypt only** option, see [Encrypt Only option for emails](https://docs.microsoft.com/information-protection/deploy-use/configure-usage-rights#encrypt-only-option-for-emails).
+  The list of templates includes all default templates and options as well as any custom templates you've created for use by Office 365. If the list is empty, ensure that you have set up Office 365 Message Encryption with the new capabilities as described in [Set up new Office 365 Message Encryption capabilities built on top of Azure Information Protection](set-up-new-message-encryption-capabilities.md). For information about the default templates, see [Configuring and managing templates for Azure Information Protection](https://docs.microsoft.com/information-protection/deploy-use/configure-policy-templates). For information about the **Do Not Forward** option, see [Do Not Forward option for emails](https://docs.microsoft.com/information-protection/deploy-use/configure-usage-rights#do-not-forward-option-for-emails). For information about the **encrypt only** option, see [Encrypt Only option for emails](https://docs.microsoft.com/information-protection/deploy-use/configure-usage-rights#encrypt-only-option-for-emails).
     
     You can choose **add action** if you want to specify another action. 
     
@@ -98,25 +98,25 @@ If you haven't yet moved your Office 365 organization to the new OME capabilitie
     
 3. In the Office 365 admin center, choose **Admin centers** \> **Exchange**.
     
-4. In the EAC, go to **mail flow** \> **rules** \> **+** ( **New**) \> **Create a new rule**. For more information about using the EAC, see [Exchange Admin Center in Exchange Online](https://technet.microsoft.com/library/jj200743%28v=exchg.150%29.aspx).
+4. In the EAC, go to **mail flow** \> **rules** \> **+** ( **New**) \> **Create a new rule**. For more information about using the EAC, see [Exchange admin center in Exchange Online](https://docs.microsoft.com/exchange/exchange-admin-center).
     
 5. In **Name**, type a name for the rule, such as Encrypt mail for DrToniRamos@hotmail.com.
     
 6. In **Apply this rule if** select a condition, and enter a value if necessary. For example, to encrypt messages going to DrToniRamos@hotmail.com: 
     
-1. In **Apply this rule if**, select **the recipient is**.
+  1. In **Apply this rule if**, select **the recipient is**.
     
-2. Select an existing name from the contact list or type a new email address in the **check names** box. 
+  2. Select an existing name from the contact list or type a new email address in the **check names** box. 
     
-    To select an existing name, select it from the list and then click **OK**.
+    - To select an existing name, select it from the list and then click **OK**.
     
-    To enter a new name, type an email address in the **check names** box and then select **check names** \> **OK**.
+    - To enter a new name, type an email address in the **check names** box and then select **check names** \> **OK**.
     
-7. To add more conditions, choose **More options** and then select **add condition** and select from the list. 
+  7. To add more conditions, choose **More options** and then select **add condition** and select from the list. 
     
     For example, to apply the rule only if the recipient is outside your organization, select **add condition** and then select **The recipient is external/internal** \> **Outside the organization** \> **OK**.
     
-8. To enable encryption without using the new OME capabilities, in **Do the following**, select **Modify the message security** \> **Apply the previous version of OME**, and then choose **Save**.
+  8. To enable encryption without using the new OME capabilities, in **Do the following**, select **Modify the message security** \> **Apply the previous version of OME**, and then choose **Save**.
     
     If you receive an error that IRM licensing isn't enabled, then you haven't set up OME for your organization yet. If you'd like to set up OME now, you must set it up to use the new OME capabilities. For information, see [Set up new Office 365 Message Encryption capabilities built on top of Azure Information Protection](set-up-new-message-encryption-capabilities.md). Microsoft no longer supports setting up new deployments of OME without the new capabilities.
     
@@ -124,40 +124,40 @@ If you haven't yet moved your Office 365 organization to the new OME capabilitie
     
 ### To create a rule for encrypting email messages without the new OME capabilities by using Windows PowerShell for Exchange Online
 
-1. Use Windows PowerShell on your local computer to create a remote PowerShell session to Exchange Online. For more information, see [Connect to Exchange Online PowerShell](https://technet.microsoft.com/library/jj984289%28v=exchg.160%29.aspx).
+1. Connect to Exchange Online PowerShell. For more information, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell).
     
-2. Define a rule by using the **New-TransportRule** cmdlet and set the **ApplyOME** attribute to **true**.
+2. Create a rule by using the **New-TransportRule** cmdlet and set the _ApplyOME_ parameter to `$true`.
     
-    For example, to require that all email messages that are addressed to DrToniRamos@hotmail.com must be encrypted, type:
+For example, to require that all email messages that are addressed to DrToniRamos@hotmail.com must be encrypted, type:
     
-     ```
-     New-TransportRule -Name "Encrypt rule for Dr Toni Ramos" -SentTo "DrToniRamos@hotmail.com" -SentToScope "NotinOrganization" -ApplyOME $true
-     ```
+```
+New-TransportRule -Name "Encrypt rule for Dr Toni Ramos" -SentTo "DrToniRamos@hotmail.com" -SentToScope "NotinOrganization" -ApplyOME $true
+```
 
-    In this example:
+In this example:
     
-  - The name of the new rule is "Encrypt rule for Dr Toni Ramos".
+- The name of the new rule is "Encrypt rule for Dr Toni Ramos".
     
-  - The **-SentTo** parameter, specifies a condition that looks for recipients in email messages. You can use any value that uniquely identifies the recipient, such as an email address, name, distinguished name (DN), etc. In this example, the recipient is identified by the email address "DrToniRamos@hotmail.com". 
+- The _SentTo_ parameter, specifies a condition that looks for recipients in email messages. You can use any value that uniquely identifies the recipient, such as an email address, name, distinguished name (DN), etc. In this example, the recipient is identified by the email address "DrToniRamos@hotmail.com". 
     
-  - The **-SentToScope** parameter specifies a condition that looks for the location of recipients. In this example, the recipient's mailbox is in hotmail and is not part of the Office 365 organization, so the "NotInOrganization" value is used. 
+- The _SentToScope_ parameter specifies a condition that looks for the location of recipients. In this example, the recipient's mailbox is in hotmail and is not part of the Office 365 organization, so the "NotInOrganization" value is used. 
     
-    For more information about the conditions you can set on mail flow rules using this cmdlet, see [New-TransportRule](https://technet.microsoft.com/en-us/library/bb125138%28v=exchg.160%29.aspx).
+For more information about the conditions you can set on mail flow rules using this cmdlet, see [New-TransportRule](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/New-TransportRule).
     
 ### Remove encryption from email replies encrypted without the new OME capabilities
 
 When your email users send encrypted messages, recipients of those messages can respond with encrypted replies. You can create mail flow rules to automatically remove encryption from replies so email users in your organization don't have to sign in to the encryption portal to view them. You can use the EAC or Windows PowerShell cmdlets to define these rules. If you are not yet using the new OME capabilities, you can only decrypt messages that are either sent from within your organization or messages that are replies to messages sent from within your organization. You cannot decrypt encrypted messages originating from outside of your organization.
   
-#### To create a rule for removing encryption from email replies encrypted without the new OME capabilities by using the EAC
+#### Create a rule for removing encryption from email replies encrypted without the new OME capabilities by using the EAC
 <a name="DecryptruleEACNoNewOME"> </a>
 
-1. In a web browser, using a work or school account that has been granted admin permissions, [sign in to Office 365](https://support.office.com/article/Sign-in-to-Office-or-Office-365-b9582171-fd1f-4284-9846-bdd72bb28426#ID0EAABAAA=Web_browser).
+1. In a web browser, using a work or school account that has been granted admin permissions, [sign in to Office 365](https://support.office.com/article/b9582171-fd1f-4284-9846-bdd72bb28426#ID0EAABAAA=Web_browser).
     
 2. Choose the **Admin** tile. 
     
 3. In the Office 365 admin center, choose **Admin centers** \> **Exchange**.
     
-4. In the EAC, go to **mail flow** \> **rules** \> **+** ( **New**) \> **Create a new rule**. For more information about using the EAC, see [Exchange Admin Center in Exchange Online](https://technet.microsoft.com/en-us/library/jj200743%28v=exchg.150%29.aspx).
+4. In the EAC, go to **mail flow** \> **rules** \> **+** ( **New**) \> **Create a new rule**. For more information about using the EAC, see [Exchange admin center in Exchange Online](https://docs.microsoft.com/exchange/exchange-admin-center).
     
 5. In **Name**, type a name for the rule, such as Remove encryption from incoming mail.
     
@@ -167,30 +167,32 @@ When your email users send encrypted messages, recipients of those messages can 
     
 8. Select **Save**.
     
-#### To create a rule to remove encryption from email replies encrypted without the new OME capabilities by using Windows PowerShell for Exchange Online
+#### Create a rule to remove encryption from email replies encrypted without the new OME capabilities by using Exchange Online PowerShell
 <a name="DecryptrulePShellNoNewOME"> </a>
 
-1. Use Windows PowerShell on your local computer to create a remote PowerShell session to Exchange Online. For more information, see [Connect to Exchange Online PowerShell](https://technet.microsoft.com/library/jj984289%28v=exchg.160%29.aspx).
+1. Connect to Exchange Online PowerShell. For more information, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell).
     
-2. Define a rule by using the **New-TransportRule** cmdlet and set the **RemoveOME** attribute to **true**.
+2. Create a rule by using the **New-TransportRule** cmdlet and set the _RemoveOME_ parameter to `$true`.
     
-    For example, to remove the encryption from all mail sent to recipients in your Office 365 organization, type:
+For example, to remove the encryption from all mail sent to recipients in your Office 365 organization, type:
     
-     ```
-     New-TransportRule - Name "Remove encryption from incoming mail"     -SentToScope "InOrganization" -RemoveOME $true
-     ```
+```
+New-TransportRule -Name "Remove encryption from incoming mail" -SentToScope "InOrganization" -RemoveOME $true
+```
 
-    In this example:
-    
-  - The name of the new rule is "Remove encryption from incoming mail".
-    
-  - The **-SentToScope** parameter specifies a condition that looks for the location of recipients. In this example, the "InOrganization" value is used which indicates that: 
-    
-  - The recipient is a mailbox, mail user, group, or mail-enabled public folder in your organization, or
-    
+In this example:
+
+- The name of the new rule is "Remove encryption from incoming mail".
+
+- The _SentToScope_ parameter specifies a condition that looks for the location of recipients. In this example, the "InOrganization" value is used which indicates that: 
+
+  - The recipient is a mailbox, mail user, group, or mail-enabled public folder in your organization.
+
+  or
+
   - The recipient's email address is in an accepted domain that's configured as an authoritative domain or an internal relay domain, and the message was sent or received over an authenticated connection.
     
-    For more information about the conditions you can set on mail flow rules using this cmdlet, see [New-TransportRule](https://technet.microsoft.com/en-us/library/bb125138%28v=exchg.160%29.aspx).
+For more information about the conditions you can set on mail flow rules using this cmdlet, see [New-TransportRule](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/New-TransportRule).
     
 ## Related Topics
 
