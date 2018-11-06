@@ -34,7 +34,7 @@ The widget includes a link to Microsoft Secure Score, which takes you to your Se
 > [!NOTE]
 > You must be an Office 365 administrator, such as a global admin or security admin, to access Secure Score.
   
-## How does it work?
+## How it works
 
 Secure Score figures out what Office 365 services you're using (such as OneDrive, SharePoint, and Exchange) then looks at your settings and activities and compares them to a baseline established by Microsoft. You'll get a score based on how aligned you are with best security practices.
   
