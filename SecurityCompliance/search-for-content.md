@@ -37,6 +37,8 @@ The first step is to starting using the Content Search tool to choose content lo
     
 - [Bulk edit](bulk-edit-content-searches.md) the query and content locations for multiple searches 
     
+- [Preserve Bcc recipients](https://docs.microsoft.com/exchange/policy-and-compliance/holds/preserve-bcc-recipients-and-group-members) so you can search for them 
+
 ## Perform actions on content you find
 
 After you run a search and refine it as necessary, the next step is to do something with the results returned by the search. You can export and download the results to your local computer or in the case of a email attack on your organization, you can delete the results of a search from user mailboxes.
