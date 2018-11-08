@@ -161,6 +161,7 @@
 ### [Use Content Search to search third-party data](use-content-search-to-search-third-party-data-that-was-imported.md)
 ### [Use Content Search in your eDiscovery workflow](use-content-search-in-ediscovery.md)
 ### [Check your Content Search query for errors](check-your-content-search-query-for-errors.md)
+### [Preserve Bcc recipients for Content Search](https://docs.microsoft.com/exchange/policy-and-compliance/holds/preserve-bcc-recipients-and-group-members)
 ## Understand Content Search
 ### [Limits for Content Search](limits-for-content-search.md)
 ### [Partially indexed items in Content Search](partially-indexed-items-in-content-search.md)
