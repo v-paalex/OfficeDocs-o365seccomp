@@ -3,7 +3,7 @@ title: "Dynamic Delivery and previewing with Office 365 ATP Safe Attachments"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 10/30/2018
+ms.date: 11/08/2018
 ms.audience: Admin
 ms.topic: overview
 ms.service: o365-administration
@@ -67,16 +67,3 @@ There are certain scenarios in which Dynamic Delivery is not supported. These in
 
 - Messages encrypted with Secure/Multipurpose Internet Mail Extensions ([S/MIME](s-mime-for-message-signing-and-encryption.md))
     
-## Related topics
-
-[Office 365 Advanced Threat Protection](office-365-atp.md)
-  
-[ATP Safe Attachments in Office 365](atp-safe-attachments.md)
-  
-[Set up ATP Safe Attachments policies in Office 365](set-up-atp-safe-attachments-policies.md)
-  
-[ATP Safe Links in Office 365](atp-safe-links.md)
-
-[Permissions in the Office 365 Security &amp; Compliance Center](permissions-in-the-security-and-compliance-center.md)
-  
-

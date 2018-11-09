@@ -60,16 +60,4 @@ Read this article to learn how to set up your organization's custom blocked URLs
 
 If you want certain groups to be able to view URLs that might be blocked for others, you can specify an ATP Safe Links policy that applies to specific recipients. See [Set up a custom "do not rewrite" URLs list using ATP Safe Links](set-up-a-custom-do-not-rewrite-urls-list-with-atp.md).
   
-## Related topics
-
-[Office 365 Advanced Threat Protection](office-365-atp.md)
-  
-[ATP Safe Links in Office 365](atp-safe-links.md)
-  
-[Set up ATP Safe Links policies in Office 365](set-up-atp-safe-links-policies.md)
-  
-[ATP Safe Attachments in Office 365](atp-safe-attachments.md)
-
-[Permissions in the Office 365 Security &amp; Compliance Center](permissions-in-the-security-and-compliance-center.md)
-  
 

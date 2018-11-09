@@ -102,14 +102,3 @@ Updated warning page:
 
 ![An error has occurred](media/2f7465a4-1cf4-4c1c-b7d4-3c07e4b795b4.png)
    
-## Related topics
-
-[How Office helps protect you from phishing schemes](https://support.office.com/article/be0de46a-29cd-4c59-aaaf-136cf177d593)
-  
-[Office 365 ATP safe links](atp-safe-links.md)
-  
-[Office 365 ATP safe attachments](atp-safe-attachments.md)
-  
-[Anti-spam and anti-malware protection in Office 365](anti-spam-and-anti-malware-protection.md)
-  
-
