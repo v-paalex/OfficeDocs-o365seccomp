@@ -3,7 +3,7 @@ title: "Support for validation of DKIM signed messages"
 ms.author: krowley
 author: kccross
 manager: laurawi
-ms.date: 12/9/2016
+ms.date: 
 ms.audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
@@ -12,7 +12,7 @@ localization_priority: Normal
 search.appverid:
 - MET150
 ms.assetid: a4c95148-a00c-4d12-85ed-88520b547d97
-description: "Exchange Online Protection (EOP) and Exchange Online support inbound validation of Domain Keys Identified Mail (DKIM) messages. DKIM is a method for validating that a message was sent from the domain it says it originated from and that it was not spoofed by someone else. It ties an email message to the organization responsible for sending it. DKIM verification is automatically used for all messages sent over IPv6 communications. (For more information about IPv6 support, see Support for anonymous inbound email messages over IPv6.)"
+description: "Learn about the validation of DKIM signed messages in Exchange Online Protection and Exchange Online"
 ---
 
 # Support for validation of DKIM signed messages
@@ -23,6 +23,6 @@ DKIM validates a digitally signed message that appears in the DKIM-Signature hea
   
  `Authentication-Results: <contoso.com>; dkim=pass (signature was verified) header.d=example.com;`
   
-Admins can create Exchange [Transport Rules](http://technet.microsoft.com/library/743bd525-0ca2-426d-b76c-b4a052bc8886.aspx) on the results of a DKIM validation to filter or route messages as needed. 
+Admins can create Exchange [mail flow rules](http://technet.microsoft.com/library/743bd525-0ca2-426d-b76c-b4a052bc8886.aspx) (also known as transport rules) on the results of a DKIM validation to filter or route messages as needed. 
   
 
