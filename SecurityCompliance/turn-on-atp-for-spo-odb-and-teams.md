@@ -1,7 +1,7 @@
 ---
 title: "Turn on Office 365 ATP for SharePoint, OneDrive, and Microsoft Teams"
-ms.author: derng
-author: derng
+ms.author: deniseb
+author: denisebmsft
 manager: laurawi
 ms.audience: ITPro
 ms.topic: article
@@ -72,16 +72,10 @@ To learn more about alerts, see [Create activity alerts in the Office 365 Securi
   
 ## Next steps
 
-- [View information about malicious files detected in SharePoint, OneDrive, or Microsoft Teams](malicious-files-detected-in-spo-odb-or-teams.md)
+1. [View information about malicious files detected in SharePoint, OneDrive, or Microsoft Teams](malicious-files-detected-in-spo-odb-or-teams.md)
     
-- [Manage quarantined messages and files as an administrator in Office 365](manage-quarantined-messages-and-files.md)
+2. [Manage quarantined messages and files as an administrator in Office 365](manage-quarantined-messages-and-files.md)
     
-## Related topics
 
-[Office 365 Advanced Threat Protection](office-365-atp.md)
-  
-[View the reports for Office 365 Advanced Threat Protection](view-reports-for-atp.md)
-  
-[Permissions in the Office 365 Security &amp; Compliance Center](permissions-in-the-security-and-compliance-center.md)
   
 
