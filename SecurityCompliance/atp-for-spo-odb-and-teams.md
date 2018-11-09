@@ -37,7 +37,7 @@ Depending on how Office 365 is configured, people might or might not have the ab
   
 To learn more, see [Turn on Office 365 ATP for SharePoint, OneDrive, and Microsoft Teams](turn-on-atp-for-spo-odb-and-teams.md).
   
-## Keep the following points in mind
+## Keep these points in mind
 
 - ATP will not scan every single file in SharePoint Online, OneDrive for Business, or Microsoft Teams. This is by design. Files are scanned asynchronously, through a process that uses sharing and guest activity events along with smart heuristics and threat signals to identify malicious files.
 
