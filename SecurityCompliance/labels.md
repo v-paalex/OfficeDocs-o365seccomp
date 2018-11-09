@@ -48,7 +48,7 @@ With retention labels, you can:
     
   - Users no longer need to know about data governance policies - they can instead focus on their work.
     
-    Note that auto-apply labels require an Office 365 Enterprise E5 subscription.
+    > The capability to apply labels automatically requires an Office 365 Enterprise E5 license for each user who has permissions to edit content that's been automatically labeled in a site or mailbox. Users who simply have read-only access do not require a license.
     
 - **Apply a default retention label to a document library** in SharePoint and Office 365 group sites, so that all documents in that library get the default retention label. 
     
