@@ -26,19 +26,17 @@ In order to perform the tasks described in this article, you must have the neces
   
 1. As a global administrator or security administrator, go to [https://protection.office.com](https://protection.office.com), and sign in with your work or school account.
     
-2. In the Office 365 Security &amp; Compliance Center, in the left navigation pane, under **Threat management**, choose **Policy** \> **Safe Attachments**.
-    
-    ![In the Security &amp; Compliance Center, choose Threat management \> Policy](media/08849c91-f043-4cd1-a55e-d440c86442f2.png)
+2. In the Office 365 Security &amp; Compliance Center, in the left navigation pane, under **Threat management**, choose **Policy** \> **Safe Attachments**. <br/>![In the Security &amp; Compliance Center, choose Threat management \> Policy](media/08849c91-f043-4cd1-a55e-d440c86442f2.png)
   
-3. Select **Turn on ATP for SharePoint, OneDrive, and Microsoft Teams**.
-    
-    ![Turn on Advanced Threat Protection for SharePoint Online, OneDrive for Business, and Microsoft Teams](media/48cfaace-59cc-4e60-bf86-05ff6b99bdbf.png)
+3. Select **Turn on ATP for SharePoint, OneDrive, and Microsoft Teams**.<br/>![Turn on Advanced Threat Protection for SharePoint Online, OneDrive for Business, and Microsoft Teams](media/48cfaace-59cc-4e60-bf86-05ff6b99bdbf.png)
   
 4. Click **Save**.
     
 5. Review (and, as appropriate, edit) your organization's [Safe Attachments policies](set-up-atp-safe-attachments-policies.md) and [Safe Links policies](set-up-atp-safe-links-policies.md).
     
-6. (Recommended) As a global administrator or a SharePoint Online administrator, run the **[Set-SPOTenant](https://docs.microsoft.com/powershell/module/sharepoint-online/Set-SPOTenant?view=sharepoint-ps)** cmdlet with the **DisallowInfectedFileDownload** parameter set to  *true*  . <br/>Setting the parameter to *true* blocks all actions (except Delete) for detected files. People cannot open, move, copy, or share detected files. <br/>Setting the parameter to *false* blocks all actions except Delete and Download. People can choose to accept the risk and download a detected file. <br/>We recommend setting the parameter to *true*. 
+6. (Recommended) As a global administrator or a SharePoint Online administrator, run the **[Set-SPOTenant](https://docs.microsoft.com/powershell/module/sharepoint-online/Set-SPOTenant?view=sharepoint-ps)** cmdlet with the **DisallowInfectedFileDownload** parameter set to  *true*. <br/>
+  - Setting the parameter to *true* blocks all actions (except Delete) for detected files. People cannot open, move, copy, or share detected files.
+  - Setting the parameter to *false* blocks all actions except Delete and Download. People can choose to accept the risk and download a detected file.  
    
 7. Allow up to 30 minutes for your changes to spread to all Office 365 datacenters.
     
