@@ -24,7 +24,7 @@ ATP Safe Attachments (along with [ATP Safe Links](atp-safe-links.md)) is part of
   
 Recently, ATP protection has been extended to files in SharePoint Online, OneDrive for Business, and Microsoft Teams. To learn more, see [Office 365 Advanced Threat Protection for SharePoint, OneDrive, and Microsoft Teams](atp-for-spo-odb-and-teams.md).
        
-### How it works
+## How it works
 
 The ATP Safe Attachments feature checks email attachments for people in your organization. When an ATP Safe Attachments policy is in place and someone covered by that policy views their email in Office 365, their email attachments are checked and appropriate actions are taken, based on your ATP Safe Attachments policies. Depending on how your policies are defined, people can continue working without ever knowing they were sent malicious files.
   
@@ -46,7 +46,7 @@ The ATP Safe Attachments feature applies when:
     
 - Users have signed into Office 365 using their work or school account. (See [Sign in to Office or Office 365](https://support.office.com/article/b9582171-fd1f-4284-9846-bdd72bb28426).)
     
-### How to know if ATP Safe Attachments protection is in place
+## How to know if ATP Safe Attachments protection is in place
 
  [ATP Safe Attachments policies](set-up-atp-safe-attachments-policies.md) must be defined in order for ATP Safe Attachments protection to be in place. 
   
