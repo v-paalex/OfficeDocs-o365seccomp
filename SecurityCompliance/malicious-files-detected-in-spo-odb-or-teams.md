@@ -54,14 +54,5 @@ To view status and detailed information about files that were detected by Office
     
 5. Choose **Close** to close the details for a selected item. 
   
-## Related topics
-
-[Office 365 Advanced Threat Protection](office-365-atp.md)
-  
-[View the reports for Office 365 Advanced Threat Protection](view-reports-for-atp.md)
-  
-[Permissions in the Office 365 Security &amp; Compliance Center](permissions-in-the-security-and-compliance-center.md)
-
-[Manage quarantined messages and files as an administrator in Office 365](manage-quarantined-messages-and-files.md)
   
 

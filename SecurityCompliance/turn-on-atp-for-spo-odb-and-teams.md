@@ -1,7 +1,7 @@
 ---
 title: "Turn on Office 365 ATP for SharePoint, OneDrive, and Microsoft Teams"
-ms.author: derng
-author: derng
+ms.author: deniseb
+author: denisebmsft
 manager: laurawi
 ms.audience: ITPro
 ms.topic: article
@@ -26,19 +26,17 @@ In order to perform the tasks described in this article, you must have the neces
   
 1. As a global administrator or security administrator, go to [https://protection.office.com](https://protection.office.com), and sign in with your work or school account.
     
-2. In the Office 365 Security &amp; Compliance Center, in the left navigation pane, under **Threat management**, choose **Policy** \> **Safe Attachments**.
-    
-    ![In the Security &amp; Compliance Center, choose Threat management \> Policy](media/08849c91-f043-4cd1-a55e-d440c86442f2.png)
+2. In the Office 365 Security &amp; Compliance Center, in the left navigation pane, under **Threat management**, choose **Policy** \> **Safe Attachments**. <br/>![In the Security &amp; Compliance Center, choose Threat management \> Policy](media/08849c91-f043-4cd1-a55e-d440c86442f2.png)
   
-3. Select **Turn on ATP for SharePoint, OneDrive, and Microsoft Teams**.
-    
-    ![Turn on Advanced Threat Protection for SharePoint Online, OneDrive for Business, and Microsoft Teams](media/48cfaace-59cc-4e60-bf86-05ff6b99bdbf.png)
+3. Select **Turn on ATP for SharePoint, OneDrive, and Microsoft Teams**.<br/>![Turn on Advanced Threat Protection for SharePoint Online, OneDrive for Business, and Microsoft Teams](media/48cfaace-59cc-4e60-bf86-05ff6b99bdbf.png)
   
 4. Click **Save**.
     
 5. Review (and, as appropriate, edit) your organization's [Safe Attachments policies](set-up-atp-safe-attachments-policies.md) and [Safe Links policies](set-up-atp-safe-links-policies.md).
     
-6. (Recommended) As a global administrator or a SharePoint Online administrator, run the **[Set-SPOTenant](https://docs.microsoft.com/powershell/module/sharepoint-online/Set-SPOTenant?view=sharepoint-ps)** cmdlet with the **DisallowInfectedFileDownload** parameter set to  *true*  . <br/>Setting the parameter to *true* blocks all actions (except Delete) for detected files. People cannot open, move, copy, or share detected files. <br/>Setting the parameter to *false* blocks all actions except Delete and Download. People can choose to accept the risk and download a detected file. <br/>We recommend setting the parameter to *true*. 
+6. (Recommended) As a global administrator or a SharePoint Online administrator, run the **[Set-SPOTenant](https://docs.microsoft.com/powershell/module/sharepoint-online/Set-SPOTenant?view=sharepoint-ps)** cmdlet with the **DisallowInfectedFileDownload** parameter set to  *true*. <br/>
+  - Setting the parameter to *true* blocks all actions (except Delete) for detected files. People cannot open, move, copy, or share detected files.
+  - Setting the parameter to *false* blocks all actions except Delete and Download. People can choose to accept the risk and download a detected file.  
    
 7. Allow up to 30 minutes for your changes to spread to all Office 365 datacenters.
     
@@ -72,16 +70,10 @@ To learn more about alerts, see [Create activity alerts in the Office 365 Securi
   
 ## Next steps
 
-- [View information about malicious files detected in SharePoint, OneDrive, or Microsoft Teams](malicious-files-detected-in-spo-odb-or-teams.md)
+1. [View information about malicious files detected in SharePoint, OneDrive, or Microsoft Teams](malicious-files-detected-in-spo-odb-or-teams.md)
     
-- [Manage quarantined messages and files as an administrator in Office 365](manage-quarantined-messages-and-files.md)
+2. [Manage quarantined messages and files as an administrator in Office 365](manage-quarantined-messages-and-files.md)
     
-## Related topics
 
-[Office 365 Advanced Threat Protection](office-365-atp.md)
-  
-[View the reports for Office 365 Advanced Threat Protection](view-reports-for-atp.md)
-  
-[Permissions in the Office 365 Security &amp; Compliance Center](permissions-in-the-security-and-compliance-center.md)
   
 
