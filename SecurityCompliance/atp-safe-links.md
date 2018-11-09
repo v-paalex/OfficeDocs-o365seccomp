@@ -32,7 +32,7 @@ Once your ATP Safe Links policies are in place, Office 365 global administrators
 
 As [new features are added to ATP](office-365-atp.md#new-features-are-continually-being-added-to-atp), your Office 365 security team can add or edit your organization's ATP Safe Links policies. In addition, you might notice changes and improvements, such as our newly revised [warning pages](atp-safe-links-warning-pages.md).
          
-### How ATP Safe Links works with URLs in email
+## How ATP Safe Links works with URLs in email
 
 At a high level, here's how ATP Safe Links protection works for URLs in email (hosted in Office 365, not on-premises):
   
@@ -58,7 +58,7 @@ At a high level, here's how ATP Safe Links protection works for URLs in email (h
     
     - If the URL is determined to be safe, the website opens.
     
-### How ATP Safe Links works with URLs in Office documents
+## How ATP Safe Links works with URLs in Office documents
 
 At a high level, here's how ATP Safe Links protection works for URLs in Office 365 ProPlus applications (current versions of Word, Excel, and PowerPoint on Windows or Mac, Office apps on iOS or Android devices, Visio on Windows, OneNote Online, and Office Online):
   
@@ -92,11 +92,11 @@ The ATP Safe Links features are active when:
     
 - **Your organization's email is hosted in Office 365**, not in an on-premises server. 
     
-### How to make sure ATP Safe Links protection is in place
+## How to make sure ATP Safe Links protection is in place
 
 One good way to see how ATP Safe Links protection is working for your organization is by [viewing reports for Advanced Threat Protection](view-reports-for-atp.md). Additionally, as a global administrator or security administrator, be sure to review your [ATP Safe Links policies](set-up-atp-safe-links-policies.md). ATP Safe Links policies determine whether protection applies to hyperlinks in email messages only, or to URLs in Office documents as well.
 
-### Example scenarios where ATP Safe Links protection might or might not be in place
+## Example scenarios where ATP Safe Links protection might or might not be in place
   
 The following table describes some example scenarios where ATP Safe Links protection might or might not be in place. (In all of these cases, we assume the organization has Office 365 Enterprise E5.)
   
