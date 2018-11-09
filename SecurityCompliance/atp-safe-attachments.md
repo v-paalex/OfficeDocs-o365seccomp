@@ -4,6 +4,7 @@ ms.author: deniseb
 author: denisebmsft
 manager: laurawi
 ms.audience: Admin
+ms.date: 11/08/2018
 ms.topic: overview
 ms.service: o365-administration
 localization_priority: Normal
@@ -37,7 +38,7 @@ ATP Safe Attachments policies can be applied to specific people or groups in you
   
 ## How to get ATP Safe Attachments
 
-The ATP Safe Attachments feature is part of Advanced Threat Protection, which is included in Microsoft 365 Enterprise, Office 365 Enterprise E5, and Microsoft 365 Business. If your organization is using another Office 365 Enterprise subscription, Advanced Threat Protection can be purchased as an add-on. (As a global administrator, in the Office 365 admin center, choose **Billing** \> **Add subscriptions**.) For more information, see [Office 365 Platform Service Description: Office 365 Security &amp; Compliance Center](https://technet.microsoft.com/en-us/library/dn933793.aspx) and [Buy or edit an add-on for Office 365 for business](https://support.office.com/article/4e7b57d6-b93b-457d-aecd-0ea58bff07a6).
+The ATP Safe Attachments feature is part of [Advanced Threat Protection](office-365-atp.md), which is included in Microsoft 365 Enterprise, Office 365 Enterprise E5, and Microsoft 365 Business. 
   
 The ATP Safe Attachments feature applies when:
   
@@ -67,18 +68,3 @@ In addition, the following table describes some example scenarios. In all of the
 
 - If you receive an email message (with or without an attachment) that you want to submit to Microsoft for analysis, use the [Report Message add-in](enable-the-report-message-add-in.md).
   
-## Related topics
-
-[Office 365 Advanced Threat Protection](office-365-atp.md)
-  
-[Set up ATP Safe Attachments policies in Office 365](set-up-atp-safe-attachments-policies.md)
-  
-[ATP for SharePoint, OneDrive, and Microsoft Teams](atp-for-spo-odb-and-teams.md)
-  
-[ATP Safe Links in Office 365](atp-safe-links.md)
-  
-[ATP anti-phishing capabilities in Office 365](atp-anti-phishing.md)
-  
-[View the reports for Advanced Threat Protection](view-reports-for-atp.md)
-  
-

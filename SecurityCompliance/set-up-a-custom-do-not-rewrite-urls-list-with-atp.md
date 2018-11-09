@@ -61,20 +61,4 @@ The following table lists examples of what you can enter and what effect those e
 |`http://contoso.com/a`  <br/> |Allows specific recipients to visit a site like `http://contoso.com/a`, but not subpaths like `http://contoso.com/a/b`  <br/> |
 |`http://contoso.com/a*`  <br/> |Allows specific recipients to visit a site like `http://contoso.com/a` and subpaths like `http://contoso.com/a/b`  <br/> |
    
-  
-
-## Related topics
-
-[Office 365 Advanced Threat Protection](office-365-atp.md)
-  
-[ATP Safe Links in Office 365](atp-safe-links.md)
-  
-[Set up ATP Safe Links policies in Office 365](set-up-atp-safe-links-policies.md)
-  
-[Set up a custom blocked URLs list using ATP Safe Links](set-up-a-custom-blocked-urls-list-wtih-atp.md)
-
-[View reports for Office 365 Advanced Threat Protection](view-reports-for-atp.md)
-
-[Permissions in the Office 365 Security &amp; Compliance Center](permissions-in-the-security-and-compliance-center.md)
-  
-
+ 

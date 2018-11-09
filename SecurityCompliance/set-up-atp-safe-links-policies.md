@@ -20,7 +20,7 @@ description: "Set up Safe Links policies to protect your organization from malic
 
 [ATP Safe Links](atp-safe-links.md) , a feature of [Office 365 Advanced Threat Protection](office-365-atp.md) (ATP), can help protect your organization from malicious links used in phishing and other attacks. If you have the necessary [permissions assigned in the Office 365 Security &amp; Compliance Center](permissions-in-the-security-and-compliance-center.md), you can set up ATP Safe Links policies to help ensure that when people click web addresses (URLs), your organization is protected. Your ATP Safe Links policies can be configured to scan URLs in email and URLs in Office documents.
   
-[New features are continually being added to ATP Safe Links](atp-safe-links.md#new-features-are-continually-being-added-to-atp-safe-links). As new features are added, you may need to make adjustments to your existing ATP Safe Links policies.
+[New features are continually being added to ATP](office-365-atp.md#new-features-are-continually-being-added-to-atp). As new features are added, you may need to make adjustments to your existing ATP Safe Links policies.
 
 ## What to do 
   
@@ -46,7 +46,7 @@ description: "Set up Safe Links policies to protect your organization from malic
     
 ## Step 2: Define (or review) the ATP Safe Links policy that applies to everyone
 
-When you have Advanced Threat Protection in Office 365 Enterprise, you will have a default ATP Safe Links policy that applies to everyone in your organization. Make sure to review, and if needed, edit your default policy.
+When you have [Office 365 Advanced Threat Protection](office-365-atp.md), you will have a default ATP Safe Links policy that applies to everyone in your organization. Make sure to review, and if needed, edit your default policy.
   
 1. Go to [https://protection.office.com](https://protection.office.com) and sign in with your work or school account. 
     
@@ -94,40 +94,39 @@ After you have reviewed (or edited) the default ATP Safe Links policy that appli
     
 6. Choose **Save**.
     
-## Step 5: Learn about ATP Safe Links policy options
+## Step 4: Learn about ATP Safe Links policy options
 
-As you set up or edit your ATP Safe Links policies, will see several options available. In case you are wondering what these options are, the following table describes each one and its effect. 
+As you set up or edit your ATP Safe Links policies, will see several options available. In case you are wondering what these options are, the following table describes each one and its effect. Remember that there are two main kinds of ATP Safe Links policies to define or edit:
+- a [default policy](#default-policy-options) that applies to everyone 
+- additional [policies that are defined for specific recipients](#policies-that-apply-to-specific-email-recipients) 
 
-There are two main kinds of policies to define or edit: a default policy that applies to everyone, and additional policies that are defined for specific recipients. Those are differentiated in the **For this policy** column in the following table.
-  
-|**For this policy**|**This option**|**Does this**|
-|:-----|:-----|:-----|
-|Default (once defined, the default policy applies to everyone in the organization)  <br/> |**Block the following URLs** <br/> |Enables your organization to have a custom list of URLs that are automatically blocked. When users click a URL in this list, they'll be taken to a [warning page](atp-safe-links-warning-pages.md) that explains why the URL is blocked.  <br/> See [Set up a custom blocked URLs list using ATP Safe Links](set-up-a-custom-blocked-urls-list-wtih-atp.md) for more details, such as newly added support for up to three wildcard asterisks (\*).  <br/> |
-|Default  <br/> |**Office 365 ProPlus, Office for iOS and Android** <br/> |When this option is selected, ATP Safe Links protection is applied to URLs in documents that are open in Office 365 ProPlus (Word, Excel, and PowerPoint on Windows or Mac OS), Office documents on iOS, or Android devices, Visio 2016 on Windows, and Office Online (Word Online, PowerPoint Online, Excel Online, and OneNote Online), provided the user has signed into Office 365. <br/><br/>If you see only **Office 2016 on Windows**, then the feature updates have not reached your Office 365 environment yet (and they are coming soon). Until then, ATP Safe Links protection applies to Word 2016, Excel 2016, PowerPoint 2016 or Visio 2016 running on Windows.           |
-|Default  <br/> |**Don't track when users click ATP Safe Links** <br/> |When this option is selected, click data for URLs in Word, Excel, PowerPoint, and Visio documents is not stored.  <br/> |
-|Default  <br/> |**Don't let users click through ATP Safe Links to original URL** <br/> |When this option is selected, users cannot proceed past a [warning page](atp-safe-links-warning-pages.md) to a URL that is determined to be malicious.  <br/> |
-|A policy created for specific email recipients  <br/> |**Off** <br/> |Does not scan URLs in email messages.  <br/> Enables you to define an exception rule, such as a rule that does not scan URLs in email messages for a specific group of recipients.  <br/> |
-|A policy created for specific email recipients  <br/> |**On** <br/> |Rewrites URLs to route users through ATP Safe Links protection when the users click URLs in email messages.  <br/> Checks a URL when clicked against a list of blocked or malicious URLs.  <br/> |
-|A policy created for specific email recipients  <br/> |**Use Safe Attachments to scan downloadable content** <br/> |When this option is selected, URLs that point to downloadable content are scanned.  <br/> |
-|A policy created for specific email recipients  <br/> |**Apply Safe Links to messages sent within the organization** <br/> | When this option is available and selected, ATP Safe Links protection is applied to email messages sent between people in your organization, provided the email accounts are hosted in Office 365.  <br/> |
-|A policy created for specific email recipients  <br/> |**Do not track user clicks** <br/> |When this option is selected, click data for URLs in email from external senders is not stored. URL click tracking for links within email messages sent within the organization is currently not supported.  <br/> |
-|A policy created for specific email recipients  <br/> |**Do not allow users to click through to original URL** <br/> |When this option is selected, users cannot proceed past a [warning page](atp-safe-links-warning-pages.md) to a URL that is determined to be malicious.  <br/> |
-|A policy created for specific email recipients  <br/> |**Do not rewrite the following URLs** <br/> |Leaves URLs as they are. Keeps a custom list of safe URLs that don't need scanning for a specific group of email recipients in your organization.  See [Set up a custom "Do not rewrite" URLs list using ATP Safe Links](set-up-a-custom-do-not-rewrite-urls-list-with-atp.md) for more details, including recent changes to support for wildcard asterisks (\*).  <br/> |
+### Default policy options
+
+Default policy options apply to everyone in your organization.
+
+|This option  |Does this  |
+|---------|---------|
+| **Block the following URLs** <br/>    | Enables your organization to have a custom list of URLs that are automatically blocked. When users click a URL in this list, they'll be taken to a [warning page](atp-safe-links-warning-pages.md) that explains why the URL is blocked.  <br/> To learn more, see [Set up a custom blocked URLs list using ATP Safe Links      |
+| **Office 365 ProPlus, Office for iOS and Android** <br/>    | When this option is selected, ATP Safe Links protection is applied to URLs in documents that are open in Office 365 ProPlus (Word, Excel, and PowerPoint on Windows or Mac OS), Office documents on iOS, or Android devices, Visio 2016 on Windows, and Office Online (Word Online, PowerPoint Online, Excel Online, and OneNote Online), provided the user has signed into Office 365. <br/><br/>If you see only **Office 2016 on Windows**, then the feature updates have not reached your Office 365 environment yet (and they are coming soon). Until then, ATP Safe Links protection applies to Word 2016, Excel 2016, PowerPoint 2016 or Visio 2016 running on Windows.            |
+| **Don't track when users click ATP Safe Links** <br/>  | When this option is selected, click data for URLs in Word, Excel, PowerPoint, and Visio documents is not stored.  <br/> |
+|**Don't let users click through ATP Safe Links to original URL** <br/> |When this option is selected, users cannot proceed past a [warning page](atp-safe-links-warning-pages.md) to a URL that is determined to be malicious.  <br/> |
+
+### Policies that apply to specific email recipients
+
+|This option  |Does this  |
+|---------|---------|
+|**Off** <br/> |Does not scan URLs in email messages.  <br/> Enables you to define an exception rule, such as a rule that does not scan URLs in email messages for a specific group of recipients.  <br/> |
+|**On** <br/> |Rewrites URLs to route users through ATP Safe Links protection when the users click URLs in email messages.  <br/> Checks a URL when clicked against a list of blocked or malicious URLs.  <br/> |
+|**Use Safe Attachments to scan downloadable content** <br/> |When this option is selected, URLs that point to downloadable content are scanned.  <br/> |
+|**Apply Safe Links to messages sent within the organization** <br/> | When this option is available and selected, ATP Safe Links protection is applied to email messages sent between people in your organization, provided the email accounts are hosted in Office 365.  <br/> |
+|**Do not track user clicks** <br/> |When this option is selected, click data for URLs in email from external senders is not stored. URL click tracking for links within email messages sent within the organization is currently not supported.  <br/> |
+|**Do not allow users to click through to original URL** <br/> |When this option is selected, users cannot proceed past a [warning page](atp-safe-links-warning-pages.md) to a URL that is determined to be malicious.  <br/> |
+|**Do not rewrite the following URLs** <br/> |Leaves URLs as they are. Keeps a custom list of safe URLs that don't need scanning for a specific group of email recipients in your organization.  See [Set up a custom "Do not rewrite" URLs list using ATP Safe Links](set-up-a-custom-do-not-rewrite-urls-list-with-atp.md) for more details, including recent changes to support for wildcard asterisks (\*).  <br/> |
    
-## Related topics
+## Step 5: View the reports for ATP
 
-[Office 365 Advanced Threat Protection](office-365-atp.md)
-  
-[ATP Safe Links in Office 365](atp-safe-links.md)
-  
-[ATP Safe Attachments in Office 365](atp-safe-attachments.md)
-  
-[Set up a custom blocked URLs list using ATP Safe Links](set-up-a-custom-blocked-urls-list-wtih-atp.md)
-  
-[Set up a custom "Do not rewrite" URLs list using ATP Safe Links](set-up-a-custom-do-not-rewrite-urls-list-with-atp.md)
-  
-[View the reports for Advanced Threat Protection](view-reports-for-atp.md)
+Once your ATP Safe Links policies are in place, you can see how ATP is working for your orgnization by viewing reports. See the following resources to learn more:
 
-[Permissions in the Office 365 Security &amp; Compliance Center](permissions-in-the-security-and-compliance-center.md)
-  
+- [View reports for Office 365 Advanced Threat Protection](view-reports-for-atp.md)
 
+- [Use Explorer in the Security &amp; Compliance Center](use-explorer-in-security-and-compliance.md) 
