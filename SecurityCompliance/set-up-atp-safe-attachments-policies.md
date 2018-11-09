@@ -78,9 +78,9 @@ As you set up your ATP Safe Attachments policies, you choose from among many opt
 |**Dynamic Delivery** <br/> |Delivers messages immediately  <br/> Replaces attachments with a placeholder file until scanning is complete, and then reattaches the attachments if no malware is detected  <br/> Includes attachment previewing capabilities for most PDFs and Office files during scanning  <br/> Sends messages with detected malware to Quarantine where a security administrator or analyst can review and release (or delete) those messages  <br/> [Learn about Dynamic Delivery and previewing with ATP Safe Attachments](dynamic-delivery-and-previewing.md) <br/> |Avoid message delays while protecting recipients from malicious files  <br/> Enable recipients to preview attachments in safe mode while scanning is taking place  <br/> |
 |**Enable redirect** <br/> |Applies when the Monitor, Block, or Replace option is chosen  <br/> Sends attachments to a specified email address where security administrators or analysts can investigate  <br/> |Enable security administrators and analysts to research suspicious attachments  <br/> |
    
-## Step 4: View ATP reports
+## Next steps
 
-To see how ATP Safe Attachments is working for your organization, you can view reports. See the following resources to learn more:
+Once your ATP Safe Attachments policies are in place, you can see how ATP is working for your organization by viewing reports. See the following resources to learn more:
 - [View reports for Office 365 Advanced Threat Protection](view-reports-for-atp.md)
 - [Use Explorer in the Security &amp; Compliance Center](use-explorer-in-security-and-compliance.md)
  
