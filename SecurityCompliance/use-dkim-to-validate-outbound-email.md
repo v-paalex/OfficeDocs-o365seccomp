@@ -3,7 +3,7 @@ title: "Use DKIM to validate outbound email sent from your custom domain in Offi
 ms.author: krowley
 author: kccross
 manager: laurawi
-ms.date: 6/19/2017
+ms.date:
 ms.audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
@@ -86,23 +86,23 @@ Use the following format for the CNAME records:
 Host name:			selector1._domainkey.<domain>
 Points to address or value:	selector1-<domainGUID>._domainkey.<initialDomain> 
 TTL:				3600
+
 Host name:			selector2._domainkey.<domain>
 Points to address or value:	selector2-<domainGUID>._domainkey.<initialDomain> 
 TTL:				3600
-
 ```
 
 Where:
   
--  For Office 365, the selectors will always be "selector1" or "selector2". 
+- For Office 365, the selectors will always be "selector1" or "selector2". 
     
--  _domainGUID_ is the same as the  _domainGUID_ in the customized MX record for your custom domain that appears before mail.protection.outlook.com. For example, in the following MX record for the domain contoso.com, the  _domainGUID_ is contoso-com: 
+- _domainGUID_ is the same as the _domainGUID_ in the customized MX record for your custom domain that appears before mail.protection.outlook.com. For example, in the following MX record for the domain contoso.com, the _domainGUID_ is contoso-com: 
     
-  ```
-  contoso.com.  3600  IN  MX   5 contoso-com.mail.protection.outlook.com
-  ```
+    ```
+    contoso.com.  3600  IN  MX   5 contoso-com.mail.protection.outlook.com
+    ```
 
--  _initialDomain_ is the domain that you used when you signed up for Office 365. For information about determining your initial domain, see [Domains FAQ](https://support.office.com/article/Domains-FAQ-1272bad0-4bd4-4796-8005-67d6fb3afc5a#bkmk_whydoihaveanonmicrosoft.comdomain).
+- _initialDomain_ is the domain that you used when you signed up for Office 365. For information about determining your initial domain, see [Domains FAQ](https://support.office.com/article/1272bad0-4bd4-4796-8005-67d6fb3afc5a#bkmk_whydoihaveanonmicrosoft.comdomain).
     
 For example, if you have an initial domain of cohovineyardandwinery.onmicrosoft.com, and two custom domains cohovineyard.com and cohowinery.com, you would need to set up two CNAME records for each additional domain, for a total of four CNAME records.
   
@@ -110,9 +110,11 @@ For example, if you have an initial domain of cohovineyardandwinery.onmicrosoft.
 Host name:			selector1._domainkey.cohovineyard.com  
 Points to address or value:	selector1-cohovineyard-com._domainkey.cohovineyardandwinery.onmicrosoft.com
 TTL:				3600
+
 Host name:			selector2._domainkey.cohovineyard.com  
 Points to address or value:	selector2-cohovineyard-com._domainkey.cohovineyardandwinery.onmicrosoft.com
 TTL:				3600
+
 Host name:			selector1._domainkey.cohowinery.com
 Points to address or value:	selector1-cohowinery-com._domainkey.cohovineyardandwinery.onmicrosoft.com 
 TTL:				3600
@@ -129,7 +131,7 @@ Once you have published the CNAME records in DNS, you are ready to enable DKIM s
   
 #### To enable DKIM signing for your custom domain through the Office 365 admin center
 
-1. [Sign in to Office 365](https://support.office.microsoft.com/article/Sign-in-to-Office-365-e9eb7d51-5430-4929-91ab-6157c5a050b4) with your work or school account. 
+1. [Sign in to Office 365](https://support.office.microsoft.com/article/e9eb7d51-5430-4929-91ab-6157c5a050b4) with your work or school account. 
     
 2. Select the app launcher icon in the upper-left and choose **Admin**.
     
@@ -141,21 +143,21 @@ Once you have published the CNAME records in DNS, you are ready to enable DKIM s
     
 #### To enable DKIM signing for your custom domain by using PowerShell
 
-1. [Connect to Exchange Online using remote PowerShell](https://technet.microsoft.com/library/jj984289%28v=exchg.160%29.aspx).
+1. [Connect to Exchange Online PowerShell](https://technet.microsoft.com/library/jj984289.aspx).
     
-2. Run the following cmdlet:
+2. Run the following command:
     
-  ```
-  New-DkimSigningConfig -DomainName <domain> -Enabled $true
-  ```
+    ```
+    New-DkimSigningConfig -DomainName <domain> -Enabled $true
+    ```
 
-    Where  _domain_ is the name of the custom domain for which you want to enable DKIM signing. 
+   Where _domain_ is the name of the custom domain that you want to enable DKIM signing for. 
     
-    For example, for the domain contoso.com:
+   For example, for the domain contoso.com:
     
-  ```
-  New-DkimSigningConfig -DomainName contoso.com -Enabled $true
-  ```
+    ```
+    New-DkimSigningConfig -DomainName contoso.com -Enabled $true
+    ```
 
 #### To Confirm DKIM signing is configured properly for Office 365
 
@@ -166,18 +168,17 @@ Wait a few minutes before you follow these steps to confirm that you have proper
 - Do not use an aol.com account for testing purposes. AOL may skip the DKIM check if the SPF check passes. This will nullify your test.
     
 - Open the message and look at the header. Instructions for viewing the header for the message will vary depending on your messaging client. For instructions on viewing message headers in Outlook, see [View e-mail message headers](https://support.office.com/article/CD039382-DC6E-4264-AC74-C048563D212C).
+
+  The DKIM-signed message will contain the host name and domain you defined when you published the CNAME entries. The message will look something like this example: 
     
-     The DKIM-signed message will contain the host name and domain you defined when you published the CNAME entries. The message will look something like this example: 
-    
-  ```
-  From: Example User <example@contoso.com> 
-  DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; 
-      s=selector1; d=contoso.com; t=1429912795; 
-      h=From:To:Message-ID:Subject:MIME-Version:Content-Type; 
-      bh=<body hash>; 
-      b=<signed field>;
-  
-  ```
+    ```
+    From: Example User <example@contoso.com> 
+    DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; 
+        s=selector1; d=contoso.com; t=1429912795; 
+        h=From:To:Message-ID:Subject:MIME-Version:Content-Type; 
+        bh=<body hash>; 
+        b=<signed field>;
+    ```
 
 - Look for the Authentication-Results header. While each receiving service uses a slightly different format to stamp the incoming mail, the result should include something like **DKIM=pass** or **DKIM=OK**. 
     
@@ -193,35 +194,33 @@ Disabling the signing policy does not completely disable DKIM. After a period of
   
 ### To disable the DKIM signing policy by using Windows PowerShell
 
-1. [Connect to Exchange Online using remote PowerShell](https://technet.microsoft.com/library/jj984289%28v=exchg.160%29.aspx).
+1. [Connect to Exchange Online PowerShell](https://technet.microsoft.com/library/jj984289.aspx).
     
 2. Run one of the following commands for each domain for which you want to disable DKIM signing.
     
-  ```
-  $p=Get-DkimSigningConfig -identity <domain>
-  $p[0] | set-DkimSigningConfig -enabled $false
-  
-  ```
+    ```
+    $p=Get-DkimSigningConfig -identity <domain>
+    $p[0] | set-DkimSigningConfig -enabled $false
+    ```
 
-    For example:
+   For example:
     
-  ```
-  $p=Get-DkimSigningConfig -identity contoso.com
-  $p[0] | set-DkimSigningConfig -enabled $false
-  ```
+    ```
+    $p=Get-DkimSigningConfig -identity contoso.com
+    $p[0] | set-DkimSigningConfig -enabled $false
+    ```
 
-    Or
+   Or
     
-  ```
-  Set-DkimSigningConfig -identity $p[<number>].identity -enabled $false
-  
-  ```
+    ```
+    Set-DkimSigningConfig -identity $p[<number>].identity -enabled $false
+    ```
 
-    Where  _number_ is the index of the policy. For example: 
+    Where _number_ is the index of the policy. For example: 
     
-  ```
-  Set-DkimSigningConfig -identity $p[0].identity -enabled $false
-  ```
+    ```
+    Set-DkimSigningConfig -identity $p[0].identity -enabled $false
+    ```
 
 ## Default behavior for DKIM and Office 365
 <a name="DefaultDKIMbehavior"> </a>
@@ -239,10 +238,9 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
     h=From:To:Message-ID:Subject:MIME-Version:Content-Type; 
     bh=<body hash>; 
     b=<signed field>;
-
 ```
 
-In this example, the host name and domain contain the values to which the CNAME would point if DKIM-signing for fabrikam.com had been enabled by the domain administrator. Eventually, every single message sent from Office 365 will be DKIM-signed. If you enable DKIM yourself, the domain will be the same as the domain in the From: address, in this case fabrikam.com. If you don't, it will not align and instead will use your organization's initial domain. For information about determining your initial domain, see [Domains FAQ](https://support.office.com/article/Domains-FAQ-1272bad0-4bd4-4796-8005-67d6fb3afc5a#bkmk_whydoihaveanonmicrosoft.comdomain).
+In this example, the host name and domain contain the values to which the CNAME would point if DKIM-signing for fabrikam.com had been enabled by the domain administrator. Eventually, every single message sent from Office 365 will be DKIM-signed. If you enable DKIM yourself, the domain will be the same as the domain in the From: address, in this case fabrikam.com. If you don't, it will not align and instead will use your organization's initial domain. For information about determining your initial domain, see [Domains FAQ](https://support.office.com/article/1272bad0-4bd4-4796-8005-67d6fb3afc5a#bkmk_whydoihaveanonmicrosoft.comdomain).
   
 ## Set up DKIM so that a third-party service can send, or spoof, email on behalf of your custom domain
 <a name="SetUp3rdPartyspoof"> </a>
@@ -268,9 +266,9 @@ In this example, in order to achieve this result:
     
 4. Receiving email systems perform a DKIM check by authenticating the DKIM-Signature d=\<domain\> value against the domain in the From: (5322.From) address of the message. In this example, the values match:
     
-    sender@ **contoso.com**
+    sender@**contoso.com**
     
-    d= **contoso.com**
+    d=**contoso.com**
     
 ## Next steps: After you set up DKIM for Office 365
 <a name="DKIMNextSteps"> </a>
