@@ -120,8 +120,8 @@ A brute-force password attack against an organization is typically used after a 
 ## New features in Attack Simulator
 
 New features are being added to Attack Simulator. These include:
-- Advanced reporting capabilities. You'll be able to see data such as the fastest (or slowest) time to open an attack simulation email message, the fastest (or slowest) time to click a link in the message, and more.
-- Email template editor. You can create a custom, reusable email template that you can use for future attack simulations.
+- **Advanced reporting capabilities**. You'll be able to see data such as the fastest (or slowest) time to open an attack simulation email message, the fastest (or slowest) time to click a link in the message, and more.
+- **Email template editor**. You can create a custom, reusable email template that you can use for future attack simulations.
 
 Visit the [Microsoft 365 Roadmap](https://www.microsoft.com/microsoft-365/roadmap) to see what's in development, what's rolling out, and what's already launched.
 
