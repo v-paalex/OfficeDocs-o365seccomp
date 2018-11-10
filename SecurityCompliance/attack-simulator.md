@@ -85,7 +85,7 @@ You can craft the rich HTML editor directly in the **Email body** field itself o
     
 ## Password-spray attack
 
-A password spray attack against an organization is typically used after a bad actor has successfully enumerated a list of valid users from the tenant, utilizing their knowledge of common passwords used. It is utilized widely as it is a cheap attack to run, and harder to detect than brute force approaches.
+A password spray attack against an organization is typically used after a bad actor has successfully acquired a list of valid users from the tenant. The bad actor knows about common passwords that people use. This is a widely used attack, as it is a cheap attack to run, and harder to detect than brute force approaches.
   
 This attack focuses on letting you specify a common password against a large target base of users.
   
@@ -103,7 +103,7 @@ This attack focuses on letting you specify a common password against a large tar
     
 ## Brute-force password attack
 
-A brute-force password attack against an organization is typically used after a bad actor has successfully enumerated a list of key users from the tenant. This attack focuses on letting you specify a set of passwords against a single user.
+A brute-force password attack against an organization is typically used after a bad actor has successfully acquired a list of key users from the tenant. This attack focuses on trying a set of passwords on a single user's account.
   
 ### To simulate a brute-force password attack
 
@@ -113,7 +113,7 @@ A brute-force password attack against an organization is typically used after a 
     
 3. Specify the target recipient. A targeted recipient must have an Exchange Online Mailbox in order for the attack to be successful.
     
-4. Specify a set of passwords to use for the attack. For example, one common, relevant password you could try is `Fall2017`. Another might be `Spring2018`, or `Password1`.
+4. Specify a set of passwords to use for the attack. You can use a text (.txt) file for your list of passwords. The text file cannot exceed 10 MB in file size. Use one password per line, and make sure to include a hard return after the last password in your list.
     
 5. Choose **Finish** to launch the attack. 
     
@@ -124,5 +124,6 @@ New features are being added to Attack Simulator. These include:
 - Email template editor. You can create a custom, reusable email template that you can use for future attack simulations.
 
 Visit the [Microsoft 365 Roadmap](https://www.microsoft.com/microsoft-365/roadmap) to see what's in development, what's rolling out, and what's already launched.
+
 
 
