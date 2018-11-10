@@ -3,7 +3,7 @@ title: "Attack Simulator in Office 365"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 6/19/2018
+ms.date: 11/09/2018
 ms.audience: ITPro
 ms.topic: overview
 ms.service: o365-administration
@@ -12,16 +12,16 @@ search.appverid:
 - MET150
 - MOE150
 ms.assetid: da5845db-c578-4a41-b2cb-5a09689a551b
-description: "Learn about three different kinds of cyber attacks you can run using Attack Simulator."
+description: "As an Office 365 global administrator, you can use Attack Simulator to run realistic attack scenarios in your organization. This can help you identify and find vulnerable users before a real attack hits your business."
 ---
 
 # Attack Simulator in Office 365
 
-With Attack Simulator (included in [Office 365 Threat Intelligence](office-365-ti.md)), if you are a member of your organization's security team, you can run realistic attack scenarios in your organization. This can help you identify and find vulnerable users before a real attack impacts your bottom line.
+**Summary** If you are an Office 365 global administrator and your organization has [Office 365 Threat Intelligence](office-365-ti.md), you can use Attack Simulator to run realistic attack scenarios in your organization. This can help you identify and find vulnerable users before a real attack impacts your bottom line. Read this article to learn more.
   
 ## The Attacks
 
-At preview release we offer three kinds of attack simulations that you can run:
+Currently, three kinds of attack simulations are available:
   
 - [Display name spear-phishing attack](attack-simulator.md#spearphish)
     
@@ -29,7 +29,7 @@ At preview release we offer three kinds of attack simulations that you can run:
     
 - [Brute-force password attack](attack-simulator.md#bruteforce)
     
-For an attack to be successfully launched, the account that is running the attack and logged on must use multi-factor authentication.
+For an attack to be successfully launched, you use multi-factor authentication on the account you are using to run simulated attacks. In addition, you must be an Office 365 global administrator.
   
 > [!NOTE]
 > Support for Conditional Access is coming soon. 
@@ -39,14 +39,15 @@ To access Attack Simulator, in the Security &amp; Compliance Center, choose **Th
 ## Before you begin...
 
 Make sure that you and your organization meet the following requirements for Attack Simulator:
-  
-- Your organization has [Office 365 Threat Intelligence](office-365-ti.md), with Attack Simulator visible in the Security &amp; Compliance Center (go to **Threat management** \> **Attack simulator**)
-    
+      
 - Your organization's email is hosted in Exchange Online. (Attack Simulator is not available for on-premises email servers.)
     
 - You are an Office 365 global administrator
     
-- Your organization is using [Multi-factor authentication for Office 365 users](https://support.office.com/article/8f0454b2-f51a-4d9c-bcde-2c48e41621c6)
+- Your organization is using [Multi-factor authentication for Office 365 users](https://docs.microsoft.com/office365/admin/security-and-compliance/set-up-multi-factor-authentication&view=o365-worldwide)
+ 
+- Your organization has [Office 365 Threat Intelligence](office-365-ti.md), with Attack Simulator visible in the Security &amp; Compliance Center (go to **Threat management** \> **Attack simulator**)<br/>![Threat management - Attack Simulator](media/ThreatMgmt-AttackSimulator.png)
+
     
 ## Display name spear-phishing attack
 
@@ -62,40 +63,25 @@ You can craft the rich HTML editor directly in the **Email body** field itself o
   
 1. In the Security &amp; Compliance Center, choose **Threat management** \> **Attack simulator**.
     
-2. Specify a meaningful campaign name for the attack or select a template.
-    
-    ![Phishing Start Page](media/5e93b3cc-5981-462f-8b45-bdf85d97f1b8.jpg)
+2. Specify a meaningful campaign name for the attack or select a template. <br/>![Phishing Start Page](media/5e93b3cc-5981-462f-8b45-bdf85d97f1b8.jpg)
   
-3. Specify the target recipients. This can be individuals or groups in your organization. A targeted recipient must have an Exchange Online Mailbox in order for the attack to be successful.
-    
-    ![Recipient Selection](media/faf8c2e0-6175-4cd7-8265-0c8e727f4d0f.jpg)
+3. Specify the target recipients. This can be individuals or groups in your organization. Each targeted recipient must have an Exchange Online Mailbox in order for the attack to be successful. <br/>![Recipient Selection](media/faf8c2e0-6175-4cd7-8265-0c8e727f4d0f.jpg)
   
-4. Configure the Phishing email details.
+4. Configure the Phishing email details. <br/>![Configure email details](media/f043608f-f8ce-4aae-be28-86e8ecc524a9.jpg)<br/>The HTML formatting can be as complex or basic as your campaign needs. As the email format is HTML, you can insert images and text to enhance believability. You have control on what the received message will look like in the receiving email client.
     
-    ![Configure email details](media/f043608f-f8ce-4aae-be28-86e8ecc524a9.jpg)
+5. Specify text for the **From (Name)** field. This is the field that shows in the **Display Name** in the receiving email client. 
+    
+6. Specify text or the **From** field. This is the field that shows as the email address of the sender in the receiving email client. <br/>You can enter an existing email namespace within your organization (doing this will make the email address actually resolve in the receiving client, facilitating a very high trust model), or you can enter an external email address. The email address that you specify does not have to actually exist, but it does need to following the format of a valid SMTP address, such as user@domainname.extension. 
   
-    The HTML formatting can be as complex or basic as your campaign needs. As it is HTML, you can insert images and text to enhance believability. You have control on what the received message will look like in the receiving email client.
+7. Using the drop-down selector, select a Phishing Login server URL that reflects the type of content you will have within your attack. Several themed URLs are provided for you to choose from, such as document delivery, technical, payroll etc. This is effectively the URL that targeted users are asked to click.
     
-1. Enter text for the **From (Name)** field. This is the field that shows in the **Display Name** in the receiving email client. 
+8. Specify a custom landing page URL. Using this will redirect users to a URL you specify at the end of a successful attack. If you have internal awareness training, for example, you can specify that here.
     
-2. Enter text or the **From** field. This is the field that shows as the email address of the sender in the receiving email client. 
+9. Specify text for the **Subject** field. This is the field that shows as the **Subject Name** in the receiving email client. 
     
-    > [!IMPORTANT]
-    > You can enter an existing email namespace within your organization (doing this will make the email address actually resolve in the receiving client, facilitating a very high trust model), or you can enter an external email address. The email address that you specify does not have to actually exist, but it does need to following the format of a valid SMTP address, such as user@domainname.extension. 
-  
-3. Using the drop-down selector, select a Phishing Login server URL that reflects the type of content you will have within your attack. Several themed URLs are provided for you to choose from, such as document delivery, technical, payroll etc. This is effectively the URL that targeted users are asked to click.
+10. Compose the **Email body** that the target will receive. <br/>`${username}` inserts the targets name into the Email body. <br/>`${loginserverurl}` inserts the URL we want target users to click 
     
-4. Enter a custom landing page URL. Using this will redirect users to a URL you specify at the end of a successful attack. If you have internal awareness training, for example, you can specify that here.
-    
-5. Enter text for the **Subject** field. This is the field that shows as the **Subject Name** in the receiving email client. 
-    
-5. Compose the **Email body** that the target will receive. 
-  
- **${username}** inserts the targets name into the Email body 
-  
- **${loginserverurl}** inserts the URL we want target users to click 
-    
-6. Choose **Next,** then **Finish** to launch the attack. The spear phishing email message is delivered to your target recipients' mailboxes. 
+11. Choose **Next,** then **Finish** to launch the attack. The spear phishing email message is delivered to your target recipients' mailboxes. 
     
 ## Password-spray attack
 
@@ -131,8 +117,12 @@ A brute-force password attack against an organization is typically used after a 
     
 5. Choose **Finish** to launch the attack. 
     
-## Related topics
+## New features in Attack Simulator
 
-[Office 365 Threat Intelligence](office-365-ti.md)
-  
+New features are being added to Attack Simulator. These include:
+- Advanced reporting capabilities. You'll be able to see data such as the fastest (or slowest) time to open an attack simulation email message, the fastest (or slowest) time to click a link in the message, and more.
+- Email template editor. You can create a custom, reusable email template that you can use for future attack simulations.
+
+Visit the [Microsoft 365 Roadmap](https://www.microsoft.com/microsoft-365/roadmap) to see what's in development, what's rolling out, and what's already launched.
+
 
