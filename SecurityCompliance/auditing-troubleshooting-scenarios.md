@@ -3,7 +3,6 @@ title: "Search the Office 365 audit log to troubleshoot common scenarios"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
-ms.date: 
 ms.audience: Admin
 ms.topic: article
 ms.service: o365-administration
@@ -12,7 +11,6 @@ ms.collection: Strat_O365_IP
 search.appverid:
 - MET150
 - MOE150
-ms.assetid: 
 description: "You can use the Office 365 audit log search tool to help you troubleshoot common issues such as inbox rules that forward email.
 ---
 
