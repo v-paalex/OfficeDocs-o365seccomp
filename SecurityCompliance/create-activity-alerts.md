@@ -37,17 +37,18 @@ You can create an activity alert that will send you an email notification when u
     
 ## Create an activity alert
 
-1. Go to [https://protection.office.com](https://protection.office.com).
+1. Go to [https://protection.office.com/#/managealerts](https://protection.office.com/#/managealerts).
     
 2. Sign in to Office 365 using your work or school account.
     
-3. In the left pane, click **Alerts**, and then click **Manage alerts**.
+3. On the **Activity alerts** page, click **New**.
+
+   The flyout page to create an activity alert is displayed.
+
     
-4. On the **Activity alerts** page, click **Add an alert**.
-    
-    ![Add an activity alert](media/53888bd5-9fa2-4398-8ccc-1a9dc72517ac.png)
+    ![Create an activity alert](media/53888bd5-9fa2-4398-8ccc-1a9dc72517ac.png)
   
-5. Complete the following fields to create an alert:
+4. Complete the following fields to create an activity alert:
     
     a. **Name** - Type a name for the alert. Alert names must be unique within your organization.
     
@@ -59,9 +60,11 @@ You can create an activity alert that will send you an email notification when u
     
      - **Users** - Click this box and then select one or more users. If the users in this box perform the activities that you added to the **Activities** box, an alert will be sent. Leave the **Users** box blank to send an alert when any user in your organization performs the activities specified by the alert. 
     
+    
+
     d. **Send this alert to** - Click **Send this alert**, and then click in the **Recipients** box and type a name to add a users who will receive an email notification when a user (specified in the **Users** box) performs an activity (specified in the **Activities** box). Note that you are added to the list of recipients by default. You can remove your name from this list.
     
-6. Click **Save** to create the alert. 
+5. Click **Save** to create the alert. 
     
     The new alert is displayed in the list on the **Activity alerts** page. 
     
