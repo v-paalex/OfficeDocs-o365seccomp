@@ -47,9 +47,10 @@ With retention labels, you can:
   - You don't need to rely on users to classify all content correctly.
     
   - Users no longer need to know about data governance policies - they can instead focus on their work.
-    
+
+  > [!NOTE]
   > The capability to apply labels automatically requires an Office 365 Enterprise E5 license for each user who has permissions to edit content that's been automatically labeled in a site or mailbox. Users who simply have read-only access do not require a license.
-        
+      
 - **Apply a default retention label to a document library** in SharePoint and Office 365 group sites, so that all documents in that library get the default retention label. 
     
 - **Implement records management across Office 365**, including both email and documents. You can use a retention label to classify content as a record. When this happens, the label can't be changed or removed, and the content can't be edited or deleted. 
