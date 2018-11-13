@@ -174,9 +174,9 @@ Keep the following limitations in mind when managing eDiscovery cases and invest
     
 - Search permissions filters aren't applied to Exchange public folders.
 
-## Searching and exporting SharePoint content in Multi-Geo environments
+## Searching and exporting content in Multi-Geo environments
 
-Search permissions filters also let you control where content is routed for export and which datacenters can be searched SharePoint sites and OneDrive accounts in a [SharePoint Multi-Geo environment](https://go.microsoft.com/fwlink/?linkid=860840):
+Search permissions filters also let you control where content is routed for export and which datacenter can be searched when searching SharePoint sites and OneDrive accounts in a [SharePoint Multi-Geo environment](https://go.microsoft.com/fwlink/?linkid=860840):
   
 - Export search results from a specific data center. This means that you can specify the data center location that search results will be exported from.
     
@@ -206,7 +206,7 @@ Similarly, you can use the following values for the **Region** parameter values 
 |IND  <br/> |Asia Pacific  <br/> |
 |LAM  <br/> |US  <br/> |
    
- **Note:** If you don't specify the Region parameter for a search permissions filter, then search results are exported from the closest data center. 
+ **Note:** If you don't specify the Region parameter for a search permissions filter, the organizations default SharePoint region will be searched, then search results are exported to the closest data center. 
   
 Here are examples of using the **-Region** parameter when creating search permission filters for compliance boundaries. This assumes that the Fourth Coffee subsidiary is located in North America and that Coho Winery is in Europe. 
   
