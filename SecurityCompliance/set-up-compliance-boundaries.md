@@ -3,7 +3,6 @@ title: "Set up compliance boundaries for eDiscovery investigations in Office 365
 ms.author: markjjo
 author: markjjo
 manager: laurawi
-ms.date: 6/6/2018
 ms.audience: Admin
 ms.topic: article
 ms.service: o365-administration
