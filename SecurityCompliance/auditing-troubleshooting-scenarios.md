@@ -11,7 +11,7 @@ ms.collection: Strat_O365_IP
 search.appverid:
 - MET150
 - MOE150
-description: "You can use the Office 365 audit log search tool to help you troubleshoot common issues such as inbox rules that forward email.
+description: "You can use the Office 365 audit log search tool to help you troubleshoot common issues such as inbox rules that forward email."
 ---
 
 # Search the Office 365 audit log to troubleshoot common scenarios
