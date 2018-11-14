@@ -6,8 +6,6 @@ manager: laurawi
 ms.date: 
 ms.audience: Admin
 ms.topic: article
-f1_keywords:
-- 'O365AC_AlternativeEmailAddress'
 ms.service: o365-administration
 localization_priority: Normal
 ms.collection: Strat_O365_IP
@@ -16,10 +14,10 @@ search.appverid:
 - MET150
 ms.assetid: 0d4d0f35-390b-4518-800e-0c7ec95e946c
 
-description: "Use the Office 365 Security &amp; Compliance Center to search the unified audit log to view user and administrator activity in your Office 365 organization. "
+description: "Use the Office 365 Security & Compliance Center to search the unified audit log to view user and administrator activity in your Office 365 organization. "
 ---
 
-# Search the audit log in the Office 365 Security &amp; Compliance Center
+# Search the audit log in the Office 365 Security & Compliance Center
 
 Need to find if a user viewed a specific document or purged an item from their mailbox? If so, you can use the Office 365 Security &amp; Compliance Center to search the unified audit log to view user and administrator activity in your Office 365 organization. Why a unified audit log? Because you can search for the following types of user and admin activity in Office 365:
   
