@@ -30,15 +30,17 @@ You have to be assigned the View-Only Audit Logs or Audit Logs role in Exchange 
 
 This section describes the basics for creating and running audit log searches. Use these instructions as a starting point for each troubleshooting scenario in this article. For more detailed step-by-step instructions, see [Search the audit log in the Office 365 Security & Compliance Center ](search-the-audit-log-in-security-and-compliance.md#step-1-run-an-audit-log-search).
 
-1. Go to [https://protection.office.com/#/unifiedauditlog](https://protection.office.com/#/unifiedauditlog).
+1. Go to [https://protection.office.com](https://protection.office.com).
   
 2. Sign in to Office 365 using your work or school account.
+
+3. In the left pane of the Security &amp; Compliance Center, click **Search & investigation** > **Audit log search**.
     
     The **Audit log search** page is displayed. 
     
     ![Configure criteria and then click Search to run the search](media/8639d09c-2843-44e4-8b4b-9f45974ff7f1.png)
   
-3. You can configure the following search criteria. Note that each troubleshooting scenario in this article will recommend specific guidance for configuring these fields.
+4. You can configure the following search criteria. Note that each troubleshooting scenario in this article will recommend specific guidance for configuring these fields.
     
     a. **Activities** - Click the drop-down list to display the activities that you can search for. After you run the search, only the audit log entries for the selected activities are displayed. Selecting **Show results for all activities** will display results for all activities that meet the other search criteria. You'll also have to leave this field blank return audit records from the Exchange admin audit log.
     
@@ -46,9 +48,9 @@ This section describes the basics for creating and running audit log searches. U
 
     c. **Users** - Click in this box and then select one or more users to display search results for. The audit log entries for the selected activity performed by the users you select in this box are displayed in the list of results. Leave this box blank to return entries for all users (and service accounts) in your organization. 
     
-    d. **File or folder** - Type some or all of a file or folder name to search for activity related to the file of folder that contains the specified keyword. You can also specify a URL of a file or folder. If you use a URL, be sure the type the full URL path or if you just type a portion of the URL, don't include any special characters or spaces. Leave this box blank to return entries for all files and folders in your organization.
+    d. **File, folder, or site** - Type some or all of a file or folder name to search for activity related to the file of folder that contains the specified keyword. You can also specify a URL of a file or folder. If you use a URL, be sure the type the full URL path or if you just type a portion of the URL, don't include any special characters or spaces. Leave this box blank to return entries for all files and folders in your organization.
     
-4. Click **Search** to run the search using your search criteria. 
+5. Click **Search** to run the search using your search criteria. 
     
     The search results are loaded, and after a few moments they are displayed under **Results** on the **Audit log search** page. Each to the following sections will provide guidance about things to look for the specific troubleshooting scenario. 
 
