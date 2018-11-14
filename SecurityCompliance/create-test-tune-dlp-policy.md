@@ -21,7 +21,7 @@ description: "The easiest, most common way to get started with DLP policies is t
 
 # Create, test, and tune a DLP policy
 
-**Principal writer** </br>
+**Principal author** </br>
 Paul Cunningham, Microsoft MVP </br>
 [Practical 365](https://practical365.com/) </br>
 [@Practical365](https://twitter.com/practical365)</br>
