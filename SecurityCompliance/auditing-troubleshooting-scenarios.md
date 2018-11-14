@@ -30,31 +30,33 @@ You have to be assigned the View-Only Audit Logs or Audit Logs role in Exchange 
 
 This section describes the basics for creating and running audit log searches. Use these instructions as a starting point for each troubleshooting scenario in this article. For more detailed step-by-step instructions, see [Search the audit log in the Office 365 Security & Compliance Center ](search-the-audit-log-in-security-and-compliance.md#step-1-run-an-audit-log-search).
 
-1. Go to [https://protection.office.com/#/](https://protection.office.com).
+1. Go to [https://protection.office.com/#/unifiedauditlog](https://protection.office.com/#/unifiedauditlog).
   
 2. Sign in to Office 365 using your work or school account.
     
     The **Audit log search** page is displayed. 
     
-    ![Configure criteria and then click Search to run report](media/8639d09c-2843-44e4-8b4b-9f45974ff7f1.png)
+    ![Configure criteria and then click Search to run the search](media/8639d09c-2843-44e4-8b4b-9f45974ff7f1.png)
   
-3. Configure the following search criteria. Note that each troubleshooting scenario in this article will recommend specific guidance for configuring the search criteria.
+3. You can configure the following search criteria. Note that each troubleshooting scenario in this article will recommend specific guidance for configuring these fields.
     
-    a. **Activities** - Click the drop-down list to display the activities that you can search for. User   and admin activities are organized in to groups of related activities. You can select specific activities or you can click the activity group name to select all activities in the group. You can also click a selected activity to clear the selection. After you run the search, only the audit log entries for the selected activities are displayed. Selecting **Show results for all activities** will display results for all activities performed by the selected user or group of users.
+    a. **Activities** - Click the drop-down list to display the activities that you can search for. After you run the search, only the audit log entries for the selected activities are displayed. Selecting **Show results for all activities** will display results for all activities that meet the other search criteria. You'll also have to leave this field blank return audit records from the Exchange admin audit log.
     
-    b. **Start date** and **End date** - The last seven days are selected by default. Select a date and time range to display the events that occurred within that period. The date and time are presented in Coordinated Universal Time (UTC) format. The maximum date range that you can specify is 90 days. An error is displayed if the selected date range is greater than 90 days. 
+    b. **Start date** and **End date** - Select a date and time range to display the events that occurred within that period. The last seven days are selected by default. The date and time are presented in Coordinated Universal Time (UTC) format. The maximum date range that you can specify is 90 days.
 
     c. **Users** - Click in this box and then select one or more users to display search results for. The audit log entries for the selected activity performed by the users you select in this box are displayed in the list of results. Leave this box blank to return entries for all users (and service accounts) in your organization. 
     
-    d. **File or folder** - Type some or all of a file or folder name to search for activity related to the file of folder that contains the specified keyword. You can also specify a URL of a file or folder. If you use a URL, be sure the type the full URL path or if you just type a portion of the URL, don't include any special characters or spaces. 
-    
-    Leave this box blank to return entries for all files and folders in your organization.
+    d. **File or folder** - Type some or all of a file or folder name to search for activity related to the file of folder that contains the specified keyword. You can also specify a URL of a file or folder. If you use a URL, be sure the type the full URL path or if you just type a portion of the URL, don't include any special characters or spaces. Leave this box blank to return entries for all files and folders in your organization.
     
 4. Click **Search** to run the search using your search criteria. 
     
-    The search results are loaded, and after a few moments they are displayed under **Results**. When the search is finished, the number of results found is displayed. Note that a maximum of 5,000 events will be displayed in the **Results** pane in increments of 150 events; if more than 5,000 events meet the search criteria, the most recent 5,000 events are displayed. 
-    
-    ![The number of results are displayed after the search is finished](media/986216f1-ca2f-4747-9480-e232b5bf094c.png)
+    The search results are loaded, and after a few moments they are displayed under **Results** on the **Audit log search** page. Each to the following sections will provide guidance about things to look for the specific troubleshooting scenario. 
+
+    For more information about viewing, filtering, or exporting audit log search results, see: 
+
+    - [View search results](search-the-audit-log-in-security-and-compliance.md#step-2-view-the-search-results)
+    - [Filter search results](search-the-audit-log-in-security-and-compliance.md#step-3-filter-the-search-results)
+    - [Export search results](search-the-audit-log-in-security-and-compliance.md#step-4-export-the-search-results-to-a-file)
 
 ## Finding the IP address of the computer used to access a compromised account
 
