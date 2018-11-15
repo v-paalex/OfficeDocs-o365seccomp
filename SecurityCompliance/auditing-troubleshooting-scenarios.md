@@ -62,30 +62,35 @@ This section describes the basics for creating and running audit log searches. U
 
 ## Finding the IP address of the computer used to access a compromised account
 
-IP address corresponding to an activity performed by the user or administrator is shown in the Audit Logs. The client information is also logged. Here are the steps to identifying such information.
+The IP address corresponding to an activity performed by any user is included in most audit records. Information about the client used is also included in the audit record.
 
-Login to the Office 365 Security & Compliance center 
-Click on “Search and Investigation” and select “Audit Log Search” 
-If you are interested in a specific activity, select it from ‘Activities’ list. If not, all activities will be returned for the selected user (default setting). Note: Certain activities may not be available to be selected using the Activities menu, however those audit items will be returned if “Show Results for all activities” is selected (default setting) 
-Specify the user name in the ‘Users’ field and select the appropriate date range for the activity and click on “Search” 
-Once the results are displayed, the IP address for that activity can be seen in the results pane. 
-To review the activity in detail, simply click on the Activity and detailed information will be shown in the right-hand side pane. This will provide more information such as Client, User that performed action etc.
+Here's how to configure an audit log search query for this scenario:
+
+**Activities** - If relevant to your case, select a specific activity to search for. Otherwise, leave this field blank to return audit records for all activities.
+
+**Start date** and **End date** - Select a date range that's applicable to your investigation.
+
+**Users** - If you're investigating a compromised account, select the user whose account was compromised. This will return audit records for activities performed by that user account.
+
+**File, folder, or site** - Leave this field blank.
+
+In the search results, the IP address for each activity is displayed in the **IP address** column. Click the record in the search results to view more detailed information in the flyout page.
 
 ## Determining if email forwarding has been set up for a user
 
-Will help customers with how to identify forwarding set at the mailbox and how to look at audit logs on who/how forwarding was set at the mailbox level.
+When Forwarding Will help customers with how to identify forwarding set at the mailbox and how to look at audit logs on who/how forwarding was set at the mailbox level.
 
-If external forwarding were set on a mailbox, the activity is audited as part of ‘Set-Mailbox’ cmdlet. We can see the activity using the audit log search in the Security and Compliance Center.
+When email forwarding is configured for a mailbox, which forwards email messages that are sent to the mailbox. Messages can be forward to users inside or outside of your organization. When email forward is et up on a mailbox, the underlying Exchange Online cmdlet that used is **Set-Mailbox**.
 
-Login to the Office 365 Security & Compliance center 
+Here's how to configure an audit log search query for this scenario:
 
-Click on “Search and Investigation” and select “Audit Log Search” 
+**Activities** - Leave this field blank  so that the search returns audit records for all activities. This is necessary to return any audit records related to the **Set-Mailbox** cmdlet.
 
-Specify date range by adjusting dates in Start and End date fields. You do not need to specify any username. 
+**Start date** and **End date** - Select a date range that's applicable to your investigation.
 
-Ensure that the Activities field is set to ‘Show results for all activities’. 
- 
-Click on ‘Search’ 
+**Users** - Unless you're investigating a mail forwarding issue for a specific user, leave this field blank. This will help you identify email forward set up for any user.
+
+**File, folder, or site** - Leave this field blank.
 
 Once the results are loaded, click on ‘Filter Results’. Type ‘Set-mailbox’ in the activity filter text box. This should return all ‘Set-Mailbox’ activities.  
 
