@@ -58,7 +58,7 @@ For more information about the different permissions you can give to users in th
     
 ## Use PowerShell to give another user access to the Security &amp; Compliance Center
 
-1. [Connect to the Office 365 Security &amp; Compliance Center using remote PowerShell](https://go.microsoft.com/fwlink/p/?LinkID=627084).
+1. [Connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/en-us/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps).
     
 2. Use the **Add-RoleGroupMember** command to add a user to the Organization Management Role, as shown in the following example. 
     
