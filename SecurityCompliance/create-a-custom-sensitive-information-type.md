@@ -13,7 +13,7 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: 
-description: "Learn how to create, modify, remove, and test custom sensitive information types for DLP in the graphical users interface in Office 365 Security & Compliance Center."
+description: "Learn how to create, modify, remove, and test custom sensitive information types for DLP in the graphical user interface in Office 365 Security & Compliance Center."
 ---
 
 # Create a custom sensitive information type
@@ -46,7 +46,7 @@ To create custom sensitive information types in the Office 365 Security & Compli
 
 The key differences are described in the following table:
 
-|Custom sensitive information types in the UI|Custom sensitive information types in PowerShell|
+|**Custom sensitive information types in the UI**|**Custom sensitive information types in PowerShell**|
 |:-----|:-----|
 |Name and Description are in one language.|Supports multiple languages for Name and Description.|
 |Supports one pattern.|Supports multiple patterns.|
@@ -86,39 +86,49 @@ Here's a scenario: You want a custom sensitive information type that detects 9-d
 
 1. In the Security & Compliance Center, go to **Classifications** \> **Sensitive info types** and click **Create**.
 
+    ![Location of Sensitive info types and Create button](media/scc-cust-sens-info-type-new.png)
+
 2. In the **Choose a name and description** page that opens, enter the following values:
 
   - **Name**: Employee ID.
 
-  - **Description** Detect nine-digit Contoso employee ID numbers.
+  - **Description**: Detect nine-digit Contoso employee ID numbers.
 
-  When you're finished, click **Next**.
+    ![Name and description page](media/scc-cust-sens-info-type-new-name-desc.png)
+
+    When you're finished, click **Next**.
 
 3. In the **Requirements for matching** page that opens, click **Add an element** configure the following settings:
 
-  - **Detect content containing**:
+    - **Detect content containing**:
  
-    a. Click **Any of these** and select **Regular expression**.
+      a. Click **Any of these** and select **Regular expression**.
 
-    b. In the regular expression box, enter `(\s)(\d{9})(\s)` (nine-digit numbers surrounded by white space).
+      b. In the regular expression box, enter `(\s)(\d{9})(\s)` (nine-digit numbers surrounded by white space).
   
-  - **Supporting elements**: Click **Add supporting elements** and select **Contains this keyword list**.
+    - **Supporting elements**: Click **Add supporting elements** and select **Contains this keyword list**.
 
-  - In the **Contains this keyword list** area that appears, configure the following settings:
+    - In the **Contains this keyword list** area that appears, configure the following settings:
 
-    - **Keyword list**: Enter the following value: employee,ID,badge.
+      - **Keyword list**: Enter the following value: employee,ID,badge.
 
-    - **Minimum count**: Leave the default value 1.
+      - **Minimum count**: Leave the default value 1.
 
-  - Leave the default **Confidence level** value 60. 
+    - Leave the default **Confidence level** value 60. 
 
-  - Leave the default **Character proximity** value 300.
+    - Leave the default **Character proximity** value 300.
 
-  When you're finished, click **Next**.
+    ![Requirements for matching page](media/scc-cust-sens-info-type-new-reqs.png)
+
+    When you're finished, click **Next**.
 
 4. On the **Review and finalize** page that opens, review the settings and click **Finish**.
 
-5. The next page encourages you to test the new custom sensitive information type. For more information, see [Test custom sensitive information types in the Security & Compliance Center](#test-custom-sensitive-information-types-in-the-security--compliance-center). Otherwise, click **Cancel**.
+    ![Review and finalize page](media/scc-cust-sens-info-type-new-review.png)
+
+5. The next page encourages you to test the new custom sensitive information type by clicking **Yes**. For more information, see [Test custom sensitive information types in the Security & Compliance Center](#test-custom-sensitive-information-types-in-the-security--compliance-center). To test the rule later, click **No**.
+
+    ![Test recommendation page](media/scc-cust-sens-info-type-new-test.png)
 
 ### How do you know this worked?
 
@@ -130,9 +140,15 @@ To verify that you've successfully created a new sensitive information type, do 
 
 ## Modify custom sensitive information types in the Security & Compliance Center
 
-**Note**: You can only modify custom sensitive information types; you can't modify built-in sensitive information types. But you can use PowerShell to export built-in custom sensitive information types, customize them, and import them as custom sensitive information types. For more information, see [Customize a built-in sensitive information type](customize-a-built-in-sensitive-information-type.md).
+**Notes**:
 
-In the Security & Compliance Center, go to **Classifications** \> **Sensitive info types** and select the custom sensitive information type that you want to modify.
+- You can only modify custom sensitive information types; you can't modify built-in sensitive information types. But you can use PowerShell to export built-in custom sensitive information types, customize them, and import them as custom sensitive information types. For more information, see [Customize a built-in sensitive information type](customize-a-built-in-sensitive-information-type.md).
+
+- You can only modify custom sensitive information types that you created in the UI. If you used the [PowerShell procedure](create-a-custom-sensitive-information-type-in-scc-powershell.md) to import a custom sensitive information type rule package, you'll get an error.
+
+In the Security & Compliance Center, go to **Classifications** \> **Sensitive info types**, select the custom sensitive information type that you want to modify, and then click **Edit**.
+
+  ![Location of Sensitive info types and Edit button](media/scc-cust-sens-info-type-edit.png)
 
 The same options are available here as when you created the custom sensitive information type in the Security & Compliance Center. For more information, see [Create custom sensitive information types in the Security & Compliance Center](#create-custom-sensitive-information-types-in-the-security--compliance-center).
 
@@ -140,7 +156,7 @@ The same options are available here as when you created the custom sensitive inf
 
 To verify that you've successfully modified a sensitive information type, do any of the following steps:
 
-  - Go to **Classifications** \> **Sensitive info types** to verify the properties of the modified custom sensitive information type.
+  - Go to **Classifications** \> **Sensitive info types** to verify the properties of the modified custom sensitive information type. 
 
   - Test the modified custom sensitive information type. For more information, see [Test custom sensitive information types in the Security & Compliance Center](#test-custom-sensitive-information-types-in-the-security--compliance-center).
 
@@ -156,12 +172,13 @@ To verify that you've successfully modified a sensitive information type, do any
 
 2. In the fly-out that opens, click **Delete** (or **Delete sensitive info types** if you selected more than one).
 
+    ![Location of Sensitive info types and Delete button](media/scc-cust-sens-info-type-delete.png)
+
 3. In the warning message that appears, click **Yes**.
 
 ### How do you know this worked?
 
 To verify that you've successfully removed a custom sensitive information type, go to **Classifications** \> **Sensitive info types** to verify the custom sensitive information type is no longer listed.
-
 
 ## Test custom sensitive information types in the Security & Compliance Center
 
@@ -169,6 +186,14 @@ To verify that you've successfully removed a custom sensitive information type, 
 
 2. Select one or more custom sensitive information types to test. In the fly-out that opens, click **Test type** (or **Test sensitive info types** if you selected more than one).
 
-3. On the page that opens, upload a document to test by dragging and dropping a file or by clicking **Browse** and selecting a file.
+    ![Location of Sensitive info types and Test type button](media/scc-cust-sens-info-type-test.png)
+
+3. On the **Upload file to test** page that opens, upload a document to test by dragging and dropping a file or by clicking **Browse** and selecting a file.
+
+    ![Upload file to test page](media/scc-cust-sens-info-type-test-upload.png)
 
 4. Click the **Test** button to test the document for pattern matches in the file.
+
+5. On the **Match results** page, click **Finish**.
+
+    ![Match results](media/scc-cust-sens-info-type-test-results.png)
