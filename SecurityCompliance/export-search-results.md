@@ -3,7 +3,7 @@ title: "Export Content Search results from the Office 365 Security &amp; Complia
 ms.author: markjjo
 author: markjjo
 manager: laurawi
-ms.date: 6/22/2018
+ms.date: 
 ms.audience: Admin
 ms.topic: article
 f1_keywords:
@@ -169,23 +169,22 @@ As previously explained, you can increase the download speed by configuring a Wi
 
   
 ## More information
-<a name="moreinfo"> </a>
 
 Here's more information about exporting search results.
   
-[Export limits](export-search-results.md#export-limits)
+[Export limits](#export-limits)
   
-[Export reports](export-search-results.md#export-reports)
+[Export reports](#export-reports)
   
 [Exporting partially indexed items](#exporting-partially-indexed-items)
+
+[Exporting individual messages or PST files](#exporting-individual-messages-or-pst-files)
   
-[Exporting individual messages or PST files](export-search-results.md#Exporting-individual-messages-or-PST-files)
+[Decrypting RMS-encrypted messages](#decrypting-rms-encrypted-messages)
   
-[Decrypting RMS-encrypted messages](export-search-results.md#Decrypting-RMS-encrypted-messages)
+[Filenames of exported items](#Filenames-of-exported-items)
   
-[Filenames of exported items](export-search-results.md#Filenames-of-exported-items)
-  
-[Miscellaneous](export-search-results.md#miscellaneous)
+[Miscellaneous](#miscellaneous)
   
  ### Export limits
   
@@ -201,7 +200,7 @@ Here's more information about exporting search results.
     
   - Exporting Content Search reports doesn't count against any of the export limits. 
     
-- As previously stated, search results from mailboxes and sites are uploaded to the Azure storage location (as described in [Step 1: Prepare search results for export](export-search-results.md#step1)) at a maximum rate of 2 GB per hour.
+- As previously stated, search results from mailboxes and sites are uploaded to the Azure storage location (as described in [Step 1: Prepare search results for export](#step-1-prepare-search-results-for-export)) at a maximum rate of 2 GB per hour.
     
 - The maximum size of a PST file that can be exported is 10 GB by default. That means if the search results from a user's mailbox are larger than 10 GB, the search results for the mailbox will be exported in two (or more) separate PST files. Additionally, if you choose to export all search results in a single PST file, the PST file will be spilt into additional PST files if the total size of the search results is larger than 10 GB. If you want to change this default size, you can edit the Windows Registry on the computer that you use to export the search results. See [Change the size of PST files when exporting eDiscovery search results](change-the-size-of-pst-files-when-exporting-results.md).
     
