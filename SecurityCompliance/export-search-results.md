@@ -1,5 +1,5 @@
 ---
-title: "Export Content Search results from the Office 365 Security &amp; Compliance Center"
+title: "Export Content Search results from the Office 365 Security & Compliance Center"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
@@ -19,7 +19,7 @@ ms.assetid: ed48d448-3714-4c42-85f5-10f75f6a4278
 description: "Export the search results from a Content Search in the Office 365 Security &amp; Compliance Center to a local computer. Emaill email results are exported as PST files. Content from SharePoint and OneDrive for Business sites are exported as native Office documents. "
 ---
 
-# Export Content Search results from the Office 365 Security &amp; Compliance Center
+# Export Content Search results from the Office 365 Security & Compliance Center
 
 After a Content Search is successfully run, you can export the search results to a local computer. When you export email results, they're downloaded to your computer as PST files. When you export content from SharePoint and OneDrive for Business sites, copies of native Office documents are exported. There are additional documents and reports that are included with the exported search results.
   
@@ -181,8 +181,8 @@ Here's more information about exporting search results.
 [Exporting individual messages or PST files](#exporting-individual-messages-or-pst-files)
   
 [Decrypting RMS-encrypted messages](#decrypting-rms-encrypted-messages)
-  
-[Filenames of exported items](#Filenames-of-exported-items)
+
+[Filenames of exported items](#filenames-of-exported-items)  
   
 [Miscellaneous](#miscellaneous)
   
