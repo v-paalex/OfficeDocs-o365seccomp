@@ -39,7 +39,7 @@ Encryption uses Azure Rights Management (Azure RMS). Azure RMS uses encryption, 
 
 ## How to turn on encryption for a sensitivity label
 
-To begin, simply toggle **Encryption** to **On**, and then use the options below to control who can acess email or documents to which this label is applied. You can:
+To begin, simply toggle **Encryption** to **On**, and then use the options below to control who can access email or documents to which this label is applied. You can:
 
 1. **Apply encryption to both email and documents, or just email.** If you choose just email, messages with this label will be encrypted in Outlook, but documents with this label won't be encrypted in other apps, such as Word or PowerPoint. 
 2. **Allow access to labeled content to expire**, either on a specific date or after a specific number of days after the label is applied. After this time, users won’t be able to open the labeled item. If you specify a date, it is effective midnight on that date in your current time zone. 
