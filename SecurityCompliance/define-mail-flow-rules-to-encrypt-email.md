@@ -23,10 +23,8 @@ If you recently migrated from AD RMS to Azure Information Protection, you'll nee
   
 For information about the components that make up mail flow rules and how mail flow rules work, see [Mail flow rules (transport rules) in Exchange Online](https://docs.microsoft.com/exchange/security-and-compliance/mail-flow-rules/mail-flow-rules). For additional information about how mail flow rules work with Azure Information Protection, see [Configuring Exchange Online mail flow rules for Azure Information Protection labels](https://docs.microsoft.com/azure/information-protection/deploy-use/configure-exo-rules).
   
-## Hybrid Exchange environments: Do this first
-On-premises users can send encrypted mail using OME if you route email through Exchange Online. In order to do this, you need to configure mail to flow from your email server to Office 365. Once you've configured mail to flow through Office 365, then you can make mail flow rules for OME by using this article.
-
-For instructions, see [Set up connectors to route mail between Office 365 and your own email servers](https://docs.microsoft.com/exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/set-up-connectors-to-route-mail). In particular, complete the steps in "Part 2: Configure mail to flow from your email server to Office 365".
+> [!IMPORTANT]
+> For hybrid Exchange environments, on-premises users can send encrypted mail using OME only if email is routed through Exchange Online. To configure OME in a hybrid Exchange environment, you need to first [configure hybrid using the Hybrid Configuration wizard](https://docs.microsoft.com/Exchange/exchange-hybrid) and then [configure mail to flow from your email server to Office 365](https://docs.microsoft.com/exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/set-up-connectors-to-route-mail#part-2-configure-mail-to-flow-from-your-email-server-to-office-365). Once you've configured mail to flow through Office 365, then you can configure mail flow rules for OME by using this guidance.
 
 ## Create a mail flow rule to encrypt email messages with the new OME capabilities
 
