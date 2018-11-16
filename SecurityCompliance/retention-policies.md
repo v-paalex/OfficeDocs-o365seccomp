@@ -3,7 +3,7 @@ title: "Overview of retention policies"
 ms.author: stephow
 author: stephow-MSFT
 manager: laurawi
-ms.date: 6/29/2018
+ms.date: 11/16/2018
 ms.audience: Admin
 ms.topic: overview
 ms.service: o365-administration
