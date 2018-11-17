@@ -78,21 +78,22 @@ In the search results, the IP address for each activity is displayed in the **IP
 
 ## Determining if email forwarding has been set up for a user
 
-When Forwarding Will help customers with how to identify forwarding set at the mailbox and how to look at audit logs on who/how forwarding was set at the mailbox level.
-
 When email forwarding is configured for a mailbox, which forwards email messages that are sent to the mailbox. Messages can be forward to users inside or outside of your organization. When email forward is et up on a mailbox, the underlying Exchange Online cmdlet that used is **Set-Mailbox**.
 
 Here's how to configure an audit log search query for this scenario:
 
-**Activities** - Leave this field blank  so that the search returns audit records for all activities. This is necessary to return any audit records related to the **Set-Mailbox** cmdlet.
+**Activities** - Leave this field blank so that the search returns audit records for all activities. This is necessary to return any audit records related to the **Set-Mailbox** cmdlet.
 
 **Start date** and **End date** - Select a date range that's applicable to your investigation.
 
-**Users** - Unless you're investigating a mail forwarding issue for a specific user, leave this field blank. This will help you identify email forward set up for any user.
+**Users** - Unless you're investigating a email forwarding issue for a specific user, leave this field blank. This will help you identify if email forwarding was set up for any user.
 
 **File, folder, or site** - Leave this field blank.
 
-Once the results are loaded, click on ‘Filter Results’. Type ‘Set-mailbox’ in the activity filter text box. This should return all ‘Set-Mailbox’ activities.  
+In the search results, click **Filter results**. In the box under **Activity** column header, type **Set-Mailbox**. Note that only auditing records related to the **Set-Mailbox** cmdlet are displayed. At this point, you have to look at the details of each audit record that's displayed to determine if it's related to email forwarding. To do that, click the audit record to display the **Details** flyout page, and then click **More information**. The following screenshot and descriptions highlight the information in the audit record that indicates email forwarding was set on the mailbox.
+
+
+After the results are loaded, click on ‘Filter Results’. Type ‘Set-mailbox’ in the activity filter text box. This should return all ‘Set-Mailbox’ activities.  
 
 When you click on the activity, a blade opens up in the righthand side pane. Click on ‘More Information’ and under the Parameters section you can see the forwarding email address that was set on the mailbox. The UserID represents the user that set up external forwarding on the mailbox
 
