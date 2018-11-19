@@ -20,7 +20,7 @@ description: "You can use the Office 365 audit log search tool to help you troub
 
 ## Using the Office 365 audit log search tool
 
-Each of the troubleshooting scenarios in this article are based on using the Office 365 audit log search tool in the Office 365 Security & Compliance Center. This section lists the permissions requirements to search the audit log and describes the steps to access and run audit log searches. Each scenario provides specific guidance about how to configure the search query and what to look for in the detail information in the audit records that match the search criteria.
+Each of the troubleshooting scenarios described in this article are based on using the Office 365 audit log search tool in the Office 365 Security & Compliance Center. This section lists the permissions requirements to search the audit log and describes the steps to access and run audit log searches. Each scenario provides specific guidance about how to configure the search query and what to look for in the detail information in the audit records that match the search criteria.
 
 ### Permissions required to use the audit log search tool
 
@@ -74,11 +74,11 @@ Here's how to configure an audit log search query for this scenario:
 
 **File, folder, or site** - Leave this field blank.
 
-In the search results, the IP address for each activity is displayed in the **IP address** column. Click the record in the search results to view more detailed information in the flyout page.
+In the search results, the IP address for each activity is displayed in the **IP address** column. Click the record in the search results to view more detailed information on the flyout page.
 
 ## Determining if email forwarding has been set up for a user
 
-When email forwarding is configured for a mailbox, which forwards email messages that are sent to the mailbox. Messages can be forward to users inside or outside of your organization. When email forward is et up on a mailbox, the underlying Exchange Online cmdlet that used is **Set-Mailbox**.
+When email forwarding is configured for a mailbox, which forwards email messages that are sent to the mailbox. Messages can be forward to users inside or outside of your organization. When email forward is set up on a mailbox, the underlying Exchange Online cmdlet that used is **Set-Mailbox**.
 
 Here's how to configure an audit log search query for this scenario:
 
@@ -90,16 +90,27 @@ Here's how to configure an audit log search query for this scenario:
 
 **File, folder, or site** - Leave this field blank.
 
-After you run the search, click **Filter results** on the search results page. In the box under **Activity** column header, type **Set-Mailbox**. Note that only auditing records related to the **Set-Mailbox** cmdlet are displayed. At this point, you have to look at the details of each audit record that's displayed to determine if the activity it's related to email forwarding. To do that, click the audit record to display the **Details** flyout page, and then click **More information**. The following screenshot and descriptions highlight the information that indicates email forwarding was set on the mailbox.
+After you run the search, click **Filter results** on the search results page. In the box under **Activity** column header, type **Set-Mailbox**. Note that only auditing records related to the **Set-Mailbox** cmdlet are displayed. 
 
+![Filtering the results of an audit log search](media/emailforwarding1.png)
 
-a. In the **ObjectId** field, the alias of the mailbox that email forwarding was set on is displayed. This mailbox is also displayed in the **Item** column in the search results page.
+At this point, you have to look at the details of each audit record that's displayed to determine if the activity it's related to email forwarding. To do that, click the audit record to display the **Details** flyout page, and then click **More information**. The following screenshot and descriptions highlight the information that indicates email forwarding was set on the mailbox.
+
+![Detailed information from the audit record](media/emailforwarding2.png)
+
+a. In the **ObjectId** field, the alias of the mailbox that email forwarding was set on is displayed. This mailbox is also displayed on the **Item** column in the search results page.
 
 b. In the **Parameters** field, The value *ForwardingSmtpAddress* indicates that email forward has been set on the mailbox. In this example, mail is being forwarded to the email address mike@contoso.com, which is outside of the alpinehouse.onmicrosoft.com organization.
 
-c. The *DeliverToMailboxAndForward* parameter indicates that a copy of message delivered to sarad@alpinehouse.onmicrosoft.com *and* is forwarded the email address specified by the *ForwardingSmtpAdress* parameter, which in this example is mike@contoso.com.
+c. The *True* value for the *DeliverToMailboxAndForward* parameter indicates that a copy of message delivered to sarad@alpinehouse.onmicrosoft.com *and* is forwarded to the email address specified by the *ForwardingSmtpAddress* parameter, which in this example is mike@contoso.com. If the value for this parameter is set to *False* then email is only forwarded to the email address specified by the *ForwardingSmtpAddress* parameter. It is not delivered to the mailbox specified in the **ObjectId** field.
 
-d. The UserId field indicate the user who set email forwarding on the mailbox speicified in the **ObjectId** field field. In this case, it seems the owner of the mailbox set email forwarding on her mailbox. 
+d. The UserId field indicate the user who set email forwarding on the mailbox specified in the **ObjectId** field field. This user is also displayed in the **User** column on the search results page. In this case, it seems that the owner of the mailbox set email forwarding on her mailbox.
+
+If you determine that email forwarding shouldn't be set on the mailbox, you can remove email forwarding by running the following command in Exchange Online PowerShell:
+
+```
+Set-Mailbox <mailbox alias> -ForwardingSmtpAddress $null 
+```
 
 See the [Set-Mailbox](https://docs.microsoft.com/powershell/module/exchange/mailboxes/set-mailbox) cmdlet reference topic for more information about the parameters related to email forwarding.
 
