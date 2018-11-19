@@ -90,12 +90,18 @@ Here's how to configure an audit log search query for this scenario:
 
 **File, folder, or site** - Leave this field blank.
 
-In the search results, click **Filter results**. In the box under **Activity** column header, type **Set-Mailbox**. Note that only auditing records related to the **Set-Mailbox** cmdlet are displayed. At this point, you have to look at the details of each audit record that's displayed to determine if it's related to email forwarding. To do that, click the audit record to display the **Details** flyout page, and then click **More information**. The following screenshot and descriptions highlight the information in the audit record that indicates email forwarding was set on the mailbox.
+After you run the search, click **Filter results** on the search results page. In the box under **Activity** column header, type **Set-Mailbox**. Note that only auditing records related to the **Set-Mailbox** cmdlet are displayed. At this point, you have to look at the details of each audit record that's displayed to determine if the activity it's related to email forwarding. To do that, click the audit record to display the **Details** flyout page, and then click **More information**. The following screenshot and descriptions highlight the information that indicates email forwarding was set on the mailbox.
 
 
-After the results are loaded, click on ‘Filter Results’. Type ‘Set-mailbox’ in the activity filter text box. This should return all ‘Set-Mailbox’ activities.  
+a. In the **ObjectId** field, the alias of the mailbox that email forwarding was set on is displayed. This mailbox is also displayed in the **Item** column in the search results page.
 
-When you click on the activity, a blade opens up in the righthand side pane. Click on ‘More Information’ and under the Parameters section you can see the forwarding email address that was set on the mailbox. The UserID represents the user that set up external forwarding on the mailbox
+b. In the **Parameters** field, The value *ForwardingSmtpAddress* indicates that email forward has been set on the mailbox. In this example, mail is being forwarded to the email address mike@contoso.com, which is outside of the alpinehouse.onmicrosoft.com organization.
+
+c. The *DeliverToMailboxAndForward* parameter indicates that a copy of message delivered to sarad@alpinehouse.onmicrosoft.com *and* is forwarded the email address specified by the *ForwardingSmtpAdress* parameter, which in this example is mike@contoso.com.
+
+d. The UserId field indicate the user who set email forwarding on the mailbox speicified in the **ObjectId** field field. In this case, it seems the owner of the mailbox set email forwarding on her mailbox. 
+
+See the [Set-Mailbox](https://docs.microsoft.com/powershell/module/exchange/mailboxes/set-mailbox) cmdlet reference topic for more information about the parameters related to email forwarding.
 
 ## Determining if a user deleted email items
 
