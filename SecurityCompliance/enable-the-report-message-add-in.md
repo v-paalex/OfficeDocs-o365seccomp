@@ -66,11 +66,11 @@ As a next step, learn how to [Use the Report Message add-in](https://support.off
     
 5. Search for Report Message, and in the list of results, next to the Report Message Add-In, choose Add.<br/>![Search for Report Message and then choose Add](media/NewAddInScreen3.png)<br/>
     
-7. On the Report Message screen, review the information, and then choose **Next**.<br/>![Report Message details](media/ReportMessageAdd-InNewScreen4.png)<br/>
+6. On the Report Message screen, review the information, and then choose **Next**.<br/>![Report Message details](media/ReportMessageAdd-InNewScreen4.png)<br/>
 
-8. Specify the user default settings for Outlook, and  then choose **Next**.<br/>![Report Message default settings for Outlook](media/ReportMessageOptionsScreen5.png)<br/>
+7. Specify the user default settings for Outlook, and  then choose **Next**.<br/>![Report Message default settings for Outlook](media/ReportMessageOptionsScreen5.png)<br/>
 
-9. Specify who gets the Report Message Add-in, and then choose **Save**. <br/>![Who gets the Report Message add-in](media/ReportMessageOptionsScreen6.png)<br/>
+8. Specify who gets the Report Message Add-in, and then choose **Save**. <br/>![Who gets the Report Message add-in](media/ReportMessageOptionsScreen6.png)<br/>
 
 > [!TIP]
 > We recommend [setting up a rule to get a copy of email messages reported by your users](#set-up-a-rule-to-get-a-copy-of-email-messages-reported-by-your-users)
