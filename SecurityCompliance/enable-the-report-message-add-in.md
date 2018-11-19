@@ -3,7 +3,7 @@ title: "Enable the Report Message add-in"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 10/18/2018
+ms.date: 11/19/2018
 ms.audience: Admin
 ms.topic: article
 ms.service: o365-administration
@@ -32,7 +32,7 @@ The Report Message add-in works with your Office 365 subscription and the follow
   
 If you're an individual user, you can [enable the Report Message add-in for yourself](#get-the-report-message-add-in-for-yourself). 
   
-If you're an Exchange Online administrator, you can [enable the Report Message add-in for your organization](#get-and-enable-the-report-message-add-in-for-your-organization).
+If you're an Office 365 global administrator or an Exchange Online administrator, and Exchange is configured to use OAuth authentication, you can [enable the Report Message add-in for your organization](#get-and-enable-the-report-message-add-in-for-your-organization). The Report Message Add-In is now available through [Centralized Deployment](https://docs.microsoft.com/office365/admin/manage/centralized-deployment-of-add-ins).
     
 ## Get the Report Message add-in for yourself
 
@@ -44,7 +44,6 @@ If you're an Exchange Online administrator, you can [enable the Report Message a
     
 4. Sign in to your Office 365 email using your work or school account (for business use) or your Microsoft account (for personal use).
     
-
 After the add-in is installed and enabled, you'll see the following icons: 
 
 - In Outlook the icon looks like this: <br/> ![Report Message Add-in icon for Outlook](media/OutlookReportMessageIcon.png)<br/>
@@ -55,33 +54,24 @@ As a next step, learn how to [Use the Report Message add-in](https://support.off
 ## Get and enable the Report Message add-in for your organization
 
 > [!IMPORTANT]
-> You must be an Office 365 global administrator or an Exchange Online Administrator to complete this task.
+> You must be an Office 365 global administrator or an Exchange Online Administrator to complete this task. In addition, Exchange must be configured to use OAuth authentication To learn more, see [Exchange requirements (Centralized Deployment of add-ins)](https://docs.microsoft.com/en-us/office365/admin/manage/centralized-deployment-of-add-ins&view=o365-worldwide#exchange-requirements). 
 
-1. Go to [https://portal.office.com](https://portal.office.com) and sign in using your work or school account. 
+1. Go to the [Services & add-ins page](https://admin.microsoft.com/AdminPortal/Home#/Settings/ServicesAndAddIns) in the new Microsoft 365 admin center.<br/>![Services and Add-Ins page in the new Microsoft 365 Admin Center](media/ServicesAddInsPageNewM365AdminCenter.png)<br/> 
     
-2. Choose **Admin** to go to the Admin center. 
+2. Choose **+ Deploy Add-in**.<br/>![Choose Deploy Add-In](media/ServicesAddIns-ChooseDeployAddIn.png)<br/> 
     
-3. Choose **Admin centers** \> **Exchange** to go to the Exchange admin center (EAC). 
+3. In the New Add-In screen, review the information, and then choose **Next**.<br/>![New Add-In details](media/NewAddInScreen1.png)<br/>
     
-4. Choose **organization** \> **add-ins**. 
+4. Select **I want to add an Add-In from the Office Store**, and then choose **Next**.<br/>![I want to add an new Add-In](media/NewAddInScreen2.png)<br/> 
     
-5. Choose **+** > **Add from the Office Store**.<br/>![Choose Add from the Office Store](media/EAC-Org-AddFromOfficeStore.png)<br/>This opens the Office Store in your web browser.
+5. Search for Report Message, and in the list of results, next to the Report Message Add-In, choose Add.<br/>![Search for Report Message and then choose Add](media/NewAddInScreen3.png)<br/>
     
-6. Search for Report Message.<br/>![Search for Report Message](media/ReportMessageSearchOfficeStore.png)<br/>
-    
-7. In the **Apps** list, select **Report Message**, and then choose **GET IT NOW**.<br/>![Choose GET IT NOW](media/ReportMessageGETITNOW.png)<br/> 
-    
-8. Review the terms of use and privacy policy. Then choose **Continue**. 
-    
-    ![Click Continue to accept the terms and privacy policy](media/ReportMessageTermsAndConditions.png)
-  
-9. A wizard opens to help you configure the Report Message add-in. Review the information, and choose **Next** to continue.<br/>![Report Message add-in wizard for Office 365](media/ReportMessageAdminInstallUI.png)<br/> 
+6. On the Report Message screen, review the information, and then choose **Next**.<br/>![Report Message details](media/ReportMessageAdd-InNewScreen4.png)<br/>
 
-10. Specify the default setting you want users to have for the Report Message add-in.<br/>![Specify default settings for the Report Message add-in](media/ReportMessageUserOptionsAdminsSet.png)<br/>
-    
-11. Specify who gets the Report Message add-in. <br/>![Specify who gets the Report Message add-in](media/ReportMessageChooseWhoGetsItAdminSettings.png)<br/>
+7. Specify the user default settings for Outlook, and  then choose **Next**.<br/>![Report Message default settings for Outlook](media/ReportMessageOptionsScreen5.png)<br/>
 
-12. Choose **Save**. <br/>
+8. Specify who gets the Report Message Add-in, and then choose **Save**. <br/>![Who gets the Report Message add-in](media/ReportMessageOptionsScreen6.png)<br/>
+
 > [!TIP]
 > We recommend [setting up a rule to get a copy of email messages reported by your users](#set-up-a-rule-to-get-a-copy-of-email-messages-reported-by-your-users)
 
@@ -105,41 +95,33 @@ You can set up a rule to get a copy of email messages reported by users in your 
     
 4. In the **Apply this rule if** list, choose **The recipient address includes...**. 
     
-5. In the **specify words or phrases** screen, add junk@office365.microsoft.com and phish@office365.microsoft.com, and then choose **OK**. 
-    
-    ![Specify the junk and phish email addresses for the rule](media/018c1833-f336-4333-a45c-f2e8b75cd698.png)
+5. In the **specify words or phrases** screen, add `junk@office365.microsoft.com` and `phish@office365.microsoft.com`, and then choose **OK**.<br/>![Specify the junk and phish email addresses for the rule](media/018c1833-f336-4333-a45c-f2e8b75cd698.png)<br/>
   
 6. In the **Do the following...** list, choose **Bcc the message to...**. 
     
-7. Add a global administrator, security administrator, and/or security reader who should receive a copy of each email message that people report to Microsoft, and then choose **OK**. 
-    
-    ![Add a global or security administrator to receive a copy of each reported message](media/a91ab9d1-66f2-4a2e-9dc1-f9f81a2298ad.png)
+7. Add a global administrator, security administrator, and/or security reader who should receive a copy of each email message that people report to Microsoft, and then choose **OK**.<br/>![Add a global or security administrator to receive a copy of each reported message](media/a91ab9d1-66f2-4a2e-9dc1-f9f81a2298ad.png)<br/>
   
 8. Select **Audit this rule with severity level**, and choose **Medium**. 
     
-9. Under **Choose a mode for this rule**, choose **Enforce**. 
-    
-    ![Set up a rule to get a copy of each reported message](media/f1cd95ce-e40d-4a8a-8f48-893469eba691.png)
+9. Under **Choose a mode for this rule**, choose **Enforce**.<br/>![Set up a rule to get a copy of each reported message](media/f1cd95ce-e40d-4a8a-8f48-893469eba691.png)<br/>
   
 10. Choose **Save**. 
     
 With this rule in place, whenever someone in your organization reports an email message using the Report Message add-in, your global administrator, security administrator, and/or security reader will receive a copy of that message. This information can enable you to set up or adjust policies, such as [Office 365 ATP Safe Links](atp-safe-links.md) policies. 
 
-## Review or edit the default settings for the Report Message add-in
+## Review or edit settings for the Report Message add-in
 
-You can review and edit the default settings for the Report Message add-in using the Admin Center. 
+You can review and edit the default settings for the Report Message Add-In in the [Services & Add-Ins page](https://admin.microsoft.com/AdminPortal/Home#/Settings/ServicesAndAddIns). 
 
 > [!IMPORTANT]
 > You must be an Office 365 global administrator or an Exchange Online Administrator to complete this task.
     
-1. If you've just installed the Report Message add-in for your organization, you'll already be on the Services & add-ins page. Otherwise, go [here](https://portal.office.com/adminportal/home#/Settings/ServicesAndAddIns) and sign in using your work or school account for Office 365.
+1. Go to the [Services & add-ins page](https://admin.microsoft.com/AdminPortal/Home#/Settings/ServicesAndAddIns) in the new Microsoft 365 admin center.<br/>![Services and Add-Ins page in the new Microsoft 365 Admin Center](media/ServicesAddInsPageNewM365AdminCenter.png)<br/>
 
-2. Search for **Report Message**, and then select it.<br/>![Services and add-ins for Office 365](media/ReportMessage-o365servicesaddins.png)<br/> 
+2. Find and select the Report Message Add-In.<br/>![Find and select the Report Message add-in](media/FindReportMessageAddIn.png)<br/> 
     
-3. A pane opens that displays the settings that were selected for the Report Message add-in during deployment.<br/>![Settings for the Report Message add-in](media/ReportMessage-reviewaddinsettings.png)<br/> 
+3. On the Report Message screen, review and edit settings as appropriate for your organization.<br/>![Settings for the Report Message add-in](media/EditReportMessageAddIn.png)<br/> 
 
-4. Review and if needed, edit settings for the Report Message add-in, and then save your changes.
-    
 ## Learn how to use the Report Message add-in
 
 See [Use the Report Message add-in](https://support.office.com/article/b5caa9f1-cdf3-4443-af8c-ff724ea719d2).
