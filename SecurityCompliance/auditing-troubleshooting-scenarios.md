@@ -124,8 +124,9 @@ Here's how to configure an audit log search query for this scenario:
 
 **Activities** - Under **Exchange mailbox activities**, select one or both of the following activities:
 
-- **Deleted messages from Deleted Items folder** -  This activity corresponds to the SoftDelete mailbox auditing action. This activity is also logged when a user permanently deletes an item by selecting it and pressing **Shift+Delete**.
-- **Purged messages from mailbox** - This activity corresponds to the HardDelete mailbox auditing action. This is logged when a user purges an item from the Recoverable Items folder 
+- **Deleted messages from Deleted Items folder** -  This activity corresponds to the SoftDelete mailbox auditing action. This activity is also logged when a user permanently deletes an item by selecting it and pressing **Shift+Delete**. After an item is permanently deleted, the user can recover it until the deleted item retention period expires.
+
+- **Purged messages from mailbox** - This activity corresponds to the HardDelete mailbox auditing action. This is logged when a user purges an item from the Recoverable Items folder. Admins can use the Content Search tool in the Office 365 Security & Compliance Center to search for and recover purged items until the deleted item retention period expires or longer if the user's mailbox is on hold.
 
 **Start date** and **End date** - Select a date range that's applicable to your investigation.
 
@@ -133,23 +134,8 @@ Here's how to configure an audit log search query for this scenario:
 
 **File, folder, or site** - Leave this field blank.
 
-Click the record in the search results to view more detailed information on the flyout page.
+After you run the search, you can filter the search results to display the audit records for soft-deleted items or for hard-deleted items. Click a record in the search results to view more detailed information on the flyout page.
 
-In the search results, the IP address for each activity is displayed in the **IP address** column. Click the record in the search results to view more detailed information on the flyout page.
-
-After you run the search, the IP address for each activity is displayed in the **IP address** column in the search results. Click the record in the search results to view more detailed information on the flyout page.
-
-After you run the search, click **Filter results** on the search results page. In the box under **Activity** column header, type **Set-Mailbox**. Note that only auditing records related to the **Set-Mailbox** cmdlet are displayed. 
-
-Login to the Office 365 Security & Compliance center 
-
-Click on “Search and Investigation” and select “Audit Log Search: 
-
-Specify date range by adjusting dates in Start and End date fields. 
-
-Specify username for the user that you want to investigate. 
-
-In the Activities field select the following: “Deleted messages from Deleted Items folder” , “Moved messages to Deleted Items folder”. 
 
 When you click on the activity, a blade opens up in the righthand side pane. 
 
@@ -158,6 +144,8 @@ Click on ‘More Information’ and under the ‘Affected Items’ Section you c
 The ClientInfoString property will show if the activity was performed from OWA or Outlook or any other device. 
 
 Note: Admin or users can't retrieve deleted items using the audit log feature. In order to recover deleted email, users can follow instructions in the topic, [Recover deleted items or email in Outlook Web App](https://support.office.com/article/Recover-deleted-items-or-email-in-Outlook-Web-App-C3D8FC15-EEEF-4F1C-81DF-E27964B7EDD4).
+
+### Recovering deleted email items
 
 ## Determining if a user created an inbox rule
 
