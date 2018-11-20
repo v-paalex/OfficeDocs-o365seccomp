@@ -36,9 +36,9 @@ Need to find if a user viewed a specific document or purged an item from their m
     
 - User and admin activity in Sway
     
-- eDiscovery activities in the Office 365 Security &amp; Compliance Center
+- eDiscovery activities in the Office 365 Security & Compliance Center
     
-- User and admin activity in Power BI for Office 365
+- User and admin activity in Power BI
     
 - User and admin activity in Microsoft Teams
 
@@ -119,7 +119,7 @@ Be sure to read the following items before you start searching the Office 365 au
     
 - Exchange Online audit logs consist of two types of events: Exchange admin events (actions taken by administrators) and mailbox events (actions taken by users on mailboxes). Note that mailbox auditing isn't enabled by default. It must be enable for each user mailbox before mailbox events can be searched for in the Office 365 audit log. For more information about mailbox auditing and the mailbox auditing actions that are logged, see [Enable mailbox auditing in Office 365](enable-mailbox-auditing.md).
     
-- Audit logging for Power BI isn't enabled by default. To search for Power BI activities in the Office 365 audit log, you have to enable auditing in the Power BI admin portal. For instructions, see [Auditing Power BI](https://docs.microsoft.com/power-bi/service-admin-auditing#enabling-auditing-functionality-in-the-power-bi-admin-portal).
+- Audit logging for Power BI isn't enabled by default. To search for Power BI activities in the Office 365 audit log, you have to enable auditing in the Power BI admin portal. For instructions, see the "Audit logs" section in [Power BI admin portal](https://docs.microsoft.com/power-bi/service-admin-portal#audit-logs).
     
     
 ## Search the audit log
@@ -272,7 +272,6 @@ You can export the results of an audit log search to a comma separated value (CS
     
     For a description of the properties that are listed in the **AuditData** column in the CSV file when you download all results, and the service each one applies to, see [Detailed properties in the Office 365 audit log](detailed-properties-in-the-office-365-audit-log.md).
 
-  
 ## Audited activities
 
 The tables in this section describe the activities that are audited in Office 365. You can search for these events by searching the audit log in the Security &amp; Compliance Center. Click the **Search the audit log** tab for step-by-step instructions. 
@@ -561,32 +560,9 @@ For a list and detailed description of the eDiscovery activities that are logged
   
 ### Power BI activities
   
-The following table lists user and admin activities in Power BI that are logged in the Office 365 audit log.
+You can search the audit log for activities in Power BI. For information about Power BI activities, see the "Activities audited by Power Power BI" section in [Using auditing within your organization](https://docs.microsoft.com/power-bi/service-admin-auditing#activities-audited-by-power-bi).
   
- **Important:** Audit logging for Power BI isn't enabled by default. To search for Power BI activities in theOffice 365 audit log, you have to enable auditing in the Power BI admin portal. For instructions, see [Auditing Power BI](https://docs.microsoft.com/power-bi/service-admin-auditing#enabling-auditing-functionality-in-the-power-bi-admin-portal).
-  
-|**Friendly name**|**Operation**|**Description**|
-|:-----|:-----|:-----|
-|Added Power BI group members  <br/> |AddGroupMembers  <br/> |A member is added to a Power BI group workspace.  <br/> |
-|Analyzed Power BI dataset  <br/> |AnalyzedByExternalApplication  <br/> |A dataset is analyzed by an external application.  <br/> |
-|Created Power BI dashboard  <br/> |CreateDashboard  <br/> |A new dashboard is created.  <br/> |
-|Created Power BI group  <br/> |CreateGroup  <br/> |A group is created.  <br/> |
-|Created organizational Power BI content pack  <br/> |CreateOrgApp  <br/> |An organizational content pack is created.  <br/> |
-|Deleted Power BI dashboard  <br/> |DeleteDashboard  <br/> |A dashboard is deleted.  <br/> |
-|Deleted Power BI dataset  <br/> |DeleteDataset  <br/> |A dataset is deleted.  <br/> |
-|Deleted Power BI report  <br/> |DeleteReport  <br/> |A report is deleted.  <br/> |
-|Downloaded Power BI report  <br/> |DownloadReport  <br/> |A user downloads a Power BI report from the service to their computer.  <br/> |
-|Edited Power BI dashboard  <br/> |EditDashboard  <br/> |A dashboard is renamed.  <br/> |
-|Exported Power BI report visual data  <br/> |ExportReport  <br/> |Data is exported from a report tile.  <br/> |
-|Exported Power BI tile data  <br/> |ExportTile  <br/> |Data is exported from a dashboard tile.  <br/> |
-|Printed Power BI dashboard  <br/> |PrintDashboard  <br/> |A dashboard is printed.  <br/> |
-|Printed Power BI report page  <br/> |PrintReport  <br/> |A report is printed.  <br/> |
-|Published Power BI report to web  <br/> |PublishToWebReport  <br/> |A report is published to the web.  <br/> |
-|Shared Power BI dashboard  <br/> |ShareDashboard  <br/> |A dashboard is shared.  <br/> |
-|Started Power BI trial  <br/> |OptInForProTrial  <br/> |A user starts a Power BI Pro trial subscription.  <br/> |
-|Updated organization's Power BI settings  <br/> |UpdatedAdminFeatureSwitch  <br/> |An admin changed an organizational setting in the Power BI admin portal.  <br/> |
-|Viewed Power BI dashboard  <br/> |ViewDashboard  <br/> |A dashboard is viewed.  <br/> |
-|Viewed Power BI report  <br/> |ViewReport  <br/> |A report is viewed.  <br/> |
+Note that audit logging for Power BI isn't enabled by default. To search for Power BI activities in the Office 365 audit log, you have to enable auditing in the Power BI admin portal. For instructions, see the "Audit logs" section in [Power BI admin portal](https://docs.microsoft.com/power-bi/service-admin-portal#audit-logs).
   
 ### Microsoft Teams activities
   
