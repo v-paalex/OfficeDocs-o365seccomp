@@ -74,7 +74,7 @@ Here's how to configure an audit log search query for this scenario:
 
 **File, folder, or site** - Leave this field blank.
 
-In the search results, the IP address for each activity is displayed in the **IP address** column. Click the record in the search results to view more detailed information on the flyout page.
+After you run the search, the IP address for each activity is displayed in the **IP address** column in the search results. Click the record in the search results to view more detailed information on the flyout page.
 
 ## Determining if email forwarding has been set up for a user
 
@@ -119,6 +119,27 @@ See the [Set-Mailbox](https://docs.microsoft.com/powershell/module/exchange/mail
 Help customers with enabling audit actions for delete events and how to review them using Unified Audit logs.
 
 We are in the process of enabling mailbox auditing by default. Until then to review delete events for a certain user, that delete actions need to be enabled for auditing.  This article can help you with enabling mailbox auditing. If you had enabled mailbox auditing already, follow the steps below.
+
+Here's how to configure an audit log search query for this scenario:
+
+**Activities** - Under **Exchange mailbox activities**, select one or both of the following activities:
+
+- **Deleted messages from Deleted Items folder** -  This activity corresponds to the SoftDelete mailbox auditing action. This activity is also logged when a user permanently deletes an item by selecting it and pressing **Shift+Delete**.
+- **Purged messages from mailbox** - This activity corresponds to the HardDelete mailbox auditing action. This is logged when a user purges an item from the Recoverable Items folder 
+
+**Start date** and **End date** - Select a date range that's applicable to your investigation.
+
+**Users** - If you select a user in this field, the audit log search tool will return audit records for email items that were deleted (SoftDeleted or HardDeleted) by the user you specify. In some cases, the user who deletes an email might not be the mailbox owner.
+
+**File, folder, or site** - Leave this field blank.
+
+Click the record in the search results to view more detailed information on the flyout page.
+
+In the search results, the IP address for each activity is displayed in the **IP address** column. Click the record in the search results to view more detailed information on the flyout page.
+
+After you run the search, the IP address for each activity is displayed in the **IP address** column in the search results. Click the record in the search results to view more detailed information on the flyout page.
+
+After you run the search, click **Filter results** on the search results page. In the box under **Activity** column header, type **Set-Mailbox**. Note that only auditing records related to the **Set-Mailbox** cmdlet are displayed. 
 
 Login to the Office 365 Security & Compliance center 
 
