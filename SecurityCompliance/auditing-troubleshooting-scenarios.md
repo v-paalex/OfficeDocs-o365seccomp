@@ -20,7 +20,7 @@ description: "You can use the Office 365 audit log search tool to help you troub
 
 ## Using the Office 365 audit log search tool
 
-Each of the troubleshooting scenarios described in this article are based on using the Office 365 audit log search tool in the Office 365 Security & Compliance Center. This section lists the permissions requirements to search the audit log and describes the steps to access and run audit log searches. Each scenario provides specific guidance about how to configure the search query and what to look for in the detail information in the audit records that match the search criteria.
+Each of the troubleshooting scenarios described in this article are based on using the Office 365 audit log search tool in the Office 365 Security & Compliance Center. This section lists the permissions requirements to search the audit log and describes the steps to access and run audit log searches. Each scenario provides specific guidance about how to configure the search query and what to look for in the detailed information in the audit records that match the search criteria.
 
 ### Permissions required to use the audit log search tool
 
@@ -116,17 +116,15 @@ See the [Set-Mailbox](https://docs.microsoft.com/powershell/module/exchange/mail
 
 ## Determining if a user deleted email items
 
-Help customers with enabling audit actions for delete events and how to review them using Unified Audit logs.
-
-We are in the process of enabling mailbox auditing by default. Until then to review delete events for a certain user, that delete actions need to be enabled for auditing.  This article can help you with enabling mailbox auditing. If you had enabled mailbox auditing already, follow the steps below.
+Before audit log records about deleted email items are saved to the Office 365 audit log, mailbox auditing has to be enabled for each user mailbox in your organization. Additionally, the SoftDelete and HardDelete mailbox actions have to be enabled for auditing. For instructions, see [Enable mailbox auditing in Office 365](enable-mailbox-auditing.md). If mailbox auditing is already enabled for users, use the following steps to search the audit log for events related to deleted email items.
 
 Here's how to configure an audit log search query for this scenario:
 
 **Activities** - Under **Exchange mailbox activities**, select one or both of the following activities:
 
-- **Deleted messages from Deleted Items folder** -  This activity corresponds to the SoftDelete mailbox auditing action. This activity is also logged when a user permanently deletes an item by selecting it and pressing **Shift+Delete**. After an item is permanently deleted, the user can recover it until the deleted item retention period expires.
+- **Deleted messages from Deleted Items folder** -  This activity corresponds to the **SoftDelete** mailbox auditing action. This activity is also logged when a user permanently deletes an item by selecting it and pressing **Shift+Delete**. After an item is permanently deleted, the user can recover it until the deleted item retention period expires.
 
-- **Purged messages from mailbox** - This activity corresponds to the HardDelete mailbox auditing action. This is logged when a user purges an item from the Recoverable Items folder. Admins can use the Content Search tool in the Office 365 Security & Compliance Center to search for and recover purged items until the deleted item retention period expires or longer if the user's mailbox is on hold.
+- **Purged messages from mailbox** - This activity corresponds to the **HardDelete** mailbox auditing action. This is logged when a user purges an item from the Recoverable Items folder. Admins can use the Content Search tool in the Office 365 Security & Compliance Center to search for and recover purged items until the deleted item retention period expires or longer if the user's mailbox is on hold.
 
 **Start date** and **End date** - Select a date range that's applicable to your investigation.
 
@@ -134,22 +132,43 @@ Here's how to configure an audit log search query for this scenario:
 
 **File, folder, or site** - Leave this field blank.
 
-After you run the search, you can filter the search results to display the audit records for soft-deleted items or for hard-deleted items. Click a record in the search results to view more detailed information on the flyout page.
+After you run the search, you can filter the search results to display the audit records for soft-deleted items or for hard-deleted items. Click the audit record to display the **Details** flyout page, and then click **More information**. Additional information about the deleted item, such as the subject line and the location of the item when it was deleted, is displayed in the **AffectedItems** field. The following screenshots show an example of the **AffectedItems** field from a soft-deleted item and a hard-deleted item.
 
+**Example of AffectedItems field for soft-deleted item**
 
-When you click on the activity, a blade opens up in the righthand side pane. 
+![Audit log record for soft-deleted item](media/softdeleteditem.png)
 
-Click on ‘More Information’ and under the ‘Affected Items’ Section you can see the Subject of the deleted message, the original folder path of the message. 
+**Example of AffectedItems field for hard-deleted item**
 
-The ClientInfoString property will show if the activity was performed from OWA or Outlook or any other device. 
-
-Note: Admin or users can't retrieve deleted items using the audit log feature. In order to recover deleted email, users can follow instructions in the topic, [Recover deleted items or email in Outlook Web App](https://support.office.com/article/Recover-deleted-items-or-email-in-Outlook-Web-App-C3D8FC15-EEEF-4F1C-81DF-E27964B7EDD4).
+![Audit log record for hard-deleted email item](media/harddeleteditem.png)
 
 ### Recovering deleted email items
 
+Users can recover soft-deleted items if the deleted items retention period has not expired. In Exchange Online, the default deleted items retention period is 14 days, but admins can increase this setting to a maximum of 30 days. Point users to the [Recover deleted items or email in Outlook Web App](https://support.office.com/article/Recover-deleted-items-or-email-in-Outlook-Web-App-C3D8FC15-EEEF-4F1C-81DF-E27964B7EDD4). topic for instructions on recovering deleted items.
+
+As previously explained, admins might be able to recover hard-deleted items if the deleted item retention period has not expired or if the mailbox is on hold, in which case items are retained until the hold duration expires. When you run a content search, soft-deleted and hard-deleted items in the Recoverable Items folder are returned in the search results if they match the search query. For more information about running content searches, see [Content Search in Office 365](content-search.md).
+
+> [!TIP]
+> To search for deleted email items, search for all or part of the subject line that's displayed in the **AffectedItems** field in the audit log record.
+
 ## Determining if a user created an inbox rule
 
-Creation, modification and deletion of inbox rules events are audited and can be reviewed using audit log search in the Security and Compliance center. Here are the instructions to find and review those events.
+When users create, edit, or delete an inbox rule for their Exchange Online mailbox, a corresponding audit record is saved to the audit log. For more information about inbox rules, see:
+
+- [Use inbox rules in Outlook on the web](https://support.office.com/article/use-inbox-rules-in-outlook-on-the-web-8400435c-f14e-4272-9004-1548bb1848f2)
+- [Manage email messages in Outlook by using rules](https://support.office.com/article/Manage-email-messages-by-using-rules-C24F5DEA-9465-4DF4-AD17-A50704D66C59)
+
+Here's how to configure an audit log search query for this scenario:
+
+**Activities** - Leave this field blank so that the search returns audit records for all activities. This is necessary to return any audit records related to the **Set-Mailbox** cmdlet.
+
+**Start date** and **End date** - Select a date range that's applicable to your investigation.
+
+**Users** - Unless you're investigating a email forwarding issue for a specific user, leave this field blank. This will help you identify if email forwarding was set up for any user.
+
+**File, folder, or site** - Leave this field blank.
+
+After you run the search, click **Filter results** on the search results page. In the box under **Activity** column header, type **Set-Mailbox**. Note that only auditing records related to the **Set-Mailbox** cmdlet are displayed. 
 
 Login to the Office 365 Security & Compliance center 
 
