@@ -39,7 +39,7 @@ Explorer has several filtering and querying capabilities that enable you to dril
 > [!IMPORTANT]
 > Do not use wildcard characters, such as an asterisk (*) or a question mark (?), with Explorer. When you search on the Subject field for email messages, Explorer will perform partial matching and yield results similar to a wildcard search.
 
-### Email \> Malware
+## Email \> Malware
 
 This view shows email messages identified as containing malware.  
 
@@ -49,7 +49,7 @@ View information in the chart by malware family, sender domain, sender IP, prote
 
 Below the chart, view details about top malware families, top targeted users, and more details about specific messages. 
 
-### Email \> Phish
+## Email \> Phish
 
 This view shows email messages identified as phishing attempts.  
 
@@ -59,7 +59,7 @@ View information by sender domain, sender IP, and protection status (actions tak
 
 Below the chart, view more details about specific messages. 
 
-### Email \> User-reported
+## Email \> User-reported
 
 This view shows email that users have reported as junk, not junk, or phishing email.  
 
@@ -69,7 +69,7 @@ View information by report type (the user's determination that the email was jun
 
 Below the chart, view more details about specific email messages, such as subject line, the sender's IP address, the user that reported the message as junk, not junk, or phish, and more. 
 
-### Email \> All mail
+## Email \> All mail
 
 This views shows an all-up view of email activity, including email identified as malicious due to phishing or malware, as well all non-malicious mail (normal email, spam, and bulk mail). 
 
@@ -82,7 +82,7 @@ To apply a filter, choose **Sender**, select an item in the list, and then click
 
 Below the chart, view more details about specific email messages, such as subject line, recipient, sender, status, and so on. 
 
-### Content \> Malware
+## Content \> Malware
 
 This view shows files that were identified as malicious in SharePoint Online, OneDrive for Business, and Microsoft Teams.
 
