@@ -35,14 +35,16 @@ In order to perform the tasks described in this article, you must have the neces
 5. Review (and, as appropriate, edit) your organization's [Safe Attachments policies](set-up-atp-safe-attachments-policies.md) and [Safe Links policies](set-up-atp-safe-links-policies.md).
     
 6. (Recommended) As a global administrator or a SharePoint Online administrator, run the **[Set-SPOTenant](https://docs.microsoft.com/powershell/module/sharepoint-online/Set-SPOTenant?view=sharepoint-ps)** cmdlet with the **DisallowInfectedFileDownload** parameter set to  *true*. <br/>
-  - Setting the parameter to *true* blocks all actions (except Delete) for detected files. People cannot open, move, copy, or share detected files.
-  - Setting the parameter to *false* blocks all actions except Delete and Download. People can choose to accept the risk and download a detected file.  
+      - Setting the parameter to *true* blocks all actions (except Delete) for detected files. People cannot open, move, copy, or share detected files.
+      - Setting the parameter to *false* blocks all actions except Delete and Download. People can choose to accept the risk and download a detected file.  
    
 7. Allow up to 30 minutes for your changes to spread to all Office 365 datacenters.
     
 8. (Recommended) Proceed to set up alerts for detected files.
     
-To learn more about using PowerShell with Office 365, see [Manage Office 365 with PowerShell](https://docs.microsoft.com/office365/enterprise/powershell/manage-office-365-with-office-365-powershell). > To learn more about the user experience when a file has been detected as malicious, see [What to do when a malicious file is found in SharePoint Online, OneDrive, or Microsoft Teams](https://support.office.com/article/01e902ad-a903-4e0f-b093-1e1ac0c37ad2). 
+To learn more about using PowerShell with Office 365, see [Manage Office 365 with PowerShell](https://docs.microsoft.com/office365/enterprise/powershell/manage-office-365-with-office-365-powershell). 
+
+To learn more about the user experience when a file has been detected as malicious, see [What to do when a malicious file is found in SharePoint Online, OneDrive, or Microsoft Teams](https://support.office.com/article/01e902ad-a903-4e0f-b093-1e1ac0c37ad2). 
   
 ## Set up alerts for detected files
 
@@ -58,9 +60,9 @@ To receive notification when a file in SharePoint Online, OneDrive for Business,
     
 5. In the **Send this alert when...** section, do the following: 
     
-  - In the **Activities** list, choose **Detected malware in file**.
+    a. In the **Activities** list, choose **Detected malware in file**.
     
-  - Leave the **Users** field empty. 
+    b. Leave the **Users** field empty. 
     
 6. In the **Send this alert to...** section, select one or more global administrators, security administrators, or security readers who should receive notification when a malicious file is detected. 
     
