@@ -3,7 +3,7 @@ title: "Security dashboard overview"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 09/05/2018
+ms.date: 11/27/2018
 ms.audience: ITPro
 ms.topic: overview
 ms.service: o365-administration
@@ -36,7 +36,7 @@ Depending on what your organization's Office 365 subscription includes, the Secu
 To view the Security Dashboard, in the [Office 365 Security &amp; Compliance Center](go-to-the-securitycompliance-center.md), go to **Threat management** \> **Dashboard**.
   
 > [!NOTE]
-> You must be an Office 365 global administrator, security administrator, or security reader to view the Security Dashboard. See [Permissions in the Office 365 Security &amp; Compliance Center](permissions-in-the-security-and-compliance-center.md). 
+> You must be an Office 365 global administrator, a security administrator, or a security reader to view the Security Dashboard. See [Permissions in the Office 365 Security &amp; Compliance Center](permissions-in-the-security-and-compliance-center.md). 
   
 ## Threat Protection Status
 
