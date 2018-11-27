@@ -3,6 +3,7 @@ title: "View email security reports in the Security &amp; Compliance Center"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
+ms.date: 11/27/2018
 ms.audience: ITPro
 ms.topic: article
 ms.service: o365-administration
@@ -170,12 +171,25 @@ To view this report, in the Security &amp; Compliance Center, do one of the foll
   
 ## What permissions are needed to view these reports?
 
-In order to view and use the email security reports described in this article, you must have an appropriate role assigned in the Security &amp; Compliance Center and in the Exchange Admin Center.
-  
-|**Role group**|**Where assigned**|**Learn more**|
-|:-----|:-----|:-----|
-| One of the following:  <br/><br/>--Organization Management  <br/>--Security Administrator  <br/>--Security Reader  <br/> |Security &amp; Compliance Center  <br/> |[Permissions in the Office 365 Security &amp; Compliance Center](permissions-in-the-security-and-compliance-center.md) <br/> |
-| One of the following:  <br/><br/>--Organization Management  <br/>--View-only Organization Management  <br/>--View-Only Recipients role  <br/>--Compliance Management  <br/> |Exchange Admin Center  <br/> |[Feature permissions in Exchange Online](https://technet.microsoft.com/library/jj200673%28v=exchg.150%29.aspx) <br/> |
+In order to view and use the reports described in this article, you must have an appropriate role assigned in both the Security &amp; Compliance Center and the Exchange Admin Center.
+
+- For the Security &amp; Compliance Center, you must have one of the following roles assigned:
+    - Organization Management
+    - Security Administrator
+    - Security Reader
+
+- For Exchange Online, you must have one of the following roles assigned:
+    - Organization Management
+    - View-only Organization Management
+    - View-Only Recipients role
+    - Compliance Management
+
+To learn more, see the following resources:
+
+- [Permissions in the Office 365 Security &amp; Compliance Center](permissions-in-the-security-and-compliance-center.md)
+
+- [Feature permissions in Exchange Online](https://docs.microsoft.com/exchange/permissions-exo/feature-permissions)
+   
    
 ## What if the reports aren't showing data?
 
