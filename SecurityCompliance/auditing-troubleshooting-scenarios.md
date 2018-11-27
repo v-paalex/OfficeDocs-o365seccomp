@@ -160,23 +160,15 @@ When users create, edit, or delete an inbox rule for their Exchange Online mailb
 
 Here's how to configure an audit log search query for this scenario:
 
-**Activities** - Leave this field blank so that the search returns audit records for all activities. This is necessary to return any audit records related to the **Set-Mailbox** cmdlet.
+**Activities** - Under **Exchange mailbox activities**, select **New-InboxRule Create/modify/enable/disable inbox rule**.
 
 **Start date** and **End date** - Select a date range that's applicable to your investigation.
 
-**Users** - Unless you're investigating a email forwarding issue for a specific user, leave this field blank. This will help you identify if email forwarding was set up for any user.
+**Users** - Unless you're investigating a specific user, leave this field blank. This will help you identify new inbox rules set up by any user.
 
 **File, folder, or site** - Leave this field blank.
 
-After you run the search, click **Filter results** on the search results page. In the box under **Activity** column header, type **Set-Mailbox**. Note that only auditing records related to the **Set-Mailbox** cmdlet are displayed. 
+After you run the search, any audit records for this activity are displayed in the search results. Click an audit record to display the **Details** flyout page, and then click **More information**. Information about the settings of the inbox rule are displayed in the **Parameters** field. The following screenshot and descriptions from the audit record highlight the information about inbox rules.
 
-Login to the Office 365 Security & Compliance center 
 
-Click on “Search and Investigation” and select “Audit Log Search” 
-
-Specify date range by adjusting dates in Start and End date fields. Specify the user name for the user you would like to investigate. Ensure that the Activities field is set to ‘New-InboxRule
- 
-Create/modify/enable/disable inbox rule’ which can be found under Exchange Mailbox Activities.  
-Click on ‘Search’ 
-
-When you click on the activity, a blade opens up in the righthand side pane. Click on ‘More Information’ and under the Parameters section you can see the name of the rule, conditions set and action that the rule will take.
+For a description of the parameters for the **New-InboxRule** cmdlet that correspond to the conditions and actions that can be set for an inbox rule, see [New-InboxRule](https://docs.microsoft.com/powershell/module/exchange/mailboxes/new-inboxrule).
