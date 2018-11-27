@@ -30,7 +30,7 @@ The **Threat Protection Status** report is a single view that brings together in
 > [!NOTE]
 > A Threat Protection Status report is available to customers who have either [Office 365 ATP](office-365-atp.md) or [Exchange Online Protection](eop/exchange-online-protection-eop.md) (EOP); however, the information that is displayed in the Threat Protection Status report for ATP customers will likely contain different data than what EOP customers might see. For example, the Threat Protection Status report for ATP customers will contain information about [malicious files detected in SharePoint Online, OneDrive, or Microsoft Teams](atp-for-spo-odb-and-teams.md). Such information is specific to ATP, so customers who have EOP but not ATP will not see those details in their Threat Protection Status report.
   
-To view the Threat Protection Status report, in the Security &amp; Compliance Center, go to **Reports** \> **Dashboard** \> **Threat Protection Status**.
+To view the Threat Protection Status report, in the [Security &amp; Compliance Center](https://security.microsoft.com), go to **Reports** \> **Dashboard** \> **Threat Protection Status**.
   
 ![ATP Threat Protection Status report](media/6bdd41eb-62e0-423b-9fd4-d1d5baf0cbd5.png)
   
@@ -50,7 +50,7 @@ You can also use the **View data by** menu to change what information is display
 
 The **ATP File Types** report shows you the type of files detected as malicious by [ATP Safe Attachments](atp-safe-attachments.md).
   
-To view this report, in the Security &amp; Compliance Center, go to **Reports** \> **Dashboard** \> **ATP File Types**.
+To view this report, in the [Security &amp; Compliance Center](https://security.microsoft.com), go to **Reports** \> **Dashboard** \> **ATP File Types**.
   
 ![ATP File Types report](media/6e3f5d33-79aa-4b2d-938c-6ef135d9e54c.png)
   
@@ -62,7 +62,7 @@ When you hover over a particular day, you can see the breakdown of types of mali
 
 The **ATP Message Disposition** report shows you the actions that were taken for email messages that were detected as having malicious content. 
   
-To view this report, in the Security &amp; Compliance Center, go to **Reports** \> **Dashboard** \> **ATP Message Disposition**.
+To view this report, in the [Security &amp; Compliance Center](https://security.microsoft.com), go to **Reports** \> **Dashboard** \> **ATP Message Disposition**.
   
 ![ATP Message Disposition Report](media/b0ff65c4-53d3-496d-bafa-8937a5eb69e5.png)
   

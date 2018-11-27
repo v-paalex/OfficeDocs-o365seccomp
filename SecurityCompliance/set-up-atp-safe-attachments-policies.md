@@ -11,7 +11,6 @@ search.appverid:
 - MET150
 - MOE150
 ms.assetid: 078eb946-819a-4e13-8673-fe0c0ad3a775
-
 description: "Define Safe Attachments policies to protect your organization from malicious files in email."
 ---
 
@@ -31,7 +30,7 @@ People regularly send, receive, and share attachments, such as documents, presen
 
 - Make sure that your organization has [Office 365 Advanced Threat Protection](office-365-atp.md).
     
-- Make sure that you have the necessary [permissions assigned in the Office 365 Security &amp; Compliance Center](permissions-in-the-security-and-compliance-center.md).
+- Make sure that you have the necessary [permissions for the Office 365 Security &amp; Compliance Center](permissions-in-the-security-and-compliance-center.md).
     
 - [Learn about ATP Safe Attachments policy options](#learn-about-atp-safe-attachments-policy-options) (in this article). Some options, such as the Monitor or Replace options, can result in a minor delay of email while attachments are scanned. To avoid message delays, consider using [Dynamic Delivery and previewing](dynamic-delivery-and-previewing.md).
     
@@ -39,7 +38,7 @@ People regularly send, receive, and share attachments, such as documents, presen
     
 ## Step 2: Set up (or edit) an ATP Safe Attachments policy
   
-1. As a global administrator or security administrator, go to [https://protection.office.com](https://protection.office.com) and sign in with your work or school account. 
+1. As a global administrator or security administrator, go to [https://security.microsoft.com](https://security.microsoft.com) and sign in with your work or school account. 
     
 2. In the Office 365 Security &amp; Compliance Center, in the left navigation pane, under **Threat management**, choose **Policy** \> **Safe Attachments**.
     
@@ -47,9 +46,7 @@ People regularly send, receive, and share attachments, such as documents, presen
     
 4. Choose **New** (the New button resembles a plus sign ( **+**)) to start creating your policy.
     
-5. Specify the name, description, and settings for the policy.
-    
-    **Example:** To set up a policy called "no delays" that delivers everyone's messages immediately and then reattaches attachments after they're scanned, you might specify the following settings: 
+5. Specify the name, description, and settings for the policy.<br/><br/>**Example:** To set up a policy called "no delays" that delivers everyone's messages immediately and then reattaches attachments after they're scanned, you might specify the following settings: 
     
       - In the **Name** box, type no delays.
     

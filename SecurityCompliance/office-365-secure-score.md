@@ -3,7 +3,7 @@ title: "Office 365 Secure Score"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 11/05/2018
+ms.date: 11/27/2018
 ms.audience: Admin
 ms.topic: overview
 ms.service: o365-administration
@@ -23,7 +23,7 @@ description: "Ever wonder how secure your organization really is in Office 365? 
 
 If your organization has a subscription that includes [Office 365 Enterprise](https://docs.microsoft.com/office365/enterprise/), [Microsoft 365 Business](https://docs.microsoft.com/microsoft-365/business/), or Office 365 Business Premium, and you have the necessary permissions, you can view your organization's secure score by visiting [https://securescore.office.com](https://securescore.office.com). 
 
-Alternatively, you can visit the Security & Compliance Center ([https://protection.office.com](https://protection.office.com)), where you'll find a Secure Score widget that provides you with your current score.
+Alternatively, you can visit the Security & Compliance Center ([https://security.microsoft.com](https://security.microsoft.com)), where you'll find a Secure Score widget that provides you with your current score.
 
 ![Secure Score widget](media/SecureScoreWidget-o365.png)
 
@@ -60,8 +60,6 @@ Using Secure Score helps increase your organization's security by encouraging yo
   
 But don't just take our word for it. Customers who are using Secure Score have seen their score increase five times more than customers who aren't using it. (The increase in their score corresponds with the security features being used in their organizations.)
   
-Check out our [blog post](https://go.microsoft.com/fwlink/?linkid=836898) to learn more. 
-  
 > [!NOTE]
 > Secure Score does not express an absolute measure of how likely you are to get breached. It expresses the extent to which you have adopted controls which can offset the risk of being breached. No service can guarantee that you will not be breached, and Secure Score should not be interpreted as a guarantee in any way. 
   
@@ -69,7 +67,7 @@ Check out our [blog post](https://go.microsoft.com/fwlink/?linkid=836898) to lea
 
 ### Who can use Secure Score?
 
-Anyone who has admin permissions (global admin or a custom admin role) for an Office 365 Enterprise, Microsoft 365 Business, or Office 365 Business Premium subscription can access Secure Score at [https://securescore.office.com](https://securescore.office.com). Users who aren't assigned an admin role won't be able to access Secure Score . However, admins can use the tool to share their results with other people in their organization. We're looking at including other, non-admin roles in the permissions list in the future. If there are specific roles you'd like us to consider, let us know by posting on the [Office Security, Privacy &amp; Compliance community](https://go.microsoft.com/fwlink/?linkid=836898).
+Anyone who has admin permissions (global admin or a custom admin role) for an Office 365 Enterprise, Microsoft 365 Business, or Office 365 Business Premium subscription can access Secure Score at [https://securescore.office.com](https://securescore.office.com). Users who aren't assigned an admin role won't be able to access Secure Score . However, admins can use the tool to share their results with other people in their organization. We're looking at including other, non-admin roles in the permissions list in the future. If there are specific roles you'd like us to consider, let us know by posting in the [Office Security, Privacy &amp; Compliance community](https://techcommunity.microsoft.com/t5/Security-Privacy-Compliance/bd-p/security_privacy).
   
 ### What does [Not Scored] mean?
 
@@ -103,7 +101,7 @@ We'd love to hear from you. Please post your ideas on the [Office Security, Priv
   
 ### Something isn't working right. Who should I contact?
 
-If you have any issues, please let us know by posting on the [Office Security, Privacy &amp; Compliance community](https://go.microsoft.com/fwlink/?linkid=836898). We're monitoring the community and will provide help.
+If you have any issues, please let us know by posting in the [Office Security, Privacy &amp; Compliance community](hhttps://techcommunity.microsoft.com/t5/Security-Privacy-Compliance/bd-p/security_privacy). We're monitoring the community and will provide help.
   
 ### My organization only has certain security features. Does this affect my score?
 

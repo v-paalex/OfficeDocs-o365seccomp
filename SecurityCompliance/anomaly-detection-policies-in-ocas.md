@@ -46,7 +46,7 @@ Make sure that:
     
 ## View your anomaly detection policies
 
-1. As a global administrator or security administrator, go to [https://protection.office.com](https://protection.office.com) and sign in using your work or school account. 
+1. As a global administrator or security administrator, go to [https://security.microsoft.com](https://security.microsoft.com) and sign in using your work or school account. 
     
 2. In the Security &amp; Compliance Center, choose **Alerts** \> **Manage advanced alerts**.
     
@@ -88,7 +88,7 @@ The following table describes the default anomaly detection policies, what they 
 
 As alerts come in, you can triage those alerts quickly and determine which ones to handle first. Having context for an alert enables you to see the bigger picture and determine whether something malicious is indeed happening. Use the following procedure to get started exploring an alert:
   
-1. As a global administrator or security administrator, go to [https://protection.office.com](https://protection.office.com) and sign in using your work or school account. 
+1. As a global administrator or security administrator, go to [https://security.microsoft.com](https://security.microsoft.com) and sign in using your work or school account. 
     
 2. In the Security &amp; Compliance Center, choose **Alerts** \> **Manage advanced alerts**.
     
@@ -113,7 +113,6 @@ As alerts come in, you can triage those alerts quickly and determine which ones 
 An alert on multiple failed logins might indeed be suspicious, and can indicate a potential brute-force attack. However, such an alert can also be an application misconfiguration, causing the alert to be a benign true positive. If you see a multiple-failed-logins alert with additional suspicious activities, then there is a higher probability that an account is compromised. For example, suppose that a multiple-failed-login alert is followed by activity from a TOR IP address and impossible travel activity, both strong indicators of compromise. You might even see that the same user performed a mass download activity, which is often an indicator of the attacker performing exfiltration of data. It's things like that that you can explore in Office 365 Cloud App Security to view and triage your alerts, and take action where needed.
   
 ## Next steps
-<a name="nextsteps"> </a>
 
 - [Integrate your SIEM server](integrate-your-siem-server-with-office-365-cas.md)
     

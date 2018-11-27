@@ -54,7 +54,7 @@ As a next step, learn how to [Use the Report Message add-in](https://support.off
 ## Get and enable the Report Message add-in for your organization
 
 > [!IMPORTANT]
-> You must be an Office 365 global administrator or an Exchange Online Administrator to complete this task. In addition, Exchange must be configured to use OAuth authentication To learn more, see [Exchange requirements (Centralized Deployment of add-ins)](https://docs.microsoft.com/en-us/office365/admin/manage/centralized-deployment-of-add-ins&view=o365-worldwide#exchange-requirements). 
+> You must be an Office 365 global administrator or an Exchange Online Administrator to complete this task. In addition, Exchange must be configured to use OAuth authentication To learn more, see [Exchange requirements (Centralized Deployment of add-ins)](https://docs.microsoft.com/office365/admin/manage/centralized-deployment-of-add-ins&view=o365-worldwide#exchange-requirements). 
 
 1. Go to the [Services & add-ins page](https://admin.microsoft.com/AdminPortal/Home#/Settings/ServicesAndAddIns) in the new Microsoft 365 admin center.<br/>![Services and Add-Ins page in the new Microsoft 365 Admin Center](media/ServicesAddInsPageNewM365AdminCenter.png)<br/> 
     
@@ -87,7 +87,7 @@ Depending on what you selected using the wizard, people in your organization wil
   
 You can set up a rule to get a copy of email messages reported by users in your organization. You do this after you have downloaded and enabled the Report Message add-in for your organization.
   
-1. In the EAC, choose **mail flow** \> **rules**. 
+1. In the Exchange Admin Center, choose **mail flow** \> **rules**. 
     
 2. Choose **+** \> **Create a new rule**. 
     
