@@ -24,7 +24,7 @@ In order to perform the tasks described in this article, you must have the neces
 
  **Before you begin this procedure, make sure that audit logging is already turned on for your Office 365 environment**. This is typically done by someone who has the Audit Logs role assigned in Exchange Online. For more information, see [Turn Office 365 audit log search on or off](turn-audit-log-search-on-or-off.md).
   
-1. As a global administrator or security administrator, go to [https://protection.office.com](https://protection.office.com), and sign in with your work or school account.
+1. As a global administrator or security administrator, go to [https://security.microsoft.com](https://security.microsoft.com), and sign in with your work or school account.
     
 2. In the Office 365 Security &amp; Compliance Center, in the left navigation pane, under **Threat management**, choose **Policy** \> **Safe Attachments**. <br/>![In the Security &amp; Compliance Center, choose Threat management \> Policy](media/08849c91-f043-4cd1-a55e-d440c86442f2.png)
   
@@ -50,7 +50,7 @@ To learn more about the user experience when a file has been detected as malicio
 
 To receive notification when a file in SharePoint Online, OneDrive for Business, or Microsoft Teams has been identified as malicious, you can set up an alert.
   
-1. In the Office 365 Security &amp; Compliance Center, choose **Alerts** \> **Manage alerts**.
+1. In the [Office 365 Security &amp; Compliance Center](https://security.microsoft.com), choose **Alerts** \> **Manage alerts**.
     
 2. Choose **New alert policy**.
     

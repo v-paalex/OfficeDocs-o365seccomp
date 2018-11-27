@@ -3,7 +3,6 @@ title: "Review and take action on alerts in Office 365 Cloud App Security"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 2/26/2018
 ms.audience: ITPro
 ms.topic: article
 ms.service: o365-administration
@@ -28,17 +27,13 @@ You can use the Alerts page in Office 365 Cloud App Security to view potential i
   
 ## How to get to the Alerts page
 
-1. As a global administrator or security administrator, go to [https://protection.office.com](https://protection.office.com) and sign in using your work or school account. 
+1. As a global administrator or security administrator, go to [https://security.microsoft.com](https://security.microsoft.com) and sign in using your work or school account. 
     
 2. In the Security &amp; Compliance Center, choose **Alerts** \> **Manage advanced alerts**.
     
-3. Choose **Go to Office 365 Cloud App Security**.
-    
-    ![In the Security &amp; Compliance Center, choose Manage Advanced Alerts to go to Office 365 Cloud App Security](media/958632d4-03e3-4ade-8e22-d5509db6fca7.png)
+3. Choose **Go to Office 365 Cloud App Security**.<br/>![In the Security &amp; Compliance Center, choose Manage Advanced Alerts to go to Office 365 Cloud App Security](media/958632d4-03e3-4ade-8e22-d5509db6fca7.png)
   
-4. In the navigation bar across the top of the screen, choose **Alerts**.
-    
-    ![On the Alerts page, you can see alerts that were triggered and any actions taken.](media/3b53d4c9-4b13-435d-8547-8c0f9ae6b914.png)
+4. In the navigation bar across the top of the screen, choose **Alerts**.<br/>![On the Alerts page, you can see alerts that were triggered and any actions taken.](media/3b53d4c9-4b13-435d-8547-8c0f9ae6b914.png)
   
 ## Review and handle alerts
 

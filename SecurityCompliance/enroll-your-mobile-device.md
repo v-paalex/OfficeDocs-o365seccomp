@@ -21,7 +21,7 @@ description: "Before you can use Office 365 services with your device, you may n
 
 Using your phone, tablet, and other mobile devices for work is a great way to stay informed and work on business projects while you're away from the office. Before you can use Office 365 services with your device, you may need to first enroll it in Mobile Device Management for Office 365 (MDM) using Microsoft Intune Company Portal.
   
-Organizations choose MDM so that employees can use their mobile devices to securely access work email, calendars, and documents while the business secures important data and meets their compliance requirements. [Learn about MDM in Office 365](https://go.microsoft.com/fwlink/?LinkId=615142).
+Organizations choose MDM so that employees can use their mobile devices to securely access work email, calendars, and documents while the business secures important data and meets their compliance requirements. [Learn about MDM in Office 365](https://support.office.com/article/overview-of-mobile-device-management-mdm-for-office-365-faa7d8e5-645d-4d59-839c-c8d4c1869e4a).
   
 > [!IMPORTANT]
 > When you enroll your device in MDM for Office 365, you might be required to set up a password, together with allowing the option for your work organization to wipe the device. A device wipe can be performed (from the Office 365 admin center), for example, to remove all data from the device if the password is entered incorrectly too many times or if usage terms are broken. 
@@ -41,7 +41,7 @@ MDM and InTune works with most, but not all, mobile devices. The following are s
 If your device is not listed above, and you need to use it with MDM and Intune, contact your work or school administrator.
   
 > [!TIP]
-> If you're having trouble enrolling your device, see: [Troubleshoot device enrollment with MDM for Office 365](troubleshoot-mdm.md). 
+> If you're having trouble enrolling your device, see: [Troubleshoot device enrollment with MDM for Office 365](https://support.office.com/article/Troubleshoot-device-enrollment-with-MDM-for-Office-365-c863b2bf-45f3-483a-ba05-29fc7f4d6434). 
   
 ## Set up your mobile device with Intune and MDM for Office 365
 
@@ -50,20 +50,12 @@ The Intune Company Portal enables a device to be managed by Office 365 and MDM.
 ### iPhone or iPad
 
 > [!TIP]
-> You won't be able to send and receive email until you complete this step. 
-  
-> Go to the Apple App Store, download and install Intune Company Portal.
-    
-> [Follow these steps to configure and connect](https://go.microsoft.com/fwlink/?linkid=875316) your iOS phone or tablet with the Company portal to Office 365. 
+> You won't be able to send and receive email until you complete this step. Go to the Apple App Store, download and install **Intune Company Portal**. See [Set up iOS device access to your company resources](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-ios). 
     
 ### Android phone or tablet
 
 > [!TIP]
-> You won't be able to send and receive email until you complete this step. 
-  
-> Go to the Google Play store, download and install Intune Company Portal.
-    
-> [Follow these steps to configure and connect](https://go.microsoft.com/fwlink/?linkid=875317) your Android phone or tablet with the Company portal to Office 365. 
+> You won't be able to send and receive email until you complete this step. Go to the Google Play store, download and install Intune Company Portal. See [Enroll your Android device in Intune](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-android). 
     
 ## What's next
 
