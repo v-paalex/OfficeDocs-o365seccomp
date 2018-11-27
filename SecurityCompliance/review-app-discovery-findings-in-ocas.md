@@ -3,7 +3,6 @@ title: "Review app discovery findings in Office 365 Cloud App Security"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 3/19/2018
 ms.audience: ITPro
 ms.topic: article
 ms.service: o365-administration
@@ -31,9 +30,7 @@ The Cloud Discovery dashboard works with your organization's web traffic logs to
 
 1. Go to [https://protection.office.com](https://protection.office.com) and sign in using your work or school account for Office 365. (This takes you to the Security &amp; Compliance Center.) 
     
-2. In the Security &amp; Compliance Center, choose **Alerts** \> **Manage advanced alerts**.
-    
-    (If Office 365 Cloud App Security is not yet enabled, and you are a global administrator, [turn on Office 365 Cloud App Security](turn-on-office-365-cas.md).)
+2. In the Security &amp; Compliance Center, choose **Alerts** \> **Manage advanced alerts**.<br/>(If Office 365 Cloud App Security is not yet enabled, and you are a global administrator, [turn on Office 365 Cloud App Security](turn-on-office-365-cas.md).)
     
 3. Choose **Go to Office 365 Cloud App Security**.
     
@@ -65,21 +62,11 @@ You can use Cloud Discovery to take a deeper look at apps, subdomains, IP addres
     
 2. Use the filters section to view apps by name, category, usage level, or last seen date.
     
-3. In the list of results, hover by an app name to reveal the **View sub-domains** link. 
+3. In the list of results, hover by an app name to reveal the **View sub-domains** link.<br/> ![Hover next to an app to reveal a link to view subdomain details](media/4a212215-8a2c-46fd-9ef9-89e4064658a6.png)<br/>Detailed information about the selected app will appear.
     
-    ![Hover next to an app to reveal a link to view subdomain details](media/4a212215-8a2c-46fd-9ef9-89e4064658a6.png)
-  
-    Detailed information about the selected app will appear.
+4. To view details about IP addresses, choose the **IP addresses** tab.<br/>![Cloud Discovery shows detailed information about IP addresses](media/0c742bf6-da9e-4d22-8656-a27a5007d5d5.png)<br/>In the list of results, select an individual IP address to view more detailed information.
     
-4. To view details about IP addresses, choose the **IP addresses** tab. 
-    
-    ![Cloud Discovery shows detailed information about IP addresses](media/0c742bf6-da9e-4d22-8656-a27a5007d5d5.png)
-  
-    In the list of results, select an individual IP address to view more detailed information.
-    
-5. To view details about Office 365 users within your organization, choose the **Users** tab. 
-    
-    ![Cloud Discovery - users info](media/2d9c2d85-01e6-4057-8020-d9a68f26bbac.png)
+5. To view details about Office 365 users within your organization, choose the **Users** tab.<br/>![Cloud Discovery - users info](media/2d9c2d85-01e6-4057-8020-d9a68f26bbac.png)
   
 ## Exclude entities
 

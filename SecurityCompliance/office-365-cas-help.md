@@ -3,7 +3,6 @@ title: "Office 365 Cloud App Security help and how-to"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 3/16/2018
 ms.audience: ITPro
 ms.topic: hub-page
 ms.service: o365-administration
@@ -16,11 +15,9 @@ description: "Find help content for Advanced Security Management in Office 365, 
 ---
 
 # Office 365 Cloud App Security help and how-to
-
- **Office 365 Advanced Security Management is now Office 365 Cloud App Security**. 
   
 > [!NOTE]
-> Office 365 Cloud App Security is available in Office 365 Enterprise E5 or as an add-on subscription to Office 365. If your organization is using another Office 365 Enterprise subscription, Office 365 Cloud App Security can be purchased as an add-on. (As a global administrator, in the Office 365 admin center, choose **Billing** \> **Add subscriptions**.) For more information about plan options, see [Compare All Office 365 for Business Plans](https://go.microsoft.com/fwlink/?linkid=844053). 
+> Office 365 Cloud App Security (formerly known as Office 365 Advanced Security Management) is available in Office 365 Enterprise E5 or as an add-on subscription to Office 365. If your organization is using another Office 365 Enterprise subscription, Office 365 Cloud App Security can be purchased as an add-on. (As a global administrator, in the Office 365 admin center, choose **Billing** \> **Add subscriptions**.) For more information about plan options, see [Compare All Office 365 for Business Plans](https://go.microsoft.com/fwlink/?linkid=844053). 
   
 With Office 365 Cloud App Security, global administrators, security administrators, and security readers can see suspicious or anomalous activities through advanced threat detection, decide which apps people in your organization can use to access information in Office 365, and get snapshots of your organization's cloud usage across Office 365 and other cloud services. All of this can helps protect users and data and without having to install any endpoint agents.
   

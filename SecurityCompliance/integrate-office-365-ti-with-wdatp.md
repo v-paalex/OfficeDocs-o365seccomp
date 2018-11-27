@@ -29,7 +29,7 @@ In this example, you can see that the recipients of the email message have four 
 
 - Your organization must have Office 365 Threat Intelligence and Windows Defender ATP.
     
-- You must be an Office 365 global administrator or have a security administrator role assigned in the Security &amp; Compliance Center. (See [Permissions in the Office 365 Security &amp; Compliance Center](permissions-in-the-security-and-compliance-center.md))
+- You must be an Office 365 global administrator or have a security administrator role assigned in the [Security &amp; Compliance Center](https://security.microsoft.com). (See [Permissions in the Office 365 Security &amp; Compliance Center](permissions-in-the-security-and-compliance-center.md))
     
 - You must have access to both Office 365 Threat Intelligence and the Windows Defender ATP portal.
     
@@ -37,7 +37,7 @@ In this example, you can see that the recipients of the email message have four 
 
 Integrating Office 365 Threat Intelligence with Windows Defender ATP is set up both in Office 365 and in the Windows Defender ATP portal.
   
-1. As an Office 365 global or a security administrator, go to [https://portal.office.com](https://portal.office.com) and sign in with your work or school account for Office 365. 
+1. As an Office 365 global or a security administrator, go to [https://security.microsoft.com](https://security.microsoft.com) and sign in with your work or school account for Office 365. 
     
 2. Choose **Threat management** \> **Threat explorer**.
     

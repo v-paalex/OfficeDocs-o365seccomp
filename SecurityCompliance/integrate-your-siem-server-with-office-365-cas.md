@@ -62,7 +62,7 @@ Office 365 Cloud App Security currently supports the following SIEM servers:
  
 ## Step 1: Set it up a SIEM agent in Office 365 Cloud App Security
 
-1. Go to [https://protection.office.com](https://protection.office.com) and sign in using your work or school account for Office 365. (This takes you to the Security &amp; Compliance Center.) 
+1. Go to [https://security.microsoft.com](https://security.microsoft.com) and sign in using your work or school account for Office 365. (This takes you to the Security &amp; Compliance Center.) 
     
 2. Go to **Alerts** \> **Manage advanced alerts**.
     
@@ -118,9 +118,13 @@ After you click Close and leave the wizard, on the Security extensions screen, y
     ```
 
 - Parameters in brackets [] are optional, and should be used only if relevant. Use the following variables:
+
     - **DIRNAME** is the path to the directory you want to use for local agent debug logs.
+
     - **ADDRESS[:PORT]** is the proxy server address and port that the server uses to connect to the Internet.
+
     - **TOKEN** is the SIEM agent token you copied in the first procedure.
+
     - To get help, type `-h`. 
   
 ## Step 3: Validate that the SIEM agent is working

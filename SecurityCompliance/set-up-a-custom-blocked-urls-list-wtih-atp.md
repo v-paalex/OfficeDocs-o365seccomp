@@ -28,17 +28,11 @@ Read this article to learn how to set up your organization's custom blocked URLs
 
 [ATP Safe Links in Office 365](atp-safe-links.md) uses several lists, including your organization's custom blocked URLs list. If you have the necessary permissions, you can set up your organization's custom list. You do this by editing your organization's default Safe Links policy.
   
-1. Go to [https://protection.office.com](https://protection.office.com) and sign in with your work or school account. 
+1. Go to [https://security.microsoft.com](https://security.microsoft.com) and sign in with your work or school account. 
     
 2. In the left navigation, under **Threat management**, choose **Policy** \> **Safe Links**.
     
-3. In the **Policies that apply to the entire organization** section, select **Default**, and then choose **Edit** (the Edit button resembles a pencil). 
-    
-    ![Click Edit to edit your default policy for Safe Links protection](media/d08f9615-d947-4033-813a-d310ec2c8cca.png)
-  
-    This is where you go to view your list of blocked URLs. Note that at first, you won't have any URLs listed.
-    
-    ![The Blocked URLs list is in the default Safe Links policy that applies to your entire organization.](media/575e1449-6191-40ac-b626-030a2fd3fb11.png)
+3. In the **Policies that apply to the entire organization** section, select **Default**, and then choose **Edit** (the Edit button resembles a pencil).<br/>![Click Edit to edit your default policy for Safe Links protection](media/d08f9615-d947-4033-813a-d310ec2c8cca.png)<br/>This is where you go to view your list of blocked URLs. Note that at first, you won't have any URLs listed.<br/>![The Blocked URLs list is in the default Safe Links policy that applies to your entire organization.](media/575e1449-6191-40ac-b626-030a2fd3fb11.png)
   
 4. Select the **Enter a valid URL** box, and then type a URL, and then choose the plus sign (+). Here are a few things to keep in mind: 
     

@@ -3,7 +3,6 @@ title: "Threat Trackers - New and Noteworthy"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 6/15/2018
 ms.audience: ITPro
 ms.topic: overview
 ms.service: o365-administration
@@ -17,7 +16,7 @@ description: "Learn about Threat Trackers, including new Noteworthy Trackers, to
 
 # Threat Trackers - New and Noteworthy
 
-[Office 365 Threat Intelligence](office-365-ti.md) enables your organization's security team to discover and take action against cybersecurity threats. **Beginning in late March 2018 and over the next several weeks, Office 365 Threat Intelligence will include new Threat Tracker features**, including Noteworthy trackers. Read this article to get an overview of these new features and next steps. 
+[Office 365 Threat Intelligence](office-365-ti.md) enables your organization's security team to discover and take action against cybersecurity threats. Beginning in late March 2018 and over the next several weeks, Office 365 Threat Intelligence will include new Threat Tracker features, including Noteworthy trackers. Read this article to get an overview of these new features and next steps. 
   
 ## What are Threat Trackers?
 
@@ -31,7 +30,7 @@ Most tracker pages include trending numbers that are updated periodically, widge
   
 Trackers are just a few of the many great features you get with [Office 365 Threat Intelligence](office-365-ti.md). When available, your new Threat Trackers will include [Noteworthy trackers](threat-trackers.md#notey), [Trending trackers](threat-trackers.md#trending), [Tracked queries](threat-trackers.md#trackedq), and [Saved queries](threat-trackers.md#savedq).
   
-To view and use your Threat Trackers when they are available for your organization, go to the Security &amp; Compliance Center ([https://protection.office.com](https://protection.office.com)) and choose **Threat management** \> **Threat tracker**.
+To view and use your Threat Trackers when they are available for your organization, go to the Security &amp; Compliance Center ([https://security.microsoft.com](https://security.microsoft.com)) and choose **Threat management** \> **Threat tracker**.
   
 > [!NOTE]
 > To use Threat Trackers, you must be an Office 365 global administrator, security administrator, or security reader. See [Permissions in the Office 365 Security &amp; Compliance Center](permissions-in-the-security-and-compliance-center.md). 

@@ -17,21 +17,20 @@ description: "Learn how to download one or more existing reports in the Security
 
 # Download existing reports in the Security &amp; Compliance Center
 
-In the Security &amp; Compliance Center, several [reports and insights](reports-and-insights-in-security-and-compliance.md) are available to help your organization's security team mitigate and address threats to your organization. If you're a member of your organization's security team, you can download one or more existing reports. 
+In the [Security &amp; Compliance Center](https://security.microsoft.com), several [reports and insights](reports-and-insights-in-security-and-compliance.md) are available to help your organization's security team mitigate and address threats to your organization. If you're a member of your organization's security team, you can download one or more existing reports. 
   
 ## Download existing reports
 
 > [!IMPORTANT]
 > Make sure that you have the necessary [permissions assigned in the Office 365 Security &amp; Compliance Center](permissions-in-the-security-and-compliance-center.md). In general, Office 365 global administrators, security administrators, and security readers can access reports in the Security &amp; Compliance Center. 
   
-1. In the Security &amp; Compliance Center, go to **Reports** \> **Reports for download**.
+1. In the [Security &amp; Compliance Center](https://security.microsoft.com), go to **Reports** \> **Reports for download**.
     
 2. Select one or more items in the list.
     
 3. Click **Download report**, and then click **Close**.
     
 ## Related topics
-<a name="download"> </a>
 
 [Reports and insights in the Office 365 Security &amp; Compliance Center](reports-and-insights-in-security-and-compliance.md)
   
