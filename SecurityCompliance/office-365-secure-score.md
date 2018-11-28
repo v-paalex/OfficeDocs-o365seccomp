@@ -50,7 +50,7 @@ To see the impact of your actions on your organization's security, select the **
   
 ![Score Analyzer tab of the Office 365 Secure Score tool](media/SecureScore-ScoreAnalyzer-7days.png)
   
-Below the chart, you'll see a lsit of scores and actions by category.
+Below the chart, you'll see a list of scores and actions by category.
   
 ![Graph on the Score Analyzer tab showing a data point selected](media/SecureScore-Analyzer-breakdownbelowchart.png)
   

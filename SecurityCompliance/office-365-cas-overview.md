@@ -42,7 +42,7 @@ You can get to the Office 365 Cloud App Security portal through the Office 365 S
     
 ## Policies
 
-Office 365 Cloud App Security works with the policies that are defined for your organization. With Office 365 Cloud App Security, your organization gets 10 predefined anomaly detection policies and several templates for activity policies. These policies are designed to detect general anomalies, identify users logging in from a risky IP address, detect ransomware activities, detect administrator activities from non-corporate IP addresses, and more.
+Office 365 Cloud App Security works with the policies that are defined for your organization. With Office 365 Cloud App Security, your organization gets many predefined anomaly detection policies and several templates for activity policies. These policies are designed to detect general anomalies, identify users logging in from a risky IP address, detect ransomware activities, detect administrator activities from non-corporate IP addresses, and more.
   
 ![In the CAS portal, choose Control \> Templates to view or create policy templates](media/88f615b4-aa8a-480c-b239-323dfcd628e1.png)
   
