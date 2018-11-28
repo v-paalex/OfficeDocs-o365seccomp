@@ -165,8 +165,11 @@ Additionally, organizations that have Microsoft Cloud App Security as part of an
 
 To display only Cloud App Security alerts in the Security & Compliance Center, use the **Source** filter and select **Cloud App Security**.
 
-Similar to and alert triggered by a Security & Compliance Center alert policy, you can click an Cloud App Security alert to display a flyout page with details about the alert. The alert includes a link to view the alert details or manage the alert in the Cloud App Security portal and a link to the corresponding Cloud App Security policy.
+![Use the Source filter to display only Cloud App Security alerts](media/FilterCASAlerts.png)
 
+Similar to an alert triggered by a Security & Compliance Center alert policy, you can click an Cloud App Security alert to display a flyout page with details about the alert. The alert includes a link to view the details and manage the alert in the Cloud App Security portal and a link to the corresponding Cloud App Security policy. See [Review and take action on alerts in Office 365 Cloud App Security](review-office-365-cas-alerts.md).
+
+![Alert details contain links to the Cloud App Security portal](media/CASAlertDetail.png)
 
 > [!IMPORTANT]
 > Changing the status of a Cloud App Security alert in the Security & Compliance Center won't update the resolution status for the same alert in the Cloud App Security portal. For example, if you mark the status of the alert as **Resolved** in the Security & Compliance Center, the status of the alert in the Cloud App Security portal is unchanged. To resolve or dismiss a Cloud App Security alert, manage the alert in the Cloud App Security portal.
