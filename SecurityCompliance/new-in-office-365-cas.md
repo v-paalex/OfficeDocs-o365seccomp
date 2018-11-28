@@ -25,7 +25,7 @@ This article is updated frequently, as features are added or improved. Office 36
 
 *Released September 16, 2018*
 
-- **Automatically revoke permissions on risky OAuth apps** You can now control which OAuth apps your users have access to, by revoking app permission for OAuth apps on Office. When creating an App permission policy, you can now set the policy to revoke an app’s permission.<br/>![OAuth app policy](media/OCAS-oathapppolicymenu.png)<br/>
+- **Automatically revoke permissions on risky OAuth apps** You can now control which OAuth apps your users have access to, by revoking app permission for OAuth apps on Office. When creating an App permission policy, you can now set the policy to revoke an app’s permission.
 
 - **Cloud Discovery additional built-in parser supported** Cloud Discovery now supports the Forcepoint Web Security Cloud log format.
 
