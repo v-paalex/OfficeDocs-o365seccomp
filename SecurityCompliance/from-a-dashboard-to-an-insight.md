@@ -25,7 +25,7 @@ This is one of several walkthroughs for the Security &amp; Compliance Center. To
 
 Let's walk through the flow from a dashboard to a report to an insight and action. (This is a brief [spoof intelligence](learn-about-spoof-intelligence.md) example.) 
   
-1. We begin with the Security dashboard in the Security &amp; Compliance Center. (Go to **Threat management** \> **Dashboard**.)
+1. We begin with the Security dashboard in the [Security &amp; Compliance Center](https://security.microsoft.com). (Go to **Threat management** \> **Dashboard**.)
     
     ![In the Security &amp; Compliance Center, choose Threat management \> Dashboard](media/05a38660-eb13-4960-a266-11809c453d95.png)
   
