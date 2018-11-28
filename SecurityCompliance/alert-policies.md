@@ -161,7 +161,7 @@ After alerts have been generated and displayed on the **View alerts** page in th
   
 Alerts that are triggered by Office 365 Cloud App Security policies are now displayed on the **View alerts** page in the Security & Compliance Center. This includes alerts that are triggered by activity policies and alerts that are triggered by anomaly detection policies in Office 365 Cloud App Security. This means you can view all alerts in the Security & Compliance Center. Note that Office 365 Cloud App Security is only available for organizations with an Office 365 Enterprise E5 or Office 365 US Government G5 subscription. For more information, see [Overview of Office 365 Cloud App Security](office-365-cas-overview.md).
 
-Additionally, organizations that have Microsoft Cloud App Security as part of an Enterprise Mobility + Security E5 subscription or as a standalone service can also view Cloud App Security alerts in the Security & Compliance Center.
+Additionally, organizations that have Microsoft Cloud App Security as part of an Enterprise Mobility + Security E5 subscription or as a standalone service can also view Cloud App Security alerts that are related to Office apps and services in the Security & Compliance Center.
 
 To display only Cloud App Security alerts in the Security & Compliance Center, use the **Source** filter and select **Cloud App Security**.
 
