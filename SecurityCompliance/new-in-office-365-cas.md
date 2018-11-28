@@ -21,6 +21,34 @@ description: "See what's new in Office 365 Cloud App Security"
   
 This article is updated frequently, as features are added or improved. Office 365 Cloud App Security updates are released approximately two weeks after Microsoft Cloud App Security updates, and not all Microsoft Cloud App Security updates apply to Office 365 Cloud App Security. In addition, new features might take a week or more after their release date to show up in your Office 365 Cloud App Security environment.
 
+## Office 365 Cloud App Security release 136
+
+*Released November 25, 2018*
+
+**Following [Microsoft Cloud App Security release 136](https://docs.microsoft.com/cloud-app-security/release-notes#cloud-app-security-release-136)**:
+
+- **Cloud Discovery updates** The custom log parser was enhanced to support additional and more complex web traffic logs formats. As part of these enhancements users can now input custom headers for headerless CSV log files, use special delimiters for key-value files, process Syslog file format, and more.
+
+- **New anomaly detection policy: Suspicious inbox manipulation rules** This policy profiles your environment and triggers alerts when suspicious rules that delete or move messages or folders are set on a user's inbox. This may indicate that the user’s account is compromised, that messages are being intentionally hidden, and that the mailbox is being used to distribute spam or malware in your organization.
+
+- **Support for groups in app permission policies** Cloud App Security now gives you the ability to define app permission policies more granularly, based on the group memberships of the users who authorized the apps. For example, an admin can decide to set a policy that revokes uncommon apps if they ask for high permissions, only if the user who authorized the permissions is a member of the administrators group.
+
+
+## Office 365 Cloud App Security releases 133, 134, and 135
+
+*Released in October-November, 2018*
+
+**Following [Microsoft Cloud App Security release 133, 134, and 135](https://docs.microsoft.com/cloud-app-security/release-notes#cloud-app-security-release-133-134-135)**:
+
+- **New anomaly detection policies** are rolling out gradually:
+    
+    - The new **Data exfiltration to unsanctioned apps** policy is automatically enabled to alert you when a user or IP address uses an app that isn't sanctioned to perform an activity that resembles an attempt to exfiltrate information from your organization.
+    
+    - The new **Multiple delete VM activities** policy profiles your environment and triggers alerts when users delete multiple VMs in a single session, relative to the baseline in your organization.
+
+- **Cloud Discovery support for i-Filter** The Cloud App Security Cloud Discovery feature now has enhanced support for the i-Filter syslog parser.
+
+
 ## Office 365 Cloud App Security release 131
 
 *Released September 16, 2018*
