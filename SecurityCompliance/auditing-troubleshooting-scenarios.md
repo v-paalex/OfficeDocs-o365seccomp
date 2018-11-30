@@ -104,7 +104,7 @@ b. In the **Parameters** field, The value *ForwardingSmtpAddress* indicates that
 
 c. The *True* value for the *DeliverToMailboxAndForward* parameter indicates that a copy of message delivered to sarad@alpinehouse.onmicrosoft.com *and* is forwarded to the email address specified by the *ForwardingSmtpAddress* parameter, which in this example is mike@contoso.com. If the value for this parameter is set to *False* then email is only forwarded to the email address specified by the *ForwardingSmtpAddress* parameter. It is not delivered to the mailbox specified in the **ObjectId** field.
 
-d. The UserId field indicate the user who set email forwarding on the mailbox specified in the **ObjectId** field field. This user is also displayed in the **User** column on the search results page. In this case, it seems that the owner of the mailbox set email forwarding on her mailbox.
+d. The **UserId** field indicate the user who set email forwarding on the mailbox specified in the **ObjectId** field field. This user is also displayed in the **User** column on the search results page. In this case, it seems that the owner of the mailbox set email forwarding on her mailbox.
 
 If you determine that email forwarding shouldn't be set on the mailbox, you can remove email forwarding by running the following command in Exchange Online PowerShell:
 
@@ -170,13 +170,12 @@ Here's how to configure an audit log search query for this scenario:
 
 After you run the search, any audit records for this activity are displayed in the search results. Click an audit record to display the **Details** flyout page, and then click **More information**. Information about the settings of the inbox rule are displayed in the **Parameters** field. The following screenshot and descriptions from the audit record highlight the information about inbox rules.
 
+![Audit log record for new inbox rule](media/NewInboxRuleRecord.png)
 
-a. In the **ObjectID** field, the full name of the inbox rule is displayed. This name includes the alias of the user's mailbox (for example, SaraD) and the name of the inbox rule (for example, "Move messages from admin").
+a. In the **ObjectId** field, the full name of the inbox rule is displayed. This name includes the alias of the user's mailbox (for example, SaraD) and the name of the inbox rule (for example, "Move messages from admin").
 
 b. In the **Parameters** field, the condition of the inbox rule is displayed. In this example, the condition is specified by the *From* parameter. The value defined for the *From* parameter indicates that the inbox rule acts on email sent by admin@alpinehouse.onmicrosoft.com. For a complete list of the parameters that can be used to define conditions of inbox rules, see see [New-InboxRule](https://docs.microsoft.com/powershell/module/exchange/mailboxes/new-inboxrule).
 
 c. The *MoveToFolder* parameter specifies the action for the inbox rule; in this example, messages received from admin@alpinehouse.onmicrosoft.com will be moved to the folder named *AdminSearch*. Also see  [New-InboxRule](https://docs.microsoft.com/powershell/module/exchange/mailboxes/new-inboxrule) for a complete list of parameters that can used to define the action of an inbox rule.
 
-d. The UserId field indicate the user who set email forwarding on the mailbox specified in the **ObjectId** field field. This user is also displayed in the **User** column on the search results page. In this case, it seems that the owner of the mailbox set email forwarding on her mailbox.
-
-For a description of the parameters for the **New-InboxRule** cmdlet that correspond to the conditions and actions that can be set for an inbox rule, see [New-InboxRule](https://docs.microsoft.com/powershell/module/exchange/mailboxes/new-inboxrule).
+d. The **UserId** field indicate the user who created the inbox rule specified in the **ObjectId** field. This user is also displayed in the **User** column on the search results page.
