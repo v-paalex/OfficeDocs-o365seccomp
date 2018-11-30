@@ -16,7 +16,12 @@ description: "You can use the Office 365 audit log search tool to help you troub
 
 # Search the Office 365 audit log to troubleshoot common scenarios
 
+This article describes how to use the Office 365 audit log search tool to help you troubleshoot the common support scenarios. This includes using the audit log to:
 
+- Find the IP address of the computer used to access a compromised account
+- Determine if email forwarding has been set up for a user
+- Determine if a user deleted email items in their mailbox
+- Determine if a user created an inbox rule
 
 ## Using the Office 365 audit log search tool
 
