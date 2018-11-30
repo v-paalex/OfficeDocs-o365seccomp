@@ -11,21 +11,21 @@ ms.collection: Strat_O365_IP
 search.appverid:
 - MET150
 - MOE150
-description: "You can use the Office 365 audit log search tool to help you troubleshoot common issues such as inbox rules that forward email."
+description: "You can use the Office 365 audit log search tool to help you troubleshoot common issues such as a investigating a compromised account or finding out who set up email forwarding for a mailbox."
 ---
 
 # Search the Office 365 audit log to troubleshoot common scenarios
 
-This article describes how to use the Office 365 audit log search tool to help you troubleshoot the common support scenarios. This includes using the audit log to:
+This article describes how to use the Office 365 audit log search tool to help you troubleshoot common support scenarios. This includes using the audit log to:
 
 - Find the IP address of the computer used to access a compromised account
-- Determine if email forwarding has been set up for a user
+- Determine who set up email forwarding for a mailbox
 - Determine if a user deleted email items in their mailbox
 - Determine if a user created an inbox rule
 
 ## Using the Office 365 audit log search tool
 
-Each of the troubleshooting scenarios described in this article are based on using the Office 365 audit log search tool in the Office 365 Security & Compliance Center. This section lists the permissions requirements to search the audit log and describes the steps to access and run audit log searches. Each scenario provides specific guidance about how to configure the search query and what to look for in the detailed information in the audit records that match the search criteria.
+Each of the troubleshooting scenarios described in this article are based on using the audit log search tool in the Office 365 Security & Compliance Center. This section lists the permissions required to search the audit log and describes the steps to access and run audit log searches. Each scenario section provides specific guidance about how to configure an audit log search query and what to look for in the detailed information in the audit records that match the search criteria.
 
 ### Permissions required to use the audit log search tool
 
@@ -39,7 +39,7 @@ This section describes the basics for creating and running audit log searches. U
   
 2. Sign in to Office 365 using your work or school account.
 
-3. In the left pane of the Security &amp; Compliance Center, click **Search & investigation** > **Audit log search**.
+3. In the left pane of the Security & Compliance Center, click **Search & investigation** > **Audit log search**.
     
     The **Audit log search** page is displayed. 
     
@@ -47,19 +47,19 @@ This section describes the basics for creating and running audit log searches. U
   
 4. You can configure the following search criteria. Note that each troubleshooting scenario in this article will recommend specific guidance for configuring these fields.
     
-    a. **Activities** - Click the drop-down list to display the activities that you can search for. After you run the search, only the audit log entries for the selected activities are displayed. Selecting **Show results for all activities** will display results for all activities that meet the other search criteria. You'll also have to leave this field blank return audit records from the Exchange admin audit log.
+    a. **Activities** - Click the drop-down list to display the activities that you can search for. After you run the search, only the audit records for the selected activities are displayed. Selecting **Show results for all activities** will display results for all activities that meet the other search criteria. You'll also have to leave this field blank in some of the troubleshooting scenarios.
     
     b. **Start date** and **End date** - Select a date and time range to display the events that occurred within that period. The last seven days are selected by default. The date and time are presented in Coordinated Universal Time (UTC) format. The maximum date range that you can specify is 90 days.
 
-    c. **Users** - Click in this box and then select one or more users to display search results for. The audit log entries for the selected activity performed by the users you select in this box are displayed in the list of results. Leave this box blank to return entries for all users (and service accounts) in your organization. 
+    c. **Users** - Click in this box and then select one or more users to display search results for. Audit records for the selected activity performed by the users you select in this box are displayed in the list of results. Leave this box blank to return entries for all users (and service accounts) in your organization.
     
-    d. **File, folder, or site** - Type some or all of a file or folder name to search for activity related to the file of folder that contains the specified keyword. You can also specify a URL of a file or folder. If you use a URL, be sure the type the full URL path or if you just type a portion of the URL, don't include any special characters or spaces. Leave this box blank to return entries for all files and folders in your organization.
+    d. **File, folder, or site** - Type some or all of a file or folder name to search for activity related to the file of folder that contains the specified keyword. You can also specify a URL of a file or folder. If you use a URL, be sure the type the full URL path or if you just type a portion of the URL, don't include any special characters or spaces. Leave this box blank to return entries for all files and folders in your organization. Note that this field is left blank in all the troubleshooting scenarios in this article.
     
 5. Click **Search** to run the search using your search criteria. 
     
-    The search results are loaded, and after a few moments they are displayed under **Results** on the **Audit log search** page. Each to the following sections will provide guidance about things to look for the specific troubleshooting scenario. 
+    The search results are loaded, and after a few moments they are displayed under **Results** on the **Audit log search** page. Each to the following sections will provide guidance about things to look for the specific troubleshooting scenario.
 
-    For more information about viewing, filtering, or exporting audit log search results, see: 
+    For more information about viewing, filtering, or exporting audit log search results, see:
 
     - [View search results](search-the-audit-log-in-security-and-compliance.md#step-2-view-the-search-results)
     - [Filter search results](search-the-audit-log-in-security-and-compliance.md#step-3-filter-the-search-results)
@@ -71,7 +71,10 @@ The IP address corresponding to an activity performed by any user is included in
 
 Here's how to configure an audit log search query for this scenario:
 
-**Activities** - If relevant to your case, select a specific activity to search for. Otherwise, leave this field blank to return audit records for all activities.
+**Activities** - If relevant to your case, select a specific activity to search for. For troubleshooting compromised accounts, consider selecting the **User signed in to mailbox** activity under **Exchange mailbox activities**. This will return auditing records showing the IP address that was use when signing in to the mailbox. Otherwise, leave this field blank to return audit records for all activities. 
+
+> [!TIP]
+> Leaving this field blank will  return **UserLoggedIn** activities, which is an Azure Active Directory activity that indicates that someone has signed in to an Office 365 user account. Use filtering in the search results to display the **UserLoggedIn** audit records.
 
 **Start date** and **End date** - Select a date range that's applicable to your investigation.
 
@@ -81,9 +84,9 @@ Here's how to configure an audit log search query for this scenario:
 
 After you run the search, the IP address for each activity is displayed in the **IP address** column in the search results. Click the record in the search results to view more detailed information on the flyout page.
 
-## Determining if email forwarding has been set up for a user
+## Determining who set up email forwarding for a mailbox
 
-When email forwarding is configured for a mailbox, which forwards email messages that are sent to the mailbox. Messages can be forward to users inside or outside of your organization. When email forward is set up on a mailbox, the underlying Exchange Online cmdlet that used is **Set-Mailbox**.
+When email forwarding is configured for a mailbox, email messages that are sent to the mailbox are forwarded to another mailbox. Messages can be forwarded to users inside or outside of your organization. When email forwarding is set up on a mailbox, the underlying Exchange Online cmdlet that's used is **Set-Mailbox**.
 
 Here's how to configure an audit log search query for this scenario:
 
@@ -95,11 +98,11 @@ Here's how to configure an audit log search query for this scenario:
 
 **File, folder, or site** - Leave this field blank.
 
-After you run the search, click **Filter results** on the search results page. In the box under **Activity** column header, type **Set-Mailbox**. Note that only auditing records related to the **Set-Mailbox** cmdlet are displayed. 
+After you run the search, click **Filter results** on the search results page. In the box under **Activity** column header, type **Set-Mailbox** so that only audit records related to the **Set-Mailbox** cmdlet are displayed.
 
 ![Filtering the results of an audit log search](media/emailforwarding1.png)
 
-At this point, you have to look at the details of each audit record that's displayed to determine if the activity it's related to email forwarding. To do that, click the audit record to display the **Details** flyout page, and then click **More information**. The following screenshot and descriptions highlight the information that indicates email forwarding was set on the mailbox.
+At this point, you have to look at the details of each audit record to determine if the activity is related to email forwarding. Click the audit record to display the **Details** flyout page, and then click **More information**. The following screenshot and descriptions highlights the information that indicates email forwarding was set on the mailbox.
 
 ![Detailed information from the audit record](media/emailforwarding2.png)
 
@@ -107,17 +110,17 @@ a. In the **ObjectId** field, the alias of the mailbox that email forwarding was
 
 b. In the **Parameters** field, The value *ForwardingSmtpAddress* indicates that email forward has been set on the mailbox. In this example, mail is being forwarded to the email address mike@contoso.com, which is outside of the alpinehouse.onmicrosoft.com organization.
 
-c. The *True* value for the *DeliverToMailboxAndForward* parameter indicates that a copy of message delivered to sarad@alpinehouse.onmicrosoft.com *and* is forwarded to the email address specified by the *ForwardingSmtpAddress* parameter, which in this example is mike@contoso.com. If the value for this parameter is set to *False* then email is only forwarded to the email address specified by the *ForwardingSmtpAddress* parameter. It is not delivered to the mailbox specified in the **ObjectId** field.
+c. The *True* value for the *DeliverToMailboxAndForward* parameter indicates that a copy of message delivered to sarad@alpinehouse.onmicrosoft.com *and* is forwarded to the email address specified by the *ForwardingSmtpAddress* parameter, which in this example is mike@contoso.com. If the value for the *DeliverToMailboxAndForward* parameter is set to *False*, then email is only forwarded to the address specified by the *ForwardingSmtpAddress* parameter. It's not delivered to the mailbox specified in the **ObjectId** field.
 
-d. The **UserId** field indicate the user who set email forwarding on the mailbox specified in the **ObjectId** field field. This user is also displayed in the **User** column on the search results page. In this case, it seems that the owner of the mailbox set email forwarding on her mailbox.
+d. The **UserId** field indicates the user who set email forwarding on the mailbox specified in the **ObjectId** field field. This user is also displayed in the **User** column on the search results page. In this case, it seems that the owner of the mailbox set email forwarding on her mailbox.
 
-If you determine that email forwarding shouldn't be set on the mailbox, you can remove email forwarding by running the following command in Exchange Online PowerShell:
+If you determine that email forwarding shouldn't be set on the mailbox, you can remove it by running the following command in Exchange Online PowerShell:
 
 ```
 Set-Mailbox <mailbox alias> -ForwardingSmtpAddress $null 
 ```
 
-See the [Set-Mailbox](https://docs.microsoft.com/powershell/module/exchange/mailboxes/set-mailbox) cmdlet reference topic for more information about the parameters related to email forwarding.
+See the [Set-Mailbox](https://docs.microsoft.com/powershell/module/exchange/mailboxes/set-mailbox) article for more information about the parameters related to email forwarding.
 
 ## Determining if a user deleted email items
 
@@ -141,24 +144,24 @@ After you run the search, you can filter the search results to display the audit
 
 **Example of AffectedItems field for soft-deleted item**
 
-![Audit log record for soft-deleted item](media/softdeleteditem.png)
+![Audit record for soft-deleted item](media/softdeleteditem.png)
 
 **Example of AffectedItems field for hard-deleted item**
 
-![Audit log record for hard-deleted email item](media/harddeleteditem.png)
+![Audit record for hard-deleted email item](media/harddeleteditem.png)
 
 ### Recovering deleted email items
 
-Users can recover soft-deleted items if the deleted items retention period has not expired. In Exchange Online, the default deleted items retention period is 14 days, but admins can increase this setting to a maximum of 30 days. Point users to the [Recover deleted items or email in Outlook Web App](https://support.office.com/article/Recover-deleted-items-or-email-in-Outlook-Web-App-C3D8FC15-EEEF-4F1C-81DF-E27964B7EDD4). topic for instructions on recovering deleted items.
+Users can recover soft-deleted items if the deleted items retention period has not expired. In Exchange Online, the default deleted items retention period is 14 days, but admins can increase this setting to a maximum of 30 days. Point users to the [Recover deleted items or email in Outlook Web App](https://support.office.com/article/Recover-deleted-items-or-email-in-Outlook-Web-App-C3D8FC15-EEEF-4F1C-81DF-E27964B7EDD4) article for instructions on recovering deleted items.
 
 As previously explained, admins might be able to recover hard-deleted items if the deleted item retention period has not expired or if the mailbox is on hold, in which case items are retained until the hold duration expires. When you run a content search, soft-deleted and hard-deleted items in the Recoverable Items folder are returned in the search results if they match the search query. For more information about running content searches, see [Content Search in Office 365](content-search.md).
 
 > [!TIP]
-> To search for deleted email items, search for all or part of the subject line that's displayed in the **AffectedItems** field in the audit log record.
+> To search for deleted email items, search for all or part of the subject line that's displayed in the **AffectedItems** field in the audit record.
 
 ## Determining if a user created an inbox rule
 
-When users create, edit, or delete an inbox rule for their Exchange Online mailbox, a corresponding audit record is saved to the audit log. For more information about inbox rules, see:
+When users create an inbox rule for their Exchange Online mailbox, a corresponding audit record is saved to the audit log. For more information about inbox rules, see:
 
 - [Use inbox rules in Outlook on the web](https://support.office.com/article/use-inbox-rules-in-outlook-on-the-web-8400435c-f14e-4272-9004-1548bb1848f2)
 - [Manage email messages in Outlook by using rules](https://support.office.com/article/Manage-email-messages-by-using-rules-C24F5DEA-9465-4DF4-AD17-A50704D66C59)
@@ -173,14 +176,14 @@ Here's how to configure an audit log search query for this scenario:
 
 **File, folder, or site** - Leave this field blank.
 
-After you run the search, any audit records for this activity are displayed in the search results. Click an audit record to display the **Details** flyout page, and then click **More information**. Information about the settings of the inbox rule are displayed in the **Parameters** field. The following screenshot and descriptions from the audit record highlight the information about inbox rules.
+After you run the search, any audit records for this activity are displayed in the search results. Click an audit record to display the **Details** flyout page, and then click **More information**. Information about the inbox rule settings are displayed in the **Parameters** field. The following screenshot and descriptions highlights the information about inbox rules.
 
-![Audit log record for new inbox rule](media/NewInboxRuleRecord.png)
+![Audit record for new inbox rule](media/NewInboxRuleRecord.png)
 
 a. In the **ObjectId** field, the full name of the inbox rule is displayed. This name includes the alias of the user's mailbox (for example, SaraD) and the name of the inbox rule (for example, "Move messages from admin").
 
-b. In the **Parameters** field, the condition of the inbox rule is displayed. In this example, the condition is specified by the *From* parameter. The value defined for the *From* parameter indicates that the inbox rule acts on email sent by admin@alpinehouse.onmicrosoft.com. For a complete list of the parameters that can be used to define conditions of inbox rules, see see [New-InboxRule](https://docs.microsoft.com/powershell/module/exchange/mailboxes/new-inboxrule).
+b. In the **Parameters** field, the condition of the inbox rule is displayed. In this example, the condition is specified by the *From* parameter. The value defined for the *From* parameter indicates that the inbox rule acts on email sent by admin@alpinehouse.onmicrosoft.com. For a complete list of the parameters that can be used to define conditions of inbox rules, see the [New-InboxRule](https://docs.microsoft.com/powershell/module/exchange/mailboxes/new-inboxrule) article.
 
-c. The *MoveToFolder* parameter specifies the action for the inbox rule; in this example, messages received from admin@alpinehouse.onmicrosoft.com will be moved to the folder named *AdminSearch*. Also see  [New-InboxRule](https://docs.microsoft.com/powershell/module/exchange/mailboxes/new-inboxrule) for a complete list of parameters that can used to define the action of an inbox rule.
+c. The *MoveToFolder* parameter specifies the action for the inbox rule; in this example, messages received from admin@alpinehouse.onmicrosoft.com are moved to the folder named *AdminSearch*. Also see the [New-InboxRule](https://docs.microsoft.com/powershell/module/exchange/mailboxes/new-inboxrule) article for a complete list of parameters that can used to define the action of an inbox rule.
 
 d. The **UserId** field indicate the user who created the inbox rule specified in the **ObjectId** field. This user is also displayed in the **User** column on the search results page.
