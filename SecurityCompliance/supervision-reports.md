@@ -1,9 +1,8 @@
 ---
 title: "Supervision reports"
-ms.author: brendonb
-author: brendonb
+ms.author: robmazz
+author: robmazz
 manager: laurawi
-ms.date: 5/12/2017
 ms.audience: Admin
 ms.topic: article
 ms.service: o365-administration

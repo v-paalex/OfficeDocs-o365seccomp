@@ -1,9 +1,8 @@
 ---
 title: "Install the Supervision add-in for Outlook desktop"
-ms.author: brendonb
-author: brendonb
+ms.author: robmazz
+author: robmazz
 manager: laurawi
-ms.date: 6/19/2017
 ms.audience: Admin
 ms.topic: article
 ms.service: o365-administration

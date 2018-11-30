@@ -1,9 +1,8 @@
 ---
 title: "Configure supervision policies for your organization"
-ms.author: brendonb
-author: brendonb
+ms.author: robmazz
+author: robmazz
 manager: laurawi
-ms.date: 5/12/2017
 ms.audience: Admin
 ms.topic: article
 f1_keywords:
@@ -23,7 +22,8 @@ description: "Set up a supervisory review policies to capture employee communica
 Use supervision policies to capture employee communications for examination by internal or external reviewers.
   
 > [!NOTE]
-> Using supervision policies requires an Office 365 E5 subscription for your organization. If you don't have that plan and want to try supervision, you can [sign up for a trial of Office 365 Enterprise E5](https://go.microsoft.com/fwlink/p/?LinkID=698279). 
+> Users monitored by supervision policies must have either an Office 365 Enterprise E3 license with the Advanced Compliance add-on or be included in an Office 365 Enterprise E5 subscription.
+If you don't have an existing Enterprise E5 plan and want to try supervision, you can [sign up for a trial of Office 365 Enterprise E5](https://go.microsoft.com/fwlink/p/?LinkID=698279). 
   
 Follow these steps to set up and use supervision in your Office 365 organization: 
   
@@ -102,16 +102,10 @@ For more information about role groups and permissions, see [Permissions in the 
   
 ## Set up a supervision policy
 <a name="setupsuper"> </a>
-
-> [!IMPORTANT]
-> Before creating a supervision policy, you must first remove any existing supervisory review policies. 
   
 1. Sign into [https://protection.office.com](https://protection.office.com) using credentials for an admin account in your Office 365 organization. 
     
 2. In the Security &amp; Compliance Center, go to click **Data governance** \> **Supervision**.
-    
-    > [!NOTE]
-    > The previous version of the feature may show in the left-hand navigation as **Supervisory Review (retiring soon)**. This version will soon be deprecated and removed. The new version called **Supervision** will take its place. 
   
 3. Click **Create** and then follow the wizard to set up the following pages of the policy. 
     
