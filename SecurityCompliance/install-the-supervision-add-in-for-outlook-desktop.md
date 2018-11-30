@@ -1,9 +1,8 @@
 ---
 title: "Install the Supervision add-in for Outlook desktop"
-ms.author: brendonb
-author: brendonb
+ms.author: robmazz
+author: robmazz
 manager: laurawi
-ms.date: 6/19/2017
 ms.audience: Admin
 ms.topic: article
 ms.service: o365-administration
@@ -21,24 +20,25 @@ description: "Install the Office 365 Supervision add-in for the desktop version 
 To review communications identified by a supervision policy, reviewers use the Supervision add-in for Outlook and Outlook web app. The add-in is installed automatically in Outlook web app for all reviewers you specified in the policy. However, reviewers must run through some steps to install it in the desktop version of Outlook.
   
 > [!NOTE]
-> Using supervision policies requires an Office 365 E5 subscription for your organization. If you don't have that plan and want to try supervision, you can [sign up for a trial of Office 365 Enterprise E5](https://go.microsoft.com/fwlink/p/?LinkID=698279). 
+> Users monitored by supervision policies must have either an Office 365 Enterprise E3 license with the Advanced Compliance add-on or be included in an Office 365 Enterprise E5 subscription.
+If you don't have an existing Enterprise E5 plan and want to try supervision, you can [sign up for a trial of Office 365 Enterprise E5](https://go.microsoft.com/fwlink/p/?LinkID=698279).
   
 ## Step 1: Copy the address for the supervision mailbox
 
-To install the add-in for Outlook desktop, you'll need the address for the supervision mailbox that was created as part of the supervision policy setup. 
+To install the add-in for Outlook desktop, you'll need the address for the supervision mailbox that was created as part of the supervision policy setup.
   
 > [!NOTE]
-> If someone else created the policy, you'll need to get this address from them to install the add-in. 
-  
+> If someone else created the policy, you'll need to get this address from them to install the add-in.
+ 
  **To find the supervision mailbox address**
   
-1. Sign into the [Security &amp; Compliance Center](https://protection.office.com) using credentials for an admin account in your Office 365 organization. 
+1. Sign into the [Security &amp; Compliance Center](https://protection.office.com) using credentials for an admin account in your Office 365 organization.
     
 2. Go to **Data governance** \> **Supervision**.
     
 3. Click the supervision policy that's gathering the communications you want to review.
     
-4. In the policy details flyout, under ** Supervision mailbox **, copy the address. 
+4. In the policy details flyout, under ** Supervision mailbox **, copy the address.
     
     ![The 'Supervision Mailbox' section of a supervision policy's details flyout showing the supervision mailbox address highlighted](media/71779d0e-4f01-4dd3-8234-5f9c30eeb067.jpg)
   
@@ -60,17 +60,17 @@ Next, reviewers will need to run a couple Exchange Online PowerShell commands so
     
 ## Step 3: Create an Outlook profile to connect to the supervision mailbox
 
-For the final step, reviewers will need to create an Outlook profile to connect to the supervision mailbox. 
-  
+For the final step, reviewers will need to create an Outlook profile to connect to the supervision mailbox.
+ 
 > [!NOTE]
-> To create a new Outlook profile, you'll use the Mail settings in the Windows Control Panel. The path you take to get to these settings might depend on which Windows operating system (Windows 7, Windows 8, or Windows 10) you're using and which version of Outlook is installed. 
+> To create a new Outlook profile, you'll use the Mail settings in the Windows Control Panel. The path you take to get to these settings might depend on which Windows operating system (Windows 7, Windows 8, or Windows 10) you're using and which version of Outlook is installed.
   
-1. Open the Control Panel, and in the **Search** box at the top of the window, type **Mail**. 
+1. Open the Control Panel, and in the **Search** box at the top of the window, type **Mail**.
     
     > [!NOTE]
     > Not sure how to get to the Control Panel? See [Where is Control Panel?](https://support.microsoft.com/help/13764/windows-where-is-control-panel)
   
-2. Open the **Mail** app. 
+2. Open the **Mail** app.
     
 3. In **Mail Setup - Outlook**, click **Show Profiles**.
     
@@ -92,6 +92,4 @@ For the final step, reviewers will need to create an Outlook profile to connect 
   
 8. When prompted, enter your Office 365 credentials.
     
-9. If successful, you'll see the **Supervision - \<policy name\>** folder listed in the Folder List view in Outlook. 
-    
-
+9. If successful, you'll see the **Supervision - \<policy name\>** folder listed in the Folder List view in Outlook.
