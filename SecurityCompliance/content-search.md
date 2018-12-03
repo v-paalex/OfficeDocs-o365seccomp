@@ -3,7 +3,7 @@ title: "Content Search in Office 365"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
-ms.date: 6/28/2018
+ms.date: 
 ms.audience: Admin
 ms.topic: article
 ms.service: o365-administration
