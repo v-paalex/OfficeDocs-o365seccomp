@@ -59,7 +59,7 @@ This will show you the apps that are assigned to the user and what permissions t
 Have your users go to https://myapps.microsoft.com and review their own application access there. They should be able to see all the apps with access, view details about them (including the scope of access), and be able to revoke privileges to suspicious or illicit apps.
 
 ### Steps for doing this with PowerShell
-The simplest way to verify the Illicit Consent Grant attack is to run  [Get-AzureADPSPermissions.ps1](https://gist.github.com/psignoret/41793f8c6211d2df5051d77ca3728c09), which will dump all the OAuth consent grants and app permissions for all users in your tenancy into one .csv file. 
+The simplest way to verify the Illicit Consent Grant attack is to run  [Get-AzureADPSPermissions.ps1](https://gist.github.com/psignoret/41793f8c6211d2df5051d77ca3728c09), which will dump all the OAuth consent grants and OAuth apps for all users in your tenancy into one .csv file. 
 
 #### Pre-requisites
 - The Azure AD PowerShell library installed.
