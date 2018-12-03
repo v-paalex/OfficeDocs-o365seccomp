@@ -138,7 +138,7 @@
 ### [Utilization activities after rolling out Office 365 Cloud App Security](utilization-activities-for-ocas.md)
 #### [Review and take action on alerts in Office 365 Cloud App Security](review-office-365-cas-alerts.md)
 #### [Investigate an activity in Office 365 Cloud App Security](investigate-an-activity-in-office-365-cas.md)
-#### [Manage app permissions using Office 365 Cloud App Security](manage-app-permissions-in-ocas.md)
+#### [Manage OAuth apps using Office 365 Cloud App Security](manage-app-permissions-in-ocas.md)
 #### [Web traffic logs and data sources for Office 365 Cloud App Security](web-traffic-logs-and-data-sources-for-ocas.md)
 #### [Suspend or restore a user account in Office 365 Cloud App Security](suspend-or-restore-an-account-in-ocas.md)
 ### [Create app discovery reports using Office 365 Cloud App Security](create-app-discovery-reports-in-ocas.md)
