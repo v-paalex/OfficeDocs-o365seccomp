@@ -3,6 +3,7 @@ title: "Office 365 Cloud App Security help and how-to"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
+ms.date: 12/03/2018
 ms.audience: ITPro
 ms.topic: hub-page
 ms.service: o365-administration
@@ -30,7 +31,7 @@ With Office 365 Cloud App Security, global administrators, security administrato
 |Set up policies and alerts for your organization  <br/> |[Activity policies and alerts in Office 365 Cloud App Security](activity-policies-and-alerts.md) <br/> [Anomaly detection policies in Office 365 Cloud App Security](anomaly-detection-policies-in-ocas.md) (newly updated!)  <br/> [SIEM integration with Office 365 Cloud App Security](integrate-your-siem-server-with-office-365-cas.md) <br/> [Security policy reference information for Office 365 Cloud App Security](security-policy-reference-information-for-ocas.md) <br/> |
 |Fine-tune settings in Office 365 Cloud App Security  <br/> |[Group your IP addresses to simplify management in Office 365 Cloud App Security](group-your-ip-addresses-in-ocas.md) <br/> [Utilization activities after rolling out Office 365 Cloud App Security](utilization-activities-for-ocas.md) <br/> |
 |Investigate activities and take action  <br/> |[Review and take action on Office 365 Cloud App Security alerts](review-office-365-cas-alerts.md) <br/> [Investigate an activity in Office 365 Cloud App Security](investigate-an-activity-in-office-365-cas.md) <br/> [Suspend or restore a user account in Office 365 Cloud App Security](suspend-or-restore-an-account-in-ocas.md) <br/> |
-|Manage third-party apps in Office 365  <br/> |[Manage app permissions using Office 365 Cloud App Security](manage-app-permissions-in-ocas.md) <br/> |
+|Manage third-party apps in Office 365  <br/> |[Manage OAuth apps using Office 365 Cloud App Security](manage-app-permissions-in-ocas.md) <br/> |
 |Create and view app discovery reports  <br/> |[Web traffic logs and data sources for Office 365 Cloud App Security](web-traffic-logs-and-data-sources-for-ocas.md) <br/> [Create app discovery reports in Office 365 Cloud App Security](create-app-discovery-reports-in-ocas.md) <br/> [Review app discovery findings in Office 365 Cloud App Security](review-app-discovery-findings-in-ocas.md) (newly updated!)  <br/> |
 |Stay in the loop on what's new in Office 365 Cloud App Security  <br/> |[What's new in Office 365 Cloud App Security](new-in-office-365-cas.md) <br/> |
    
