@@ -3,6 +3,7 @@ title: "Overview of Office 365 Cloud App Security"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
+ms.date: 12/03/2018
 ms.audience: ITPro
 ms.topic: overview
 ms.service: o365-administration
@@ -86,17 +87,17 @@ You can use your web traffic logs with Office 365 Cloud App Security, too. The m
   
 [Learn about web traffic logs and data sources for Office 365 Cloud App Security](web-traffic-logs-and-data-sources-for-ocas.md)
   
-## App permissions
+## OAuth apps
 
 With Office 365 Cloud App Security, you can allow or prevent people in your organization to use third-party apps that access data in Office 365.
   
-![In O365 CAS, you can access the Manage App Permissions page from the Investigate menu.](media/78272cda-986f-4b3b-bbbe-8c236c74f5d3.png)
+![In O365 CAS, you can access the Manage OAuth apps page from the Investigate menu.](media/78272cda-986f-4b3b-bbbe-8c236c74f5d3.png)
   
-To get to this page, go to **Investigate** \> **App permissions**. 
+To get to this page, go to **Investigate** \> **OAuth apps**. 
   
 ![In the O365 CAS portal, choose Investigate.](media/8c7b87c9-71a6-4952-adb2-185e941ffe9a.png)
   
-[Manage app permissions using Office 365 Cloud App Security](manage-app-permissions-in-ocas.md)
+[Manage OAuth apps using Office 365 Cloud App Security](manage-app-permissions-in-ocas.md)
   
 ## Cloud Discovery Dashboard
 

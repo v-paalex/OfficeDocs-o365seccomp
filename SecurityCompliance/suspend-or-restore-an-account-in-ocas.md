@@ -3,7 +3,7 @@ title: "Suspend or restore a user account in Office 365 Cloud App Security"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 2/26/2018
+ms.date: 12/03/2018
 ms.audience: ITPro
 ms.topic: article
 ms.service: o365-administration
@@ -57,7 +57,7 @@ See [Restore a user in Office 365](https://support.office.com/article/2c261e42-5
 
 - [Review and take action on alerts in Office 365 Cloud App Security](review-office-365-cas-alerts.md)
     
-- [Manage app permissions using Office 365 Cloud App Security](manage-app-permissions-in-ocas.md)
+- [Manage OAuth apps using Office 365 Cloud App Security](manage-app-permissions-in-ocas.md)
     
 - Review your [utilization activities for Office 365 Cloud App Security](utilization-activities-for-ocas.md)
     
