@@ -70,7 +70,7 @@ Admins can use Exchange Online PowerShell to enable or disable safety tips. Use 
   Set-HostedContentFilterPolicy -Identity "policy name " -InlineSafetyTipsEnabled <$true|$false>
   ```
 
-    Where:
+Where:
     
   -  *policy name*  is the name of the policy you want to modify, for example **default**.
     
@@ -84,7 +84,7 @@ Admins can use Exchange Online PowerShell to enable or disable safety tips. Use 
   PS C:\> Set-HostedContentFilterPolicy -Identity "default" -InlineSafetyTipsEnabled $false
   ```
 
-    For more information about this cmdlet, see [Set-HostedContentFilterPolicy](https://technet.microsoft.com/library/jj200781.aspx).
+For more information about this cmdlet, see [Set-HostedContentFilterPolicy](https://technet.microsoft.com/library/jj200781.aspx).
     
 ## Still need help?
 <a name="pshellsafetytip"> </a>
