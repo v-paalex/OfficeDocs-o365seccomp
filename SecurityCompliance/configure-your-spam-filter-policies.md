@@ -40,21 +40,15 @@ For information about keyboard shortcuts that may apply to the procedures in thi
     
       - Click the ![Add Icon](media/ITPro-EAC-AddIcon.gif) **New** icon in order to create a new custom spam-filter policy that can be applied to users, groups, and domains in your organization. You can also edit existing custom policies by double-clicking them. 
     
-3. For custom policies only, specify a name for this policy. Optionally, you can also specify a more detailed description. You cannot rename the default policy.<br/>
-    > [!NOTE]
-    > When you create a policy, all configuration settings appear on a single screen. By contrast, when you edit a policy, you must navigate through multiple screens. The settings are the same in either case, but the rest of this procedure describes how to access these settings when you edit a policy. 
+3. For custom policies only, specify a name for this policy. Optionally, you can also specify a more detailed description. You cannot rename the default policy.<br/><br/>NOTE: When you create a policy, all configuration settings appear on a single screen. By contrast, when you edit a policy, you must navigate through multiple screens. The settings are the same in either case, but the rest of this procedure describes how to access these settings when you edit a policy. 
   
 4. On the **spam and bulk email actions** page, under **Spam** and **High confidence spam**, select the action to take for incoming spam and bulk email. By default, **Move messages to Junk Email folder** is selected. The other possible values are: 
     
       - **Delete message** Deletes the entire message, including all attachments. 
         
-      - **Quarantine message** Sends the message to quarantine instead of to the intended recipients. If you select this option, in the **Retain spam for (days)** input box, specify the number of days during which the spam message will be quarantined. (It will automatically be deleted after the time elapses. The default value is 15 days which is the maximum value. The minimum value is 1 day.)<br/> 
-    > [!TIP]
-    >  For information about how administrators can manage email messages that reside in the quarantine in the EAC, see [Quarantine](quarantine.md) and [Find and release quarantined messages as an administrator](find-and-release-quarantined-messages-as-an-administrator.md). >  For information about how to configure spam notification messages to be sent to users, see [Configure end-user spam notifications in EOP](configure-end-user-spam-notifications-in-eop.md) or [Configure end-user spam notifications in Exchange Online](configure-end-user-spam-notifications-in-exchange-online.md). 
+      - **Quarantine message** Sends the message to quarantine instead of to the intended recipients. If you select this option, in the **Retain spam for (days)** input box, specify the number of days during which the spam message will be quarantined. (It will automatically be deleted after the time elapses. The default value is 15 days which is the maximum value. The minimum value is 1 day.)<br/><br/>TIP: For information about how administrators can manage email messages that reside in the quarantine in the EAC, see [Quarantine](quarantine.md) and [Find and release quarantined messages as an administrator](find-and-release-quarantined-messages-as-an-administrator.md). >  For information about how to configure spam notification messages to be sent to users, see [Configure end-user spam notifications in EOP](configure-end-user-spam-notifications-in-eop.md) or [Configure end-user spam notifications in Exchange Online](configure-end-user-spam-notifications-in-exchange-online.md). 
   
-      - **Move message to Junk Email folder** Sends the message to the Junk Email folder of the specified recipients. This is the default action for both confidence threshold levels. <br/> 
-    > [!IMPORTANT]
-    > For Exchange Online Protection (EOP) customers: In order for this action to work with on-premises mailboxes, you must configure two Exchange Transport rules on your on-premises servers to detect spam headers added by EOP. For details, see [Ensure that spam is routed to each user's Junk Email folder](ensure-that-spam-is-routed-to-each-user-s-junk-email-folder.md). 
+      - **Move message to Junk Email folder** Sends the message to the Junk Email folder of the specified recipients. This is the default action for both confidence threshold levels. <br/><br/>**IMPORTANT: For Exchange Online Protection (EOP) customers: In order for this action to work with on-premises mailboxes, you must configure two Exchange Transport rules on your on-premises servers to detect spam headers added by EOP. For details, see [Ensure that spam is routed to each user's Junk Email folder](ensure-that-spam-is-routed-to-each-user-s-junk-email-folder.md).**
   
       - **Add X-header** Sends the message to the specified recipients, but adds X-header text to the message header in order to identify the message as spam. Using this text as an identifier, you can optionally create inbox rules or use a downstream device to act on the message. The default X-header text is **This message appears to be spam**.<br/>You can customize the X-header text by using the **Add this X-header text** input box. If you customize the X-header text, be aware of the following conditions: 
     
@@ -66,9 +60,7 @@ For information about keyboard shortcuts that may apply to the procedures in thi
         
       - **Prepend subject line with text** Sends the message to the intended recipients but prepends the subject line with the text that you specify in the **Prefix subject line with this text** input box. Using this text as an identifier, you can optionally create rules to filter or route the messages as necessary. 
         
-      - **Redirect message to email address** Sends the message to a designated email address instead of to the intended recipients. Specify the "redirect" address in the **Redirect to this email address** input box. <br/>
-    > [!NOTE]
-    > For more information about spam confidence levels, see [Spam confidence levels](spam-confidence-levels.md). 
+      - **Redirect message to email address** Sends the message to a designated email address instead of to the intended recipients. Specify the "redirect" address in the **Redirect to this email address** input box. <br/><br/>NOTE: For more information about spam confidence levels, see [Spam confidence levels](spam-confidence-levels.md). 
   
 5. Under **Bulk email**, you can select a threshold to treat bulk email as spam. This threshold is based on the bulk complaint level of the message. You can choose a threshold setting from 1 to 9, where 1 indicates most bulk email as spam, and 9 allows the most bulk email to be delivered. The service then performs the configured action, such as sending the message to the recipient's Junk Email folder. See [Bulk Complaint Level values](bulk-complaint-level-values.md) and [What's the difference between junk email and bulk email?](what-s-the-difference-between-junk-email-and-bulk-email.md) for more details. 
     
@@ -76,25 +68,19 @@ For information about keyboard shortcuts that may apply to the procedures in thi
     
       - Add unwanted senders to the Sender block list. Click **Add**![Add Icon](media/ITPro-EAC-AddIcon.gif), and then in the selection dialog box, add the sender addresses you want to block. You can separate multiple entries using a semi-colon or a new line. Click **Ok** to return to the **Block Lists** page. 
         
-      - Add unwanted domains to the Domain block list. Click **Add**![Add Icon](media/ITPro-EAC-AddIcon.gif), and then in the selection dialog box, add the domains you want to block. You can separate multiple entries using a semi-colon or a new line. Click **Ok** to return to the **Block Lists** page. <br/>
-    > [!CAUTION]
-    > If you block top-level domains, it's likely that email you want will be marked as spam. 
+      - Add unwanted domains to the Domain block list. Click **Add**![Add Icon](media/ITPro-EAC-AddIcon.gif), and then in the selection dialog box, add the domains you want to block. You can separate multiple entries using a semi-colon or a new line. Click **Ok** to return to the **Block Lists** page. <br/><br/>**CAUTION: If you block top-level domains, it's likely that email you want will be marked as spam.** 
   
 7. On the **Allow Lists** page, you can specify entries, such as senders or domains, that will always be delivered to the inbox. Email from these entries is not processed by the spam filter. 
     
       - Add trusted senders to the Sender allow list. Click **Add**![Add Icon](media/ITPro-EAC-AddIcon.gif), and then in the selection dialog box, add the sender addresses you wish to allow. You can separate multiple entries using a semi-colon or a new line. Click ok to return to the **Allow Lists** page. 
         
-      - Add trusted domains to the Domain allow list. Click **Add**![Add Icon](media/ITPro-EAC-AddIcon.gif), and then in the selection dialog box, add the domains you wish to allow. You can separate multiple entries using a semi-colon or a new line. Click ok to return to the **Allow Lists** page. <br/>
-    > [!CAUTION]
-    > If you allow top-level domains, it's likely that email you don't want will be delivered to an inbox. 
+      - Add trusted domains to the Domain allow list. Click **Add**![Add Icon](media/ITPro-EAC-AddIcon.gif), and then in the selection dialog box, add the domains you wish to allow. You can separate multiple entries using a semi-colon or a new line. Click ok to return to the **Allow Lists** page. <br/><br/>**CAUTION: If you allow top-level domains, it's likely that email you don't want will be delivered to an inbox.** 
   
 8. On the **International Spam** page you can filter email messages that are written in specific languages or sent from specific countries or regions. You can configure up to 86 different languages and 250 different regions. The service will apply the configured action for high-confidence spam. 
     
 9. Select the **Filter email messages written in the following languages** check box to enable this functionality. Click ![Add Icon](media/ITPro-EAC-AddIcon.gif), and then, in the selection dialog box, make your choices (multi-selection is supported). For example, if you select to filter messages written in Arabic (AR), and **Quarantine message** is your configured action for high confidence spam messages, any messages written in Arabic will be quarantined. Click **ok** to return to the **International Spam** pane. 
     
-10. Select the **Filter email messages sent from the following countries or regions** check box to enable this functionality. Click ![Add Icon](media/ITPro-EAC-AddIcon.gif), and then, in the selection dialog box, make your choices (multi-selection is supported). For example, if you select to filter all messages that are sent from Australia (AU), and **Quarantine message** is your configured action for high-confidence spam messages, then any messages that is sent from Australia will be quarantined. Click **ok** to return to the **International Spam** pane. <br/>
-    > [!NOTE]
-    > By default, if no international spam options are selected, the service performs normal spam filtering on messages sent in all languages and from all regions. Messages are analyzed and the configured actions are applied if the message is determined to be spam or high confidence spam. 
+10. Select the **Filter email messages sent from the following countries or regions** check box to enable this functionality. Click ![Add Icon](media/ITPro-EAC-AddIcon.gif), and then, in the selection dialog box, make your choices (multi-selection is supported). For example, if you select to filter all messages that are sent from Australia (AU), and **Quarantine message** is your configured action for high-confidence spam messages, then any messages that is sent from Australia will be quarantined. Click **ok** to return to the **International Spam** pane. <br/><br/>By default, if no international spam options are selected, the service performs normal spam filtering on messages sent in all languages and from all regions. Messages are analyzed and the configured actions are applied if the message is determined to be spam or high confidence spam. 
   
 11. On the **Advanced Options** page, you can select **On**, **Off**, or **Test** for each advanced spam filtering option. 
     
@@ -108,9 +94,7 @@ For information about keyboard shortcuts that may apply to the procedures in thi
         
       - **Add the default test X-header text** Selecting this option sends the message to the specified recipients, but also adds a special X-header to the message to identify it as having matched a specific advanced spam filtering option. 
         
-      - **Send a Bcc message to this address** Selecting this option sends a blind carbon copy of the message to the email address that you specify in the input box. <br/>
-    > [!TIP]
-    > For more information about the advanced spam filtering options, including descriptions about each option and the X-header text that is associated with each one, see [Advanced spam filtering  options](advanced-spam-filtering-asf-options.md). 
+      - **Send a Bcc message to this address** Selecting this option sends a blind carbon copy of the message to the email address that you specify in the input box. <br/><br/>For more information about the advanced spam filtering options, including descriptions about each option and the X-header text that is associated with each one, see [Advanced spam filtering  options](advanced-spam-filtering-asf-options.md). 
   
 15. For custom policies only, click the **Apply to** menu item, and then create a condition-based rule to specify the users, groups, and domains to which to apply this policy. You can create multiple conditions, if they are unique. 
     
@@ -118,12 +102,10 @@ For information about keyboard shortcuts that may apply to the procedures in thi
         
       - To select groups, select **The recipient is a member of**. Then, in the subsequent dialog box, select or specify the groups. Click **ok** to return to the main screen. 
         
-      - To select domains, select **The recipient domain is**. Then, in the subsequent dialog box, add the domains. Click **ok** to return to the main screen. <br/><br/>You can create exceptions within the rule. For example, you can filter messages from all domains except for a certain domain. Click **add exception**, and then create your exception conditions similar to the way that you created the other conditions.
-    
-    > [!TIP]
-    > Applying a spam policy to a group is supported only for **Mail Enabled Security Groups**. 
+      - To select domains, select **The recipient domain is**. Then, in the subsequent dialog box, add the domains. Click **ok** to return to the main screen. <br/><br/>You can create exceptions within the rule. For example, you can filter messages from all domains except for a certain domain. Click **add exception**, and then create your exception conditions similar to the way that you created the other conditions.<br/><br/>Applying a spam policy to a group is supported only for **Mail Enabled Security Groups**. 
   
-16. Click **save**. A summary of your policy settings appears in the right pane.<br/>
+16. Click **save**. A summary of your policy settings appears in the right pane.
+
 > [!TIP]
 >  You can select or clear the check boxes in the **ENABLED** column to enable or disable your custom policies. By default, all policies are enabled. The default policy cannot be disabled. >  To delete a custom policy, select the policy, click the ![Delete icon](media/ITPro-EAC-DeleteIcon.gif) **Delete** icon, and then confirm that you want to delete the policy. The default policy cannot be deleted. >  Custom policies always take precedence over the default policy. Custom policies run in the reverse order in which you created them (from oldest to newest), but you can change the priority (running order) of your custom policies by clicking the ![Up Arrow Icon](media/ITPro-EAC-UpArrowIcon.gif) up arrow and ![Down Arrow Icon](media/ITPro-EAC-DownArrowIcon.gif) down arrow. The policy that has a **PRIORITY** of **0** will run first, followed by **1**, then **2**, and so on. 
   
