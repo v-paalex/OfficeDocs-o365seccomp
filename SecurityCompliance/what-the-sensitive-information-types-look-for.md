@@ -3807,16 +3807,14 @@ A DLP policy is 75% confident that it's detected this type of sensitive informat
 
 ### Format
 
-7-12 digits
+12 letters and digits
 
 ### Pattern
 
-7-12 digits:
-- Four digits 
-- A hyphen (optional) 
-- Six digits
-OR
-- 7-12 consecutive digits
+12 letters and digits:
+- Two letters (not case sensitive)
+- Eight digits 
+- Two letters (not case sensitive)
 
 ### Checksum
 
@@ -3824,31 +3822,23 @@ No
 
 ### Definition
 
-A DLP policy is 85% confident that it's detected this type of sensitive information if, within a proximity of 300 characters:
-- The function Func_jp_sin finds content that matches the pattern.
-- A keyword from Keyword_jp_sin is found.
-
 A DLP policy is 75% confident that it's detected this type of sensitive information if, within a proximity of 300 characters:
-- The function Func_jp_sin_pre_1997 finds content that matches the pattern.
-- A keyword from Keyword_jp_sin is found.
+- The regular expression Regex_jp_residence_card_number finds content that matches the pattern.
+- A keyword from Keyword_jp_residence_card_number is found.
 
 ```
-<!-- Japan Social Insurance Number -->
-<Entity id="c840e719-0896-45bb-84fd-1ed5c95e45ff" patternsProximity="300" recommendedConfidence="75">
-    <Pattern confidenceLevel="85">
-        <IdMatch idRef="Func_jp_sin" />
-        <Match idRef="Keyword_jp_sin" />
-    </Pattern>
-    <Pattern confidenceLevel="75">
-        <IdMatch idRef="Func_jp_sin_pre_1997" />
-        <Match idRef="Keyword_jp_sin" />
-    </Pattern>
+<!--Japan Residence Card Number-->
+-<Entity id="ac36fef2-a289-4e2c-bb48-b02366e89fc0" recommendedConfidence="75" patternsProximity="300">
+   -<Pattern confidenceLevel="75">
+      <IdMatch idRef="Regex_jp_residence_card_number"/>
+      <Match idRef="Keyword_jp_residence_card_number"/>
+   </Pattern>
 </Entity>
 ```
 
 ### Keywords
 
-#### Keyword_jp_sin
+#### Keyword_jp_residence_card_number
 
 - Residence card number
 - Residence card no
