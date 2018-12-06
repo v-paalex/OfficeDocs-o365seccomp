@@ -3802,6 +3802,48 @@ A DLP policy is 75% confident that it's detected this type of sensitive informat
 - Social Insurance Number 
 - 社会保険のテンキー 
 - 社会保険番号 
+
+## Japanese Residence Card Number
+
+### Format
+
+12 letters and digits
+
+### Pattern
+
+12 letters and digits:
+- Two letters (not case sensitive)
+- Eight digits 
+- Two letters (not case sensitive)
+
+### Checksum
+
+No
+
+### Definition
+
+A DLP policy is 75% confident that it's detected this type of sensitive information if, within a proximity of 300 characters:
+- The regular expression Regex_jp_residence_card_number finds content that matches the pattern.
+- A keyword from Keyword_jp_residence_card_number is found.
+
+```
+<!--Japan Residence Card Number-->
+-<Entity id="ac36fef2-a289-4e2c-bb48-b02366e89fc0" recommendedConfidence="75" patternsProximity="300">
+   -<Pattern confidenceLevel="75">
+      <IdMatch idRef="Regex_jp_residence_card_number"/>
+      <Match idRef="Keyword_jp_residence_card_number"/>
+   </Pattern>
+</Entity>
+```
+
+### Keywords
+
+#### Keyword_jp_residence_card_number
+
+- Residence card number
+- Residence card no
+- Residence card #
+- 在留カード番号
    
 ## Malaysia ID Card Number
 
@@ -4757,7 +4799,101 @@ A DLP policy is 75% confident that it's detected this type of sensitive informat
 - 居留證 
 - 外僑居留證 
 - 台灣地區居留證 
-   
+
+## Thai Population Identification Code
+
+### Format
+
+13 digits
+
+### Pattern
+
+13 digits:
+- First digit is not 0 or 9 
+- 12 digits
+
+### Checksum
+
+Yes
+
+### Definition
+
+A DLP policy is 85% confident that it's detected this type of sensitive information if, within a proximity of 300 characters:
+- The function Func_Thai_Citizen_Id finds content that matches the pattern.
+- A keyword from Keyword_Thai_Citizen_Id is found.
+
+A DLP policy is 75% confident that it's detected this type of sensitive information if, within a proximity of 300 characters:
+- The function Func_Thai_Citizen_Id finds content that matches the pattern.
+
+```
+<!-- Thai Citizen ID -->
+-<Entity id="44ca9e86-ead7-4c5d-884a-e2eaa401515e" recommendedConfidence="75" patternsProximity="300">
+   -<Pattern confidenceLevel="85">
+      <IdMatch idRef="Func_Thai_Citizen_Id"/>
+      <Match idRef="Keyword_Thai_Citizen_Id"/>
+   </Pattern>
+   -<Pattern confidenceLevel="75">
+      <IdMatch idRef="Func_Thai_Citizen_Id"/>
+   </Pattern>
+</Entity>
+```
+
+### Keywords
+
+#### Keyword_Thai_Citizen_Id
+
+- ID Number
+- Identification Number
+- บัตรประชาชน
+- รหัสบัตรประชาชน
+- บัตรประชาชน
+- รหัสบัตรประชาชน
+  
+## Turkish National Identification Number
+
+### Format
+
+11 digits
+
+### Pattern
+
+11 digits
+
+### Checksum
+
+Yes
+
+### Definition
+
+A DLP policy is 85% confident that it's detected this type of sensitive information if, within a proximity of 300 characters:
+- The function Func_Turkish_National_Id finds content that matches the pattern.
+- A keyword from Keyword_Turkish_National_Id is found.
+
+A DLP policy is 75% confident that it's detected this type of sensitive information if, within a proximity of 300 characters:
+- The function Func_Turkish_National_Id finds content that matches the pattern.
+
+```
+<!-- Turkish National Identity -->
+-<Entity id="fb621f20-3876-4cfc-acec-8c8e73ca32c7" recommendedConfidence="75" patternsProximity="300">
+   -<Pattern confidenceLevel="85">
+      <IdMatch idRef="Func_Turkish_National_Id"/>
+      <Match idRef="Keyword_Turkish_National_Id"/>
+   </Pattern>
+   -<Pattern confidenceLevel="75">
+      <IdMatch idRef="Func_Turkish_National_Id"/>
+   </Pattern>
+</Entity>
+```
+
+### Keywords
+
+#### Keyword_Turkish_National_Id
+
+- TC Kimlik No
+- TC Kimlik numarası
+- Vatandaşlık numarası
+- Vatandaşlık no
+
 ## U.K. Driver's License Number
 
 ### Format
