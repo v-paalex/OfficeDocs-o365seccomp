@@ -192,17 +192,13 @@ Other important features of an org-wide retention policy include:
 - There is no limit to the number of mailboxes or sites the policy can include.
     
 - For Exchange, any new mailbox created after the policy is applied will automatically inherit the policy.
-    
-However, there is a limit of 10 org-wide policies and entire-location policies combined (see next section) per tenant.
   
 ### A policy that applies to entire locations
 
 When you choose locations, you can easily include or exclude an entire location, such as Exchange email or OneDrive accounts. To do so, simply toggle the **Status** of that location on or off. 
   
 Like an org-wide policy, if a policy applies to any combination of entire locations, there is no limit to the number of mailboxes or sites the policy can include. For example, if a policy includes all Exchange email and all SharePoint sites, all sites and mailboxes will be included, no matter how many. And for Exchange, any new mailbox created after the policy is applied will automatically inherit the policy.
-  
-However, there is a limit of 10 org-wide policies and entire-location policies combined per tenant.
-  
+ 
 ![Choose locations page](media/6ac0c2d6-1abf-4690-b3f6-9ca506887ba3.png)
   
 ### A policy with specific inclusions or exclusions
