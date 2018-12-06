@@ -3,15 +3,13 @@ title: "Retry a failed Content Search to resolve a content location error"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
-ms.date: 
 ms.audience: Admin
 ms.topic: article
 ms.service: o365-administration
 localization_priority: Normal
-ms.collection: Strat_O365_IP
+ms.collection: 
 search.appverid:
 - MOE150
-- MED150
 - MET150
 ms.assetid: 
 description: "Use the Retry button for resolve Content Searches that have content location errors."
