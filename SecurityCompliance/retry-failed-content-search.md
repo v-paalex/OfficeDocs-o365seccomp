@@ -44,4 +44,4 @@ Restarting the search will often result in similar errors on different servers. 
 This will result in the retrying the search only for the mailboxes that failed. When you retry the search, the other results that were successfully returned are retained.
 
 > [!NOTE]
-> we're working on improving this experience so that the search will automatically retry failed mailboxes until all search results from all content locations are successfully returned.
+> We're working to improve this experience so that the search will automatically retry failed mailboxes until all search results from all content locations are successfully returned.
