@@ -3,7 +3,7 @@ title: "Zero-hour auto purge - protection against spam and malware"
 ms.author: krowley
 author: kccross
 manager: laurawi
-ms.date: 10/23/2018
+ms.date: 12/05/2018
 ms.audience: Admin
 ms.topic: article
 ms.service: o365-administration
@@ -21,7 +21,7 @@ description: "Zero-hour auto purge (ZAP) is an email protection feature that det
 
 ## Overview
 
-Zero-hour auto purge (ZAP) is an email protection feature that detects messages with spam or malware that have already been delivered to your users' inboxes, and then renders the malicious content harmless. How ZAP does this depends on the type of malicious content detected.
+Zero-hour auto purge (ZAP) is an email protection feature that detects messages with phish, spam, or malware that have already been delivered to your users' inboxes, and then renders the malicious content harmless. How ZAP does this depends on the type of malicious content detected; mail can be zapped due to mail content, URLs, or attachments.
   
 ZAP is available with the default Exchange Online Protection that is included with any Office 365 subscription that contains Exchange Online mailboxes.
 
@@ -34,7 +34,11 @@ ZAP is turned on by default, but the folowing conditions must be met:
 ## How does ZAP work?
 
 Office 365 updates anti-spam engine and malware signatures in real-time on a daily basis. However, your users might still get malicious messages delivered to their inboxes for a variety of reasons, including if content is weaponized after being delivered to users. ZAP addresses this by continually monitoring updates to the Office 365 spam and malware signatures. ZAP can find and remove previously delivered messages that are already in users' inboxes. 
+
 - For mail that is identified as spam, ZAP moves unread messages to users' Junk mail folder. 
+
+- For mail that is identified as spam, ZAP moves messages to users' Junk mail folder, regardless of whether the email has been read.
+
 - For newly detected malware, ZAP removes attachments from email messages, regardless of whether the email has been read. 
   
 The ZAP action is seamless for the mailbox user; they are not notified if an email message is moved.
@@ -44,8 +48,11 @@ Allow lists, [mail flow rules](https://go.microsoft.com/fwlink/p/?LinkId=722755)
 ## To review or set up a spam filter policy
   
 1. Go to [https://protection.office.com](https://protection.office.com) and sign in using your work or school account for Office 365.
+
 2. Under **Threat management**, choose **Anti-spam**.
+
 3. Review the standard settings. 
+
 4. If you want to customize your settings, select the **Custom** tab, and turn on **Custom settings**. Edit your settings and if you want, choose **+ Create a policy** to add a new policy. 
     
 ## To see if ZAP moved your message
