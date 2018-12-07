@@ -50,17 +50,17 @@ This will result in the retrying the search only for the mailboxes that failed. 
 
 Here are some addition causes of content location errors and some tips to help you avoid them when searching large numbers of mailboxes.
 
-- The mailbox being searched might be busy due to user activity. In this case, the search service might throttle itself to prevent the mailbox from becoming unavailable. To avoid this, try running searches during non-business hours when users are less likely to be using email.
+- The mailbox being searched might be busy due to user activity. In this case, the search service might throttle itself to prevent the mailbox from becoming unavailable. To avoid this, try running searches during non-business hours.
 
-- Required maintenance is being performed on the mailbox. may be being performed on the mailbox – these occur infrequently, wait a brief period of time and retry
-
-- The search query may be retrieving too much content from the mailbox. If possible, try to narrow the scope of the search by using keywords, date ranges, and search conditions.
+- The search query might be retrieving too much content from the mailbox. If possible, try to narrow the scope of the search by using keywords, date ranges, and search conditions.
 
 - Too many keywords or keyword phrases when you create a search query using the [keywords list](view-keyword-statistics-for-content-search.md#get-keyword-statistics-for-content-searches). When you run a search query that uses the keywords list, the service essentially runs a separate search for each row in the keyword list so that statistics can be generated. If you're using the keywords list in search queries, minimize the number of rows in the keyword list or divide the number keywords into smaller lists and create a different search for each keyword list.
 
   > [!NOTE]
   > To help reduce issues caused by large keyword lists, you're now limited to a maximum of 20 rows in the keyword list of a search query.
 
-- Too many searches being performed on the same mailbox at the same time. If possible, try to run one search at a time on any one mailbox.
+- Too many searches are being performed on the same mailbox at the same time. If possible, try to run one search at a time on any one mailbox.
 
-- Searching too many mailboxes in a single search. The probability of content location errors increases when searching a very large number of mailboxes. If possible, try to run multiple searches, so that each search includes a subset of  mailboxes in your organization.
+- Searching too many mailboxes in a single search. The probability of content location errors increases when searching a very large number of mailboxes. If possible, try to run multiple searches so that each search includes a subset of  mailboxes in your organization.
+
+- Required maintenance is being performed on the mailbox. Though this cause probably occurs infrequently, wait a little while after receiving the content location error and then retry the search.
