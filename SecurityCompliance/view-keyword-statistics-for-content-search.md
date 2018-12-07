@@ -95,6 +95,10 @@ To display statistics for Content Searches:
 ## Get keyword statistics for Content Searches
 
 As previous explained, the **Queries** page shows the search query and the number (and size) of items that match the query. If you use a keyword list when you create or edit a search query, you can get enhanced statistics that show how many items match each keyword or keyword phrase. This can help you quickly identify which parts of the query are the most (and least) effective. For example, if a keyword returns a large number of items, you might choose to refine the keyword query to narrow the search results. You can set up a keyword list when you create or edit a Content Search. 
+
+
+
+
   
 To create a keyword list and view keyword statistics for a Content Search:
   
@@ -125,3 +129,6 @@ To create a keyword list and view keyword statistics for a Content Search:
     - The actual search query for each keyword, which includes any conditions from the search query. 
     
     - The complete search query (identified as **Primary** in the **Part** column) and the statistics for the complete query. Note these are the same statistics displayed on the **Summary** page. 
+
+> [!NOTE]
+> To help reduce issues caused by large keyword lists, you're now limited to a maximum of 20 rows in the keyword list of a search query.
