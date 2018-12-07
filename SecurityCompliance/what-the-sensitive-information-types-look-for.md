@@ -1842,14 +1842,18 @@ Nine digits with optional forward slash (old format)
 
 Nine digits (old format):
 - Nine digits
+
 OR
+
 - Six digits that represent date of birth
 - A forward slash
 - Three digits
 
 10 digits (new format):
 - 10 digits
+
 OR
+
 - Six digits that represent date of birth
 - A forward slash 
 - Four digits where last digit is a check digit
