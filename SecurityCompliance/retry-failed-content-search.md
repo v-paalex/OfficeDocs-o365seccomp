@@ -45,3 +45,19 @@ This will result in the retrying the search only for the mailboxes that failed. 
 
 > [!NOTE]
 > We're working to improve this experience so that the search will automatically retry failed mailboxes until all search results from all content locations are successfully returned.
+
+## Tips to avoid content location errors
+
+Here are some addition causes of content location errors and some tips to you avoid them when searching large numbers of mailboxes.
+
+- The mailbox being searched might be busy due to user activity. In this case, the search service might throttle itself to prevent the mailbox from becoming unavailable. To avoid this, try running searches during non-business hours when users are less likely to be using email.
+
+- Required maintenance is being performed on the mailbox. may be being performed on the mailbox – these occur infrequently, wait a brief period of time and retry
+
+- Your query may be retrieving too much content from the mailbox - check if you can reduce the scope of the search
+
+- You may too many keyword segments in your query - try reducing segments or break them into multiple searches
+
+- you may have too many searches being performed on the same mailbox, - try to serialize eDiscovery activity on a mailbox
+
+- You may be searching too many mailboxes and you are a victim of probability – try to be a better person and scope your searches 
