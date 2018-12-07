@@ -83,11 +83,11 @@ For each domain for which you want to add a DKIM signature in DNS, you need to p
 Use the following format for the CNAME records:
   
 ```
-Host name:			selector1._domainkey.<domain>
+Host name:			selector1._domainkey
 Points to address or value:	selector1-<domainGUID>._domainkey.<initialDomain> 
 TTL:				3600
 
-Host name:			selector2._domainkey.<domain>
+Host name:			selector2._domainkey
 Points to address or value:	selector2-<domainGUID>._domainkey.<initialDomain> 
 TTL:				3600
 ```
@@ -107,20 +107,20 @@ Where:
 For example, if you have an initial domain of cohovineyardandwinery.onmicrosoft.com, and two custom domains cohovineyard.com and cohowinery.com, you would need to set up two CNAME records for each additional domain, for a total of four CNAME records.
   
 ```
-Host name:			selector1._domainkey.cohovineyard.com  
-Points to address or value:	selector1-cohovineyard-com._domainkey.cohovineyardandwinery.onmicrosoft.com
+Host name:			selector1._domainkey
+Points to address or value:	**selector1-cohovineyard-com**._domainkey.cohovineyardandwinery.onmicrosoft.com
 TTL:				3600
 
-Host name:			selector2._domainkey.cohovineyard.com  
-Points to address or value:	selector2-cohovineyard-com._domainkey.cohovineyardandwinery.onmicrosoft.com
+Host name:			selector2._domainkey
+Points to address or value:	**selector2-cohovineyard-com**._domainkey.cohovineyardandwinery.onmicrosoft.com
 TTL:				3600
 
-Host name:			selector1._domainkey.cohowinery.com
-Points to address or value:	selector1-cohowinery-com._domainkey.cohovineyardandwinery.onmicrosoft.com 
+Host name:			selector1._domainkey
+Points to address or value:	**selector1-cohowinery-com**._domainkey.cohovineyardandwinery.onmicrosoft.com 
 TTL:				3600
  
-Host name:			selector2._domainkey.cohowinery.com
-Points to address or value:	selector2-cohowinery-com._domainkey.cohovineyardandwinery.onmicrosoft.com 
+Host name:			selector2._domainkey
+Points to address or value:	**selector2-cohowinery-com**._domainkey.cohovineyardandwinery.onmicrosoft.com 
 TTL:				3600
 ```
 
