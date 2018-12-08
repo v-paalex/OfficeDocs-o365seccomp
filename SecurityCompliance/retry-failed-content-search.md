@@ -43,9 +43,6 @@ Restarting the search will often result in similar errors on different servers. 
 
 This will result in the retrying the search only for the mailboxes that failed. When you retry the search, the other results that were successfully returned are retained.
 
-> [!NOTE]
-> We're working to improve this experience so that the search will automatically retry failed mailboxes until all search results from all content locations are successfully returned.
-
 ## Tips to avoid content location errors
 
 Here are some addition causes of content location errors and some tips to help you avoid them when searching large numbers of mailboxes.
