@@ -1,5 +1,5 @@
 ---
-title: "Retry a failed Content Search to resolve a content location error"
+title: "Retry a Content Search to resolve a content location error"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
@@ -15,7 +15,7 @@ ms.assetid:
 description: "Use the Retry button for resolve Content Searches that have content location errors."
 ---
 
-# Retry a failed Content Search to resolve a content location error
+# Retry a Content Search to resolve a content location error
 
 When you use Content Search in the Office 365 Security & Compliance Center to search a very large number of mailboxes (for example, searching 100,000 mailboxes or more in a single Content Search), you may get search errors that are similar to the following:
 
