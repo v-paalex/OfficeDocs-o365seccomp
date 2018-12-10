@@ -69,9 +69,9 @@ For more information about the different permissions you can give to users in th
 
  **Parameters**
   
--  _-Identity_ is the role group to add a member to. 
+- _-Identity_ is the role group to add a member to. 
     
-- - _Member_ is the mailbox, universal security group (USG), or computer to add to the role group. You can specify only one member at a time. 
+- _Member_ is the mailbox, universal security group (USG), or computer to add to the role group. You can specify only one member at a time. 
     
 For detailed information on syntax and parameters, see [Add-RoleGroupMember](https://go.microsoft.com/fwlink/p/?LinkId=510859).
   
