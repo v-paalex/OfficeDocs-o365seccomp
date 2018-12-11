@@ -678,7 +678,7 @@ Also note that the duration of the retention period for audit records is based o
 
 Yes. The Office 365 Management Activity API is used to fetch the audit logs programmatically.  To get started, see [Get started with Office 365 Management APIs](https://docs.microsoft.com/office/office-365-management-api/get-started-with-office-365-management-apis).
 
-**Are there other ways to get auditing logs other than suing the Office 365 Security & Compliance Center or the Office 365 Management Activity API?**
+**Are there other ways to get auditing logs other than using the Office 365 Security & Compliance Center or the Office 365 Management Activity API?**
 
 No. These are the only two ways to get data from the Office 365 auditing service. 
 
