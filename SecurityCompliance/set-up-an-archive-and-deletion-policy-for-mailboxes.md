@@ -225,11 +225,8 @@ When a new mailbox is created, a retention policy named Default MRM policy is as
 2. On the mailbox properties page for the selected user, click **Mailbox features**.
     
     The name of the new policy assigned to the mailbox is displayed in the **Retention policy** drop-down list. 
-    
 
-  
 ## (Optional) Step 5: Run the Managed Folder Assistant to apply the new settings
-<a name="step3"> </a>
 
 After you apply the new retention policy to mailboxes in Step 4, it can take up to 7 days in Exchange Online for the new retention settings to be applied to the mailboxes. This is because a process called the Managed Folder Assistant processes mailboxes once every 7 days. Instead of waiting for the Managed Folder Assistant to run, you can force this to happen by running the **Start-ManagedFolderAssistant** cmdlet in Exchange Online PowerShell. 
   
@@ -264,7 +261,7 @@ Here are the steps to connect to Exchange Online PowerShell, and then run the Ma
     ```
 
     > [!NOTE]
-    > For more information or if you have problems connecting to your Exchange Online organization, see [Connect to Exchange Online using remote PowerShell](https://go.microsoft.com/fwlink/p/?LinkId=517283). 
+    > For more information or if you have problems connecting to your Exchange Online organization, see [Connect to Exchange Online PowerShell](https://go.microsoft.com/fwlink/p/?LinkId=517283). 
   
 5. Run the following two commands to start the Managed Folder Assistant for all user mailboxes in your organization.
     
@@ -278,8 +275,27 @@ Here are the steps to connect to Exchange Online PowerShell, and then run the Ma
 
 That's it! You've set up an archive and deletion policy for the Alpine House organization.
   
+## (Optional) Step 6: Make the new retention policy the default for your organization
+
+In Step 4, you have to assign the new retention policy to existing mailboxes. But you can configure Exchange Online so that the new retention policy is assigned to new mailboxes that are created in the future. You do this by using Exchange Online PowerShell to update your organization's default mailbox plan. A *mailbox plan* is a template that automatically configures properties on new mailboxes.  In this optional step, you can replace the current retention policy that's assigned to the mailbox plan (by default, the Default MRM Policy) with the retention policy that you created in Step 3. After you update the mailbox plan, the new retention policy will be assigned to new mailboxes.
+
+1. [Connect to Exchange Online PowerShell](https://go.microsoft.com/fwlink/p/?LinkId=517283) or see Step 5.
+
+2. Run the following command to display information about the mailbox plans in your organization.
+
+    ```
+    Get-MailboxPlan | Format-Table DisplayName,RetentionPolicy,IsDefault
+    ```
+    Note the mailbox plan that's set as the default.
+
+3. Run the following command to assign the new retention policy that you created in Step 3 (for example, **Alpine House Archive and Retention Policy**) to the default mailbox plan. This example assumes the name of the default mailbox plan is **ExchangeOnlineEnterprise**.
+
+    ```
+    Set-MailboxPlan "ExchangeOnlineEnterprise" -RetentionPolicy "Alpine House Archive and Retention Policy"
+    ```
+4. You can re-run the command in step 2 to verify that the retention policy assigned to the default mailbox plan was changed.
+
 ## More information
-<a name="moreinfo"> </a>
 
 - How is retention age calculated? The retention age of mailbox items is calculated from the date of delivery or the date of creation for items such as draft messages that aren't sent but are created by the user. When the Managed Folder Assistant processes items in a mailbox, it stamps a start date and an expiration date for all items that have retention tags with the Delete and Allow Recovery or Permanently Delete retention action. Items that have an archive tag are stamped with a move date. 
     
