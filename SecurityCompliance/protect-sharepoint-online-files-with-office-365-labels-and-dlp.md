@@ -3,7 +3,7 @@ title: "Protect SharePoint Online files with Office 365 labels and DLP"
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 12/15/2017
+ms.date: 12/12/2018
 ms.audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
@@ -63,13 +63,13 @@ To create the labels, you can use the Office 365 Admin center or Microsoft Power
     
 4. From the new **Home - Security &amp; Compliance** tab of your browser, click **Classifications > Labels**.
     
-5. From the **Home > Labels** pane, click **Create a label**.
+5. From the **Home > Labels** pane, click the **Retention** tab, and then click **Create a label**.
     
-6. On the **Name your label** pane, type the name of the label, and then click **Next**.
-    
+6. On the **Name your label** pane, type the name of the label and a description for admins and users, and then click **Next**.
+
 7. On the **Label settings** pane, click **Next**.
     
-8. On the **Review your settings** pane, click **Create this label**, and then click **Close**.
+8. On the **Review your settings** pane, click **Create**, and then click **Close**.
     
 9. Repeat steps 5-8 for your additional labels.
     
@@ -84,9 +84,11 @@ To create the labels, you can use the Office 365 Admin center or Microsoft Power
 ForEach ($element in $labelNames){ New-ComplianceTag -Name $element }
   ```
 
+### Publish your new labels
+
 Next, use these steps to publish the new Office 365 labels.
   
-1. From the **Home > Labels** pane the Security &amp; Compliance Center, click **Publish labels**.
+1. From the **Home > Labels** pane of the Security &amp; Compliance Center, click the **Retention** tab, and then click **Publish labels**.
     
 2. On the **Choose labels to publish** pane, click **Choose labels to publish**.
     
@@ -101,6 +103,7 @@ Next, use these steps to publish the new Office 365 labels.
 7. On the **Name your policy** pane, type a name for your set of labels in **Name**, and then click **Next**.
     
 8. On the **Review your settings** pane, click **Publish labels**, and then click **Close**.
+
     
 ### Phase 3: Apply the Office 365 labels to your SharePoint Online sites
 
@@ -129,14 +132,16 @@ Here is your resulting configuration.
 ## DLP policies for your SharePoint Online sites
 
 Use these steps to configure a DLP policy that notifies users when they share a document on a SharePoint Online sensitive team site outside the organization.
-  
-1. From the **Microsoft Office Home** tab in your browser, click the **Security &amp; Compliance** tile.
+
+1. From the **Microsoft Office Home** tab, click the **Admin** tile.
     
-2. On the new **Security &amp; Compliance** tab in your browser, click **Data loss prevention > Policy**.
+2. From the new **Office Admin center** tab of your browser, click **Admin centers > Security &amp; Compliance**.
     
-3. In the **Data loss prevention** pane, click **+ Create a policy**.
+3. On the new **Security &amp; Compliance** tab in your browser, click **Data loss prevention > Policy**.
     
-4. In the **Start with a template or create a custom policy** pane, click **Custom**, and then click **Next**.
+4. In the **Data loss prevention** pane, click **+ Create a policy**.
+    
+5. In the **Start with a template or create a custom policy** pane, click **Custom**, and then click **Next**.
     
 5. In the **Name your policy** pane, type the name for the sensitive level DLP policy in **Name**, and then click **Next**.
     
@@ -153,7 +158,7 @@ Use these steps to configure a DLP policy that notifies users when they share a 
 11. In the **Choose the types of content to protect** pane, click **Save**.
     
 12. In the **Customize the types of sensitive info you want to protect** pane, click **Next**.
-    
+
 13. In the **What do you want to do if we detect sensitive info?** pane, click **Customize the tip and email**.
     
 14. In the **Customize policy tips and email notifications** pane, click **Customize the policy tip text**.
@@ -167,7 +172,7 @@ Use these steps to configure a DLP policy that notifies users when they share a 
     
 16. Click **OK**.
     
-17. In the **What do you want to do if we detect sensitive info?** pane, clear the **Block people from sharing, and restrict access to shared content** check box, and then click **Next**.
+17. In the **What do you want to do if we detect sensitive info?** pane, click **Next**.
     
 18. In the **Do you want to turn on the policy or test things out first?** pane, click **Yes, turn it on right away**, and then click **Next**.
     
@@ -215,7 +220,7 @@ Next, use these steps to configure a DLP policy that blocks users when they shar
     
 16. Click **OK**.
     
-17. In the **What do you want to do if we detect sensitive info?** pane, select **Require a business justification to override**, and then click **Next**.
+17. In the **What do you want to do if we detect sensitive info?** pane, click **Next**.
     
 18. In the **Do you want to turn on the policy or test things out first?** pane, click **Yes, turn it on right away**, and then click **Next**.
     
