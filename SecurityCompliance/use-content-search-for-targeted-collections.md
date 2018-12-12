@@ -270,3 +270,5 @@ Keep the following things in mind when using the script in this article and perf
 - When searching site folders, the folder (identified by its  `path` property) and all sub-folders will be searched. 
     
 - As previously stated, you can't use  `path` property to search for media files, such as .png, .tiff, or .wav files, located in OneDrive locations. Use a different [site property](keyword-queries-and-search-conditions.md#searchable-site-properties) to search for media files in OneDrive folders. 
+
+- When searching and exporting a folder when you only specify Folderid, during export, it is only necessary to choose the first export option, "All items, excluding ones hat have an unrecognized format, are encrypted, or weren't indexed for other reasons."  All items in the folder will always be exported regardless of their indexing status since Folderid is alwyas indexed.
