@@ -3,7 +3,7 @@ title: "Exchange Online Protection IP addresses"
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 10/2/2018
+ms.date: 12/12/2018
 ms.audience: ITPro
 ms.topic: reference
 ms.service: O365-seccomp
@@ -19,7 +19,7 @@ description: "The following Microsoft data center IP addresses are used by Micro
 The following Microsoft data center IP addresses are used by Microsoft Exchange Online Protection (EOP) when sending email, receiving email, or for Exchange Online Protection portal and administrative services. In order to send and receive messages from EOP or use the administrative services, make sure your network allows connections from these IP addresses.
  
 > [!NOTE]
-> Microsoft has developed a REST-based web service for the IP address and FQDN entries on this page. This new service helps you configure and update network perimeter devices such as firewalls and proxy servers. You can download the list of endpoints, the current version of the list, or specific changes. This service replaces the XML document, RSS feed, and the IP address and FQDN entries on this page. To try out this new service, go to [Web service](https://support.office.com/article/managing-office-365-endpoints-99cab9d4-ef59-4207-9f2b-3728eb46bf9a#webservice). 
+> Microsoft has developed a REST-based web service for the IP address and FQDN entries on this page. This new service helps you configure and update network perimeter devices such as firewalls and proxy servers. You can download the list of endpoints, the current version of the list, or specific changes. This service replaces the XML document, RSS feed, and the IP address and FQDN entries on this page. To try out this new service, go to [Office 365 IP Address and URL Web service](https://docs.microsoft.com/office365/enterprise/office-365-ip-web-service). 
  
 ## EOP IP address ranges
 
@@ -50,7 +50,7 @@ The following Microsoft data center IP addresses are used by Microsoft Exchange 
 ||||
  
 > [!IMPORTANT]
-> The IP address ranges provided here are only used for relay through customer connectors. Changes to the list of IP addresses are rare, and are communicated in advance. To ensure that messages that you send to your business partners, a smart host, or an on-premises environment route through the service's published range of IP addresses, you must configure the correct connector for routing to each destination. For more information about connectors, see [Decide Which Connector to use](https://docs.microsoft.com/exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/set-up-connectors-to-route-mail).  The IP addresses in this topic can change over time. For a record of all IP addresses that have been added, changed, or deprecated in the past year, see [Change notification for EOP IP addresses](change-notification-for-eop-ip-addresses.md). 
+> The IP address ranges provided here are only used for relay through customer connectors. Changes to the list of IP addresses are rare, and are communicated in advance. To ensure that messages that you send to your business partners, a smart host, or an on-premises environment route through the service's published range of IP addresses, you must configure the correct connector for routing to each destination. For more information about connectors, see [Decide Which Connector to use](https://docs.microsoft.com/exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/set-up-connectors-to-route-mail).  The IP addresses in this topic can change over time.  
  
 For information about IP addresses used by Microsoft Office 365, see [Office 365 URLs and IP address ranges](https://go.microsoft.com/fwlink/p/?LinkId=324165).
 

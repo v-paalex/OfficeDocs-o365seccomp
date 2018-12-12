@@ -3,7 +3,7 @@ title: "Secure SharePoint Online sites in a dev/test environment"
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 05/17/2018
+ms.date: 12/12/2018
 ms.audience: ITPro
 ms.topic: article
 ms.collection: 
@@ -199,7 +199,7 @@ In this phase, you create the labels for the different levels of security for Sh
     
 4. From the new **Home - Security &amp; Compliance** tab of your browser, click **Classifications > Labels**.
     
-5. From the **Home > Labels** pane, click **Create a label**.
+5. From the **Home > Labels** pane, click the **Retention** tab, and then click **Create a label**.
     
 6. On the **Name your label** pane, type **Internal Public**, and then click **Next**.
     
@@ -523,7 +523,7 @@ Next, configure a DLP policy that blocks users when they share a document on a S
     
 17. Click **OK**.
     
-18. In the **What do you want to do if we detect sensitive info?** pane, select **Require a business justification to override**, and then click **Next**.
+18. In the **What do you want to do if we detect sensitive info?** pane, click **Next**.
     
 19. In the **Do you want to turn on the policy or test things out first?** pane, click **Yes, turn it on right away**, and then click **Next**.
     
