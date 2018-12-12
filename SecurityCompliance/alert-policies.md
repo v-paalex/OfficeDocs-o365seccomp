@@ -3,7 +3,7 @@ title: "Alert policies in the Office 365 Security &amp; Compliance Center"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
-ms.date: 6/8/2018
+ms.date: 
 ms.audience: Admin
 ms.topic: overview
 ms.service: o365-administration
@@ -21,7 +21,7 @@ description: "Create alert policies in the Office 365 Security &amp; Compliance 
 You can use the new alert policy and alert dashboard tools in the Office 365 Security &amp; Compliance Center to create alert policies and then view the alerts that are generated when users perform activities that match the conditions of an alert policy. Alert policies build on and expand the functionality of activity alerts by letting you categorize the alert policy, apply the policy to all users in your organization, set a threshold level for when an alert is triggered, and decide whether or not to receive email notifications. There's also a **View alerts** page in the Security &amp; Compliance Center where you can view and filter alerts, set an alert status to help you manage alerts, and then dismiss alerts after you've addressed or resolved the underlying incident. We've also expanded the type of events that you can create alerts for. For example, you can create alert policies to track malware activity and data loss incidents. Finally, we've also included a number of default alert policies that help you monitor assigning admin privileges in Exchange Online, malware attacks, and unusual levels of file deletions and external sharing. 
   
 > [!NOTE]
-> Alert policies are available for organizations with an Office 365 Enterprise E1, E3, or E5 subscription. However, some advanced functionality is only available for organizations with an E5 subscription, or for organizations that have an E1 or E3 subscription and an Office 365 Threat Intelligence or Office 365 Advanced Compliance add-on subscription. The functionality that requires an E5 or add-on subscription is highlighted in this topic. 
+> Alert policies are available for organizations with an Office 365 Enterprise or Office 365 US Government E1/G1, E3/G3, or E5/G5 subscription. However, some advanced functionality is only available for organizations with an E5/G5 subscription, or for organizations that have an E1/G1 or E3/G3 subscription and an Office 365 Threat Intelligence or Office 365 Advanced Compliance add-on subscription. The functionality that requires an E5/G5 or add-on subscription is highlighted in this topic. Also note that alert policies are available in Office 365 GCC, GCC High, and DoD US government environments.
   
 ## How alert policies work
 
@@ -52,7 +52,7 @@ An alert policy consists of the following settings and conditions.
 - **Activity the alert is tracking** - You create a policy to track an activity or in some case a few related activities, such a sharing a file with an external user by sharing it, assigning access permissions, or creating an anonymous link. When a user performs the activity defined by the policy, an alert is triggered based on the alert threshold settings.
     
     > [!NOTE]
-    > The activities that you can track depend on your organization's Office 365 Enterprise subscription. In general, activities related to malware campaigns and phishing attacks require an E5 subscription or an E1 or E3 subscription with a Threat Intelligence add-on subscription. 
+    > The activities that you can track depend on your organization's Office 365 Enterprise or Office 365 US Government plan. In general, activities related to malware campaigns and phishing attacks require an E5/G5 subscription or an E1/G1 or E3/G3 subscription with a Threat Intelligence add-on subscription. 
   
 - **Activity conditions** - For most activities, you can define additional conditions that must be met for an alert to be triggered. Common conditions include IP addresses (so that an alert is triggered when the user performs the activity on a computer with a specific IP address or within an IP address range), whether an alert is triggered if a specific user or users perform that activity, and whether the activity is performed on a specific file name or URL. You can also configure a condition that triggers an alert when the activity is performed by any user in your organization. Note that the available conditions are dependent on the selected activity.
     
@@ -63,13 +63,15 @@ An alert policy consists of the following settings and conditions.
     If you select the setting based on unusual activity, Office 365 establishes a baseline value that defines the normal frequency for the selected activity; it takes up to 7 days to establish this baseline, during which alerts won't be generated. After the baseline is established, an alert will be triggered when the frequency of the activity tracked by the alert policy greatly exceeds the baseline value. For auditing-related activities (such as file and folder activities), you can establish a baseline based on a single user or based on all users in your organization; for malware-related activities, you can establish a baseline based on a single malware family, a single recipient, or all messages in your organization.
     
     > [!NOTE]
-    > The ability to configure alert policies based on a threshold or based on unusual activity requires an E5 subscription, or an E1 or E3 subscription with a Threat Intelligence or Advanced Compliance add-on subscription. Organizations with an E1 and E3 subscription can only create an alert policy where an alert is triggered every time that an activity occurs. 
+    > The ability to configure alert policies based on a threshold or based on unusual activity requires an E5/G5 subscription, or an E1/G1 or E3/G3 subscription with a Threat Intelligence or Advanced Compliance add-on subscription. Organizations with an E1/G1 and E3/G3 subscription can only create an alert policy where an alert is triggered every time that an activity occurs. 
   
 - **Alert category** - To help with tracking and managing the alerts generated by a policy, you can assign one of the following categories to a policy.
     
   - Data governance
     
-  - Data loss protection
+  - Data loss prevention
+
+  - Mail flow
     
   - Permissions
     
@@ -90,20 +92,21 @@ An alert policy consists of the following settings and conditions.
 
 Office 365 provides built-in alert policies that help identify Exchange admin permissions abuse, malware activity, and data governance risks. On the **Alert policies** page, the name of these built-in policies are in bold and the policy type is defined as **System**. These policies are turned on by default. You can turn these policies off (or back on again), set up a list of recipients to send email notifications to, and set a daily notification limit. The other settings for these policies can't be edited.
   
-The following table lists and describes the available default alert policies and indicates the Office 365 Enterprise subscription required for each one. Note that some default alert policies are available if your organization has the appropriate add-on subscription in addition to an E1 or E3 subscription. 
+The following table lists and describes the available default alert policies and indicates the Office 365 Enterprise and Office 365 US Government plans required for each one. Note that some default alert policies are available if your organization has the appropriate add-on subscription in addition to an E1/G1 or E3/G3 subscription. 
   
 |**Default alert policy**|**Description**|**Office 365 Enterprise subscription**|
 |:-----|:-----|:-----|
-|**Creation of forwarding/redirect rule** <br/> |Generates an alert when someone in your organization creates an inbox rule for their mailbox that forwards or redirects messages to another email account. This policy only tracks inbox rules that are created using Outlook Web App or Exchange Online PowerShell. This policy has a **Low** severity setting. For more information using inbox rules to forward and redirect email in Outlook Web App, see [Use rules in Outlook Web App to automatically forward messages to another account](https://support.office.com/article/1433e3a0-7fb0-4999-b536-50e05cb67fed).  <br/> |E1, E3, or E5  <br/> |
-|**Elevation of Exchange admin privilege** <br/> |Generates an alert when someone is assigned administrative permissions in your Exchange Online organization; for example, if a user is added to the Organization Management role group in Exchange Online. This policy has a **Low** severity setting.  <br/> |E1, E3, or E5  <br/> |
-|**Messages have been delayed** <br/> |Generates an alert when Office 365 can't deliver email messages to your on-premises organization or a partner servers by using a connector. When this happen, the message is queued in Office 365. This alert is triggered when there are 2,000 messages or more that have been queued for more than an hour. This policy has a **High** severity setting.  <br/> |E1, E3, or E5  <br/> |
-|**Malware campaign detected after delivery** <br/> |Generates an alert when an unusually large number of messages containing malware are delivered to mailboxes in your organization. If this event occurs, Office 365 removes the infected messages from Exchange Online mailboxes. This policy has a **High** severity setting.  <br/> |E5 or Office 365 Threat Intelligence add-on subscription  <br/> |
-|**Malware campaign detected and blocked** <br/> |Generates an alert when someone has attempted to send an unusually large number of email messages containing a certain type of malware to users in your organization. If this event occurs, the infected messages are blocked by Office 365 and not delivered to mailboxes. This policy has a **Low** severity setting.  <br/> |E5 or Office 365 Threat Intelligence add-on subscription  <br/> |
-|**Malware campaign detected in SharePoint and OneDrive** <br/> |Generates an alert when an unusually high volume of malware or viruses are detected in files located in SharePoint sites or OneDrive accounts in your organization. This policy has a **High** severity setting.  <br/> |E5 or Office 365 Threat Intelligence add-on subscription  <br/> |
-|**Unusual external user file activity** <br/> |Generates an alert when an usually large number of activities are performed on files in SharePoint or OneDrive by users outside of your organization. This includes activities such as accessing files, downloading files, and deleting files. This policy has a **High** severity setting.  <br/> |E5, or Office 365 Threat Intelligence or Advanced Compliance add-on subscription  <br/> |
-|**Unusual volume of external file sharing** <br/> |Generates an alert when an usually large number of files in SharePoint or OneDrive are shared with users outside of your organization. This policy has a **Medium** severity setting.  <br/> |E5, or Office 365 Threat Intelligence or Advanced Compliance add-on subscription  <br/> |
-|**Unusual volume of file deletion** <br/> |Generates an alert when an unusually large number of files are deleted in SharePoint or OneDrive within a short time frame. This policy has a **Medium** severity setting.  <br/> |E5, or Office 365 Threat Intelligence or Advanced Compliance add-on subscription  <br/> |
-|**Unusual increase in email reported as phish** <br/> |Generates an alert when there is a significant increase in the number of people in your organization using the Report Message add-in in Outlook to report messages as phishing mail. This policy has a **High** severity setting. For more information about this add-in, see [Use the Report Message add-in](https://support.office.com/article/b5caa9f1-cdf3-4443-af8c-ff724ea719d2).  <br/> |E5 or Office 365 Threat Intelligence add-on subscription  <br/> |
+|**Creation of forwarding/redirect rule** <br/> |Generates an alert when someone in your organization creates an inbox rule for their mailbox that forwards or redirects messages to another email account. This policy only tracks inbox rules that are created using Outlook Web App or Exchange Online PowerShell. This policy has a **Low** severity setting. For more information using inbox rules to forward and redirect email in Outlook Web App, see [Use rules in Outlook Web App to automatically forward messages to another account](https://support.office.com/article/1433e3a0-7fb0-4999-b536-50e05cb67fed).  <br/> |E1/G1, E3/G3, or E5/G5  <br/> |
+|**eDiscovery search started or exported** <br/> |Generates an alert when someone uses the Content search tool in the Security & Compliance Center. An alert is triggered when the following content search activities are performed: <br/><br/>• A content search is started<br/>• The results of a content search are exported<br/>• A content search report is exported<br/><br/>Alerts are also trigged when the previous content search activities are performed in association with an eDiscovery case. This policy has a **Medium** severity setting. For more information about content search activities, see [Search for eDiscovery activities in the Office 365 audit log](search-for-ediscovery-activities-in-the-audit-log.md#ediscovery-activities). <br/> |E1/G1, E3/G3, or E5/G5  <br/> |
+|**Elevation of Exchange admin privilege** <br/> |Generates an alert when someone is assigned administrative permissions in your Exchange Online organization; for example, if a user is added to the Organization Management role group in Exchange Online. This policy has a **Low** severity setting.  <br/> |E1/G1, E3/G3, or E5/G5  <br/> |
+|**Messages have been delayed** <br/> |Generates an alert when Office 365 can't deliver email messages to your on-premises organization or a partner servers by using a connector. When this happen, the message is queued in Office 365. This alert is triggered when there are 2,000 messages or more that have been queued for more than an hour. This policy has a **High** severity setting.  <br/> |E1/G1, E3/G3, or E5/G5  <br/> |
+|**Malware campaign detected after delivery** <br/> |Generates an alert when an unusually large number of messages containing malware are delivered to mailboxes in your organization. If this event occurs, Office 365 removes the infected messages from Exchange Online mailboxes. This policy has a **High** severity setting.  <br/> |E5/G5 or Office 365 Threat Intelligence add-on subscription  <br/> |
+|**Malware campaign detected and blocked** <br/> |Generates an alert when someone has attempted to send an unusually large number of email messages containing a certain type of malware to users in your organization. If this event occurs, the infected messages are blocked by Office 365 and not delivered to mailboxes. This policy has a **Low** severity setting.  <br/> |E5/G5 or Office 365 Threat Intelligence add-on subscription  <br/> |
+|**Malware campaign detected in SharePoint and OneDrive** <br/> |Generates an alert when an unusually high volume of malware or viruses are detected in files located in SharePoint sites or OneDrive accounts in your organization. This policy has a **High** severity setting.  <br/> |E5/G5 or Office 365 Threat Intelligence add-on subscription  <br/> |
+|**Unusual external user file activity** <br/> |Generates an alert when an usually large number of activities are performed on files in SharePoint or OneDrive by users outside of your organization. This includes activities such as accessing files, downloading files, and deleting files. This policy has a **High** severity setting.  <br/> |E5/G5, or Office 365 Threat Intelligence or Advanced Compliance add-on subscription  <br/> |
+|**Unusual volume of external file sharing** <br/> |Generates an alert when an usually large number of files in SharePoint or OneDrive are shared with users outside of your organization. This policy has a **Medium** severity setting.  <br/> |E5/G5, or Office 365 Threat Intelligence or Advanced Compliance add-on subscription  <br/> |
+|**Unusual volume of file deletion** <br/> |Generates an alert when an unusually large number of files are deleted in SharePoint or OneDrive within a short time frame. This policy has a **Medium** severity setting.  <br/> |E5/G5, or Office 365 Threat Intelligence or Advanced Compliance add-on subscription  <br/> |
+|**Unusual increase in email reported as phish** <br/> |Generates an alert when there is a significant increase in the number of people in your organization using the Report Message add-in in Outlook to report messages as phishing mail. This policy has a **High** severity setting. For more information about this add-in, see [Use the Report Message add-in](https://support.office.com/article/b5caa9f1-cdf3-4443-af8c-ff724ea719d2).  <br/> |E5/G5 or Office 365 Threat Intelligence add-on subscription  <br/> |
    
 Note that the unusual activity monitored by some of the built-in policies is based on the same process as the alert threshold setting that was previously described. Office 365 establishes a baseline value that defines the normal frequency for "usual" activity. Alerts are then triggered when the frequency of activities tracked by the built-in alert policy greatly exceeds the baseline value.
  
@@ -119,18 +122,18 @@ You can use the following filters to view a subset of all the alerts on the **Vi
   
 - **Status** - Use this filter to show alerts that are assigned a particular status; the default status is **Active**. You or other administrators can change the status value.
     
-- **Policies** - Use this filter to show alerts that match the setting of one or more alert policies. Or, you can just display all alerts for all alert policies.
+- **Policy** - Use this filter to show alerts that match the setting of one or more alert policies. Or, you can just display all alerts for all alert policies.
     
 - **Time range** - Use this filter to show alerts that were generated within a specific date and time range.
     
 - **Severity** - Use this filter to show alerts that are assigned a specific severity.
     
 - **Category** - Use this filter to show alerts from one or more alert categories.
-    
+
+- **Source** - Use this filter to show alerts triggered by alert policies in the Security & Compliance Center or alerts triggered by Office 365 Cloud App Security policies, or both. For more information about Office 365 Cloud App Security alerts, see the [Viewing Cloud App Security alerts](#viewing-cloud-app-security-alerts) section.
 
   
 ## Managing alerts
-<a name="managingalerts"> </a>
 
 After alerts have been generated and displayed on the **View alerts** page in the Security &amp; Compliance Center, you can triage, investigate, and resolve them. Here are some tasks you can perform to manage alerts. 
   
@@ -154,6 +157,19 @@ After alerts have been generated and displayed on the **View alerts** page in th
     
 - **Resolve alerts** - You can mark an alert as resolved on the flyout page for an alert (which sets the status of the alert to **Resolved**). Unless you change the filter, resolved alerts aren't displayed on the **View alerts** page. 
     
-
+## Viewing Cloud App Security alerts
   
+Alerts that are triggered by Office 365 Cloud App Security policies are now displayed on the **View alerts** page in the Security & Compliance Center. This includes alerts that are triggered by activity policies and alerts that are triggered by anomaly detection policies in Office 365 Cloud App Security. This means you can view all alerts in the Security & Compliance Center. Note that Office 365 Cloud App Security is only available for organizations with an Office 365 Enterprise E5 or Office 365 US Government G5 subscription. For more information, see [Overview of Office 365 Cloud App Security](office-365-cas-overview.md).
 
+Additionally, organizations that have Microsoft Cloud App Security as part of an Enterprise Mobility + Security E5 subscription or as a standalone service can also view Cloud App Security alerts that are related to Office 365 apps and services in the Security & Compliance Center.
+
+To display only Cloud App Security alerts in the Security & Compliance Center, use the **Source** filter and select **Cloud App Security**.
+
+![Use the Source filter to display only Cloud App Security alerts](media/FilterCASAlerts.png)
+
+Similar to an alert triggered by a Security & Compliance Center alert policy, you can click a Cloud App Security alert to display a flyout page with details about the alert. The alert includes a link to view the details and manage the alert in the Cloud App Security portal and a link to the corresponding Cloud App Security policy that triggered the alert. See [Review and take action on alerts in Office 365 Cloud App Security](review-office-365-cas-alerts.md).
+
+![Alert details contain links to the Cloud App Security portal](media/CASAlertDetail.png)
+
+> [!IMPORTANT]
+> Changing the status of a Cloud App Security alert in the Security & Compliance Center won't update the resolution status for the same alert in the Cloud App Security portal. For example, if you mark the status of the alert as **Resolved** in the Security & Compliance Center, the status of the alert in the Cloud App Security portal is unchanged. To resolve or dismiss a Cloud App Security alert, manage the alert in the Cloud App Security portal.

@@ -246,7 +246,6 @@ A DLP policy is 75% confident that it's detected this type of sensitive informat
 
 - international driving permits
 - australian automobile association
-- sydney nsw
 - international driving permit
 - DriverLicence
 - DriverLicences
@@ -1786,13 +1785,14 @@ A DLP policy is 75% confident that it's detected this type of sensitive informat
 
 ### Format
 
-10 digits
+11 digits
 
 ### Pattern
 
-10 digits:
-- Six digits in the form DDMMYY which are the date of birth 
-- Four digits where the final digit is a check digit
+11 digits:
+- 10 digits 
+- Final digit is a check digit
+For the purposes of international data exchange, the letters HR are added preceding the eleven digits.
 
 ### Checksum
 
@@ -1831,18 +1831,32 @@ A DLP policy is 75% confident that it's detected this type of sensitive informat
 - OIB 
 
    
-## Czech National Identity Card Number
+## Czech Personal Identity Number
 
 ### Format
 
-10 digits containing a forward slash
+Nine digits with optional forward slash (old format)
+10 digits with optional forward slash (new format)
 
 ### Pattern
 
-10 digits:
-- Six digits which are the date of birth 
+Nine digits (old format):
+- Nine digits
+
+OR
+
+- Six digits that represent date of birth
+- A forward slash
+- Three digits
+
+10 digits (new format):
+- 10 digits
+
+OR
+
+- Six digits that represent date of birth
 - A forward slash 
-- Four digits where the final digit is a check digit
+- Four digits where last digit is a check digit
 
 ### Checksum
 
@@ -1856,21 +1870,18 @@ A keyword from Keyword_czech_id_card is found.
 The checksum passes.
 
 ```
-<!-- Czech National Identity Card Number -->
-<Entity id="60c0725a-4eb6-455b-9dda-05d8a7396497" recommendedConfidence="85" patternsProximity="300">
-  <Pattern confidenceLevel="85">
-     <IdMatch idRef="Func_czech_id_card"/>
-     <Match idRef="Keyword_czech_id_card"/>
-  </Pattern>
+<!-- Czech Personal Identity Number -->
+<Entity id="60c0725a-4eb6-455b-9dda-05d8a7396497"      patternsProximity="300" recommendedConfidence="85">
+   <Pattern confidenceLevel="85">
+      <IdMatch idRef="Func_czech_id_card" />
+      <Match idRef="Keyword_czech_id_card" />
+   </Pattern>
 </Entity>
 ```
-
-
 ### Keywords
 
-- Keyword_czech_id_card
-- Czech national identity card
-- Občanský průka
+- czech personal identity number
+- Rodné číslo
    
 ## Denmark Personal Identification Number
 
@@ -2971,11 +2982,42 @@ A DLP policy is 65% confident that it's detected this type of sensitive informat
 
 #### Keyword_hong_kong_id_card
 
-- Hong Kong Identity Card
-- HKID
-- ID card
-- 香港身份證 
-- 香港永久性居民身份證 
+- hong kong identity card
+- HKIDC
+- id card
+- identity card
+- hk identity card
+- hong kong id
+- 香港身份證
+- 香港永久性居民身份證
+- 身份證
+- 身份証
+- 身分證
+- 身分証
+- 香港身份証
+- 香港身分證
+- 香港身分証
+- 香港身份證
+- 香港居民身份證
+- 香港居民身份証
+- 香港居民身分證
+- 香港居民身分証
+- 香港永久性居民身份証
+- 香港永久性居民身分證
+- 香港永久性居民身分証
+- 香港永久性居民身份證
+- 香港非永久性居民身份證
+- 香港非永久性居民身份証
+- 香港非永久性居民身分證
+- 香港非永久性居民身分証
+- 香港特別行政區永久性居民身份證
+- 香港特別行政區永久性居民身份証
+- 香港特別行政區永久性居民身分證
+- 香港特別行政區永久性居民身分証
+- 香港特別行政區非永久性居民身份證
+- 香港特別行政區非永久性居民身份証
+- 香港特別行政區非永久性居民身分證
+- 香港特別行政區非永久性居民身分証
    
 ## India Permanent Account Number (PAN)
 
@@ -3802,6 +3844,48 @@ A DLP policy is 75% confident that it's detected this type of sensitive informat
 - Social Insurance Number 
 - 社会保険のテンキー 
 - 社会保険番号 
+
+## Japanese Residence Card Number
+
+### Format
+
+12 letters and digits
+
+### Pattern
+
+12 letters and digits:
+- Two letters (not case sensitive)
+- Eight digits 
+- Two letters (not case sensitive)
+
+### Checksum
+
+No
+
+### Definition
+
+A DLP policy is 75% confident that it's detected this type of sensitive information if, within a proximity of 300 characters:
+- The regular expression Regex_jp_residence_card_number finds content that matches the pattern.
+- A keyword from Keyword_jp_residence_card_number is found.
+
+```
+<!--Japan Residence Card Number-->
+-<Entity id="ac36fef2-a289-4e2c-bb48-b02366e89fc0" recommendedConfidence="75" patternsProximity="300">
+   -<Pattern confidenceLevel="75">
+      <IdMatch idRef="Regex_jp_residence_card_number"/>
+      <Match idRef="Keyword_jp_residence_card_number"/>
+   </Pattern>
+</Entity>
+```
+
+### Keywords
+
+#### Keyword_jp_residence_card_number
+
+- Residence card number
+- Residence card no
+- Residence card #
+- 在留カード番号
    
 ## Malaysia ID Card Number
 
@@ -3844,13 +3928,30 @@ A DLP policy is 85% confident that it's detected this type of sensitive informat
    
 #### Keyword_malaysia_id_card_number
 
-- MyKad 
-- Identity Card 
-- ID Card 
-- Identification Card 
-- Digital Application Card 
-- Kad Akuan Diri 
-- Kad Aplikasi Digital 
+- digital application card
+- i/c
+- i/c no
+- ic
+- ic no
+- id card
+- identification Card
+- identity card
+- k/p
+- k/p no
+- kad akuan diri
+- kad aplikasi digital
+- kad pengenalan malaysia
+- kp
+- kp no
+- mykad
+- mykas
+- mykid
+- mypr
+- mytentera
+- malaysia identity card
+- malaysian identity card
+- nric
+- personal identification card
    
 ## Netherlands Citizen's Service (BSN) Number
 
@@ -4075,9 +4176,13 @@ The checksum passes.
 
 #### Keyword_polish_national_id_passport_number
 
-- Nazwa i nr dowodu tożsamości 
-- Dowód Tożsamości 
-- dow. os. 
+- Dowód osobisty
+- Numer dowodu osobistego
+- Nazwa i numer dowodu osobistego
+- Nazwa i nr dowodu osobistego
+- Nazwa i nr dowodu tożsamości
+- Dowód Tożsamości
+- dow. os.
 
    
 ## Poland National ID (PESEL)
@@ -4155,9 +4260,9 @@ A DLP policy is 85% confident that it's detected this type of sensitive informat
 
 #### Keyword_polish_national_id_passport_number
 
-- Nazwa i nr dowodu tożsamości 
-- Dowód Tożsamości 
-- dow. os. 
+- Numer paszportu
+- Nr. Paszportu
+- Paszport
 
    
 ## Portugal Citizen Card Number
@@ -4757,7 +4862,101 @@ A DLP policy is 75% confident that it's detected this type of sensitive informat
 - 居留證 
 - 外僑居留證 
 - 台灣地區居留證 
-   
+
+## Thai Population Identification Code
+
+### Format
+
+13 digits
+
+### Pattern
+
+13 digits:
+- First digit is not 0 or 9 
+- 12 digits
+
+### Checksum
+
+Yes
+
+### Definition
+
+A DLP policy is 85% confident that it's detected this type of sensitive information if, within a proximity of 300 characters:
+- The function Func_Thai_Citizen_Id finds content that matches the pattern.
+- A keyword from Keyword_Thai_Citizen_Id is found.
+
+A DLP policy is 75% confident that it's detected this type of sensitive information if, within a proximity of 300 characters:
+- The function Func_Thai_Citizen_Id finds content that matches the pattern.
+
+```
+<!-- Thai Citizen ID -->
+-<Entity id="44ca9e86-ead7-4c5d-884a-e2eaa401515e" recommendedConfidence="75" patternsProximity="300">
+   -<Pattern confidenceLevel="85">
+      <IdMatch idRef="Func_Thai_Citizen_Id"/>
+      <Match idRef="Keyword_Thai_Citizen_Id"/>
+   </Pattern>
+   -<Pattern confidenceLevel="75">
+      <IdMatch idRef="Func_Thai_Citizen_Id"/>
+   </Pattern>
+</Entity>
+```
+
+### Keywords
+
+#### Keyword_Thai_Citizen_Id
+
+- ID Number
+- Identification Number
+- บัตรประชาชน
+- รหัสบัตรประชาชน
+- บัตรประชาชน
+- รหัสบัตรประชาชน
+  
+## Turkish National Identification Number
+
+### Format
+
+11 digits
+
+### Pattern
+
+11 digits
+
+### Checksum
+
+Yes
+
+### Definition
+
+A DLP policy is 85% confident that it's detected this type of sensitive information if, within a proximity of 300 characters:
+- The function Func_Turkish_National_Id finds content that matches the pattern.
+- A keyword from Keyword_Turkish_National_Id is found.
+
+A DLP policy is 75% confident that it's detected this type of sensitive information if, within a proximity of 300 characters:
+- The function Func_Turkish_National_Id finds content that matches the pattern.
+
+```
+<!-- Turkish National Identity -->
+-<Entity id="fb621f20-3876-4cfc-acec-8c8e73ca32c7" recommendedConfidence="75" patternsProximity="300">
+   -<Pattern confidenceLevel="85">
+      <IdMatch idRef="Func_Turkish_National_Id"/>
+      <Match idRef="Keyword_Turkish_National_Id"/>
+   </Pattern>
+   -<Pattern confidenceLevel="75">
+      <IdMatch idRef="Func_Turkish_National_Id"/>
+   </Pattern>
+</Entity>
+```
+
+### Keywords
+
+#### Keyword_Turkish_National_Id
+
+- TC Kimlik No
+- TC Kimlik numarası
+- Vatandaşlık numarası
+- Vatandaşlık no
+
 ## U.K. Driver's License Number
 
 ### Format

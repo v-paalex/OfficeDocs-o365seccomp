@@ -3,16 +3,16 @@ title: "Set up a custom blocked URLs list using Office 365 ATP Safe Links"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 5/30/2018
 ms.audience: Admin
 ms.topic: article
+ms.date: 12/11/2018
 ms.service: o365-administration
 localization_priority: Normal
 search.appverid:
 - MET150
 - MOE150
 ms.assetid: 896a7efb-1683-465e-a394-261349e5d866
-description: "Read this article to learn how to set up a list of blocked URLs for your organization using Office 365 Advanced Threat Protection. The blocked URLs will apply to email messages and Office documents according to your ATP safe links policies."
+description: "Learn how to set up a list of blocked URLs for your organization using Office 365 Advanced Threat Protection. The blocked URLs will apply to email messages and Office documents according to your ATP safe links policies."
 ---
 
 # Set up a custom blocked URLs list using Office 365 ATP Safe Links
@@ -29,48 +29,38 @@ Read this article to learn how to set up your organization's custom blocked URLs
 
 [ATP Safe Links in Office 365](atp-safe-links.md) uses several lists, including your organization's custom blocked URLs list. If you have the necessary permissions, you can set up your organization's custom list. You do this by editing your organization's default Safe Links policy.
   
-1. Go to [https://protection.office.com](https://protection.office.com) and sign in with your work or school account. 
+1. Go to [https://security.microsoft.com](https://security.microsoft.com) and sign in with your work or school account. 
     
 2. In the left navigation, under **Threat management**, choose **Policy** \> **Safe Links**.
     
-3. In the **Policies that apply to the entire organization** section, select **Default**, and then choose **Edit** (the Edit button resembles a pencil). 
-    
-    ![Click Edit to edit your default policy for Safe Links protection](media/d08f9615-d947-4033-813a-d310ec2c8cca.png)
+3. In the **Policies that apply to the entire organization** section, select **Default**, and then choose **Edit** (the Edit button resembles a pencil).<br/>![Click Edit to edit your default policy for Safe Links protection](media/d08f9615-d947-4033-813a-d310ec2c8cca.png)<br/>This enables you to view your list of blocked URLs. At first, you might not have any URLs listed here.<br/>![Blocked URLs list in the default Safe Links policy](media/575e1449-6191-40ac-b626-030a2fd3fb11.png)
   
-    This is where you go to view your list of blocked URLs. Note that at first, you won't have any URLs listed.
+4. Select the **Enter a valid URL** box, type a URL, and then choose the plus sign (**+**). 
+
+5. When you are finished adding URLs, in the lower right corner of the screen, choose **Save**.
     
-    ![The Blocked URLs list is in the default Safe Links policy that applies to your entire organization.](media/575e1449-6191-40ac-b626-030a2fd3fb11.png)
-  
-4. Select the **Enter a valid URL** box, and then type a URL, and then choose the plus sign (+). Here are a few things to keep in mind: 
+## A few things to keep in mind
+
+While you add URLs to your list, keep the following points in mind: 
+
+- Do not include a forward slash ( **/**) at the end of the URL. For example, instead of entering `http://www.contoso.com/`, enter `http://www.contoso.com`.
     
-  - You can specify a domain-only URL (like `contoso.com` or `tailspintoys.com`). This will block clicks on any URL that contains the domain.
+- You can specify a domain-only URL (like `contoso.com` or `tailspintoys.com`). This will block clicks on any URL that contains the domain.
+
+- You can specify a subdomain (like `toys.contoso.com*`) without blocking a full domain (like `contoso.com`). This will block clicks any URL that contains the subdomain, but it won't block clicks to a URL that contains the full domain.  
     
-  - Do not include a forward slash ( **/**) at the end of the URL. For example, instead of entering `http://www.contoso.com/`, enter `http://www.contoso.com`.
-    
-  - You can include up to three wildcard asterisks (\*) per URL. The following table lists some examples of what you can enter and what effect those entries have.
+- You can include up to three wildcard asterisks (\*) per URL. The following table lists some examples of what you can enter and what effect those entries have.
     
 |**Example Entry**|**What It Does**|
 |:-----|:-----|
-|`contoso.com` or `\*contoso.com\*`  <br/> |Blocks the domain, subdomains, and paths, such as `https://www.contoso.com`, `http://sub.contoso.com`, and `http://contoso.com/abc`  <br/> |
+|`contoso.com` or `*contoso.com*`  <br/> |Blocks the domain, subdomains, and paths, such as `https://www.contoso.com`, `http://sub.contoso.com`, and `http://contoso.com/abc`  <br/> |
 |`http://contoso.com/a`  <br/> |Blocks a site `http://contoso.com/a` but not additional subpaths like `http://contoso.com/a/b`  <br/> |
-|`http://contoso.com/a\*`  <br/> |Blocks a site `http://contoso.com/a` and additional subpaths like `http://contoso.com/a/b`  <br/> |
+|`http://contoso.com/a*`  <br/> |Blocks a site `http://contoso.com/a` and additional subpaths like `http://contoso.com/a/b`  <br/> |
+|`http://toys.contoso.com*`  <br/> |Blocks a subdomain ("toys" in this case) but allow clicks to other domain URLs (like `http://contoso.com` or `http://home.contoso.com`).  <br/> |
    
-5. When you are finished adding URLs, in the lower right corner of the screen, choose **Save**.
-    
-## What if I want to define exceptions for certain users in my organization?
+
+## How to define exceptions for certain users in an organization
 
 If you want certain groups to be able to view URLs that might be blocked for others, you can specify an ATP Safe Links policy that applies to specific recipients. See [Set up a custom "do not rewrite" URLs list using ATP Safe Links](set-up-a-custom-do-not-rewrite-urls-list-with-atp.md).
-  
-## Related topics
-
-[Office 365 Advanced Threat Protection](office-365-atp.md)
-  
-[ATP Safe Links in Office 365](atp-safe-links.md)
-  
-[Set up ATP Safe Links policies in Office 365](set-up-atp-safe-links-policies.md)
-  
-[ATP Safe Attachments in Office 365](atp-safe-attachments.md)
-
-[Permissions in the Office 365 Security &amp; Compliance Center](permissions-in-the-security-and-compliance-center.md)
   
 

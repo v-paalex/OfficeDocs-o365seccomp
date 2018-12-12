@@ -29,7 +29,7 @@ If your organization needs to protect your data or comply with legal or regulato
                     </div>
                     <div class="cardText">
                         <h3>Get started - first 30 days</h3>
-                <p>These basic security and compliance tasks can be accomplished quickly and have a low impact to users: <br> - <a href="https://securescore.office.com" target="_blank">Check Secure Score</a> <br> - <a href="search-the-audit-log-in-security-and-compliance.md">Turn on audit logging</a> <br> - <a href="tenant-wide-setup-for-increased-security.md">Configure tenant security</a> <br> - <a href="https://docs.microsoft.com/cloud-app-security/connect-office-365-to-microsoft-cloud-app-security">Connect Cloud App Security</a> <br> - <a href="https://docs.microsoft.com/azure/active-directory/active-directory-identityprotection-enable">Enable Azure AD Identity Protection</a> <br> - <a href="https://docs.microsoft.com/office365/enterprise/secure-sharepoint-online-sites-and-files">Secure SharePoint sites and files</a> <br> - <a href="configure-supervision-policies.md">Enable a data governance policy</a> </p>
+                <p>These basic security and compliance tasks can be accomplished quickly and have a low impact to users: <br> - <a href="office-365-secure-score.md" target="_blank">Check Secure Score</a> <br> - <a href="search-the-audit-log-in-security-and-compliance.md">Turn on audit logging</a> <br> - <a href="tenant-wide-setup-for-increased-security.md">Configure tenant security</a> <br> - <a href="https://docs.microsoft.com/cloud-app-security/connect-office-365-to-microsoft-cloud-app-security">Connect Cloud App Security</a> <br> - <a href="https://docs.microsoft.com/azure/active-directory/active-directory-identityprotection-enable">Enable Azure AD Identity Protection</a> <br> - <a href="https://docs.microsoft.com/office365/enterprise/secure-sharepoint-online-sites-and-files">Secure SharePoint sites and files</a> <br> - <a href="configure-supervision-policies.md">Enable a data governance policy</a> </p>
                     </div>
                 </div>
             </div>
@@ -46,7 +46,7 @@ If your organization needs to protect your data or comply with legal or regulato
                     </div>
                     <div class="cardText">
                         <h3>Next steps within 90 days</h3>
-                        <p>These tasks take a bit more time to plan and implement but greatly increase your security posture: <br> - <a href="attack-simulator.md">Conduct attack simulations</a> <br> - <a href="meet-data-protection-and-regulatory-reqs-using-microsoft-cloud.md">Review Compliance Manager</a> <br> - <a href="https://docs.microsoft.com/azure/active-directory/privileged-identity-management/pim-configure">Configure Azure Privileged Identity Management</a> <br> - <a href="https://docs.microsoft.com/azure/active-directory/authentication/concept-mfa-howitworks">Enable multi-factor authentication</a> <br> - <a href="protect-against-threats.md">Review & update protection policies</a> </p>
+                        <p>These tasks take a bit more time to plan and implement but greatly increase your security posture: <br> - <a href="attack-simulator.md">Conduct attack simulations</a> <br> - <a href="meet-data-protection-and-regulatory-reqs-using-microsoft-cloud.md">Review Compliance Manager</a> <br> - <a href="https://docs.microsoft.com/azure/active-directory/privileged-identity-management/pim-configure">Configure Azure Privileged Identity Management</a> <br> - <a href="privileged-access-management-configuration.md">Configure Privileged Access Management</a>  <br> - <a href="https://docs.microsoft.com/azure/active-directory/authentication/concept-mfa-howitworks">Enable multi-factor authentication</a> <br> - <a href="protect-against-threats.md">Review & update protection policies</a> </p>
                     </div>
                 </div>
             </div>
@@ -127,6 +127,7 @@ If your organization needs to protect your data or comply with legal or regulato
                     </div>
                     <div class="cardText">
                         <h3>Stay up-to-date</h3>
+                        <p><a href="https://docs.microsoft.com/office365/servicedescriptions/office-365-service-descriptions-technet-library" target="_blank">Office 365 Service Descriptions</a></p>
                         <p><a href="https://blogs.technet.microsoft.com/office365security" target="_blank">Office 365 Security Team blog</a></p>
                         <p><a href="https://www.microsoft.com/msrc" target="_blank">Microsoft Security Response Center</a></p>
                     </div>

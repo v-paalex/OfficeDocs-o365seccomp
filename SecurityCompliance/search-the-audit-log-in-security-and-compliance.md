@@ -6,8 +6,6 @@ manager: laurawi
 ms.date: 
 ms.audience: Admin
 ms.topic: article
-f1_keywords:
-- 'O365AC_AlternativeEmailAddress'
 ms.service: o365-administration
 localization_priority: Normal
 ms.collection: Strat_O365_IP
@@ -16,10 +14,10 @@ search.appverid:
 - MET150
 ms.assetid: 0d4d0f35-390b-4518-800e-0c7ec95e946c
 
-description: "Use the Office 365 Security &amp; Compliance Center to search the unified audit log to view user and administrator activity in your Office 365 organization. "
+description: "Use the Office 365 Security & Compliance Center to search the unified audit log to view user and administrator activity in your Office 365 organization. "
 ---
 
-# Search the audit log in the Office 365 Security &amp; Compliance Center
+# Search the audit log in the Office 365 Security & Compliance Center
 
 Need to find if a user viewed a specific document or purged an item from their mailbox? If so, you can use the Office 365 Security &amp; Compliance Center to search the unified audit log to view user and administrator activity in your Office 365 organization. Why a unified audit log? Because you can search for the following types of user and admin activity in Office 365:
   
@@ -38,17 +36,17 @@ Need to find if a user viewed a specific document or purged an item from their m
     
 - User and admin activity in Sway
     
-- eDiscovery activities in the Office 365 Security &amp; Compliance Center
+- eDiscovery activities in the Office 365 Security & Compliance Center
     
-- User and admin activity in Power BI for Office 365
+- User and admin activity in Power BI
     
 - User and admin activity in Microsoft Teams
 
 - User and admin activity in Dynamics 365
     
-- User and admin activity in Microsoft Flow
-
 - User and admin activity in Yammer
+ 
+- User and admin activity in Microsoft Flow
     
 - User and admin activity in Microsoft Stream
     
@@ -67,6 +65,15 @@ Be sure to read the following items before you start searching the Office 365 au
     > [!IMPORTANT]
     > If you assign a user the View-Only Audit Logs or Audit Logs role on the **Permissions** page in the Security &amp; Compliance Center, they won't be able to search the Office 365 audit log. You have to assign the permissions in Exchange Online. This is because the underlying cmdlet used to search the audit log is an Exchange Online cmdlet. 
   
+- When an audited activity is performed by a user or admin, an audit record is generated and stored in the Office 365 audit log for your organization. The length of time that an audit record is retained (and searchable in the audit log) depends on your Office 365 subscription, and specifically the type of the license that is assigned to a specific user.
+
+     - **Office 365 E3** - Audit records are retained for 90 days. That means you can search the audit log for activities that were performed within the last 90 days.
+
+     - **Office 365 E5** - Audit records are retained for 365 days (one year). That means you can search the audit log for activities that were performed within the last year. Retaining audit records for one year is also available for users that are assigned an E3/Exchange Online Plan 1 license and have an Office 365 Advanced Compliance add-on license.
+
+        > [!NOTE]
+        > The one-year retention period for audit records for E5 organizations (or E3 organizations that have Advanced Compliance add-on licenses) is currently available only as part of a private preview program. To enroll in this preview program, please file a request with [Microsoft Support](https://docs.microsoft.com/en-us/office365/admin/contact-support-for-business-products?redirectSourcePath=%252fen-us%252farticle%252fcontact-support-for-business-products-admin-help-32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b&view=o365-worldwide&tabs=online) and include the following as the description of what you need help with: "Long-term Office 365 audit log private preview".
+
 - If you want to turn off audit log search in Office 365 for your organization, you can run the following command in remote PowerShell connected to your Exchange Online organization:
     
   ```
@@ -85,36 +92,34 @@ Be sure to read the following items before you start searching the Office 365 au
     
 - If you want to programmatically download data from the Office 365 audit log, we recommend that you use the Office 365 Management Activity API instead of using a PowerShell script. The Office 365 Management Activity API is a REST web service that you can use to develop operations, security, and compliance monitoring solutions for your organization. For more information, see [Office 365 Management Activity API reference](https://go.microsoft.com/fwlink/?linkid=852309).
     
-- You can search the Office 365 audit log for activities that were performed within the last 90 days.
-    
 - It can take up to 30 minutes or up to 24 hours after an event occurs for the corresponding audit log entry to be displayed in the search results. The following table shows the time it takes for the different services in Office 365.
     
-|**Office 365 service**|**30 minutes**|**24 hours**|
-|:-----|:-----|:-----|
-|Advanced Threat Protection and Threat Intelligence  <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)| |
-|Azure Active Directory (user login events)  <br/> ||![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/> |
-|Azure Active Directory (admin events)  <br/> ||![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png) |
-|Azure Active Directory (user login events)  <br/> ||![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/> |
-|Data Loss Prevention  <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/>| |
-|Dynamics 365 CRM <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/>| |
-|eDiscovery  <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/>| |
-|Exchange Online  <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/> ||
-|Microsoft Flow  <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/>| |
-|Microsoft Forms  <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/>| |
-|Microsoft Project  <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/>| |
-|Microsoft Stream  <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/>| |
-|Microsoft Teams  <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/> ||
-|Power BI  <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/>| |
-|Security &amp; Compliance Center  <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/> ||
-|SharePoint Online and OneDrive for Business  <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/> ||
-|Sway  <br/> ||![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/> |
-|Yammer  <br/> ||![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/> |
+    |**Office 365 service**|**30 minutes**|**24 hours**|
+    |:-----|:-----|:-----|
+    |Advanced Threat Protection and Threat Intelligence  <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)| |
+    |Azure Active Directory (user login events)  <br/> ||![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/> |
+    |Azure Active Directory (admin events)  <br/> ||![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png) |
+    |Azure Active Directory (user login events)  <br/> ||![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/> |
+    |Data Loss Prevention  <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/>| |
+    |Dynamics 365 CRM <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/>| |
+    |eDiscovery  <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/>| |
+    |Exchange Online  <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/> ||
+    |Microsoft Flow  <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/>| |
+    |Microsoft Forms  <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/>| |
+    |Microsoft Project  <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/>| |
+    |Microsoft Stream  <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/>| |
+    |Microsoft Teams  <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/> ||
+    |Power BI  <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/>| |
+    |Security &amp; Compliance Center  <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/> ||
+    |SharePoint Online and OneDrive for Business  <br/> |![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/> ||
+    |Sway  <br/> ||![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/> |
+    |Yammer  <br/> ||![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)           <br/> |
    
 - Azure Active Directory (Azure AD) is the directory service for Office 365. The unified audit log contains user, group, application, domain, and directory activities performed in the Office 365 admin center or in the in Azure management portal. For a complete list of Azure AD events, see [Azure Active Directory Audit Report Events](https://go.microsoft.com/fwlink/p/?LinkID=616549).
     
 - Exchange Online audit logs consist of two types of events: Exchange admin events (actions taken by administrators) and mailbox events (actions taken by users on mailboxes). Note that mailbox auditing isn't enabled by default. It must be enable for each user mailbox before mailbox events can be searched for in the Office 365 audit log. For more information about mailbox auditing and the mailbox auditing actions that are logged, see [Enable mailbox auditing in Office 365](enable-mailbox-auditing.md).
     
-- Audit logging for Power BI isn't enabled by default. To search for Power BI activities in the Office 365 audit log, you have to enable auditing in the Power BI admin portal. For instructions, see [Auditing Power BI](https://docs.microsoft.com/power-bi/service-admin-auditing#enabling-auditing-functionality-in-the-power-bi-admin-portal).
+- Audit logging for Power BI isn't enabled by default. To search for Power BI activities in the Office 365 audit log, you have to enable auditing in the Power BI admin portal. For instructions, see the "Audit logs" section in [Power BI admin portal](https://docs.microsoft.com/power-bi/service-admin-portal#audit-logs).
     
     
 ## Search the audit log
@@ -149,18 +154,18 @@ Here's the process for searching the audit log in Office 365.
   
 4. Configure the following search criteria:
     
-1. **Activities** Click the drop-down list to display the activities that you can search for. User and admin activities are organized in to groups of related activities. You can select specific activities or you can click the activity group name to select all activities in the group. You can also click a selected activity to clear the selection. After you run the search, only the audit log entries for the selected activities are displayed. Selecting **Show results for all activities** will display results for all activities performed by the selected user or group of users. 
+    a. **Activities** Click the drop-down list to display the activities that you can search for. User and admin activities are organized in to groups of related activities. You can select specific activities or you can click the activity group name to select all activities in the group. You can also click a selected activity to clear the selection. After you run the search, only the audit log entries for the selected activities are displayed. Selecting **Show results for all activities** will display results for all activities performed by the selected user or group of users. 
     
     Over 100 user and admin activities are logged in the Office 365 audit log. Click the **Audited activities** tab at the topic of this article to see the descriptions of every activity in each of the different Office 365 services. 
     
-2. **Start date** and **End date** The last seven days are selected by default. Select a date and time range to display the events that occurred within that period. The date and time are presented in Coordinated Universal Time (UTC) format. The maximum date range that you can specify is 90 days. An error is displayed if the selected date range is greater than 90 days. 
+    b. **Start date** and **End date** The last seven days are selected by default. Select a date and time range to display the events that occurred within that period. The date and time are presented in Coordinated Universal Time (UTC) format. The maximum date range that you can specify is 90 days. An error is displayed if the selected date range is greater than 90 days. 
     
     > [!TIP]
     > If you're using the maximum date range of 90 days, select the current time for the **Start date**. Otherwise, you'll receive an error saying that the start date is earlier than the end date. If you've turned on auditing within the last 90 days, the maximum date range can't start before the date that auditing was turned on. 
   
-3. **Users** Click in this box and then select one or more users to display search results for. The audit log entries for the selected activity performed by the users you select in this box are displayed in the list of results. Leave this box blank to return entries for all users (and service accounts) in your organization. 
+    c. **Users** Click in this box and then select one or more users to display search results for. The audit log entries for the selected activity performed by the users you select in this box are displayed in the list of results. Leave this box blank to return entries for all users (and service accounts) in your organization. 
     
-4. **File or folder** Type some or all of a file or folder name to search for activity related to the file of folder that contains the specified keyword. You can also specify a URL of a file or folder. If you use a URL, be sure the type the full URL path or if you just type a portion of the URL, don't include any special characters or spaces. 
+    d. **File, folder, or site** Type some or all of a file or folder name to search for activity related to the file of folder that contains the specified keyword. You can also specify a URL of a file or folder. If you use a URL, be sure the type the full URL path or if you just type a portion of the URL, don't include any special characters or spaces. 
     
     Leave this box blank to return entries for all files and folders in your organization.
     
@@ -267,7 +272,6 @@ You can export the results of an audit log search to a comma separated value (CS
     
     For a description of the properties that are listed in the **AuditData** column in the CSV file when you download all results, and the service each one applies to, see [Detailed properties in the Office 365 audit log](detailed-properties-in-the-office-365-audit-log.md).
 
-  
 ## Audited activities
 
 The tables in this section describe the activities that are audited in Office 365. You can search for these events by searching the audit log in the Security &amp; Compliance Center. Click the **Search the audit log** tab for step-by-step instructions. 
@@ -283,7 +287,8 @@ Click one of the following links to go to a specific table.
 |[Sway activities](#sway-activities) <br/> |[User administration activities](#user-administration-activities) <br/> |[Azure AD group administration activities](#azure-ad-group-administration-activities) <br/> |
 |[Application administration activities](#application-administration-activities) <br/> |[Role administration activities](#role-administration-activities) <br/> |[Directory administration activities](#directory-administration-activities) <br/> |
 |[eDiscovery activities](#ediscovery-activities) <br/> |[Power BI activities](#power-bi-activities) <br/> |[Microsoft Teams activities](#microsoft-teams-activities) <br/> |
-|[Yammer activities](#yammer-activities) <br/> |[Microsoft Stream](#microsoft-stream) <br/> |[Exchange admin audit log](#exchange-admin-audit-log) <br/> |
+|[Yammer activities](#yammer-activities) <br/> |[Microsoft Flow](#microsoft-flow) <br/> |[Microsoft Stream](#microsoft-stream) <br/>|
+|[Exchange admin audit log](#exchange-admin-audit-log) <br/> |
    
   
 ### File and page activities
@@ -555,32 +560,9 @@ For a list and detailed description of the eDiscovery activities that are logged
   
 ### Power BI activities
   
-The following table lists user and admin activities in Power BI that are logged in the Office 365 audit log.
+You can search the audit log for activities in Power BI. For information about Power BI activities, see the "Activities audited by Power Power BI" section in [Using auditing within your organization](https://docs.microsoft.com/power-bi/service-admin-auditing#activities-audited-by-power-bi).
   
- **Important:** Audit logging for Power BI isn't enabled by default. To search for Power BI activities in theOffice 365 audit log, you have to enable auditing in the Power BI admin portal. For instructions, see [Auditing Power BI](https://docs.microsoft.com/power-bi/service-admin-auditing#enabling-auditing-functionality-in-the-power-bi-admin-portal).
-  
-|**Friendly name**|**Operation**|**Description**|
-|:-----|:-----|:-----|
-|Added Power BI group members  <br/> |AddGroupMembers  <br/> |A member is added to a Power BI group workspace.  <br/> |
-|Analyzed Power BI dataset  <br/> |AnalyzedByExternalApplication  <br/> |A dataset is analyzed by an external application.  <br/> |
-|Created Power BI dashboard  <br/> |CreateDashboard  <br/> |A new dashboard is created.  <br/> |
-|Created Power BI group  <br/> |CreateGroup  <br/> |A group is created.  <br/> |
-|Created organizational Power BI content pack  <br/> |CreateOrgApp  <br/> |An organizational content pack is created.  <br/> |
-|Deleted Power BI dashboard  <br/> |DeleteDashboard  <br/> |A dashboard is deleted.  <br/> |
-|Deleted Power BI dataset  <br/> |DeleteDataset  <br/> |A dataset is deleted.  <br/> |
-|Deleted Power BI report  <br/> |DeleteReport  <br/> |A report is deleted.  <br/> |
-|Downloaded Power BI report  <br/> |DownloadReport  <br/> |A user downloads a Power BI report from the service to their computer.  <br/> |
-|Edited Power BI dashboard  <br/> |EditDashboard  <br/> |A dashboard is renamed.  <br/> |
-|Exported Power BI report visual data  <br/> |ExportReport  <br/> |Data is exported from a report tile.  <br/> |
-|Exported Power BI tile data  <br/> |ExportTile  <br/> |Data is exported from a dashboard tile.  <br/> |
-|Printed Power BI dashboard  <br/> |PrintDashboard  <br/> |A dashboard is printed.  <br/> |
-|Printed Power BI report page  <br/> |PrintReport  <br/> |A report is printed.  <br/> |
-|Published Power BI report to web  <br/> |PublishToWebReport  <br/> |A report is published to the web.  <br/> |
-|Shared Power BI dashboard  <br/> |ShareDashboard  <br/> |A dashboard is shared.  <br/> |
-|Started Power BI trial  <br/> |OptInForProTrial  <br/> |A user starts a Power BI Pro trial subscription.  <br/> |
-|Updated organization's Power BI settings  <br/> |UpdatedAdminFeatureSwitch  <br/> |An admin changed an organizational setting in the Power BI admin portal.  <br/> |
-|Viewed Power BI dashboard  <br/> |ViewDashboard  <br/> |A dashboard is viewed.  <br/> |
-|Viewed Power BI report  <br/> |ViewReport  <br/> |A report is viewed.  <br/> |
+Note that audit logging for Power BI isn't enabled by default. To search for Power BI activities in the Office 365 audit log, you have to enable auditing in the Power BI admin portal. For instructions, see the "Audit logs" section in [Power BI admin portal](https://docs.microsoft.com/power-bi/service-admin-portal#audit-logs).
   
 ### Microsoft Teams activities
   
@@ -636,6 +618,11 @@ The following table lists the user and admin activities in Yammer that are logge
 |Updated file name  <br/> |FileUpdateName  <br/> |User changes the name of a file.  <br/> |
 |Viewed file  <br/> |FileVisited  <br/> |User views a file.  <br/> |
    
+### Microsoft Flow
+
+You can search the audit log for activities in Microsoft Flow. These activities include creating, editing and deleting flows, and changing flow permissions. For information about auditing for Flow activities, see the blog  [Microsoft Flow audit events now available in Office 365 Security & Compliance Center](https://flow.microsoft.com/blog/security-and-compliance-center).
+
+
 ### Microsoft Stream
   
 You can search the audit log for activities in Microsoft Stream. These activities include video activities performed by users, group channel activities, and admin activities such as managing users, managing organization settings, and exporting reports. For a description of these activities, see the "Activities logged in Microsoft Stream" section in [Audit Logs in Microsoft Stream](https://docs.microsoft.com/stream/audit-logs).
@@ -674,15 +661,24 @@ See the [Audited activities](#audited-activities) section in this article for a 
 
 Most auditing data is available within 30 minutes but it may take up to 24 hours after an event occurs for the corresponding audit log entry to be displayed in the search results. See the table in the [Before you begin](#before-you-begin) section of this article that shows the time it takes for events in the different Office 365 services to be available.
 
-**How long are the auditing records retained for?**
+**How long are the audit records retained for?**
 
-Currently audit log records are retained for 90 days. Microsoft is actively working on a plan to increase this limit. 
+As previously explained, the retention period for audit records depends on your organization's Office 365 subscription.  
+
+- **Office 365 E3** - Audit records are retained for 90 days.
+
+- **Office 365 E5** - Audit records are retained for 365 days (one year). Retaining audit records for one year is also available for organizations that have an E3 subscription and an Office 365 Advanced Compliance add-on subscription.
+
+     > [!NOTE]
+     > As previously explained, the one-year retention period for audit records for E5 organizations (or E3 organizations that have Advanced Compliance add-on licenses) is currently available only as part of a private preview program. To enroll in this preview program, please file a request with [Microsoft Support](https://docs.microsoft.com/en-us/office365/admin/contact-support-for-business-products?redirectSourcePath=%252fen-us%252farticle%252fcontact-support-for-business-products-admin-help-32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b&view=o365-worldwide&tabs=online) and include the following as the description of what you need help with: "Long-term Office 365 audit log private preview".
+
+Also note that the duration of the retention period for audit records is based on per-user licensing. For example, if a user in your organization is assigned an Office 365 E3 license, then the audit records for activities performed by that user are retained for 90 days. If a different user is assigned an Office 365 E5 license, their audit records are retained for one year. 
 
 **Can I access the auditing data programmatically?**
 
 Yes. The Office 365 Management Activity API is used to fetch the audit logs programmatically.  To get started, see [Get started with Office 365 Management APIs](https://docs.microsoft.com/office/office-365-management-api/get-started-with-office-365-management-apis).
 
-**Are there other ways to get auditing logs other than suing the Office 365 Security & Compliance Center or the Office 365 Management Activity API?**
+**Are there other ways to get auditing logs other than using the Office 365 Security & Compliance Center or the Office 365 Management Activity API?**
 
 No. These are the only two ways to get data from the Office 365 auditing service. 
 

@@ -3,7 +3,7 @@ title: "Security dashboard overview"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 09/05/2018
+ms.date: 11/27/2018
 ms.audience: ITPro
 ms.topic: overview
 ms.service: o365-administration
@@ -12,12 +12,12 @@ search.appverid:
 - MET150
 - MOE150
 ms.assetid: fe0b9b8f-faa9-44ff-8095-4d1b2f507b74
-description: "Use the new Security Dashboard to review Office 365 threat protection status, and view and act on security alerts."
+description: "Use the new Security Dashboard to review Office 365 Threat Protection Status, and view and act on security alerts."
 ---
 
 # Security dashboard overview
 
-The Security &amp; Compliance Center enables your organization to manage data protection and compliance. Beginning in March 2018, the Security &amp; Compliance Center features a new Security Dashboard you can use to review your threat protection status, and view and act on security alerts. 
+The [Security &amp; Compliance Center](go-to-the-securitycompliance-center.md) enables your organization to manage data protection and compliance. Beginning in March 2018, the Security &amp; Compliance Center features a new Security Dashboard you can use to review your Threat Protection Status, and view and act on security alerts. 
   
 Watch the video to get an overview, and then read this article to learn more.
   
@@ -25,7 +25,7 @@ Watch the video to get an overview, and then read this article to learn more.
   
 Depending on what your organization's Office 365 subscription includes, the Security Dashboard includes the following sections:
   
-- [Threat protection status](#threat-protection-status)
+- [Threat Protection Status](#threat-protection-status)
     
 - [Insights](#insights)
     
@@ -36,11 +36,11 @@ Depending on what your organization's Office 365 subscription includes, the Secu
 To view the Security Dashboard, in the [Office 365 Security &amp; Compliance Center](go-to-the-securitycompliance-center.md), go to **Threat management** \> **Dashboard**.
   
 > [!NOTE]
-> You must be an Office 365 global administrator, security administrator, or security reader to view the Security Dashboard. See [Permissions in the Office 365 Security &amp; Compliance Center](permissions-in-the-security-and-compliance-center.md). 
+> You must be an Office 365 global administrator, a security administrator, or a security reader to view the Security Dashboard. See [Permissions in the Office 365 Security &amp; Compliance Center](permissions-in-the-security-and-compliance-center.md). 
   
-## Threat protection status
+## Threat Protection Status
 
-In the upper left corner of the Security Dashboard is a threat protection status widget that shows threat protection effectiveness. This widget tells you at a glance how many threats were blocked by [Office 365 Exchange Online Protection](anti-spam-protection.md) and [Office 365 Advanced Threat Protection](office-365-atp.md) (if configured) over the last seven days. This widget also shows the number of email messages detected as misclassified and reported by using the [Use the Report Message add-in](https://support.office.com/article/b5caa9f1-cdf3-4443-af8c-ff724ea719d2). Review your anti-spam, anti-malware, and anti-phishing policies to improve your configuration.
+In the upper left corner of the Security Dashboard is a Threat Protection Status widget that shows threat protection effectiveness. This widget tells you at a glance how many threats were blocked by [Office 365 Exchange Online Protection](anti-spam-protection.md) and [Office 365 Advanced Threat Protection](office-365-atp.md) (if configured) over the last seven days. This widget also shows the number of email messages detected as misclassified and reported by using the [Use the Report Message add-in](https://support.office.com/article/b5caa9f1-cdf3-4443-af8c-ff724ea719d2). Review your anti-spam, anti-malware, and anti-phishing policies to improve your configuration.
   
 ![Threat protection widgets across the top of the Security Dashboard](media/5c7c644e-6b01-4bf8-b991-f6ba0fdc5717.png)
   

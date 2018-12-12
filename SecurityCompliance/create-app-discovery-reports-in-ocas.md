@@ -39,7 +39,7 @@ To create an app discovery report, you identify the vendor data source for the l
   
 1. Collect your [web traffic logs and data sources for Office 365 Cloud App Security](web-traffic-logs-and-data-sources-for-ocas.md).
     
-2. Go to [https://protection.office.com](https://protection.office.com) and sign in using your work or school account. 
+2. Go to [https://security.microsoft.com](https://security.microsoft.com) and sign in using your work or school account. 
     
 3. In the Security &amp; Compliance Center, choose **Alerts** \> **Manage advanced alerts**.
     

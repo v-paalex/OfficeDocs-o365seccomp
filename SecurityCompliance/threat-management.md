@@ -11,7 +11,6 @@ localization_priority: Normal
 search.appverid:
 - MET150
 ms.assetid: 0a73d5fa-b2c8-43e7-9ed4-61f0552b1c98
-
 description: "Use Threat management to help control and manage mobile device access to your organization's data, help protect your organization from data loss, and help protect inbound and outbound messages from malicious software and spam. You also use threat management to protect your domain's reputation and to determine whether or not senders are maliciously spoofing accounts from your domain."
 ---
 
@@ -58,6 +57,6 @@ In some cases, there are minor differences between the EAC and the Security &amp
 |**Safe Attachments** <br/> |[Safe Attachments](atp-safe-attachments.md) is part of Advanced Threat Protection. When enabled, email attachments are opened in a special, isolated environment that is separate from Office 365 before they are sent to recipient inboxes. Safe Attachments is designed to help detect malicious attachments even before anti-virus signatures are available. To learn more, see [Safe Attachments in Office 365](atp-safe-attachments.md).  <br/> |
 |**Safe Links** <br/> |[Safe Links](atp-safe-links.md) is part of Advanced Threat Protection. Safe Links help prevent users from following URLs in email or in Office documents that point to web sites that are recognized as malicious. To learn more, see [Safe Links in Office 365](atp-safe-links.md).  <br/> |
 |**Quarantine** <br/> |Set up [Quarantine](http://go.microsoft.com/fwlink/p/?LinkID=809005) for incoming email messages in Office 365 where messages that have been filtered as spam, bulk, phishing, and malware mail can be kept for later review. Both users and admins can work with quarantined messages. Users can work with just their own filtered messages in quarantine. Admins can search for and manage quarantined messages for all users.  <br/> |
-|**Advanced threats** <br/> |View the [threat protection status report](https://support.office.com/article/View-the-reports-for-Advanced-Threat-Protection-E47E838C-D99E-4C0B-B9AA-E66C4FAE902F#advancedthreats) to see information about the malicious content found and blocked by Exchange Online Protection and Advanced Threat Protection.  <br/> |
+|**Advanced threats** <br/> |View the [Threat Protection Status report](https://support.office.com/article/View-the-reports-for-Advanced-Threat-Protection-E47E838C-D99E-4C0B-B9AA-E66C4FAE902F#advancedthreats) to see information about the malicious content found and blocked by Exchange Online Protection and Advanced Threat Protection.  <br/> |
    
 

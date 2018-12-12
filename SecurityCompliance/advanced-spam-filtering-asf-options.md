@@ -1,5 +1,5 @@
 ---
-title: "Advanced spam filtering  options"
+title: "Advanced spam filtering options"
 ms.author: krowley
 author: kccross
 manager: laurawi
@@ -15,7 +15,7 @@ ms.assetid: b286f853-b484-4af0-b01f-281fffd85e7a
 description: "Advanced spam filtering  options give administrators the ability to inspect various content attributes of a message. The presence of these attributes in a message either increases the spam score of the message (thereby increasing the potential for it to be identified as spam) or marks the message as spam. The ASF options target specific message properties, such as HTML tags and URL redirection, which are commonly found in spam messages."
 ---
 
-# Advanced spam filtering  options
+# Advanced spam filtering options
 
 Advanced spam filtering  options give administrators the ability to inspect various content attributes of a message. The presence of these attributes in a message either increases the spam score of the message (thereby increasing the potential for it to be identified as spam) or marks the message as spam. The ASF options target specific message properties, such as HTML tags and URL redirection, which are commonly found in spam messages.
   
@@ -23,7 +23,8 @@ Enabling ASF options is an aggressive approach to spam filtering, and any messag
   
 ASF options can be set on, off, or to test mode when you edit your content filter policies. For more information, see [Configure your spam filter policies](configure-your-spam-filter-policies.md). Test mode is not available for the **NDR backscatter**, **SPF record: hard fail**, **Conditional Sender ID filtering: hard fail**, and **Bulk mail** options. 
   
-> [!TIP]
+> > [!TIP]
+> Optional information to help a user be more successful
 >  Consider enabling your ASF options in test mode in order to maximize spam blocking based upon your environment. For customers with high spam percentages for specific ASF options, we recommend that you test these options first before implementing them in your production environment. >  It's recommended that organizations who are concerned about phishing turn on the **SPF record: hard fail** option. 
   
 The following table describes each advanced spam filtering option.
@@ -45,9 +46,13 @@ The following table describes each advanced spam filtering option.
 |Form tags in HTML  <br/> |When this setting is enabled, any message that contains the \<Form\> HTML tag will be marked as spam. This HTML tag is used to create website forms. Email advertisements often include this tag to solicit information from the recipient.  <br/> |X-CustomSpam: Form tag in html  <br/> |
 |Web bugs in HTML  <br/> |When this setting is enabled, any message that contains a Web bug will be marked as spam. A Web bug is a graphic that is designed to determine whether a Web page or email message has been read. Web bugs are often invisible to the recipient because they are typically added to a message as a graphic that is as small as one pixel by one pixel. Legitimate newsletters may also use this technique, although many consider this an invasion of privacy.  <br/> |X-CustomSpam: Web bug  <br/> |
 |Apply sensitive word list  <br/> |When this setting is enabled, any message that contains a word from the sensitive word list will be marked as spam. Using the sensitive word list allows easy blocking of words that are associated with potentially offensive messages. Some of these words are case sensitive. As an administrator, you cannot edit this list. Filtering against the sensitive word list is applied to both the subject and message body of a message.  <br/> |X-CustomSpam: Sensitive word in subject/body  <br/> |
-|SPF record: hard fail  <br/> |When this setting is enabled, messages that fail an SPF check (meaning they were sent from an IP address not specified in the SPF record) will be marked as spam. Turning this setting on is recommended for organizations who are concerned about receiving phishing messages.  <br/> **Note:** Test mode is not available for this option.  <br/> |X-CustomSpam: SPF Record Fail  <br/> |
-|Conditional Sender ID filtering: hard fail  <br/> |When this setting is enabled, any message that hard fails a conditional Sender ID check is marked as spam. This option combines an SPF check with a Sender ID check to help protect against message headers that contain forged senders.  <br/> **Note:** Test mode is not available for this option.  <br/> |X-CustomSpam: SPF From Record Fail  <br/> |
-|NDR backscatter  <br/> |If you're using EOP to protect on-premises mailboxes, when this setting is enabled, all legitimate non-delivery report (NDR) messages are delivered to the original sender, and all backscatter (illegitimate NDR) messages will be marked as spam. If you don't enable this setting, then all NDRs still go through spam filtering. In this case, most legitimate messages will get delivered to the original sender while some, but not all, backscatter messages will get marked as spam. However, backscatter messages that aren't marked as spam won't go to the original sender because it will go to the spoofed sender.  <br/> If you're using the service to protect Exchange Online cloud-hosted mailboxes, you don't need to configure this setting.  <br/> > [!NOTE]>  For both scenarios (on-premises and cloud-hosted mailboxes), it's also not necessary to enable this setting for outbound mail sent through the service, as NDRs that are legitimate bounce messages will be automatically detected and delivered to the original sender. >  Test mode is not available for this option.           > [!TIP]> For more information about backscatter messages and EOP, see [Backscatter messages and EOP](backscatter-messages-and-eop.md).           |X-CustomSpam: Backscatter NDR  <br/> |
-|Bulk mail  <br/> |Advanced-spam filtering of bulk email has been retired and replaced with the bulk and email threshold settings. Check out [What's the difference between junk email and bulk email?](what-s-the-difference-between-junk-email-and-bulk-email.md) and [Configure your spam filter policies](configure-your-spam-filter-policies.md) for more information and how to configure the settings.  <br/> ||
+|SPF record: hard fail  <br/> |When this setting is enabled, messages that fail an SPF check (meaning they were sent from an IP address not specified in the SPF record) will be marked as spam. Turning this setting on is recommended for organizations who are concerned about receiving phishing messages.  <br/> <br/>> [!NOTE]
+> Test mode is not available for this option.  <br/> |X-CustomSpam: SPF Record Fail  <br/> |
+|Conditional Sender ID filtering: hard fail  <br/> |When this setting is enabled, any message that hard fails a conditional Sender ID check is marked as spam. This option combines an SPF check with a Sender ID check to help protect against message headers that contain forged senders.  <br/> <br/>> [!NOTE]
+> Test mode is not available for this option.  <br/> |X-CustomSpam: SPF From Record Fail  <br/> |
+|NDR backscatter  <br/> |If you're using EOP to protect on-premises mailboxes, when this setting is enabled, all legitimate non-delivery report (NDR) messages are delivered to the original sender, and all backscatter (illegitimate NDR) messages will be marked as spam. If you don't enable this setting, then all NDRs still go through spam filtering. In this case, most legitimate messages will get delivered to the original sender while some, but not all, backscatter messages will get marked as spam. However, backscatter messages that aren't marked as spam won't go to the original sender because it will go to the spoofed sender. <br/> <br/> If you're using the service to protect Exchange Online cloud-hosted mailboxes, you don't need to configure this setting.  <br/><br/> > [!NOTE]
+> For both scenarios (on-premises and cloud-hosted mailboxes), it's also not necessary to enable this setting for outbound mail sent through the service, as NDRs that are legitimate bounce messages will be automatically detected and delivered to the original sender. >  Test mode is not available for this option.           <br/><br/>> [!TIP]
+> TIP: For more information about backscatter messages and EOP, see [Backscatter messages and EOP](backscatter-messages-and-eop.md).           |X-CustomSpam: Backscatter NDR  <br/> |
+|Bulk mail  <br/> |Advanced-spam filtering of bulk email has been retired and replaced with the bulk and email threshold settings. Check out [What's the difference between junk email and bulk email?](what-s-the-difference-between-junk-email-and-bulk-email.md) and [Configure your spam filter policies](configure-your-spam-filter-policies.md) for more information and how to configure the sett    ings.  <br/> ||
    
 

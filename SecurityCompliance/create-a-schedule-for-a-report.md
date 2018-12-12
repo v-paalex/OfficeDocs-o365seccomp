@@ -24,9 +24,9 @@ In the Security &amp; Compliance Center, several [reports and insights](reports-
 > [!IMPORTANT]
 > Make sure that you have the necessary permissions to perform this task. In general, Office 365 global administrators, security administrators, and security readers can access reports in the Security &amp; Compliance Center. To learn more about permissions, see [Permissions in the Office 365 Security &amp; Compliance Center](permissions-in-the-security-and-compliance-center.md).
   
-1. In the Security &amp; Compliance Center, go to **Reports** \> **Dashboard**.
+1. In the [Security &amp; Compliance Center](https://security.microsoft.com), go to **Reports** \> **Dashboard**.
     
-2. Choose a report. For this example, we'll choose the Threat protection status report.
+2. Choose a report. For this example, we'll choose the Threat Protection Status report.
     
 3. In the upper left corner of the report, choose **+ Create schedule**.
     

@@ -3,7 +3,6 @@ title: "Protect against threats in Office 365"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 5/30/2018
 ms.audience: Admin
 ms.topic: hub-page
 ms.service: o365-administration
@@ -23,11 +22,11 @@ With Office 365 Enterprise, you can help protect your organization against a var
 
 If you're using a custom domain in Office 365, help stop sender fraud from your organization, improve email security, and protect your domain's reputation.
   
-- [Prevent spoofing with SPF](https://go.microsoft.com/fwlink/?linkid=851943)
+- [Prevent spoofing with SPF]([Set up SPF in Office 365 to help prevent spoofing](set-up-spf-in-office-365-to-help-prevent-spoofing.md))
     
-- [Validate outbound email with DKIM](https://go.microsoft.com/fwlink/?linkid=851944)
+- [Validate outbound email with DKIM]([Use DKIM to validate outbound email sent from your custom domain in Office 365](use-dkim-to-validate-outbound-email.md))
     
-- [Validate email with DMARC](https://go.microsoft.com/fwlink/?linkid=832951)
+- [Validate email with DMARC]([Use DMARC to validate email in Office 365](use-dmarc-to-validate-email.md))
     
 ## Anti-spam &amp; anti-malware
 
@@ -35,11 +34,11 @@ Learn about Office 365 anti-spam scoring, connection filtering, and malware capt
   
 - [Anti-spam &amp; anti-malware protection](anti-spam-and-anti-malware-protection.md)
     
-- [Turn on logging for email](https://technet.microsoft.com/en-us/library/dn879651.aspx)
+- [Turn on logging for email]([Enable mailbox auditing in Office 365](enable-mailbox-auditing.md))
     
 - [Quarantine email messages in Office 365](quarantine-email-messages.md)
     
-- [Submit suspicious content to Microsoft](https://technet.microsoft.com/en-us/library/dn762129%28v=exchg.150%29.aspx)
+- [Submit suspicious content to Microsoft]([Submitting malware and non-malware to Microsoft for analysis](submitting-malware-and-non-malware-to-microsoft-for-analysis.md))
     
 ## Advanced Threat Protection
 
@@ -49,7 +48,7 @@ Configure policies to manage spoofing, protect against phishing attacks, and cat
     
 - [Learn about spoof intelligence](learn-about-spoof-intelligence.md)
     
-- [Set up ATP anti-phishing policies](set-up-atp-anti-phishing-policies.md)
+- [Set up anti-phishing policies](set-up-anti-phishing-policies.md)
     
 - [Set up ATP Safe Links policies](set-up-atp-safe-links-policies.md)
     

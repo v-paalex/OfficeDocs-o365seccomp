@@ -3,7 +3,7 @@ title: "Overview of Office 365 Cloud App Security"
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 2/26/2018
+ms.date: 12/03/2018
 ms.audience: ITPro
 ms.topic: overview
 ms.service: o365-administration
@@ -35,19 +35,15 @@ Office 365 Cloud App Security gives you insight into suspicious activity in Offi
   
 You can get to the Office 365 Cloud App Security portal through the Office 365 Security &amp; Compliance Center. Here's one good way to do it:
   
-1. Go to [https://protection.office.com](https://protection.office.com) and sign in using your work or school account for Office 365. (This takes you to the Security &amp; Compliance Center.) 
+1. Go to [https://security.microsoft.com](https://security.microsoft.com) and sign in using your work or school account for Office 365. (This takes you to the Security &amp; Compliance Center.) 
     
-2. In the Security &amp; Compliance Center, choose **Alerts** \> **Manage advanced alerts**. 
-    
-    ![In the Security &amp; Compliance Center, choose Manage Advanced Alerts to go to Office 365 Cloud App Security](media/958632d4-03e3-4ade-8e22-d5509db6fca7.png)
-  
-    (If Office 365 Cloud App Security is not yet enabled, and you are a global administrator, [turn on Office 365 Cloud App Security](turn-on-office-365-cas.md).)
+2. In the Security &amp; Compliance Center, choose **Alerts** \> **Manage advanced alerts**. <br/>![In the Security &amp; Compliance Center, choose Manage Advanced Alerts to go to Office 365 Cloud App Security](media/958632d4-03e3-4ade-8e22-d5509db6fca7.png)<br/>(If Office 365 Cloud App Security is not yet enabled, and you are a global administrator, [turn on Office 365 Cloud App Security](turn-on-office-365-cas.md).)
     
 3. Choose **Go to Office 365 Cloud App Security**. 
     
 ## Policies
 
-Office 365 Cloud App Security works with the policies that are defined for your organization. With Office 365 Cloud App Security, your organization gets 10 predefined anomaly detection policies and several templates for activity policies. These policies are designed to detect general anomalies, identify users logging in from a risky IP address, detect ransomware activities, detect administrator activities from non-corporate IP addresses, and more.
+Office 365 Cloud App Security works with the policies that are defined for your organization. With Office 365 Cloud App Security, your organization gets many predefined anomaly detection policies and several templates for activity policies. These policies are designed to detect general anomalies, identify users logging in from a risky IP address, detect ransomware activities, detect administrator activities from non-corporate IP addresses, and more.
   
 ![In the CAS portal, choose Control \> Templates to view or create policy templates](media/88f615b4-aa8a-480c-b239-323dfcd628e1.png)
   
@@ -91,17 +87,17 @@ You can use your web traffic logs with Office 365 Cloud App Security, too. The m
   
 [Learn about web traffic logs and data sources for Office 365 Cloud App Security](web-traffic-logs-and-data-sources-for-ocas.md)
   
-## App permissions
+## OAuth apps
 
 With Office 365 Cloud App Security, you can allow or prevent people in your organization to use third-party apps that access data in Office 365.
   
-![In O365 CAS, you can access the Manage App Permissions page from the Investigate menu.](media/78272cda-986f-4b3b-bbbe-8c236c74f5d3.png)
+![In O365 CAS, you can access the Manage OAuth apps page from the Investigate menu.](media/78272cda-986f-4b3b-bbbe-8c236c74f5d3.png)
   
-To get to this page, go to **Investigate** \> **App permissions**. 
+To get to this page, go to **Investigate** \> **OAuth apps**. 
   
 ![In the O365 CAS portal, choose Investigate.](media/8c7b87c9-71a6-4952-adb2-185e941ffe9a.png)
   
-[Manage app permissions using Office 365 Cloud App Security](manage-app-permissions-in-ocas.md)
+[Manage OAuth apps using Office 365 Cloud App Security](manage-app-permissions-in-ocas.md)
   
 ## Cloud Discovery Dashboard
 

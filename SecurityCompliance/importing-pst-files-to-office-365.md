@@ -95,7 +95,15 @@ Here's an illustration and description of the complete PST import process. The i
     
 ## Importing SharePoint data to Office 365
 
-You can also import files and documents to SharePoint sites and OneDrive accounts in your Office 365 organization. For more information, see [Upload on-premises content to SharePoint Online using PowerShell cmdlets](https://docs.microsoft.com/sharepointmigration/upload-on-premises-content-to-sharepoint-online-using-powershell-cmdlets).
+You can also import files and documents to SharePoint sites and OneDrive accounts in your Office 365 organization. For more information, see the following articles:
+
+- [Migrate to SharePoint Online](https://docs.microsoft.com/sharepointmigration/migrate-to-sharepoint-online)
+
+- [Introducing the SharePoint Migration Tool](https://docs.microsoft.com/sharepointmigration/introducing-the-sharepoint-migration-tool)
+
+- [Migrate to SharePoint Online using PowerShell](https://docs.microsoft.com/sharepointmigration/overview-spmt-ps-cmdlets)
+
+- [Migrate your file share content to SharePoint Online using the Azure Data Box](https://docs.microsoft.com/sharepointmigration/how-to-migrate-file-share-content-to-spo-using-azuredatabox)
 
 
 ## Frequently asked questions about importing PST files to Office 365

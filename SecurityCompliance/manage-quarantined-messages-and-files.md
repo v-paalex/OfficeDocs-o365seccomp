@@ -60,8 +60,7 @@ After you find a specific quarantined message, click the message to view details
 
 1. Using a work or school account that has global administrator privileges in your Office 365 organization, sign in to Office 365 and [go to the Security and Compliance Center](go-to-the-securitycompliance-center.md).
     
-2. On the left, expand **Threat Management**, choose **Review**, and then choose **Quarantine**. 
-    
+2. On the left, expand **Threat Management**, choose **Review**, and then choose **Quarantine**. <br/>
     > [!TIP]
     > To go directly to the **Quarantine** page in the Security &amp; Compliance Center, use this URL: > [https://protection.office.com/?hash=/quarantine](https://protection.office.com/?hash=/quarantine)
   
@@ -78,36 +77,28 @@ Depending on your settings, there may be a lot of quarantined messages and files
   
 1. On the **Quarantine** page, ensure that the top row of filters is set to display messages or files as appropriate: 
     
-  - To search for files, set the filters to show **files** quarantined due to **malware**.
-    
+      - To search for files, set the filters to show **files** quarantined due to **malware**.<br/>
     For quarantined files, the page displays all quarantined files, not just your own, regardless of what you tell it to show.
     
-  - To search for quarantined messages, set filters to show **all** or **only my** **email**. For the last filter choose the type of quarantined message that you're looking for. You can search for quarantined messages that have been identified as **spam**, for messages that matched a mail flow or **transport rule**, **bulk** mail, **phishing** mail, or mail that contains **malware**.
+      - To search for quarantined messages, set filters to show **all** or **only my** **email**. For the last filter choose the type of quarantined message that you're looking for. You can search for quarantined messages that have been identified as **spam**, for messages that matched a mail flow or **transport rule**, **bulk** mail, **phishing** mail, or mail that contains **malware**.
     
-2. Under **Sort results by**, choose the filter or filters you want to use to search from the drop-down lists. The options vary based on whether you are searching for files or messages. Wildcards are not supported in search fields at this time.
+2. Under **Sort results by**, choose the filter or filters you want to use to search from the drop-down lists. The options vary based on whether you are searching for files or messages. Wildcards are not supported in search fields at this time.<br/><br/>For both files and messages, you can choose to filter by the date the message or file was sent to quarantine. You can specify the date or a date range, including the time. You can also filter your search results by the expiration date on which the file or message will be deleted from quarantine, or you can use a combination of filters. To search by expiration date, choose **Advanced filter**. Under **Expires**, you can select messages that will be deleted from quarantine within the next 24 hours ( **Today**), within the next 48 hours ( **Next 2 days**), within the next week ( **Next 7 days**), or you can select a custom time interval.<br/><br/>For messages, you have the following additional options:
     
-    For both files and messages, you can choose to filter by the date the message or file was sent to quarantine. You can specify the date or a date range, including the time. You can also filter your search results by the expiration date on which the file or message will be deleted from quarantine, or you can use a combination of filters. To search by expiration date, choose **Advanced filter**. Under **Expires**, you can select messages that will be deleted from quarantine within the next 24 hours ( **Today**), within the next 48 hours ( **Next 2 days**), within the next week ( **Next 7 days**), or you can select a custom time interval.
+      - **Message ID**. Use this to identify a specific message when you know the message ID.<br/><br/>
+    For example, if a specific message is sent by, or intended for, a user in your organization, but it never reached its destination, you can search for the message by using a message trace (see [Run a Message trace and View Results](https://go.microsoft.com/fwlink/?LinkId=799737)). If you discover that the message was sent to quarantine, perhaps because it matched a mail flow rule or was identified as spam, you can then easily find this message in quarantine by specifying its message ID. Be sure to include the full message ID string. This might include angle brackets (\<\>), for example:<br/>
+    `<79239079-d95a-483a-aacf-e954f592a0f6@XYZPR00BM0200.contoso.com>`
     
-    For messages, you have the following additional options:
+      - **Sender email address**. Choose to filter by a single sender email address. 
     
-  - **Message ID**. Use this to identify a specific message when you know the message ID. 
+      - **Recipient email address**. Choose to filter by a single recipient email address. 
     
-    For example, if a specific message is sent by, or intended for, a user in your organization, but it never reached its destination, you can search for the message by using a message trace (see [Run a Message trace and View Results](https://go.microsoft.com/fwlink/?LinkId=799737)). If you discover that the message was sent to quarantine, perhaps because it matched a mail flow rule or was identified as spam, you can then easily find this message in quarantine by specifying its message ID. Be sure to include the full message ID string. This might include angle brackets (\<\>), for example:
-    
-    \<79239079-d95a-483a-aacf-e954f592a0f6@XYZPR00BM0200.contoso.com\>
-    
-  - **Sender email address**. Choose to filter by a single sender email address. 
-    
-  - **Recipient email address**. Choose to filter by a single recipient email address. 
-    
-  - **Subject**. Enter the subject of an email address you want to find. Since wildcard searching is not supported, you must use the entire subject of the message in order for search to return the message in the results. The search is not case-sensitive. 
+      - **Subject**. Enter the subject of an email address you want to find. Since wildcard searching is not supported, you must use the entire subject of the message in order for search to return the message in the results. The search is not case-sensitive. 
     
 ## View details about quarantined messages and files
-<a name="BKMK_ViewDetails"> </a>
 
 When you select an item displayed in the quarantine list, you'll see a summary of its properties in the **Details** pane on the right side of the Security &amp; Compliance Center. 
   
- **Details displayed for quarantined messages**
+**Details displayed for quarantined messages**
   
 - **Message ID**. The unique identifier for the message. 
     
@@ -193,8 +184,7 @@ You can configure how long messages and files will remain in quarantine before t
 
 1. Using a work or school account that has global administrator privileges in your Office 365 organization, sign in to Office 365 and [go to the Security and Compliance Center](go-to-the-securitycompliance-center.md).
     
-2. On the left, expand **Threat Management**, choose **Policy**, and then choose **Anti-spam**. 
-    
+2. On the left, expand **Threat Management**, choose **Policy**, and then choose **Anti-spam**. <br/>
     > [!TIP]
     > To go directly to the **anti-spam** page in the Security &amp; Compliance Center, use this URL: > [https://protection.office.com/?hash=/antispam](https://protection.office.com/?hash=/antispam)
   

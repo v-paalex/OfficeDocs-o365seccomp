@@ -36,11 +36,7 @@ For more information about the different permissions you can give to users in th
 
 1. [Sign in to Office 365 and go to the Admin center](https://go.microsoft.com/fwlink/p/?LinkId=525275).
     
-<<<<<<< HEAD
-2. In the Office 365 Admin Center, open **Admin centers** and then click **Security &amp; Compliance**. 
-=======
 2. In the Office 365 admin center, open **Admin centers** and then click **Security &amp; Compliance**. 
->>>>>>> master
     
 3. In the Security &amp; Compliance Center, go to **Permissions**.
     
@@ -62,7 +58,7 @@ For more information about the different permissions you can give to users in th
     
 ## Use PowerShell to give another user access to the Security &amp; Compliance Center
 
-1. [Connect to the Office 365 Security &amp; Compliance Center using remote PowerShell](https://go.microsoft.com/fwlink/p/?LinkID=627084).
+1. [Connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/en-us/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps).
     
 2. Use the **Add-RoleGroupMember** command to add a user to the Organization Management Role, as shown in the following example. 
     
@@ -73,9 +69,9 @@ For more information about the different permissions you can give to users in th
 
  **Parameters**
   
--  _-Identity_ is the role group to add a member to. 
+- _-Identity_ is the role group to add a member to. 
     
-- - _Member_ is the mailbox, universal security group (USG), or computer to add to the role group. You can specify only one member at a time. 
+- _Member_ is the mailbox, universal security group (USG), or computer to add to the role group. You can specify only one member at a time. 
     
 For detailed information on syntax and parameters, see [Add-RoleGroupMember](https://go.microsoft.com/fwlink/p/?LinkId=510859).
   

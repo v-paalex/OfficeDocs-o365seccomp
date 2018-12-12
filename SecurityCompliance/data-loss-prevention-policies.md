@@ -307,7 +307,7 @@ You can create a label and then:
     
 - **Auto-apply** it to content that matches the conditions that you choose. 
     
-For more information about labels, see [Overview of labels](labels.md).
+For more information about labels, see [Overview of retention labels](labels.md).
   
 After you create a label, you can then use that label as a condition in your DLP policies. For example, you might want to do this because:
   
@@ -322,12 +322,16 @@ After you create a label, you can then use that label as a condition in your DLP
 By using labels as a condition in your DLP rules, can you selectively enforce protection actions on a specific set of content, locations, or users.
   
 ![Labels as a condition](media/5b1752b4-a129-4a88-b010-8dcf8a38bb09.png)
+
+### Support for sensitivity labels is coming
+
+Note that you can currently use only a retention label as a condition, not a [sensitivity label](sensitivity-labels.md). We're currently working on support for using a sensitivity label in this condition.
   
 ### How this feature relates to other features
 
 Several features can be applied to content containing sensitive information:
   
-- An [Applying a label automatically based on conditions](labels.md#applying-a-label-automatically-based-on-conditions) and a [retention policy](retention-policies.md) can both enforce **retention** actions on this content. 
+- A [retention label](labels.md#applying-a-retention-label-automatically-based-on-conditions) and a [retention policy](retention-policies.md) can both enforce **retention** actions on this content. 
     
 - A DLP policy can enforce **protection** actions on this content. And before enforcing these actions, a DLP policy can require other conditions to be met in addition to the content containing a label. 
     
