@@ -3,7 +3,7 @@ title: "Use Content Search in Office 365 for targeted collections"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
-ms.date: 10/12/2018
+ms.date: 
 ms.audience: Admin
 ms.topic: article
 ms.service: o365-administration
@@ -15,7 +15,7 @@ description: "Use Content Search in the Office 365 Security &amp; Compliance Cen
 
 # Use Content Search in Office 365 for targeted collections
 
-The Content Search feature in the Office 365 Security &amp; Compliance Center doesn't provide a direct way in the UI to search specific folders in Exchange mailboxes or SharePoint and OneDrive for Business sites. However, it is possible to search specific folders (called a targeted collection) by specifying the folder ID or path in the actual search query syntax. Using Content Search to perform a targeted collection is useful when you're confident that items responsive to a case or privileged items are located in a specific mailbox or site folder. You can use the script in this article to obtain the folder ID for mailbox folders or the path for folders on a SharePoint and OneDrive for Business site. Then you can use the folder ID or path in a search query to return items located in the folder.
+The Content Search feature in the Office 365 Security &amp; Compliance Center doesn't provide a direct way in the UI to search specific folders in Exchange mailboxes or SharePoint and OneDrive for Business sites. However, it's possible to search specific folders (called a *targeted collection*) by specifying the folder ID or path in the actual search query syntax. Using Content Search to perform a targeted collection is useful when you're confident that items responsive to a case or privileged items are located in a specific mailbox or site folder. You can use the script in this article to obtain the folder ID for mailbox folders or the path for folders on a SharePoint and OneDrive for Business site. Then you can use the folder ID or path in a search query to return items located in the folder.
   
 ## Before you begin
 
@@ -39,7 +39,7 @@ The Content Search feature in the Office 365 Security &amp; Compliance Center do
 
 The script that you run in this first step will return a list of mailbox folders or SharePoint or OneDrive for Business folders, and the corresponding folder ID or path for each folder. When you run this script, it will prompt you for the following information.
   
-- **Email address or site URL** Type an email address of the custodian to return a list of Exchange mailbox folders and fold IDs. Or type the URL for a SharePoint site or a OneDrive for Business site to return a list of paths for the specified site. Here are some examples: 
+- **Email address or site URL** Type an email address of the custodian to return a list of Exchange mailbox folders and folder IDs. Or type the URL for a SharePoint site or a OneDrive for Business site to return a list of paths for the specified site. Here are some examples: 
     
   - **Exchange** - stacig@contoso.onmicrosoft.com 
     
@@ -133,7 +133,7 @@ To display a list of mailbox folders or site path names:
       }while ($complianceSearch.Status -ne 'Completed')
       if ($complianceSearch.Items -gt 0)
       {
-          # Create a Complinace Search Action and wait for it to complete. The folders will be listed in the .Results parameter
+          # Create a Compliance Search Action and wait for it to complete. The folders will be listed in the .Results parameter
           $complianceSearchAction = New-ComplianceSearchAction -SearchName $searchName -Preview
           do
           {
@@ -211,7 +211,7 @@ After you've run the script to collect a list of folder IDs or paths for a speci
     
 4. On the **New search** page, type a name for the Content Search. This name has to be unique in your organization. 
     
-5. Under **Where do you want us to look**, do one of the following, based on whether your searching a mailbox folder or a site folder:
+5. Under **Where do you want us to look**, do one of the following, based on whether you're searching a mailbox folder or a site folder:
     
     - Click **Choose specific mailboxes to search** and then add the same mailbox that you specified when you ran the script in Step 1. 
     
@@ -265,7 +265,7 @@ Keep the following things in mind when using the script in this article to perfo
     
 - This script only returns folder information for the user's primary mailbox. It doesn't return information about folders in the user's archive mailbox.
     
-- When searching mailbox folders, only the specified folder (identified by its  `folderid` property) will be searched. Subfolders won't be searched. To search sub-folders, you need to use the  `folderid` for the sub-folder that you want to search. 
+- When searching mailbox folders, only the specified folder (identified by its  `folderid` property) will be searched. Subfolders won't be searched. To search sub-folders, you need to use the  folder ID for the sub-folder that you want to search. 
     
 - When searching site folders, the folder (identified by its  `path` property) and all sub-folders will be searched. 
     
