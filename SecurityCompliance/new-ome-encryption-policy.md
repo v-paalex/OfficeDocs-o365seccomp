@@ -42,6 +42,15 @@ A new Exchange mail flow rule will be created in your organization that will aut
 
 You do not have to update or modify any existing Office 365 configuration settings prior to this new change. However, you may want to update any applicable end-user documentation and training materials to prepare people in your organization for this change.
 
+## How will this change be represented in the Audit log?
+
+This activity is audited and is available to customers.  The operation is ‘New-TransportRule’ and a snippet of a sample audit entry from the Audit Log Search in Security & Compliance Center is below:
+
+```
+{"CreationTime":"2018-11-28T23:35:01","Id":"a1b2c3d4-daa0-4c4f-a019-03a1234a1b0c","Operation":"New-TransportRule","OrganizationId":"123456-221d-12345 ","RecordType":1,"ResultStatus":"True","UserKey":"Microsoft Operator","UserType":3,"Version":1,"Workload":"Exchange","ClientIP":"123.456.147.68:17584","ObjectId":"","UserId":"Microsoft Operator","ExternalAccess":true,"OrganizationName":"contoso.onmicrosoft.com","OriginatingServer":"CY4PR13MBXXXX (15.20.1382.008)","Parameters":[{"Name":"Organization","Value":"123456-221d-12346"},{"Name":"ApplyRightsProtectionTemplate","Value":"Encrypt"},{"Name":"Name",
+"Value":"Encrypt outbound sensitive emails (out of box rule)"},{"Name":"MessageContainsDataClassifications”…etc.
+```
+
 ## How do I opt-out?
 
 If you would like to opt-out of this change, please follow these steps:
@@ -53,6 +62,6 @@ If you would like to opt-out of this change, please follow these steps:
     Set-IRMConfiguration -AutomaticServiceUpdateEnabled $false
     ```
 
-## How do I change or disable the automatic policy?
+## How do I disable the automatic policy?
 
-If you didn’t opt-out of this change and the Exchange mail rule has already been created, you can [modify the rule](https://docs.microsoft.com/exchange/security-and-compliance/mail-flow-rules/manage-mail-flow-rules#view-or-modify-a-mail-flow-rule) by going to **Mail flow** > **Rules** in the Exchange admin center (EAC) and modifying the rule “*Encrypt outbound sensitive emails (out of box rule)*”.
+If you didn’t opt-out of this change and the Exchange mail rule has already been created, you can [disable the rule](https://docs.microsoft.com/exchange/security-and-compliance/mail-flow-rules/manage-mail-flow-rules#view-or-modify-a-mail-flow-rule) by going to **Mail flow** > **Rules** in the Exchange admin center (EAC) and disable the rule “*Encrypt outbound sensitive emails (out of box rule)*”.
