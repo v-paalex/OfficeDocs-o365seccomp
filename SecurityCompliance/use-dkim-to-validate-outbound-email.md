@@ -78,9 +78,13 @@ To configure DKIM, you will complete these steps:
 
 For each domain for which you want to add a DKIM signature in DNS, you need to publish two CNAME records. A CNAME record is used by DNS to specify that the canonical name of a domain is an alias for another domain name. 
   
- Office 365 performs automatic key rotation using the two records that you establish. If you have provisioned custom domains in addition to the initial domain in Office 365, you must publish two CNAME records for each additional domain. So, if you have two domains, you must publish two additional CNAME records, and so on. 
+ Office 365 performs automatic key rotation using the two records that you establish. If you have provisioned custom domains in addition to the initial domain in Office 365, you must publish two CNAME records for each additional domain. So, if you have two domains, you must publish two additional CNAME records, and so on.
   
-Use the following format for the CNAME records:
+Use the following format for the CNAME records.
+
+> [!IMPORTANT]
+> If you are one of our GCC customers, the domainGUID method will not work for you! Be sure to use the proper MX value for your domain. Use: 
+`selector2-<domain-key>._domainkey.<initialDomain>` for the examples below. Use [this article](https://docs.microsoft.com/en-us/office365/admin/get-help-with-domains/information-for-dns-records?view=o365-worldwide) to find the MX record needed for your *domain-key* value.
   
 ```
 Host name:			selector1._domainkey
