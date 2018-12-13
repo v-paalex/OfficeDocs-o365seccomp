@@ -17,7 +17,7 @@ description: "Summary: New Office 365 Message Encryption policy for sensitive in
 
 # New Office 365 Message Encryption policy for sensitive information
 
-We will be creating a new automatic policy in Office 365 tenants that will apply Office 365 Message Encryption to all emails that contain sensitive information and are being sent outside the organization. A new Exchange mail flow rule will be created in your Office 365 tenant so that your organization will be protected by default.
+We will be creating a new automatic policy in Office 365 tenants that will apply Office 365 Message Encryption to all emails that contain sensitive information and that are being sent outside your organization. This new Exchange mail flow rule will be automatically created in your Office 365 tenant so that your organization will be protected by default.
 
 ## How will this work?
 
