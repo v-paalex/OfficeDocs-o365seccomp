@@ -259,7 +259,7 @@ Here are some examples of using the  `folderid` and  `path` properties in a sear
   
 ## More information
 
-Keep the following things in mind when using the script in this article and performing targeted collections.
+Keep the following things in mind when using the script in this article to perform targeted collections.
   
 - The script doesn't remove any folders from the results. So some folders listed in the results might be unsearchable (or return zero items) because they contain system-generated content.
     
@@ -271,4 +271,4 @@ Keep the following things in mind when using the script in this article and perf
     
 - As previously stated, you can't use  `path` property to search for media files, such as .png, .tiff, or .wav files, located in OneDrive locations. Use a different [site property](keyword-queries-and-search-conditions.md#searchable-site-properties) to search for media files in OneDrive folders. 
 
-- When searching and exporting a folder when you only specify Folderid, during export, it is only necessary to choose the first export option, "All items, excluding ones hat have an unrecognized format, are encrypted, or weren't indexed for other reasons."  All items in the folder will always be exported regardless of their indexing status since Folderid is alwyas indexed.
+- When exporting the results of a search in which you only specified the `folderid` property in the search query, you can choose the first export option, "All items, excluding ones that have an unrecognized format, are encrypted, or weren't indexed for other reasons." All items in the folder will always be exported regardless of their indexing status because the folder ID is alwyas indexed.
