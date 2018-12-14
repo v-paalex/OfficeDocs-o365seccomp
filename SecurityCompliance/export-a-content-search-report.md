@@ -3,7 +3,7 @@ title: "Export a Content Search report"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
-ms.date: 4/25/2018
+ms.date: 12/14/2018
 ms.audience: Admin
 ms.topic: article
 f1_keywords:
@@ -161,3 +161,12 @@ When you generate and export a report about the results of a Content Search, the
     > The number of rows in the **Results** report should be equal to the total number of search results that would be downloaded minus the total number of items listed in the **Unindexed Items** report. 
   
 - **Unindexed Items** - An Excel document that contains information about any unindexed items that would be included in the search results. If you don't include unindexed items when you generate the search results report, this report will still be downloaded, but will be empty.
+
+[Miscellaneous](#miscellaneous)
+  
+  
+ ### Export report limits
+  
+- Exporting search reports from the Security &amp; Compliance Center has the following limits:
+    
+  - The maximum size of a report that can be generated is 20TB.
