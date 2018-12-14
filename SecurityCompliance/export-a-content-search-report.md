@@ -3,7 +3,7 @@ title: "Export a Content Search report"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
-ms.date: 4/25/2018
+ms.date: 
 ms.audience: Admin
 ms.topic: article
 f1_keywords:
@@ -47,7 +47,9 @@ When you export a report, it's downloaded to a folder that has the same name as 
     - Microsoft Internet Explorer 10 and later versions
     
     **Note:** Microsoft doesn't manufacture third-party extensions or add-ons for ClickOnce applications. Exporting search results using an unsupported browser with third-party extensions or add-ons isn't supported. 
-    
+
+- If the estimated total size of the results returned by a Content Search exceeds 20&nbsp;TB, exporting the report will fail. To successfully export the report, try to narrow the scope and re-run the search so the estimated size of the results is less than 20&nbsp;TB.
+
 ## Generate and download a Content Search report
 
 The steps to generate and download a Content Search report are very similar to actually exporting search results.
