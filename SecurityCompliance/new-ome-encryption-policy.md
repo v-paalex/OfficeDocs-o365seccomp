@@ -40,7 +40,7 @@ A new Exchange mail flow rule will be created in your organization that will aut
 
 ## What do I need to do to prepare for this change?
 
-You do not have to update or modify any existing Office 365 configuration settings prior to this new change. However, you may want to update any applicable end-user documentation and training materials to prepare people in your organization for this change. Share these Office Message Encryption resources with your users as appropriate:
+You do not have to update or modify any existing Office 365 configuration settings prior to this new change. However, you may want to update any applicable end-user documentation and training materials to prepare people in your organization for this change. Share these Office 365 Message Encryption resources with your users as appropriate:
 
 - [Send, view, and reply to encrypted messages in Outlook for PC](https://support.office.com/article/send-view-and-reply-to-encrypted-messages-in-outlook-for-pc-eaa43495-9bbb-4fca-922a-df90dee51980)
 - [Office 365 Essentials Video: Office Message Encryption](https://youtu.be/CQR0cG_iEUc)
