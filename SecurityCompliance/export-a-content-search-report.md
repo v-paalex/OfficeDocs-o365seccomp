@@ -3,7 +3,7 @@ title: "Export a Content Search report"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
-ms.date: 12/14/2018
+ms.date: 
 ms.audience: Admin
 ms.topic: article
 f1_keywords:
@@ -47,7 +47,9 @@ When you export a report, it's downloaded to a folder that has the same name as 
     - Microsoft Internet Explorer 10 and later versions
     
     **Note:** Microsoft doesn't manufacture third-party extensions or add-ons for ClickOnce applications. Exporting search results using an unsupported browser with third-party extensions or add-ons isn't supported. 
-    
+
+- If the estimated total size of the results returned by a Content Search exceeds 20 TB, exporting the report will fail. To successfully export the report, try to narrow the scope and re-run the search so the estimated size of the results is less the 20 TB.
+
 ## Generate and download a Content Search report
 
 The steps to generate and download a Content Search report are very similar to actually exporting search results.
@@ -161,12 +163,3 @@ When you generate and export a report about the results of a Content Search, the
     > The number of rows in the **Results** report should be equal to the total number of search results that would be downloaded minus the total number of items listed in the **Unindexed Items** report. 
   
 - **Unindexed Items** - An Excel document that contains information about any unindexed items that would be included in the search results. If you don't include unindexed items when you generate the search results report, this report will still be downloaded, but will be empty.
-
-[Miscellaneous](#miscellaneous)
-  
-  
- ### Export report limits
-  
-- Exporting search reports from the Security &amp; Compliance Center has the following limits:
-    
-  - The maximum size of a report that can be generated is 20TB.
