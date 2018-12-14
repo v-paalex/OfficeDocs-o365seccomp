@@ -3,7 +3,7 @@ title: "Prepare search results for Office 365 Advanced eDiscovery"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
-ms.date: 12/14/2018
+ms.date: 
 ms.audience: Admin
 ms.topic: article
 f1_keywords:
@@ -20,7 +20,13 @@ description: "Learn how to prepare the results of a Content Search in the Office
 
 After a search that's associated with an eDiscovery case in the Office 365 Security &amp; Compliance Center is successfully run, you can prepare the search results for further analysis with Office 365 Advanced eDiscovery, which lets you analyze large, unstructured data sets and reduce the amount of data that's relevant to a legal case. Advanced eDiscovery features include:
   
-- **Optical character recognition** - When you prepare search results for Advanced eDiscovery, optical character recognition (OCR) functionality automatically extracts text from images, and includes this with the search results that are loaded in to Advanced eDiscovery for analysis. OCR is supported for loose files, email attachments, and embedded images. This allows you to apply the text analytic capabilities of Advanced eDiscovery (near-duplicates, email threading, themes, and predictive coding) to the text content in image files. Advanced eDiscovery OCR supports the following image types, tiff, png, jpg, jpeg, gif.
+- **Optical character recognition** - When you prepare search results for Advanced eDiscovery, optical character recognition (OCR) functionality automatically extracts text from images, and includes this with the search results that are loaded in to Advanced eDiscovery for analysis. OCR is supported for loose files, email attachments, and embedded images. This allows you to apply the text analytic capabilities of Advanced eDiscovery (near-duplicates, email threading, themes, and predictive coding) to the text content in image files. Advanced eDiscovery OCR supports the following formats for image files:
+
+    - GIF
+    - JPEG
+    - JPG
+    - PNG
+    - TIFF
     
 - **Near-duplicate detection** - Lets you structure your data review more efficiently, so one person reviews a group of similar documents. This helps prevent multiple reviewers from having to view different versions of the same document. 
     
