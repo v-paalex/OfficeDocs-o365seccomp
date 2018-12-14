@@ -3,7 +3,7 @@ title: "Deploy SharePoint Online sites for three tiers of protection"
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 06/05/2018
+ms.date: 12/14/2018
 ms.audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
@@ -259,13 +259,12 @@ The members of the site, through group membership in one of the access groups, c
   
 ## Next step
 
-[Protect SharePoint Online files with Office 365 labels and DLP](protect-sharepoint-online-files-with-office-365-labels-and-dlp.md)
-    
+[Protect SharePoint Online files with Azure Information Protection](protect-sharepoint-online-files-with-azure-information-protection.md)
+
+
 ## See also
 
 [Secure SharePoint Online sites and files](secure-sharepoint-online-sites-and-files.md)
-  
-[Secure SharePoint Online sites in a dev/test environment](secure-sharepoint-online-sites-in-a-dev-test-environment.md)
   
 [Microsoft Security Guidance for Political Campaigns, Nonprofits, and Other Agile Organizations](microsoft-security-guidance-for-political-campaigns-nonprofits-and-other-agile-o.md)
   
