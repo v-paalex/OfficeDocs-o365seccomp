@@ -3,7 +3,7 @@ title: "Prepare search results for Office 365 Advanced eDiscovery"
 ms.author: markjjo
 author: markjjo
 manager: laurawi
-ms.date: 5/10/2017
+ms.date: 12/14/2018
 ms.audience: Admin
 ms.topic: article
 f1_keywords:
