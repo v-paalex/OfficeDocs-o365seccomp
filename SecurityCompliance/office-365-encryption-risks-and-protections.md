@@ -3,7 +3,6 @@ title: "Office 365 Encryption Risks and Protections"
 ms.author: robmazz
 author: robmazz
 manager: laurawi
-ms.date: 8/21/2018
 audience: ITPro
 ms.topic: article
 ms.service: Office 365 Administration
@@ -16,7 +15,11 @@ description: "Summary: Understand data resiliency in Microsoft Office 365."
 
 # Encryption Risks and Protections
 
-Microsoft follows a control and compliance framework that focuses on risks to the Office 365 service and to customer data. Microsoft implements a large set of technology and process-based methods (referred to as controls) to mitigate these risks. Identification, evaluation and mitigation of risks via controls is a continuous process. The implementation of controls within various layers of our cloud services such as facilities, network, servers, applications, users (such as Microsoft administrators) and data form a defense-in-depth strategy. The key to this strategy is that many different controls are implemented at different layers to protect against the same or similar risk scenarios. This multi-layered approach provides fail-safe protection in case a control fails for some reason. Some risk scenarios and the currently available encryption technologies that mitigate them are listed below. These scenarios are in many cases also mitigated via other controls implemented in Office 365.
+Microsoft follows a control and compliance framework that focuses on risks to the Office 365 service and to customer data. Microsoft implements a large set of technology and process-based methods (referred to as controls) to mitigate these risks. Identification, evaluation and mitigation of risks via controls is a continuous process. 
+
+The implementation of controls within various layers of our cloud services such as facilities, network, servers, applications, users (such as Microsoft administrators) and data form a defense-in-depth strategy. The key to this strategy is that many different controls are implemented at different layers to protect against the same or similar risk scenarios. This multi-layered approach provides fail-safe protection in case a control fails for some reason.
+
+Some risk scenarios and the currently available encryption technologies that mitigate them are listed below. These scenarios are in many cases also mitigated via other controls implemented in Office 365.
 
 | Encryption Technology | Services | Key Management | Risk Scenario | Value |
 |----------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------|---------------------|------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -30,7 +33,7 @@ Microsoft follows a control and compliance framework that focuses on risks to th
 | Office 365 Message Encryption | Exchange Online, SharePoint Online | Customer | Email, including protected attachments, falls in hands of a person either within or outside Office 365 who is not the intended recipient of the email. | OME provides value to customers where all emails originating from Office 365 that match certain criteria (i.e., all emails to a certain address) are automatically encrypted before they get sent to another internal or an external recipient. |
 | SMTP TLS with partner organization | Exchange Online | Customer | Email is intercepted via a man-in-the-middle or other attack while in transit from an Office 365 tenant to another partner organization. | This scenario provides value to the customer such that they can send/receive all emails between their Office 365 tenant and their partner’s email organization inside an encrypted SMTP channel. |
 
-The following tables summarize the encryption technologies available in Office 365 Multi-tenant and Government Cloud Community environments.
+## Encryption technologies available in Office 365 Multi-tenant environments
 
 | Encryption Technology | Implemented by | Key Exchange Algorithm and Strength | Key Management* | FIPS 140-2 Validated |
 |----------------------------------------------------------------------------------|-------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------|
@@ -61,6 +64,8 @@ The following tables summarize the encryption technologies available in Office 3
 **TLS certificates referenced in this table are for US datacenters; non-US datacenters also use 2048-bit SHA256RSA certificates.*
 
 ***Most servers in the Exchange Online multi-tenant environment have been deployed with AES 256-bit encryption for BitLocker. Servers using AES 128-bit are being phased out.*
+
+## Encryption technologies available in Government Cloud Community environments
 
 | Encryption Technology | Implemented by | Key Exchange Algorithm and Strength | Key Management* | FIPS 140-2 Validated |
 |---------------------------------------------|--------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------|
